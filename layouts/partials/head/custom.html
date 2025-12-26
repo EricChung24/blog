@@ -1,3 +1,14 @@
+<!-- layouts/partials/head/custom.html -->
+
+<!-- 預載字型：讓瀏覽器更早開始下載（通常可明顯改善首屏字型切換時間） -->
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href='{{ "fonts/Cubic11.woff2" | relURL }}'
+  crossorigin
+/>
+
 <style>
   @font-face {
     font-family: "Cubic11Web";
@@ -7,12 +18,14 @@
     font-style: normal;
   }
 
-  :root{
+  /* Stack 全站字體主要吃這兩個變數 */
+  :root {
     --base-font-family: "Cubic11Web", system-ui, -apple-system, "Segoe UI", "Noto Sans TC", sans-serif;
     --article-font-family: "Cubic11Web", var(--base-font-family);
   }
 
-  body{
+  /* 像素感加強（可保留） */
+  body {
     letter-spacing: 0.02em;
     -webkit-font-smoothing: none;
     text-rendering: optimizeSpeed;
