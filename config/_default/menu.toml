@@ -15,4 +15,12 @@ url = "https://github.com/EricChung24"
 [social.params]
 icon = "brand-github"
 
+[[social]]
+identifier = "instagram"
+name = "Instagram"
+url = "https://instagram.com/ericchung_878"
+
+[social.params]
+icon = "brand-instagram"
+
 
