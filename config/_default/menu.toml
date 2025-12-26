@@ -20,7 +20,5 @@ identifier = "instagram"
 name = "Instagram"
 url = "https://instagram.com/ericchung_878"
 
-[social.params]
-icon = "brand-instagram"
 
 
