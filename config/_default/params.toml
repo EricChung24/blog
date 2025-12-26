@@ -13,8 +13,8 @@ published = "Jan 02, 2006"
 lastUpdated = "Jan 02, 2006 15:04 MST"
 
 [sidebar]
-emoji = "🫰"
-subtitle = "淡水前端工程師一枚，工作內容包含：切版、元件化、效能優化，以及跟某些神秘的 padding 對線。文章偏實作，能貼就貼、能跑就跑，不能跑就一起找原因。"
+emoji = "🫩"
+subtitle = "專門把設計稿變成網頁，把網頁變成「看起來像設計稿」。這裡寫切版、元件化、效能優化與踩坑筆記；如果你也被 CSS 搞過，我們算同一個專案組。"
 
 [sidebar.avatar]
 enabled = true
