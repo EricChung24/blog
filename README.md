@@ -63,6 +63,16 @@ dnf install -y golang
 ![image](https://github.com/zhi-yi-huang/hugo-theme-stack-starter/assets/83860323/777c1109-dfc8-4893-9db7-1305ec027cf5)
 
 
+
+
+
+
+
+-------------------------
+
+https://ericchung24.github.io/blog/ 
+
+
 Make sure also to specify Hugo version in the environment variable `HUGO_VERSION` (Use the latest version of Hugo extended):
 
 ![Environment variable](https://user-images.githubusercontent.com/5889006/156917212-afb7c70d-ab85-480f-8288-b15781a462c0.png)
