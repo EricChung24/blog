@@ -1,10 +1,8 @@
 # Change baseurl before deploy
-baseurl = "https://ubiquitous-fishstick-r47qxvr4p7wv2pr6x-1313.app.github.dev/"
+baseurl = "https://ericchung24.github.io/blog/"
 languageCode = "zh-tw"
 title = "Eric的程式勇者村"
-[params.sidebar]
-emoji = "🫰"
-subtitle = "淡水前端工程師一枚，工作內容包含：切版、元件化、效能優化，以及跟某些神秘的 padding 對線。文章偏實作，能貼就貼、能跑就跑，不能跑就一起找原因。"
+
 
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk, ar

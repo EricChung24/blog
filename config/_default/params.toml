@@ -13,8 +13,8 @@ published = "Jan 02, 2006"
 lastUpdated = "Jan 02, 2006 15:04 MST"
 
 [sidebar]
-emoji = "🍥"
-subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+emoji = "🫰"
+subtitle = "淡水前端工程師一枚，工作內容包含：切版、元件化、效能優化，以及跟某些神秘的 padding 對線。文章偏實作，能貼就貼、能跑就跑，不能跑就一起找原因。"
 
 [sidebar.avatar]
 enabled = true
