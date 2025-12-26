@@ -48,6 +48,7 @@ If you want to build this site using another static page hosting, you need to ma
   
 You need to overwrite build command to install manually Go:
 
+https://ericchung24.github.io/blog/ 
 ```
 amazon-linux-extras install golang1.11 && hugo --gc --minify
 ```
@@ -70,7 +71,6 @@ dnf install -y golang
 
 -------------------------
 
-https://ericchung24.github.io/blog/ 
 
 
 Make sure also to specify Hugo version in the environment variable `HUGO_VERSION` (Use the latest version of Hugo extended):
