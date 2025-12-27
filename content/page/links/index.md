@@ -13,7 +13,7 @@ links:
     website: "https://hshuang.blog/"
     image: "https://hshuang.blog/Author_hu_106d8ba03a16b9e.webp"
 
-   - title: "yuzen - Developer"
+  - title: "yuzen - Developer"
     description: "專注問題本身，也不斷向新的事物靠近。"
     website: "https://www.yuzen.dev/zh-Hans"
     image: "https://hshuang.blog/Author_hu_106d8ba03a16b9e.webp"
