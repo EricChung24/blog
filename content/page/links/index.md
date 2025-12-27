@@ -8,6 +8,11 @@ links:
     website: "https://blog.giveanornot.com/"
     image: "https://blog.giveanornot.com/img/avatar_hu_4b7b53acf39ce207.jpg"
 
+  - title: "Hong-Sheng Huang's Blog"
+    description: "保持好奇心並付諸行動"
+    website: "https://hshuang.blog/"
+    image: "https://hshuang.blog/Author_hu_106d8ba03a16b9e.webp"
+
 menu:
   main:
     weight: 4
