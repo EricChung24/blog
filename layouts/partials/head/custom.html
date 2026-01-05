@@ -1,33 +1,30 @@
 <!-- layouts/partials/head/custom.html -->
 
-<!-- 預載字型：讓瀏覽器更早開始下載（通常可明顯改善首屏字型切換時間） -->
 <link
   rel="preload"
   as="font"
-  type="font/woff2"
-  href='{{ "fonts/Cubic11.woff2" | relURL }}'
+  type="font/ttf"
+  href='{{ "fonts/Iansui-Regular.ttf" | relURL }}'
   crossorigin
 />
 
 <style>
   @font-face {
-    font-family: "Cubic11Web";
-    src: url('{{ "fonts/Cubic11.woff2" | relURL }}') format("woff2");
+    font-family: "IansuiWeb";
+    src: url('{{ "fonts/Iansui-Regular.ttf" | relURL }}') format("truetype");
     font-display: swap;
     font-weight: 400;
     font-style: normal;
   }
 
-  /* Stack 全站字體主要吃這兩個變數 */
+  /* Stack 全站主要吃這兩個變數 */
   :root {
-    --base-font-family: "Cubic11Web", system-ui, -apple-system, "Segoe UI", "Noto Sans TC", sans-serif;
-    --article-font-family: "Cubic11Web", var(--base-font-family);
+    --base-font-family: "IansuiWeb", system-ui, -apple-system, "Segoe UI", "Noto Sans TC", sans-serif;
+    --article-font-family: "IansuiWeb", var(--base-font-family);
   }
 
-  /* 像素感加強（可保留） */
+  /* 保險：有些情況主題沒套到變數時，直接補一層 */
   body {
-    letter-spacing: 0.02em;
-    -webkit-font-smoothing: none;
-    text-rendering: optimizeSpeed;
+    font-family: var(--base-font-family);
   }
 </style>
