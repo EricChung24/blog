@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>VS Code on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/vs-code/</link><description>Recent content in VS Code on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 27 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/vs-code/index.xml" rel="self" type="application/rss+xml"/><item><title>新手第一步：安裝 VS Code 打造你的網頁開發環境</title><link>https://ericchung24.github.io/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%AE%89%E8%A3%9D-vs-code-%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83/</link><pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate><guid>https://ericchung24.github.io/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%AE%89%E8%A3%9D-vs-code-%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83/</guid><description>&lt;img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post 新手第一步：安裝 VS Code 打造你的網頁開發環境" /&gt;&lt;p&gt;在開始寫 HTML 之前，你需要一個好用的「筆記本」來寫程式。目前全球開發者最推薦的工具就是 &lt;strong&gt;Visual Studio Code (簡稱 VS Code)&lt;/strong&gt;。它免費、快速，而且功能非常強大。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-下載-vs-code"&gt;1. 下載 VS Code
+&lt;/h2&gt;&lt;p&gt;首先，請前往 VS Code 的官方網站下載安裝檔。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;官方網站：&lt;/strong&gt; &lt;a class="link" href="https://code.visualstudio.com/" target="_blank" rel="noopener"
+&gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;進入官網後，點擊大大的 &lt;strong&gt;&amp;ldquo;Download&amp;rdquo;&lt;/strong&gt; 按鈕（系統會自動偵測你是 Windows 還是 Mac）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="2-安裝步驟-windows--mac"&gt;2. 安裝步驟 (Windows / Mac)
+&lt;/h2&gt;&lt;h3 id="windows-使用者"&gt;Windows 使用者：
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;執行下載的 &lt;code&gt;.exe&lt;/code&gt; 檔。&lt;/li&gt;
+&lt;li&gt;點選「我同意合約」。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重要：&lt;/strong&gt; 在「選取額外工作」畫面時，建議勾選 &lt;strong&gt;「將 [以此 Code 開啟] 動作新增到 Windows 檔案總管內容功能表」&lt;/strong&gt;。這樣你之後對著資料夾點右鍵就能直接開啟，非常方便。&lt;/li&gt;
+&lt;li&gt;點擊「安裝」直到完成。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="mac-使用者"&gt;Mac 使用者：
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;下載完成後會得到一個 &lt;code&gt;.zip&lt;/code&gt; 檔。&lt;/li&gt;
+&lt;li&gt;解壓縮後，將 &lt;strong&gt;Visual Studio Code&lt;/strong&gt; 圖示拖曳到你的 &lt;strong&gt;「應用程式 (Applications)」&lt;/strong&gt; 資料夾即可。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="3-環境中文化-繁體中文"&gt;3. 環境中文化 (繁體中文)
+&lt;/h2&gt;&lt;p&gt;VS Code 預設是英文介面，新手可以先安裝中文插件來降低學習門檻。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打開 VS Code。&lt;/li&gt;
+&lt;li&gt;點擊左側圖示列最下方的 &lt;strong&gt;「擴充功能 (Extensions)」&lt;/strong&gt; 圖示（長得像積木）。&lt;/li&gt;
+&lt;li&gt;在搜尋框輸入：&lt;code&gt;Chinese&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;找到 &lt;strong&gt;&amp;ldquo;Chinese (Traditional) Language Pack for Visual Studio Code&amp;rdquo;&lt;/strong&gt; 並點擊 &lt;strong&gt;Install&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;安裝完成後，右下角會出現重啟通知，點擊 &lt;strong&gt;&amp;ldquo;Restart&amp;rdquo;&lt;/strong&gt; 即可切換為中文。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="4-建立你的第一個網頁檔案"&gt;4. 建立你的第一個網頁檔案
+&lt;/h2&gt;&lt;p&gt;安裝好後，我們來動手試試看：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在桌面建立一個新的資料夾，取名為 &lt;code&gt;my-web&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;回到 VS Code，點擊 &lt;strong&gt;「檔案」&amp;gt;「開啟資料夾」&lt;/strong&gt;，選擇剛才建立的 &lt;code&gt;my-web&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;點擊左側「檔案總管」旁的新增檔案圖示，輸入檔名：&lt;code&gt;index.html&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;在右側空白處輸入 &lt;code&gt;!&lt;/code&gt; 然後按下 &lt;strong&gt;Tab 鍵&lt;/strong&gt;，VS Code 會自動幫你產生標準的 HTML 骨架！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="5-推薦新手的必裝套件"&gt;5. 推薦新手的必裝套件
+&lt;/h2&gt;&lt;p&gt;除了中文化之外，這兩個套件能讓你寫網頁的效率提升 200%：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Live Server&lt;/strong&gt;：讓你改完程式碼存檔後，瀏覽器會自動重新整理，即時看到結果。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Auto Close Tag&lt;/strong&gt;：輸入開頭標籤後，自動幫你補上結尾標籤。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="結語"&gt;結語
+&lt;/h2&gt;&lt;p&gt;恭喜你！你已經準備好開發環境了。現在你的電腦已經不是一台只能追劇的機器，而是能創造出無限可能網頁的工具。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;下一步建議：&lt;/strong&gt;
+既然環境裝好了，快去學習 &lt;strong&gt;HTML 基礎標籤&lt;/strong&gt;，試著在 &lt;code&gt;index.html&lt;/code&gt; 寫下你的第一行標題吧！&lt;/p&gt;</description></item></channel></rss>
