@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>數位資產 on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/%E6%95%B8%E4%BD%8D%E8%B3%87%E7%94%A2/</link><description>Recent content in 數位資產 on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 26 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/%E6%95%B8%E4%BD%8D%E8%B3%87%E7%94%A2/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World ! 建立自己的部落格</title><link>https://ericchung24.github.io/blog/p/hello-world-%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC/</link><pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate><guid>https://ericchung24.github.io/blog/p/hello-world-%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC/</guid><description>&lt;img src="https://ericchung24.github.io/blog/p/hello-world-%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC/hugo-logo-wide.svg" alt="Featured image of post Hello World ! 建立自己的部落格 " /&gt;&lt;p&gt;我一直很敬佩那些願意在部落格寫教學的軟體工程師前輩。&lt;/p&gt;
+&lt;p&gt;很多時候，新手遇到的問題其實不大：環境怎麼裝、指令怎麼跑、為什麼畫面沒出來、錯誤訊息代表什麼。但就是這些「小卡關」，會讓人卡一整晚。每當我靠著前輩們寫下的文章解出一個問題，都會覺得：原來有人走過同一段路，還願意把路標留給後來的人。&lt;/p&gt;
+&lt;p&gt;而我現在也想做同樣的事。&lt;/p&gt;
+&lt;h2 id="我目前還很初階但我想開始寫"&gt;我目前還很初階，但我想開始寫
+&lt;/h2&gt;&lt;p&gt;我知道自己還在成長，理解也不一定完整。可我也發現一件事：&lt;br&gt;
+&lt;strong&gt;越是初階的時候，越能記得「新手到底看不懂什麼」&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;很多教學寫得很厲害，但會默認你已經懂很多背景知識；對新手來說，反而會更焦慮。&lt;br&gt;
+所以我想用一個目標提醒自己：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;把我「剛搞懂的那一刻」寫下來，寫到讓當時的我也看得懂。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="我會在這裡寫什麼"&gt;我會在這裡寫什麼
+&lt;/h2&gt;&lt;p&gt;我希望這個部落格可以慢慢累積成一份「對新手友善」的筆記庫，內容可能會包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;前端切版：HTML/CSS 觀念、版型排版、常見 bug 與修法&lt;/li&gt;
+&lt;li&gt;JavaScript：DOM、事件、資料處理、API 串接、debug 方法&lt;/li&gt;
+&lt;li&gt;工具與流程：Git、部署、專案結構、指令與環境設定&lt;/li&gt;
+&lt;li&gt;讀書／學習心得：我怎麼學、卡在哪、怎麼突破&lt;/li&gt;
+&lt;li&gt;小專案記錄：做了什麼、踩了哪些坑、怎麼修&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不一定每篇都很大、很完整，有時候就是一個小問題的解法。&lt;br&gt;
+但我相信：&lt;strong&gt;小問題的解法，對另一個人可能是救命繩。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="我想維持的寫作原則"&gt;我想維持的寫作原則
+&lt;/h2&gt;&lt;p&gt;我希望自己能做到這幾件事：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;寫清楚「前置條件」&lt;/strong&gt;：需要安裝什麼、在哪裡改設定、檔案放哪裡&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;能貼就貼、能跑就跑&lt;/strong&gt;：盡量給可複製的範例與步驟&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;保留失敗紀錄&lt;/strong&gt;：錯誤訊息長什麼樣、我怎麼查、怎麼定位問題&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;用新手的語言解釋&lt;/strong&gt;：少一點炫技，多一點讓人看懂&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="給未來的自己"&gt;給未來的自己
+&lt;/h2&gt;&lt;p&gt;如果有一天我回頭看這篇，希望我仍然記得：&lt;br&gt;
+我寫部落格不是為了看起來很厲害，而是為了把路標留給別人，也留給自己。&lt;/p&gt;
+&lt;p&gt;從今天開始，慢慢寫。&lt;br&gt;
+哪怕只是一篇小小的筆記，也算前進。&lt;/p&gt;
+&lt;p&gt;如果你剛好也在學習路上，希望這裡的內容能幫到你。&lt;br&gt;
+也歡迎你留言告訴我：你現在卡在哪，我也想把解法整理成下一篇文章。&lt;/p&gt;</description></item></channel></rss>

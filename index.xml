@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/</link><description>Recent content on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 28 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>新手第二步：HTML 入門　3 分鐘掌握網頁設計的骨架！</title><link>https://ericchung24.github.io/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E4%BA%8C%E6%AD%A5html-%E5%85%A5%E9%96%80-3-%E5%88%86%E9%90%98%E6%8E%8C%E6%8F%A1%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88%E7%9A%84%E9%AA%A8%E6%9E%B6/</link><pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate><guid>https://ericchung24.github.io/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E4%BA%8C%E6%AD%A5html-%E5%85%A5%E9%96%80-3-%E5%88%86%E9%90%98%E6%8E%8C%E6%8F%A1%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88%E7%9A%84%E9%AA%A8%E6%9E%B6/</guid><description>&lt;img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post 新手第二步：HTML 入門　3 分鐘掌握網頁設計的骨架！" /&gt;&lt;p&gt;如果你想學做網頁，第一個要認識的就是 &lt;strong&gt;HTML&lt;/strong&gt;。別把它想得太複雜，它其實就是幫網頁內容「貼標籤」而已！&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-什麼是-html"&gt;1. 什麼是 HTML？
+&lt;/h2&gt;&lt;p&gt;HTML 的全名是超文本標記語言。簡單來說，它就像是一份**「網頁的說明書」**。&lt;/p&gt;
+&lt;p&gt;想像你在蓋房子：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HTML&lt;/strong&gt; 就是「鋼筋」與「牆壁」，決定哪裡是門、哪裡是窗戶（決定結構）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CSS&lt;/strong&gt; 就是「油漆」與「家具」，決定房子好不好看（決定外觀）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="2-標籤taghtml-的基本組成"&gt;2. 標籤（Tag）：HTML 的基本組成
+&lt;/h2&gt;&lt;p&gt;寫 HTML 的過程，就是把文字用**「標籤」**包起來。標籤通常是成對的，像是一對括號：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;標籤名稱&amp;gt;&lt;/code&gt;&lt;/strong&gt; 內容 &lt;strong&gt;&lt;code&gt;&amp;lt;/標籤名稱&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;內容&lt;code&gt;&amp;lt;/h1&amp;gt;&lt;/code&gt;&lt;/strong&gt;：這是大標題。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;內容&lt;code&gt;&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/strong&gt;：這是普通的段落文字。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;內容&lt;code&gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/strong&gt;：這是超連結。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="3-網頁的基本長相"&gt;3. 網頁的基本長相
+&lt;/h2&gt;&lt;p&gt;每一張網頁都有一個標準的「骨架」，你可以直接複製這段代碼到 VS Code 試試看：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;我的第一個網頁&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;哈囉，世界！&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;p&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;這是我用 HTML 寫的第一句話。&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;p&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;[https://google.com](https://google.com)&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;點我連到 Google&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="4-三個最常用的標籤"&gt;4. 三個最常用的標籤
+&lt;/h2&gt;&lt;p&gt;新手只要先記住這三個，就能做出最基本的網頁了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;標題標籤 (&lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; 到 &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt;)&lt;/strong&gt;：&lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; 是最重要的標題（通常一頁只有一個），&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; 是層級最小的標題。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;圖片標籤 (&lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;)&lt;/strong&gt;：用來在網頁中放入照片或圖示。
+&lt;ul&gt;
+&lt;li&gt;範例：&lt;code&gt;&amp;lt;img src=&amp;quot;圖片網址&amp;quot;&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;超連結標籤 (&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;)&lt;/strong&gt;：網頁的靈魂！用來連到別的網站或是自己的其他頁面。
+&lt;ul&gt;
+&lt;li&gt;範例：&lt;code&gt;&amp;lt;a href=&amp;quot;網址&amp;quot;&amp;gt;點我開啟新視窗&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="5-為什麼要學-html"&gt;5. 為什麼要學 HTML？
+&lt;/h2&gt;&lt;p&gt;很多人問：「現在排版軟體這麼多，為什麼還要學寫代碼？」原因有這三個：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;它是所有網頁的基礎&lt;/strong&gt;：不管是專業工程師還是數位行銷，看不懂 HTML 就無法深入調整網頁內容。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;容易上手&lt;/strong&gt;：HTML 沒有複雜的數學邏輯，只要像填空一樣把內容塞進標籤裡，成就感很高。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;即時回饋&lt;/strong&gt;：這是學習程式最快樂的地方——寫完存檔，回到瀏覽器重新整理，你剛才寫的東西就會立刻跳出來！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="6-深入一點點標籤裡的小祕密"&gt;6. 深入一點點：標籤裡的「小祕密」
+&lt;/h2&gt;&lt;p&gt;剛才提到了標籤，但標籤其實可以攜帶更多「額外資訊」，我們稱之為 &lt;strong&gt;屬性 (Attributes)&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="屬性怎麼寫"&gt;屬性怎麼寫？
+&lt;/h3&gt;&lt;p&gt;屬性永遠寫在「開頭標籤」裡面，長得像這樣：&lt;code&gt;屬性名稱=&amp;quot;屬性值&amp;quot;&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;以圖片 &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 為例：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;my-dog.jpg&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;alt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;我的小狗在公園跑步&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;src&lt;/code&gt; (source)：告訴瀏覽器圖片在哪裡。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alt&lt;/code&gt; (alternative text)：萬一圖片跑不出來，顯示這段文字告訴使用者這本來是什麼。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;以超連結 &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; 為例：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;[https://google.com](https://google.com)&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;_blank&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;另開視窗去搜尋&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;target=&amp;quot;_blank&amp;quot;&lt;/code&gt;：這是一個超實用的屬性，可以讓連結在「新分頁」開啟，不會把原本的網頁蓋掉。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="7-寫-html-的好習慣語意化"&gt;7. 寫 HTML 的好習慣：語意化
+&lt;/h2&gt;&lt;p&gt;雖然 HTML 標籤很多，但不要因為想讓字變大就亂用 &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;SEO (搜尋引擎優化)&lt;/strong&gt;：如果你正確使用標籤（例如文章內容用 &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;，主標題用 &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;），Google 的機器人會更喜歡你的網站。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;閱讀順序&lt;/strong&gt;：對視障人士來說，正確的標籤能讓語音朗讀軟體順利讀出網頁內容。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="8-給新手的實戰練習"&gt;8. 給新手的實戰練習
+&lt;/h2&gt;&lt;p&gt;看完文章，不動手寫是學不會的！請跟著以下步驟做：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;打開 VS Code&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;新建檔案&lt;/strong&gt;，存檔為 &lt;code&gt;practice.html&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;輸入 &lt;code&gt;!&lt;/code&gt; 並按 Tab 鍵&lt;/strong&gt;（這是 VS Code 的神奇快捷鍵，會幫你生出骨架）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;在 &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; 標籤中間加入以下內容：&lt;/strong&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;我的自我介紹&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;p&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;大家好，我正在學習網頁開發！&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;p&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;[https://via.placeholder.com/150](https://via.placeholder.com/150)&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;alt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;測試圖片&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;br&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;[https://facebook.com](https://facebook.com)&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;我的臉書&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存檔並用瀏覽器打開檔案&lt;/strong&gt;，看看你的成品！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="結語你已經邁出第一步了"&gt;結語：你已經邁出第一步了！
+&lt;/h2&gt;&lt;p&gt;HTML 是網頁世界的敲門磚。雖然現在看起來只是黑白文字，但只要你掌握了這些「標籤」的邏輯，你已經贏過一半以上的人了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;接下來你可以做什麼？&lt;/strong&gt;
+當你覺得黑白網頁太單調時，就是學習 &lt;strong&gt;CSS (樣式表)&lt;/strong&gt; 的時候了！CSS 會教你怎麼把字變顏色、怎麼排版、怎麼讓網頁看起來像專業公司做的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;準備好進入色彩繽紛的網頁世界了嗎？我們下一篇見！&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>新手第一步：安裝 VS Code 打造你的網頁開發環境</title><link>https://ericchung24.github.io/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%AE%89%E8%A3%9D-vs-code-%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83/</link><pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate><guid>https://ericchung24.github.io/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%AE%89%E8%A3%9D-vs-code-%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83/</guid><description>&lt;img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post 新手第一步：安裝 VS Code 打造你的網頁開發環境" /&gt;&lt;p&gt;在開始寫 HTML 之前，你需要一個好用的「筆記本」來寫程式。目前全球開發者最推薦的工具就是 &lt;strong&gt;Visual Studio Code (簡稱 VS Code)&lt;/strong&gt;。它免費、快速，而且功能非常強大。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-下載-vs-code"&gt;1. 下載 VS Code
+&lt;/h2&gt;&lt;p&gt;首先，請前往 VS Code 的官方網站下載安裝檔。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;官方網站：&lt;/strong&gt; &lt;a class="link" href="https://code.visualstudio.com/" target="_blank" rel="noopener"
+&gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;進入官網後，點擊大大的 &lt;strong&gt;&amp;ldquo;Download&amp;rdquo;&lt;/strong&gt; 按鈕（系統會自動偵測你是 Windows 還是 Mac）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="2-安裝步驟-windows--mac"&gt;2. 安裝步驟 (Windows / Mac)
+&lt;/h2&gt;&lt;h3 id="windows-使用者"&gt;Windows 使用者：
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;執行下載的 &lt;code&gt;.exe&lt;/code&gt; 檔。&lt;/li&gt;
+&lt;li&gt;點選「我同意合約」。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重要：&lt;/strong&gt; 在「選取額外工作」畫面時，建議勾選 &lt;strong&gt;「將 [以此 Code 開啟] 動作新增到 Windows 檔案總管內容功能表」&lt;/strong&gt;。這樣你之後對著資料夾點右鍵就能直接開啟，非常方便。&lt;/li&gt;
+&lt;li&gt;點擊「安裝」直到完成。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="mac-使用者"&gt;Mac 使用者：
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;下載完成後會得到一個 &lt;code&gt;.zip&lt;/code&gt; 檔。&lt;/li&gt;
+&lt;li&gt;解壓縮後，將 &lt;strong&gt;Visual Studio Code&lt;/strong&gt; 圖示拖曳到你的 &lt;strong&gt;「應用程式 (Applications)」&lt;/strong&gt; 資料夾即可。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="3-環境中文化-繁體中文"&gt;3. 環境中文化 (繁體中文)
+&lt;/h2&gt;&lt;p&gt;VS Code 預設是英文介面，新手可以先安裝中文插件來降低學習門檻。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打開 VS Code。&lt;/li&gt;
+&lt;li&gt;點擊左側圖示列最下方的 &lt;strong&gt;「擴充功能 (Extensions)」&lt;/strong&gt; 圖示（長得像積木）。&lt;/li&gt;
+&lt;li&gt;在搜尋框輸入：&lt;code&gt;Chinese&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;找到 &lt;strong&gt;&amp;ldquo;Chinese (Traditional) Language Pack for Visual Studio Code&amp;rdquo;&lt;/strong&gt; 並點擊 &lt;strong&gt;Install&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;安裝完成後，右下角會出現重啟通知，點擊 &lt;strong&gt;&amp;ldquo;Restart&amp;rdquo;&lt;/strong&gt; 即可切換為中文。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="4-建立你的第一個網頁檔案"&gt;4. 建立你的第一個網頁檔案
+&lt;/h2&gt;&lt;p&gt;安裝好後，我們來動手試試看：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在桌面建立一個新的資料夾，取名為 &lt;code&gt;my-web&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;回到 VS Code，點擊 &lt;strong&gt;「檔案」&amp;gt;「開啟資料夾」&lt;/strong&gt;，選擇剛才建立的 &lt;code&gt;my-web&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;點擊左側「檔案總管」旁的新增檔案圖示，輸入檔名：&lt;code&gt;index.html&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;在右側空白處輸入 &lt;code&gt;!&lt;/code&gt; 然後按下 &lt;strong&gt;Tab 鍵&lt;/strong&gt;，VS Code 會自動幫你產生標準的 HTML 骨架！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="5-推薦新手的必裝套件"&gt;5. 推薦新手的必裝套件
+&lt;/h2&gt;&lt;p&gt;除了中文化之外，這兩個套件能讓你寫網頁的效率提升 200%：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Live Server&lt;/strong&gt;：讓你改完程式碼存檔後，瀏覽器會自動重新整理，即時看到結果。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Auto Close Tag&lt;/strong&gt;：輸入開頭標籤後，自動幫你補上結尾標籤。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="結語"&gt;結語
+&lt;/h2&gt;&lt;p&gt;恭喜你！你已經準備好開發環境了。現在你的電腦已經不是一台只能追劇的機器，而是能創造出無限可能網頁的工具。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;下一步建議：&lt;/strong&gt;
+既然環境裝好了，快去學習 &lt;strong&gt;HTML 基礎標籤&lt;/strong&gt;，試著在 &lt;code&gt;index.html&lt;/code&gt; 寫下你的第一行標題吧！&lt;/p&gt;</description></item><item><title>Hello World ! 建立自己的部落格</title><link>https://ericchung24.github.io/blog/p/hello-world-%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC/</link><pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate><guid>https://ericchung24.github.io/blog/p/hello-world-%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC/</guid><description>&lt;img src="https://ericchung24.github.io/blog/p/hello-world-%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC/hugo-logo-wide.svg" alt="Featured image of post Hello World ! 建立自己的部落格 " /&gt;&lt;p&gt;我一直很敬佩那些願意在部落格寫教學的軟體工程師前輩。&lt;/p&gt;
+&lt;p&gt;很多時候，新手遇到的問題其實不大：環境怎麼裝、指令怎麼跑、為什麼畫面沒出來、錯誤訊息代表什麼。但就是這些「小卡關」，會讓人卡一整晚。每當我靠著前輩們寫下的文章解出一個問題，都會覺得：原來有人走過同一段路，還願意把路標留給後來的人。&lt;/p&gt;
+&lt;p&gt;而我現在也想做同樣的事。&lt;/p&gt;
+&lt;h2 id="我目前還很初階但我想開始寫"&gt;我目前還很初階，但我想開始寫
+&lt;/h2&gt;&lt;p&gt;我知道自己還在成長，理解也不一定完整。可我也發現一件事：&lt;br&gt;
+&lt;strong&gt;越是初階的時候，越能記得「新手到底看不懂什麼」&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;很多教學寫得很厲害，但會默認你已經懂很多背景知識；對新手來說，反而會更焦慮。&lt;br&gt;
+所以我想用一個目標提醒自己：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;把我「剛搞懂的那一刻」寫下來，寫到讓當時的我也看得懂。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="我會在這裡寫什麼"&gt;我會在這裡寫什麼
+&lt;/h2&gt;&lt;p&gt;我希望這個部落格可以慢慢累積成一份「對新手友善」的筆記庫，內容可能會包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;前端切版：HTML/CSS 觀念、版型排版、常見 bug 與修法&lt;/li&gt;
+&lt;li&gt;JavaScript：DOM、事件、資料處理、API 串接、debug 方法&lt;/li&gt;
+&lt;li&gt;工具與流程：Git、部署、專案結構、指令與環境設定&lt;/li&gt;
+&lt;li&gt;讀書／學習心得：我怎麼學、卡在哪、怎麼突破&lt;/li&gt;
+&lt;li&gt;小專案記錄：做了什麼、踩了哪些坑、怎麼修&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不一定每篇都很大、很完整，有時候就是一個小問題的解法。&lt;br&gt;
+但我相信：&lt;strong&gt;小問題的解法，對另一個人可能是救命繩。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="我想維持的寫作原則"&gt;我想維持的寫作原則
+&lt;/h2&gt;&lt;p&gt;我希望自己能做到這幾件事：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;寫清楚「前置條件」&lt;/strong&gt;：需要安裝什麼、在哪裡改設定、檔案放哪裡&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;能貼就貼、能跑就跑&lt;/strong&gt;：盡量給可複製的範例與步驟&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;保留失敗紀錄&lt;/strong&gt;：錯誤訊息長什麼樣、我怎麼查、怎麼定位問題&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;用新手的語言解釋&lt;/strong&gt;：少一點炫技，多一點讓人看懂&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="給未來的自己"&gt;給未來的自己
+&lt;/h2&gt;&lt;p&gt;如果有一天我回頭看這篇，希望我仍然記得：&lt;br&gt;
+我寫部落格不是為了看起來很厲害，而是為了把路標留給別人，也留給自己。&lt;/p&gt;
+&lt;p&gt;從今天開始，慢慢寫。&lt;br&gt;
+哪怕只是一篇小小的筆記，也算前進。&lt;/p&gt;
+&lt;p&gt;如果你剛好也在學習路上，希望這裡的內容能幫到你。&lt;br&gt;
+也歡迎你留言告訴我：你現在卡在哪，我也想把解法整理成下一篇文章。&lt;/p&gt;</description></item><item><title>全部文章</title><link>https://ericchung24.github.io/blog/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://ericchung24.github.io/blog/archives/</guid><description/></item><item><title>友站連結</title><link>https://ericchung24.github.io/blog/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ericchung24.github.io/blog/links/</guid><description>&lt;h1 id="以下是我部落格的-front-matter-有想設定友站可以直接複製哦-"&gt;以下是我部落格的 Front Matter 有想設定友站可以直接複製哦 !
+&lt;/h1&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;links&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;EricChung的程式勇者村&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;專門把設計稿變成網頁，把網頁變成「看起來像設計稿」。這裡寫切版、元件化、效能優化與踩坑筆記；如果你也被 CSS 搞過，我們算同一個專案組。&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;website&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://ericchung24.github.io/blog/&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://reimagined-fortnight-r47qxvr4p77v2x4p5-1313.app.github.dev/blog/img/avatar_hu_6a4904efc9fbc170.png&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id="下面是我常看的部落客的連結"&gt;下面是我常看的部落客的連結↓
+&lt;/h1&gt;</description></item><item><title>全站搜尋</title><link>https://ericchung24.github.io/blog/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ericchung24.github.io/blog/search/</guid><description/></item></channel></rss>
