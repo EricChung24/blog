@@ -6,7 +6,7 @@ links:
   - title: "資工小廢物 - JN"
     description: "資工系畢業，但其實沒有很會寫程式"
     website: "https://blog.giveanornot.com/"
-    image: "https://blog.giveanornot.com/img/avatar_hu_4b7b53acf39ce207.jpg"
+    image: "https://blog.giveanornot.com/img/avatar_hu_8a21430ccd887c92.png"
 
   - title: "Hong-Sheng Huang's Blog"
     description: "保持好奇心並付諸行動"
