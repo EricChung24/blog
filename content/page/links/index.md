@@ -15,7 +15,7 @@ links:
 
   - title: "Yuzen - Developer"
     description: "專注問題本身，也不斷向新的事物靠近。"
-    website: "https://www.yuzen.dev/zh-Hans"
+    website: "https://www.yuzen.dev/zh-Hant"
     image: "https://www.yuzen.dev/avatar.webp"
 
 menu:
