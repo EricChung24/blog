@@ -1,6 +1,7 @@
 ---
 title: "新手第二步：HTML 入門　3 分鐘掌握網頁設計的骨架！" 
 date: 2025-12-28 
+weight: 2
 draft: false
 description: "別被複雜的代碼嚇到了！這篇文章用最簡單的語言，帶你快速看懂 HTML 的運作邏輯。" 
 image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
