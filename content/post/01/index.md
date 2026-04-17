@@ -4,8 +4,8 @@ date: 2025-12-27
 draft: false
 description: "工欲善其事，必先利其器。手把手教你安裝最強大的程式碼編輯器 Visual Studio Code。" 
 image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-tags: ["VS Code", "開發工具", "新手入門"] 
-categories: ["工具安裝"] 
+tags: ["VS Code", "開發工具", "工具安裝", "新手入門"] 
+categories: ["前端工具", "工具安裝"] 
 ---
 
 在開始寫 HTML 之前，你需要一個好用的「筆記本」來寫程式。目前全球開發者最推薦的工具就是 **Visual Studio Code (簡稱 VS Code)**。它免費、快速，而且功能非常強大。

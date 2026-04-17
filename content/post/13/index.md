@@ -5,7 +5,7 @@ draft: false
 description: "靜態網頁的內容是死的，串接 API 才能讓你的網頁活起來！這篇從同步非同步的概念、fetch、Promise，到 async/await 和實戰 API 串接，一步一步帶你搞懂。"
 image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 tags: ["JavaScript", "API", "Async", "Fetch", "新手入門"]
-categories: ["基礎教學"]
+categories: ["JavaScript", "API"]
 ---
 
 到目前為止，你網頁上的所有資料都是**自己寫死**的。標題、卡片內容、圖片——全都是你親手打進去的。

@@ -5,7 +5,7 @@ draft: false
 description: "學完 HTML 只有骨架，現在要替網頁穿上衣服了！5 分鐘帶你看懂 CSS 的核心觀念，讓你的網頁立刻好看起來。"
 image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 tags: ["CSS", "網頁基礎", "新手入門"]
-categories: ["基礎教學"]
+categories: ["網頁基礎", "CSS"]
 ---
 
 上一篇我們學了 HTML，做出了一個「能動但很醜」的網頁。今天我們要學 **CSS**，讓你的網頁從工地毛胚屋，搖身一變成精心裝潢的新家！

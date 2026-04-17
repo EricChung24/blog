@@ -4,7 +4,7 @@ date: 2025-12-26
 draft: false
 description: "建立自己的部落格"
 image: "hugo-logo-wide.svg"   # 封面（可選）
-tags: ["Hugo", "Stack","數位資產"]
+tags: ["Hugo", "Stack","數位資產", "菜鳥日記"]
 categories: ["菜鳥日記"]
 ---
 我一直很敬佩那些願意在部落格寫教學的軟體工程師前輩。

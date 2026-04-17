@@ -5,7 +5,7 @@ draft: false
 description: "Tailwind 和 Bootstrap 完全不同——它不給你做好的元件，而是給你幾百個小 class 讓你自由組合。第一次看會覺得 HTML 很醜，用過就回不去了。"
 image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 tags: ["Tailwind CSS", "CSS 框架", "前端工具", "新手入門"]
-categories: ["基礎教學"]
+categories: ["CSS 框架", "前端工具"]
 ---
 
 學完 Bootstrap，你已經體驗過 CSS 框架的威力。但 Bootstrap 有一個隱藏的痛點：**所有用 Bootstrap 做的網站看起來都長得差不多**。

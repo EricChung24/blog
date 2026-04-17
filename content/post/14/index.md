@@ -5,7 +5,7 @@ draft: false
 description: "很多 React 新手一學到 useEffect，就什麼都想塞進去。其實它不是萬用鉤子，而是專門處理副作用的工具。這篇帶你從零搞懂它該用在哪裡。"
 image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 tags: ["React", "useEffect", "Hooks", "新手入門"]
-categories: ["基礎教學"]
+categories: ["React", "前端框架"]
 ---
 
 很多 React 新手一看到 `useEffect`，第一反應都是：「這個看起來很強，我是不是什麼事情都可以丟進去？」

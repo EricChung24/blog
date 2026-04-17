@@ -5,7 +5,7 @@ draft: false
 description: "原生 CSS 寫久了會發現一個痛點：重複的顏色要改十幾個地方。SCSS 讓你用變數、巢狀、函式來寫 CSS，維護起來輕鬆十倍。"
 image: "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 tags: ["SCSS", "CSS", "前端工具", "新手入門"]
-categories: ["基礎教學"]
+categories: ["CSS", "前端工具"]
 ---
 
 你有沒有遇過這樣的情況：網站的主題色是 `#3498db`，結果整份 CSS 裡出現了四十幾次。有一天設計師說「主題色改一下」，你只能一個一個找、一個一個改，改到懷疑人生。

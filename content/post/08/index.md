@@ -5,7 +5,7 @@ draft: false
 description: "還在從零開始寫 CSS？Bootstrap 5 提供了現成的元件庫，按鈕、導覽列、卡片通通有，讓你快速搭出專業的響應式網頁。"
 image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 tags: ["Bootstrap 5", "CSS 框架", "響應式設計", "新手入門"]
-categories: ["基礎教學"]
+categories: ["CSS 框架", "前端工具"]
 ---
 
 每次做新專案，是不是又要從頭寫按鈕樣式、導覽列、卡片？**Bootstrap 5** 就是解決這個痛點的神器——它把最常用的 UI 元件全部做好了，你只要加幾個 class 名稱就能直接用。

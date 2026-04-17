@@ -5,7 +5,7 @@ draft: false
 description: "每個工程師都必備的技能。Git 讓你隨時回到過去的版本、和別人一起協作、把作品放上 GitHub 讓全世界看見——這篇從安裝到實戰，一次學完！"
 image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 tags: ["Git", "GitHub", "版本控制", "新手入門"]
-categories: ["基礎教學"]
+categories: ["版本控制", "Git"]
 ---
 
 你有沒有遇過這種情況：改了一堆程式碼，結果改壞了，想回到之前的版本，卻發現根本回不去？

@@ -5,7 +5,7 @@ draft: false
 description: "學完原生 JS 後，你會發現程式碼越寫越亂。Vue.js 就是來解救你的——讓你用更少的程式碼，做出更強大、更好維護的網頁。"
 image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 tags: ["Vue.js", "JavaScript", "前端框架", "新手入門"]
-categories: ["基礎教學"]
+categories: ["前端框架", "Vue"]
 ---
 
 上一篇我們用原生 JavaScript 做了計數器。雖然可以動，但你有沒有發現——當功能一多，程式碼就開始變得雜亂？

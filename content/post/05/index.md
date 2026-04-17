@@ -5,7 +5,7 @@ draft: false
 description: "HTML 是骨架、CSS 是外觀，JavaScript 才是讓網頁「動起來」的靈魂！這篇帶你從零開始，寫出你人生第一行 JS。"
 image: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 tags: ["JavaScript", "網頁基礎", "新手入門"]
-categories: ["基礎教學"]
+categories: ["JavaScript", "網頁基礎"]
 ---
 
 HTML 決定結構、CSS 決定外觀，但這兩樣東西做出來的網頁是**死的**——不管使用者怎麼點按鈕，頁面都不會有任何反應。

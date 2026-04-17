@@ -5,7 +5,7 @@ draft: false
 description: "還在用 margin 硬推元素位置？學會 Flexbox，左右並排、垂直置中這些讓新手崩潰的版面，5 行 CSS 就搞定！"
 image: "https://images.unsplash.com/photo-1545670723-196ed0954986?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 tags: ["CSS", "Flexbox", "排版", "新手入門"]
-categories: ["基礎教學"]
+categories: ["CSS", "排版"]
 ---
 
 上一篇學完 CSS 基礎，你已經能改顏色、換字型了。但你一定還遇過這個問題：**「為什麼我要的左右並排，偏偏是上下疊在一起？！」**
