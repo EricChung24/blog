@@ -11,11 +11,11 @@ links:
   - title: "Hong-Sheng Huang's Blog"
     description: "保持好奇心並付諸行動"
     website: "https://hshuang.blog/"
-    image: "https://hshuang.blog/img/Author_hu_16bff3d1ac624865.webp"
+    image: "https://hshuang.blog/img/Author_hu_a410431c219d33e1.jpg"
 
   - title: "Yuzen - Developer"
     description: "專注問題本身，也不斷向新的事物靠近。"
-    website: "https://www.yuzen.dev/zh-Hans"
+    website: "https://www.yuzen.dev/zh-Hant"
     image: "https://www.yuzen.dev/avatar.webp"
 
 menu:
