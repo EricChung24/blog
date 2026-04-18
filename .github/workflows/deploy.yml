@@ -9,6 +9,8 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        env:
+            FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
         permissions:
             # Give the default GITHUB_TOKEN write permission to commit and push the
@@ -34,7 +36,7 @@ jobs:
             - run: go version
 
             - name: Setup Hugo
-              uses: peaceiris/actions-hugo@v2
+              uses: peaceiris/actions-hugo@v3
               with:
                   hugo-version: "latest"
                   extended: true
