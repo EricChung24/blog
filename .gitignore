@@ -2,3 +2,7 @@ public
 resources
 .hugo_build.lock
 .gstack/
+.hugo_cache/
+.claude/
+bash.exe.stackdump
+yes
