@@ -77,7 +77,7 @@ enabled = true
 ## Comments
 [comments]
 enabled = true
-provider = "artalk"
+provider = "giscus"
 
 [comments.artalk]
 server = ""       # 填入你的 Artalk 伺服器網址，例如 https://artalk.example.com
@@ -133,13 +133,13 @@ serverName = "cactus.chat"
 siteName = ""
 
 [comments.giscus]
-repo = ""
-repoID = ""
-category = ""
-categoryID = ""
-mapping = ""
-lightTheme = ""
-darkTheme = ""
+repo = "EricChung24/blog"
+repoID = "R_kgDOQvBrhg"
+category = "Announcements"
+categoryID = "DIC_kwDOQvBrhs4C7Jcv"
+mapping = "pathname"
+lightTheme = "light"
+darkTheme = "dark_dimmed"
 reactionsEnabled = 1
 emitMetadata = 0
 
