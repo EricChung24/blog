@@ -9,12 +9,8 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-        env:
-            FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
         permissions:
-            # Give the default GITHUB_TOKEN write permission to commit and push the
-            # added or changed files to the repository.
             contents: write
 
         steps:
@@ -30,16 +26,11 @@ jobs:
                   path: resources
                   key: ${{ env.cache-name }}
 
-            - uses: actions/setup-go@v5
-              with:
-                  go-version: "^1.17.0"
-            - run: go version
-
             - name: Setup Hugo
-              uses: peaceiris/actions-hugo@v3
-              with:
-                  hugo-version: "latest"
-                  extended: true
+              run: |
+                  HUGO_VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | jq -r '.tag_name')
+                  wget -q "https://github.com/gohugoio/hugo/releases/download/${HUGO_VERSION}/hugo_extended_${HUGO_VERSION#v}_linux-amd64.deb" -O /tmp/hugo.deb
+                  sudo dpkg -i /tmp/hugo.deb
 
             - name: Build
               run: hugo --minify --gc
