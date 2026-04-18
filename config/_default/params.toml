@@ -77,7 +77,12 @@ enabled = true
 ## Comments
 [comments]
 enabled = true
-provider = "disqus"
+provider = "artalk"
+
+[comments.artalk]
+server = ""       # 填入你的 Artalk 伺服器網址，例如 https://artalk.example.com
+site   = "EricChung的程式勇者村"
+locale = "zh-TW"
 
 [comments.disqusjs]
 shortname = ""

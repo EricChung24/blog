@@ -1,0 +1,33 @@
+{{- with .Site.Params.comments.artalk -}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/artalk@latest/dist/Artalk.css">
+<script src="https://cdn.jsdelivr.net/npm/artalk@latest/dist/Artalk.js"></script>
+
+<div id="artalk-comments"></div>
+
+<style>
+    #artalk-comments {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        margin-top: 16px;
+    }
+    .atk-comment-wrap,
+    .atk-list-header,
+    .atk-editor-wrap {
+        color: var(--card-text-color-main);
+    }
+</style>
+
+<script>
+    Artalk.init({
+        el:        '#artalk-comments',
+        pageKey:   '{{ $.Page.RelPermalink }}',
+        pageTitle: '{{ $.Page.Title | htmlEscape }}',
+        server:    '{{ .server }}',
+        site:      '{{ .site }}',
+        locale:    '{{ default "zh-TW" .locale }}',
+        darkMode:  'auto',
+    });
+</script>
+{{- end -}}
