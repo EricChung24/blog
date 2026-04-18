@@ -357,6 +357,9 @@ body::after {
     position: relative;
     background: #1e1e2e;
 
+    /* 移除主題的 card-padding，讓 title bar 和程式碼撐滿全寬 */
+    padding: 0 !important;
+
     /* macOS title bar */
     &::before {
         content: '';
@@ -364,7 +367,6 @@ body::after {
         height: 40px;
         background: linear-gradient(90deg, #2a2a3d, #252535);
         border-bottom: 1px solid rgba(255,255,255,0.06);
-        flex-shrink: 0;
     }
 
     /* Traffic lights */
@@ -384,12 +386,24 @@ body::after {
     pre {
         border-radius: 0 !important;
         margin: 0 !important;
-        padding: 18px 22px 22px !important;
+        padding: 16px 22px 20px !important;
+        width: 100% !important;
         font-family: var(--code-font-family) !important;
         font-size: 1.4rem !important;
         line-height: 1.7 !important;
         background: #1e1e2e !important;
         overflow-x: auto;
+        box-sizing: border-box !important;
+    }
+
+    /* 有行號時的 table 結構也要撐滿 */
+    table {
+        width: 100%;
+        border-spacing: 0;
+    }
+
+    td.lntd:last-child {
+        width: 100%;
     }
 
     code {
