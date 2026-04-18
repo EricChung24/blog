@@ -33,7 +33,7 @@ jobs:
                   sudo dpkg -i /tmp/hugo.deb
 
             - name: Build
-              run: hugo --minify --gc
+              run: hugo --minify --gc --buildFuture
 
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4

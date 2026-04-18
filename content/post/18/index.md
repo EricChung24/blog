@@ -1,6 +1,6 @@
 ---
 title: "我的 Obsidian 知識庫長什麼樣？前端工程師的筆記系統建立方法"
-date: 2026-04-19
+date: 2026-04-19T00:00:00+08:00
 draft: false
 description: "分享我如何用 Obsidian 建立一套系統化的前端知識庫，從資料夾架構、筆記方法，到如何讓知識真正被內化。"
 image: "https://github.com/EricChung24/Obsidian-vault/blob/main/status.png?raw=true"
