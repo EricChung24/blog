@@ -1,7 +1,6 @@
 ---
 title: "新手第十步：Vite 入門　現代前端開發環境，快到你不敢相信！"
 date: 2026-04-17
-weight: 10
 draft: false
 description: "還在用 CDN 引入套件？Vite 讓你在 0.1 秒內啟動開發伺服器，熱更新快到眼睛跟不上，一鍵整合 Vue、Tailwind、SCSS，是現代前端的標配工具。"
 image: "https://sambitsahoo.com/vite-article.svg"

@@ -1,7 +1,6 @@
 ---
 title: "新手第九步：Tailwind CSS 入門　用 class 直接堆出你要的樣式！"
 date: 2026-04-17
-weight: 9
 draft: false
 description: "Tailwind 和 Bootstrap 完全不同——它不給你做好的元件，而是給你幾百個小 class 讓你自由組合。第一次看會覺得 HTML 很醜，用過就回不去了。"
 image: "https://image.blocktempo.com/2026/01/Tailwind-CSS-682x375.jpeg"

@@ -1,7 +1,6 @@
 ---
 title: "新手第六步：Vue.js 入門　前端框架到底在解決什麼問題？"
 date: 2026-04-17
-weight: 6
 draft: false
 description: "學完原生 JS 後，你會發現程式碼越寫越亂。Vue.js 就是來解救你的——讓你用更少的程式碼，做出更強大、更好維護的網頁。"
 image: "https://vuejs.org/logo.svg"

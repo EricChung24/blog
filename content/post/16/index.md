@@ -1,7 +1,6 @@
 ---
 title: "新手第十六步：CodePen 入門　不用建專案，也能立刻開始寫前端！"
 date: 2026-04-17
-weight: 16
 draft: false
 description: "剛學前端時，常常只是想試一小段 HTML、CSS、JavaScript，卻還要開資料夾、建檔案、跑 Live Server。CodePen 就是讓你打開瀏覽器就能直接寫前端的神器。"
 image: "https://assets.codepen.io/t-1/codepen-wordmark-black.png"

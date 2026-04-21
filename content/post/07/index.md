@@ -1,7 +1,6 @@
 ---
 title: "新手第七步：SCSS 入門　寫 CSS 終於不再複製貼上了！"
 date: 2026-04-17
-weight: 7
 draft: false
 description: "原生 CSS 寫久了會發現一個痛點：重複的顏色要改十幾個地方。SCSS 讓你用變數、巢狀、函式來寫 CSS，維護起來輕鬆十倍。"
 image: "https://pluginicons.craft-cdn.com/scssqTY8srJEesn2VFiUV73mUCyRIZsfXfDj2eOY.svg?1528091210"

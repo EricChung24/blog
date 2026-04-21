@@ -1,7 +1,6 @@
 ---
 title: "新手第三步：CSS 入門　讓你的網頁從黑白變彩色！"
 date: 2026-04-16
-weight: 3
 draft: false
 description: "學完 HTML 只有骨架，現在要替網頁穿上衣服了！5 分鐘帶你看懂 CSS 的核心觀念，讓你的網頁立刻好看起來。"
 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Uq-mdBRi7SDzGBxM2En69NJPvkynCsotvA&s"

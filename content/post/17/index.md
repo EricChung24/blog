@@ -1,7 +1,6 @@
 ---
 title: "新手第十七步：Figma 入門　前端工程師一定會碰到的設計工具"
 date: 2026-04-17
-weight: 17
 draft: false
 description: "你不一定是設計師，但只要做前端，幾乎一定會碰到 Figma。這篇帶你用新手聽得懂的方式，搞懂 Figma 是什麼、能做什麼，以及前端工程師最常怎麼用它。"
 image: "https://cdn.sanity.io/images/599r6htc/regionalized/5094051dac77593d0f0978bdcbabaf79e5bb855c-1080x1080.png?w=540&h=540&q=75&fit=max&auto=format"

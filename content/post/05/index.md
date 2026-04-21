@@ -1,7 +1,6 @@
 ---
 title: "新手第五步：JavaScript 入門　給你的網頁加上靈魂！"
 date: 2026-04-17
-weight: 5
 draft: false
 description: "HTML 是骨架、CSS 是外觀，JavaScript 才是讓網頁「動起來」的靈魂！這篇帶你從零開始，寫出你人生第一行 JS。"
 image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"

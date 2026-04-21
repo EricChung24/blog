@@ -1,7 +1,6 @@
 ---
 title: "新手第十二步：GitHub Pages 部署　免費讓你的網站上線，讓全世界看到！"
 date: 2026-04-17
-weight: 12
 draft: false
 description: "做完的作品放在電腦裡誰都看不到。這篇教你用 GitHub Pages 免費部署靜態網站，從靜態 HTML 到 Vite 專案全部涵蓋，5 分鐘讓你的網站有專屬網址！"
 image: "https://pages.github.com/images/logo.svg"

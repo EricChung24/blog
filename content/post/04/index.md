@@ -1,7 +1,6 @@
 ---
 title: "新手第四步：CSS Flexbox　排版終於不再靠感覺！"
 date: 2026-04-17
-weight: 4
 draft: false
 description: "還在用 margin 硬推元素位置？學會 Flexbox，左右並排、垂直置中這些讓新手崩潰的版面，5 行 CSS 就搞定！"
 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Uq-mdBRi7SDzGBxM2En69NJPvkynCsotvA&s"

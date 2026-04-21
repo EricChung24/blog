@@ -1,7 +1,6 @@
 ---
 title: "新手第八步：Bootstrap 5 入門　不會設計也能做出專業版面！"
 date: 2026-04-17
-weight: 8
 draft: false
 description: "還在從零開始寫 CSS？Bootstrap 5 提供了現成的元件庫，按鈕、導覽列、卡片通通有，讓你快速搭出專業的響應式網頁。"
 image: "https://i.imgur.com/B4jcvpV.png"

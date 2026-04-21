@@ -1,7 +1,6 @@
 ---
 title: "新手第一步：安裝 VS Code 打造你的網頁開發環境" 
 date: 2025-12-27 
-weight: 1
 draft: false
 description: "工欲善其事，必先利其器。手把手教你安裝最強大的程式碼編輯器 Visual Studio Code。" 
 image: "https://code.visualstudio.com/opengraphimg/opengraph-home.png" 
