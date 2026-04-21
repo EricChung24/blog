@@ -4,7 +4,7 @@ date: 2026-04-17
 weight: 8
 draft: false
 description: "還在從零開始寫 CSS？Bootstrap 5 提供了現成的元件庫，按鈕、導覽列、卡片通通有，讓你快速搭出專業的響應式網頁。"
-image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://i.imgur.com/B4jcvpV.png"
 tags: ["Bootstrap 5", "CSS 框架", "響應式設計", "新手入門"]
 categories: ["CSS 框架", "前端工具"]
 ---
