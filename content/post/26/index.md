@@ -1,5 +1,5 @@
 ---
-title: "OpenClaw 是什麼？那隻橘色龍蝦是你的私人 AI 助理"
+title: "OpenClaw 是什麼？那隻紅色龍蝦是你的私人 AI 助理"
 date: 2026-04-21T00:10:00+08:00
 draft: false
 description: "跑在你自己電腦上的開源 AI Agent，會收信、寫 code、控制瀏覽器、接 LINE，還能自己寫擴充套件。Peter Steinberger 做的這個工具，讓「擁有自己的 AI 助理」不再是夢話。"
@@ -10,7 +10,7 @@ categories: ["工具與工作流"]
 
 如果 Manus 是跑在別人家雲端的 AI 員工，那 **[OpenClaw](https://openclaw.ai)** 就是**住在你自己電腦裡**的那一個。
 
-Logo 是一隻橘色龍蝦，但別被可愛外表騙了——這其實是目前最有潛力的**本地端 AI Agent** 之一。
+Logo 是一隻紅色龍蝦，但別被可愛外表騙了——這其實是目前最有潛力的**本地端 AI Agent** 之一。
 
 ---
 
@@ -100,6 +100,24 @@ OpenClaw 最狂的一點：**它可以自己寫擴充套件**。
 3. 加進自己的能力清單
 
 **AI 幫 AI 自己擴充能力**，這個遞迴很有意思。
+
+---
+
+## 補充：Claude 本身也有 Agent 功能
+
+在講跟 Manus 的差異之前，值得提一下：
+
+**Anthropic 的 Claude 本身也有 Agent 能力**，叫做 **Claude Computer Use**（電腦使用）以及整合在 Claude.ai 的 **Projects + Tools** 功能。
+
+Claude 可以：
+
+- 控制瀏覽器、操作視窗（Computer Use）
+- 呼叫工具（搜尋網路、執行程式碼、讀取檔案）
+- 在 Projects 裡保存長期記憶與文件
+
+跟 OpenClaw 的差別是：Claude 的 agent 能力是**雲端服務、官方整合**，而 OpenClaw 是把 Claude 當成「大腦」，在**你的電腦上自主執行**。
+
+也就是說，OpenClaw + Claude API = 把 Claude 的智慧裝進一個跑在你家的機器人。
 
 ---
 
@@ -206,7 +224,7 @@ OpenClaw 還很新，會有 bug、會有奇怪行為。
 
 這個很多人問。
 
-OpenClaw 的 Logo 是一隻橘色龍蝦——「Claw」就是龍蝦的螯。
+OpenClaw 的 Logo 是一隻紅色龍蝦——「Claw」就是龍蝦的螯。
 
 這隱喻大概是：**有抓取、有操作、有個性，不是軟綿綿的助手**。
 
@@ -230,7 +248,7 @@ OpenClaw 的 Logo 是一隻橘色龍蝦——「Claw」就是龍蝦的螯。
 - 願意花點時間裝設定
 - 想有一個真正「屬於自己」的 AI 助理
 
-那這隻橘色龍蝦值得一試：
+那這隻紅色龍蝦值得一試：
 
 👉 [openclaw.ai](https://openclaw.ai)
 
