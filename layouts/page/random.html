@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隨機文章 | {{ .Site.Title }}</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #1a1a2e;
+            font-family: system-ui, sans-serif;
+        }
+        .container {
+            text-align: center;
+            color: #e0e0e0;
+        }
+        .emoji {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 1rem;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        p {
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="emoji">🎲</span>
+        <p>正在隨機挑選文章…</p>
+    </div>
+    <script>
+        const posts = [
+            {{ range where .Site.RegularPages "Type" "post" -}}
+            "{{ .RelPermalink }}",
+            {{ end -}}
+        ];
+        if (posts.length > 0) {
+            const random = posts[Math.floor(Math.random() * posts.length)];
+            window.location.replace(random);
+        }
+    </script>
+</body>
+</html>
