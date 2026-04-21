@@ -4,7 +4,7 @@ date: 2025-12-27
 weight: 1
 draft: false
 description: "工欲善其事，必先利其器。手把手教你安裝最強大的程式碼編輯器 Visual Studio Code。" 
-image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+image: "https://code.visualstudio.com/opengraphimg/opengraph-home.png" 
 tags: ["VS Code", "開發工具", "工具安裝", "新手入門"] 
 categories: ["前端工具", "工具安裝"] 
 ---

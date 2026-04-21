@@ -4,7 +4,7 @@ date: 2026-04-17
 weight: 15
 draft: false
 description: "你一定聽過 React，很紅、很多公司在用、職缺也很多。但 React 到底在解決什麼問題？這篇用新手聽得懂的方式，帶你一次搞懂 React 的核心觀念。"
-image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://legacy.reactjs.org/logo-og.png"
 tags: ["React", "JavaScript", "前端框架", "新手入門"]
 categories: ["React", "前端框架"]
 ---

@@ -4,7 +4,7 @@ date: 2026-04-17
 weight: 4
 draft: false
 description: "還在用 margin 硬推元素位置？學會 Flexbox，左右並排、垂直置中這些讓新手崩潰的版面，5 行 CSS 就搞定！"
-image: "https://images.unsplash.com/photo-1545670723-196ed0954986?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/512px-CSS3_logo_and_wordmark.svg.png"
 tags: ["CSS", "Flexbox", "排版", "新手入門"]
 categories: ["CSS", "排版"]
 ---

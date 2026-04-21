@@ -3,7 +3,7 @@ title: "部落格終於有留言板了！聊聊我為什麼選 Giscus"
 date: 2026-04-18
 draft: false
 description: "從零開始架這個部落格以來，一直有一件事沒做完——留言板。今天終於搞定了，順便聊聊為什麼選 Giscus，以及它怎麼運作的。"
-image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://avatars.githubusercontent.com/u/81452695?s=200&v=4"
 tags: ["Giscus", "Hugo", "部落格", "GitHub"]
 categories: ["部落格紀錄"]
 ---

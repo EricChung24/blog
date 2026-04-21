@@ -4,7 +4,7 @@ date: 2026-04-16
 weight: 3
 draft: false
 description: "學完 HTML 只有骨架，現在要替網頁穿上衣服了！5 分鐘帶你看懂 CSS 的核心觀念，讓你的網頁立刻好看起來。"
-image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/512px-CSS3_logo_and_wordmark.svg.png"
 tags: ["CSS", "網頁基礎", "新手入門"]
 categories: ["網頁基礎", "CSS"]
 ---

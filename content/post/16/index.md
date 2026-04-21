@@ -4,7 +4,7 @@ date: 2026-04-17
 weight: 16
 draft: false
 description: "剛學前端時，常常只是想試一小段 HTML、CSS、JavaScript，卻還要開資料夾、建檔案、跑 Live Server。CodePen 就是讓你打開瀏覽器就能直接寫前端的神器。"
-image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://assets.codepen.io/t-1/codepen-wordmark-black.png"
 tags: ["CodePen", "HTML", "CSS", "JavaScript", "新手入門", "前端工具"]
 categories: ["前端工具", "開發工具"]
 ---

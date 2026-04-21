@@ -4,7 +4,7 @@ date: 2026-04-17
 weight: 5
 draft: false
 description: "HTML 是骨架、CSS 是外觀，JavaScript 才是讓網頁「動起來」的靈魂！這篇帶你從零開始，寫出你人生第一行 JS。"
-image: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
 tags: ["JavaScript", "網頁基礎", "新手入門"]
 categories: ["JavaScript", "網頁基礎"]
 ---

@@ -4,7 +4,7 @@ date: 2026-04-17
 weight: 11
 draft: false
 description: "每個工程師都必備的技能。Git 讓你隨時回到過去的版本、和別人一起協作、把作品放上 GitHub 讓全世界看見——這篇從安裝到實戰，一次學完！"
-image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png"
 tags: ["Git", "GitHub", "版本控制", "新手入門"]
 categories: ["版本控制", "Git"]
 ---

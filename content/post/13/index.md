@@ -4,7 +4,7 @@ date: 2026-04-17
 weight: 13
 draft: false
 description: "靜態網頁的內容是死的，串接 API 才能讓你的網頁活起來！這篇從同步非同步的概念、fetch、Promise，到 async/await 和實戰 API 串接，一步一步帶你搞懂。"
-image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
 tags: ["JavaScript", "API", "Async", "Fetch", "新手入門"]
 categories: ["JavaScript", "API"]
 ---

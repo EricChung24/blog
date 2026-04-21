@@ -4,7 +4,7 @@ date: 2026-04-17
 weight: 17
 draft: false
 description: "你不一定是設計師，但只要做前端，幾乎一定會碰到 Figma。這篇帶你用新手聽得懂的方式，搞懂 Figma 是什麼、能做什麼，以及前端工程師最常怎麼用它。"
-image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://cdn.sanity.io/images/599r6htc/regionalized/5094051dac77593d0f0978bdcbabaf79e5bb855c-1080x1080.png?w=540&h=540&q=75&fit=max&auto=format"
 tags: ["Figma", "UI Design", "前端工具", "新手入門"]
 categories: ["前端工具", "設計工具"]
 ---
