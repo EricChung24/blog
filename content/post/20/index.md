@@ -3,7 +3,7 @@ title: "找免費圖片不用再怕版權：Unsplash 是前端工程師最好的
 date: 2026-04-20T00:10:00+08:00
 draft: false
 description: "免費、高畫質、可商用、不用標示來源——Unsplash 幾乎是我每個 side project 都會用到的圖庫網站。"
-image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://images.unsplash.com/photo-1495745966610-2a67f2297e5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 tags: ["Unsplash", "免費資源", "圖片素材", "前端工具"]
 categories: ["工具與工作流"]
 ---

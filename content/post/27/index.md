@@ -3,7 +3,7 @@ title: "LINE 跟 IG 要收費了，然後呢？"
 date: 2026-04-21T00:20:00+08:00
 draft: false
 description: "社群平台接連推出付費版，免費的東西終究要還。資料掌握在別人手裡，連說話的地方都是租來的——這是我開部落格的原因。"
-image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 tags: ["社群媒體", "數位主權", "部落格", "商業化", "隱私"]
 categories: ["生活與觀點"]
 ---

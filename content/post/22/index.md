@@ -3,7 +3,7 @@ title: "認識 Stack Overflow：工程師搜尋問題的第一站"
 date: 2026-04-20T00:30:00+08:00
 draft: false
 description: "從一個單純的問答網站，到全世界工程師每天會上的地方——這篇帶你認識 Stack Overflow 的起源、運作機制、以及在 AI 時代裡它還剩下什麼價值。"
-image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://images.unsplash.com/photo-1604933762021-5bba28545db1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 tags: ["Stack Overflow", "工程師文化", "開發者社群", "問答平台"]
 categories: ["工具與工作流"]
 ---

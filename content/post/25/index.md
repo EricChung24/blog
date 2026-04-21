@@ -3,7 +3,7 @@ title: "Manus 是什麼？那個被稱為「第一個真正能做事」的 AI Ag
 date: 2026-04-21T00:00:00+08:00
 draft: false
 description: "不是聊天機器人，而是會自己開瀏覽器、寫 code、跑腳本、交付檔案的 AI Agent。Manus 一推出就引爆討論，這篇帶你理解它到底在做什麼。"
-image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://files.manuscdn.com/assets/dashboard/materials/2025/12/15/cdfc0adf32479d5715866796f170441a34b6c8d6f0ffa14fcdae56c127a5df45.webp"
 tags: ["Manus", "AI Agent", "自動化", "AI 工具"]
 categories: ["工具與工作流"]
 ---

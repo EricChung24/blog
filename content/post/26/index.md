@@ -3,7 +3,7 @@ title: "OpenClaw 是什麼？那隻紅色龍蝦是你的私人 AI 助理"
 date: 2026-04-21T00:10:00+08:00
 draft: false
 description: "跑在你自己電腦上的開源 AI Agent，會收信、寫 code、控制瀏覽器、接 LINE，還能自己寫擴充套件。Peter Steinberger 做的這個工具，讓「擁有自己的 AI 助理」不再是夢話。"
-image: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://image.blocktempo.com/2026/03/f5d227bc122c1ba58f427c78f7b875d0-750x375.png"
 tags: ["OpenClaw", "AI Agent", "開源工具", "自動化", "隱私"]
 categories: ["工具與工作流"]
 ---
