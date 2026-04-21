@@ -4,7 +4,7 @@ date: 2026-04-17
 weight: 10
 draft: false
 description: "還在用 CDN 引入套件？Vite 讓你在 0.1 秒內啟動開發伺服器，熱更新快到眼睛跟不上，一鍵整合 Vue、Tailwind、SCSS，是現代前端的標配工具。"
-image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+image: "https://sambitsahoo.com/vite-article.svg"
 tags: ["Vite", "前端工具", "開發環境", "新手入門"]
 categories: ["前端工具", "開發環境"]
 ---
