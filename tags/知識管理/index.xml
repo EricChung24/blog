@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知識管理 on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/%E7%9F%A5%E8%AD%98%E7%AE%A1%E7%90%86/</link><description>Recent content in 知識管理 on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 20 Apr 2026 00:50:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/%E7%9F%A5%E8%AD%98%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>Notion 是什麼？把筆記、資料庫、協作、專案管理全部塞進一個地方的神器</title><link>https://ericchung24.github.io/blog/p/notion-%E6%98%AF%E4%BB%80%E9%BA%BC%E6%8A%8A%E7%AD%86%E8%A8%98%E8%B3%87%E6%96%99%E5%BA%AB%E5%8D%94%E4%BD%9C%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86%E5%85%A8%E9%83%A8%E5%A1%9E%E9%80%B2%E4%B8%80%E5%80%8B%E5%9C%B0%E6%96%B9%E7%9A%84%E7%A5%9E%E5%99%A8/</link><pubDate>Mon, 20 Apr 2026 00:50:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/notion-%E6%98%AF%E4%BB%80%E9%BA%BC%E6%8A%8A%E7%AD%86%E8%A8%98%E8%B3%87%E6%96%99%E5%BA%AB%E5%8D%94%E4%BD%9C%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86%E5%85%A8%E9%83%A8%E5%A1%9E%E9%80%B2%E4%B8%80%E5%80%8B%E5%9C%B0%E6%96%B9%E7%9A%84%E7%A5%9E%E5%99%A8/</guid><description>&lt;img src="https://www.notion.so/front-static/meta/default.png" alt="Featured image of post Notion 是什麼？把筆記、資料庫、協作、專案管理全部塞進一個地方的神器" /&gt;&lt;p&gt;有一類工具，第一次用會搞不清楚它到底是什麼。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Notion 就是這種工具。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;是筆記？是資料庫？是協作平台？是專案管理？是 Wiki？&lt;/p&gt;
+&lt;p&gt;答案是：&lt;strong&gt;以上皆是，而且可以自己組合。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;這個不明確的定位反而是它的強項，也是它有點難入門的原因。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="notion-是什麼"&gt;Notion 是什麼？
+&lt;/h2&gt;&lt;p&gt;官方說法是「&lt;strong&gt;All-in-one workspace&lt;/strong&gt;」——一個把筆記、文件、專案、資料庫、協作全部整合在一起的工作空間。&lt;/p&gt;
+&lt;p&gt;但這樣講很抽象。&lt;/p&gt;
+&lt;p&gt;更好理解的方式是把 Notion 想成&lt;strong&gt;一個積木盒&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每個「頁面」是一塊積木&lt;/li&gt;
+&lt;li&gt;每個頁面裡可以放文字、圖片、表格、看板、行事曆、連結、子頁面&lt;/li&gt;
+&lt;li&gt;這些積木可以自由組合、互相連結、拆裝重組&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以用同一套積木蓋出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;個人日記&lt;/li&gt;
+&lt;li&gt;團隊 Wiki&lt;/li&gt;
+&lt;li&gt;產品 roadmap&lt;/li&gt;
+&lt;li&gt;客戶管理系統（CRM）&lt;/li&gt;
+&lt;li&gt;讀書筆記&lt;/li&gt;
+&lt;li&gt;食譜收藏&lt;/li&gt;
+&lt;li&gt;旅遊規劃&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;工具是同一個，結果可以完全不同&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="核心概念block區塊"&gt;核心概念：Block（區塊）
+&lt;/h2&gt;&lt;p&gt;理解 Notion 之前，要先認識它最基本的單位：&lt;strong&gt;Block&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;在 Notion 裡面，&lt;strong&gt;所有東西都是 block&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一段文字是 block&lt;/li&gt;
+&lt;li&gt;一張圖片是 block&lt;/li&gt;
+&lt;li&gt;一個待辦項目是 block&lt;/li&gt;
+&lt;li&gt;一個資料庫是 block&lt;/li&gt;
+&lt;li&gt;一個子頁面也是 block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;每個 block 都可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;拖曳移動&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;轉換類型&lt;/strong&gt;（例如把一段文字轉成代辦項目）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;巢狀包起來&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個設計讓 Notion 的編輯體驗變得非常自由——&lt;strong&gt;你不是在填表格，而是在組裝&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="另一個殺手鐧database資料庫"&gt;另一個殺手鐧：Database（資料庫）
+&lt;/h2&gt;&lt;p&gt;如果 block 是 Notion 的骨架，&lt;strong&gt;database 就是它的靈魂&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Notion 的資料庫不是 Excel，更像是&lt;strong&gt;可以用不同角度檢視的同一份資料&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Table View&lt;/strong&gt; — 像試算表&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Board View&lt;/strong&gt; — 像 Trello 看板&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calendar View&lt;/strong&gt; — 像 Google Calendar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gallery View&lt;/strong&gt; — 像 Pinterest 卡片&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Timeline View&lt;/strong&gt; — 像甘特圖&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;List View&lt;/strong&gt; — 簡潔的清單&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;重點是&lt;/strong&gt;：同一筆資料，可以在不同 view 裡面以不同形式呈現。&lt;/p&gt;
+&lt;p&gt;例如一個「任務清單」：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;工程師用 Board View 管 Kanban&lt;/li&gt;
+&lt;li&gt;主管用 Timeline View 看時程&lt;/li&gt;
+&lt;li&gt;PM 用 Calendar View 追 deadline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;資料只有一份，視角各自不同&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="notion-最常見的用法"&gt;Notion 最常見的用法
+&lt;/h2&gt;&lt;p&gt;給一些實際的使用情境：&lt;/p&gt;
+&lt;h3 id="個人用途"&gt;個人用途
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;第二大腦&lt;/strong&gt;：把所有筆記、想法、靈感存在這裡&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;閱讀清單&lt;/strong&gt;：書、文章、Podcast 統一管理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;專案追蹤&lt;/strong&gt;：side project 的 task list&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;習慣追蹤&lt;/strong&gt;：每天運動、讀書打勾&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;旅遊規劃&lt;/strong&gt;：行程、預算、住宿整合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="工作用途"&gt;工作用途
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;公司 Wiki&lt;/strong&gt;：把 SOP、文件、會議記錄集中&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;產品 Roadmap&lt;/strong&gt;：功能、進度、負責人&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;客戶管理&lt;/strong&gt;：代替 CRM 的輕量版&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OKR 追蹤&lt;/strong&gt;：目標拆解、季度檢視&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;招募流程&lt;/strong&gt;：應徵者清單、面試紀錄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="團隊協作"&gt;團隊協作
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;共同編輯&lt;/strong&gt;：多人同時編輯，類似 Google Docs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;留言 &amp;amp; 標註&lt;/strong&gt;：&lt;code&gt;@某人&lt;/code&gt; 指派任務或討論&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;權限管理&lt;/strong&gt;：哪些頁面誰能看、誰能編輯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="notion-ai2022-年以後最大的改變"&gt;Notion AI：2022 年以後最大的改變
+&lt;/h2&gt;&lt;p&gt;2022 年 Notion 推出了內建的 AI 功能。&lt;/p&gt;
+&lt;p&gt;直接在頁面裡：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;自動寫作&lt;/strong&gt;：輸入標題，AI 幫你寫初稿&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;摘要長文&lt;/strong&gt;：一鍵把整頁內容壓縮成重點&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;翻譯&lt;/strong&gt;：直接轉換語言&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;改寫&lt;/strong&gt;：讓文字更正式 / 更口語 / 更簡短&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;問答&lt;/strong&gt;：根據整個 workspace 的資料回答問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最後這個「Q&amp;amp;A」功能有點像 NotebookLM，但範圍是你整個 Notion——等於整個工作空間變成可問答的知識庫。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="優點-vs-缺點"&gt;優點 vs 缺點
+&lt;/h2&gt;&lt;h3 id="優點"&gt;優點
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;超級彈性&lt;/strong&gt; — 幾乎什麼情境都能用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;跨平台&lt;/strong&gt; — Web、Mac、Windows、iOS、Android 全部有&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分享容易&lt;/strong&gt; — 一鍵產生公開連結，像迷你網站&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模板豐富&lt;/strong&gt; — 社群有幾千個免費模板可以抄&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;免費版就很好用&lt;/strong&gt; — 個人使用基本不用付費&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="缺點"&gt;缺點
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;速度不算快&lt;/strong&gt; — 頁面多、資料庫大的時候會 lag&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;離線支援差&lt;/strong&gt; — 幾乎是雲端依賴&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;學習曲線&lt;/strong&gt; — 第一次用會搞不清楚能幹嘛&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;太彈性反而難開始&lt;/strong&gt; — 空白頁面容易讓人不知道怎麼下手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;搜尋普通&lt;/strong&gt; — 跟 Obsidian、Roam 比起來，連結功能較弱&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="跟其他工具怎麼選"&gt;跟其他工具怎麼選？
+&lt;/h2&gt;&lt;p&gt;很多人會糾結 Notion vs Obsidian vs Evernote vs Apple Notes。&lt;/p&gt;
+&lt;p&gt;我自己的分法：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;需求&lt;/th&gt;
+&lt;th&gt;推薦&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;個人純筆記 + 雙向連結&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Obsidian&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;跟別人協作、做 Wiki、做資料庫&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Notion&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;快速記一些瑣事&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Apple Notes / Google Keep&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;深度寫作、長文&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Ulysses / iA Writer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;專案管理為主&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Linear / Asana&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Notion 最強的情境是「&lt;strong&gt;個人 + 協作都要、筆記 + 資料庫都要&lt;/strong&gt;」。&lt;/p&gt;
+&lt;p&gt;如果你只需要其中一部分，可能有更專精的工具。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="新手怎麼開始"&gt;新手怎麼開始？
+&lt;/h2&gt;&lt;p&gt;剛接觸 Notion 很容易「空白頁面恐懼症」——看著空白畫面不知道要做什麼。&lt;/p&gt;
+&lt;p&gt;建議這樣開始：&lt;/p&gt;
+&lt;h3 id="1-先用模板"&gt;1. 先用模板
+&lt;/h3&gt;&lt;p&gt;不要從零開始。&lt;/p&gt;
+&lt;p&gt;Notion 官方有 &lt;a class="link" href="https://www.notion.com/templates" target="_blank" rel="noopener"
+&gt;Template Gallery&lt;/a&gt;，找一個最接近你需求的模板，&lt;strong&gt;直接 duplicate 到你的 workspace&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="2-用一陣子再改"&gt;2. 用一陣子再改
+&lt;/h3&gt;&lt;p&gt;先照著模板用一兩週。&lt;/p&gt;
+&lt;p&gt;用的過程會自然發現「這裡不順、那裡多餘」，再開始客製化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不要還沒用就開始調結構&lt;/strong&gt;，通常會浪費很多時間。&lt;/p&gt;
+&lt;h3 id="3-一次只建一個系統"&gt;3. 一次只建一個系統
+&lt;/h3&gt;&lt;p&gt;新手最常犯的錯：&lt;strong&gt;一次想把筆記、任務、閱讀清單、專案管理全部移進 Notion&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;結果每個系統都半成品，最後放棄。&lt;/p&gt;
+&lt;p&gt;建議&lt;strong&gt;一次只搬一個&lt;/strong&gt;，用穩了再搬下一個。&lt;/p&gt;
+&lt;h3 id="4-學會-slash-command"&gt;4. 學會 Slash Command
+&lt;/h3&gt;&lt;p&gt;在 Notion 裡輸入 &lt;code&gt;/&lt;/code&gt;，會跳出所有 block 類型選單。&lt;/p&gt;
+&lt;p&gt;熟悉這個命令能大幅加速編輯。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="價格"&gt;價格
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方案&lt;/th&gt;
+&lt;th&gt;價格&lt;/th&gt;
+&lt;th&gt;適合&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Free&lt;/td&gt;
+&lt;td&gt;$0&lt;/td&gt;
+&lt;td&gt;個人使用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Plus&lt;/td&gt;
+&lt;td&gt;約 $10/月&lt;/td&gt;
+&lt;td&gt;小團隊&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Business&lt;/td&gt;
+&lt;td&gt;約 $18/月&lt;/td&gt;
+&lt;td&gt;公司&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Enterprise&lt;/td&gt;
+&lt;td&gt;聯繫&lt;/td&gt;
+&lt;td&gt;大型組織&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;個人使用免費版完全夠用&lt;/strong&gt;，除非你需要更多團隊成員、更多上傳空間、或高級權限管理。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Notion 不是一個工具，而是&lt;strong&gt;一個可以組合出任何工具的平台&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;一開始會覺得複雜、混亂、不知道怎麼用。&lt;/p&gt;
+&lt;p&gt;但一旦你建立起自己的系統，會發現它成為&lt;strong&gt;日常工作與思考的中心&lt;/strong&gt;——打開電腦第一件事就是開 Notion。&lt;/p&gt;
+&lt;p&gt;如果你還沒用過，推薦從一個模板開始：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://www.notion.com" target="_blank" rel="noopener"
+&gt;notion.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有時候一個好的工具，不是讓你做更多事，而是讓你&lt;strong&gt;把所有事情放在同一個地方&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>NotebookLM 是什麼？Google 的 AI 筆記助手，幫你把一堆資料變成可問答的知識庫</title><link>https://ericchung24.github.io/blog/p/notebooklm-%E6%98%AF%E4%BB%80%E9%BA%BCgoogle-%E7%9A%84-ai-%E7%AD%86%E8%A8%98%E5%8A%A9%E6%89%8B%E5%B9%AB%E4%BD%A0%E6%8A%8A%E4%B8%80%E5%A0%86%E8%B3%87%E6%96%99%E8%AE%8A%E6%88%90%E5%8F%AF%E5%95%8F%E7%AD%94%E7%9A%84%E7%9F%A5%E8%AD%98%E5%BA%AB/</link><pubDate>Mon, 20 Apr 2026 00:40:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/notebooklm-%E6%98%AF%E4%BB%80%E9%BA%BCgoogle-%E7%9A%84-ai-%E7%AD%86%E8%A8%98%E5%8A%A9%E6%89%8B%E5%B9%AB%E4%BD%A0%E6%8A%8A%E4%B8%80%E5%A0%86%E8%B3%87%E6%96%99%E8%AE%8A%E6%88%90%E5%8F%AF%E5%95%8F%E7%AD%94%E7%9A%84%E7%9F%A5%E8%AD%98%E5%BA%AB/</guid><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/notebookLM_v2_1.width-1000.format-webp.webp" alt="Featured image of post NotebookLM 是什麼？Google 的 AI 筆記助手，幫你把一堆資料變成可問答的知識庫" /&gt;&lt;p&gt;你一定遇過這種情境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手上一堆 PDF、會議記錄、研究報告，要整理成摘要&lt;/li&gt;
+&lt;li&gt;讀了十篇文章，要比較它們對同一個主題的觀點&lt;/li&gt;
+&lt;li&gt;YouTube 有一場 3 小時的演講，只想知道「他在第幾分鐘講了 XX」&lt;/li&gt;
+&lt;li&gt;準備考試或簡報，想把筆記變成可以互相問答的對象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以前這種事很花時間。&lt;/p&gt;
+&lt;p&gt;直到 Google 推出 &lt;strong&gt;&lt;a class="link" href="https://notebooklm.google.com" target="_blank" rel="noopener"
+&gt;NotebookLM&lt;/a&gt;&lt;/strong&gt;，整個遊戲規則變了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="notebooklm-是什麼"&gt;NotebookLM 是什麼？
+&lt;/h2&gt;&lt;p&gt;簡單一句話：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「把你自己的資料丟進去，它就變成一個只會根據這些資料回答的 AI 助手。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;跟 ChatGPT、Claude 最大的差別是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ChatGPT 會用它&lt;strong&gt;全網路的訓練資料&lt;/strong&gt;回答你&lt;/li&gt;
+&lt;li&gt;NotebookLM 只會用&lt;strong&gt;你上傳的那些文件&lt;/strong&gt;回答你&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個差別超級關鍵。&lt;/p&gt;
+&lt;p&gt;因為它表示：&lt;strong&gt;AI 不會亂掰（或至少亂掰的機率大幅降低）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你讀的資料、它讀的資料，是同一份。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="可以放什麼進去"&gt;可以放什麼進去？
+&lt;/h2&gt;&lt;p&gt;支援的來源類型越來越多，目前包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Docs / Slides&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;網頁 URL&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;YouTube 影片&lt;/strong&gt;（會自動抓字幕）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;音訊檔&lt;/strong&gt;（會自動轉文字）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;純文字貼上&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一個 notebook 可以放最多 &lt;strong&gt;50 個來源&lt;/strong&gt;（免費版）、300 個（Plus 版）。&lt;/p&gt;
+&lt;p&gt;每個來源的大小限制也不小（PDF 上限 500,000 字），對大部分情境夠用了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="最強的三個功能"&gt;最強的三個功能
+&lt;/h2&gt;&lt;h3 id="1-基於來源的問答"&gt;1. 基於來源的問答
+&lt;/h3&gt;&lt;p&gt;這是核心。&lt;/p&gt;
+&lt;p&gt;把資料丟進去後，你可以直接問：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「這幾篇文章對於 XX 議題，立場分別是什麼？」&lt;/li&gt;
+&lt;li&gt;「第 3 頁講的那個實驗，結論是什麼？」&lt;/li&gt;
+&lt;li&gt;「這本書的核心論點用三句話總結」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;每個回答都會附上「引用來源」&lt;/strong&gt;，點進去就能看到原文在哪一段。&lt;/p&gt;
+&lt;p&gt;這個 &lt;strong&gt;source citation&lt;/strong&gt; 功能是 NotebookLM 最讓人安心的地方——你可以驗證 AI 有沒有亂掰。&lt;/p&gt;
+&lt;h3 id="2-自動-podcastaudio-overview"&gt;2. 自動 Podcast（Audio Overview）
+&lt;/h3&gt;&lt;p&gt;這個功能剛推出的時候全網都在驚呼。&lt;/p&gt;
+&lt;p&gt;你丟一份資料進去，點一下「Generate Audio Overview」，它會&lt;strong&gt;自動生成一集兩個 AI 主持人對話的 Podcast&lt;/strong&gt;，就像真人在討論你的資料一樣。&lt;/p&gt;
+&lt;p&gt;聽起來像真人節目，而且內容是根據你的資料做的。&lt;/p&gt;
+&lt;p&gt;用途：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通勤聽自己的論文摘要&lt;/li&gt;
+&lt;li&gt;讀書會前快速掌握一本書&lt;/li&gt;
+&lt;li&gt;把枯燥的技術文件轉成好吸收的對話形式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;現在還支援多國語言（包含中文）。&lt;/p&gt;
+&lt;h3 id="3-mind-map心智圖"&gt;3. Mind Map（心智圖）
+&lt;/h3&gt;&lt;p&gt;上傳資料後，NotebookLM 可以自動生成&lt;strong&gt;一張心智圖&lt;/strong&gt;，把主要概念、子概念、彼此的關係視覺化。&lt;/p&gt;
+&lt;p&gt;對要做簡報、寫文章、理清思路的人，超級有用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="實際使用情境"&gt;實際使用情境
+&lt;/h2&gt;&lt;p&gt;我自己常用的幾種情境：&lt;/p&gt;
+&lt;h3 id="情境-1讀論文--研究報告"&gt;情境 1：讀論文 / 研究報告
+&lt;/h3&gt;&lt;p&gt;丟 5 篇相關主題的論文進去，問：「這些研究在方法論上有什麼差異？」&lt;/p&gt;
+&lt;p&gt;比自己一篇一篇讀快十倍。&lt;/p&gt;
+&lt;h3 id="情境-2工作文件彙整"&gt;情境 2：工作文件彙整
+&lt;/h3&gt;&lt;p&gt;把會議記錄、產品規格、使用者回饋全部丟進去。&lt;/p&gt;
+&lt;p&gt;需要某個決策背景時，直接問：「關於 XX 功能，之前做了什麼決定？為什麼？」&lt;/p&gt;
+&lt;h3 id="情境-3技術文件學習"&gt;情境 3：技術文件學習
+&lt;/h3&gt;&lt;p&gt;丟一份新工具的完整官方文件進去，問：「我要做 XX 的話，大概的流程是什麼？」&lt;/p&gt;
+&lt;p&gt;不用從頭讀 200 頁文件。&lt;/p&gt;
+&lt;h3 id="情境-4寫作素材整理"&gt;情境 4：寫作素材整理
+&lt;/h3&gt;&lt;p&gt;把相關文章、筆記、訪談稿丟進去。&lt;/p&gt;
+&lt;p&gt;寫作時問：「這個主題我之前有沒有寫過類似的觀點？」&lt;/p&gt;
+&lt;h3 id="情境-5面試準備"&gt;情境 5：面試準備
+&lt;/h3&gt;&lt;p&gt;把公司官網、產品文件、新聞報導丟進去。&lt;/p&gt;
+&lt;p&gt;問：「這家公司最近的策略方向是什麼？」「他們最大的競爭對手是誰？」&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="跟-chatgpt--claude-比起來呢"&gt;跟 ChatGPT / Claude 比起來呢？
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;NotebookLM&lt;/th&gt;
+&lt;th&gt;ChatGPT / Claude&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;基於自己資料&lt;/td&gt;
+&lt;td&gt;✅ 核心功能&lt;/td&gt;
+&lt;td&gt;有但要貼上&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;引用來源&lt;/td&gt;
+&lt;td&gt;✅ 每句都有&lt;/td&gt;
+&lt;td&gt;大部分沒有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;來源數量&lt;/td&gt;
+&lt;td&gt;50 份（免費）&lt;/td&gt;
+&lt;td&gt;受 context 限制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自動 Podcast&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;通用對話&lt;/td&gt;
+&lt;td&gt;弱&lt;/td&gt;
+&lt;td&gt;強&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;程式碼生成&lt;/td&gt;
+&lt;td&gt;弱&lt;/td&gt;
+&lt;td&gt;強&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;結論：&lt;strong&gt;NotebookLM 不是要取代 ChatGPT，是另一個用途&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;需要「基於特定資料做深度理解」時，用 NotebookLM；要「寫 code、寫文案、泛用對話」時，還是用 ChatGPT / Claude。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="幾個使用小技巧"&gt;幾個使用小技巧
+&lt;/h2&gt;&lt;h3 id="把相關資料放同一個-notebook"&gt;把相關資料放同一個 notebook
+&lt;/h3&gt;&lt;p&gt;NotebookLM 的回答品質，跟你給的來源品質高度相關。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不要把無關的資料塞在一起&lt;/strong&gt;，會互相干擾。建議一個主題開一個 notebook。&lt;/p&gt;
+&lt;h3 id="先問總結再問細節"&gt;先問「總結」再問細節
+&lt;/h3&gt;&lt;p&gt;新開一個 notebook，先丟資料問：「這些資料的主要內容是什麼？」&lt;/p&gt;
+&lt;p&gt;這樣你會對它「看到什麼」有個概念，後續問細節才知道怎麼問。&lt;/p&gt;
+&lt;h3 id="善用notes功能"&gt;善用「Notes」功能
+&lt;/h3&gt;&lt;p&gt;NotebookLM 裡面可以記 notes。&lt;/p&gt;
+&lt;p&gt;把自己的想法、問答結果存成 note，之後可以把這些 note 也變成新的來源。&lt;/p&gt;
+&lt;p&gt;等於&lt;strong&gt;你的思考會跟資料一起累積&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="定期清理來源"&gt;定期清理來源
+&lt;/h3&gt;&lt;p&gt;資料放太多會稀釋重點。&lt;/p&gt;
+&lt;p&gt;做完一個專案後，可以把這個 notebook 封存，開新的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="需要付費嗎"&gt;需要付費嗎？
+&lt;/h2&gt;&lt;p&gt;目前有兩個版本：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;價格&lt;/th&gt;
+&lt;th&gt;特色&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;免費版&lt;/td&gt;
+&lt;td&gt;$0&lt;/td&gt;
+&lt;td&gt;每個 notebook 50 個來源、基本功能都有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Plus&lt;/td&gt;
+&lt;td&gt;併入 Google AI Plus / Pro 方案&lt;/td&gt;
+&lt;td&gt;更多來源、更長使用時間、進階功能&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;免費版已經夠用，&lt;strong&gt;如果你只是想試試看，不用急著付費&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="資料安全"&gt;資料安全？
+&lt;/h2&gt;&lt;p&gt;這是 Google，大家關心的問題：「我的資料會被拿去訓練嗎？」&lt;/p&gt;
+&lt;p&gt;官方說明是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;個人免費版的資料不會被用來訓練模型&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;企業/教育版（Workspace）的資料完全隔離&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但還是有幾個原則：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;機密資料、公司機密不要上傳&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;客戶個資不要上傳&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如果不確定敏感程度，請遵守公司的資料政策&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;對個人學習、公開資料研究，NotebookLM 幾乎沒有安全疑慮。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;如果你是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;學生&lt;/strong&gt;：NotebookLM 可以把整學期的教材變成問答助手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;研究者&lt;/strong&gt;：可以快速整合多篇文獻&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工程師&lt;/strong&gt;：可以把技術文件變成隨時可查的 AI&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;寫作者&lt;/strong&gt;：可以把素材庫變成靈感來源&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一般上班族&lt;/strong&gt;：可以把工作文件變成「問問題就有答案」的系統&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個工具都值得試試看。&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://notebooklm.google.com" target="_blank" rel="noopener"
+&gt;notebooklm.google.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;用 Google 帳號就能登入，免費先玩一輪再說。&lt;/p&gt;</description></item><item><title>我的 Obsidian 知識庫長什麼樣？前端工程師的筆記系統建立方法</title><link>https://ericchung24.github.io/blog/p/%E6%88%91%E7%9A%84-obsidian-%E7%9F%A5%E8%AD%98%E5%BA%AB%E9%95%B7%E4%BB%80%E9%BA%BC%E6%A8%A3%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E7%AD%86%E8%A8%98%E7%B3%BB%E7%B5%B1%E5%BB%BA%E7%AB%8B%E6%96%B9%E6%B3%95/</link><pubDate>Sun, 19 Apr 2026 00:00:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/%E6%88%91%E7%9A%84-obsidian-%E7%9F%A5%E8%AD%98%E5%BA%AB%E9%95%B7%E4%BB%80%E9%BA%BC%E6%A8%A3%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E7%AD%86%E8%A8%98%E7%B3%BB%E7%B5%B1%E5%BB%BA%E7%AB%8B%E6%96%B9%E6%B3%95/</guid><description>&lt;img src="https://github.com/EricChung24/Obsidian-vault/blob/main/status.png?raw=true" alt="Featured image of post 我的 Obsidian 知識庫長什麼樣？前端工程師的筆記系統建立方法" /&gt;&lt;p&gt;工程師最怕的一件事，不是學不會，是&lt;strong&gt;學了又忘&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;看了一篇很棒的文章，當下覺得懂了，過三天回來看自己的 code 又像在看別人寫的。&lt;/p&gt;
+&lt;p&gt;這個問題困擾我很久。&lt;/p&gt;
+&lt;p&gt;直到我開始認真用 Obsidian，才覺得知識開始真正累積起來。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼選-obsidian"&gt;為什麼選 Obsidian？
+&lt;/h2&gt;&lt;p&gt;市面上的筆記工具不少：Notion、Evernote、Logseq……&lt;/p&gt;
+&lt;p&gt;我試過不少，最後回到 Obsidian，原因很簡單：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;本地純文字（Markdown）&lt;/strong&gt; — 資料永遠在自己電腦上，不依賴任何雲端服務&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;雙向連結&lt;/strong&gt; — 可以把不同主題的筆記串聯起來，像大腦一樣形成網狀結構&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;完全客製化&lt;/strong&gt; — 外掛生態系非常豐富，可以打造符合自己習慣的系統&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;速度快&lt;/strong&gt; — 不像 Notion 有時候載入要等，Obsidian 本地執行幾乎零延遲&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="知識庫的架構"&gt;知識庫的架構
+&lt;/h2&gt;&lt;p&gt;我的 Obsidian Vault 公開放在 GitHub 上：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://github.com/EricChung24/Obsidian-vault" target="_blank" rel="noopener"
+&gt;EricChung24/Obsidian-vault&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;整個 Vault 以&lt;strong&gt;前端工程師&lt;/strong&gt;的知識地圖為核心，目前分成 12 個資料夾：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;資料夾&lt;/th&gt;
+&lt;th&gt;主題&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;01-基礎技術&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;HTML、CSS、JavaScript 核心觀念&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;02-框架與函式庫&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;React、Vue、Angular 等框架&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;03-狀態管理&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Redux、Zustand、Pinia 等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;04-樣式解決方案&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Tailwind、CSS Modules、styled-components&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;05-建置工具&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Vite、Webpack、Rollup&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;06-測試&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Jest、Vitest、Cypress、Testing Library&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;07-效能優化&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Lazy loading、Bundle size、Core Web Vitals&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;08-瀏覽器與 Web APIs&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;DOM、事件迴圈、Fetch、Web Storage&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;09-設計模式&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;常見 Design Patterns 在前端的應用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;10-無障礙與資安&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;a11y、CSRF、XSS 防護&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;11-DevOps 與部署&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;CI/CD、Docker、Vercel、GitHub Actions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;12-面試準備&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;常見面試題整理與解題思路&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="目前的進度快照"&gt;目前的進度快照
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://github.com/EricChung24/Obsidian-vault/blob/main/status.png?raw=true"
+loading="lazy"
+alt="知識庫進度截圖"
+&gt;&lt;/p&gt;
+&lt;p&gt;這是現在 Vault 的大致狀態。&lt;/p&gt;
+&lt;p&gt;每個資料夾下面都在持續補充中，不是一次性整理好的，而是&lt;strong&gt;隨著學習推進慢慢長出來的&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="我怎麼記筆記"&gt;我怎麼記筆記？
+&lt;/h2&gt;&lt;p&gt;有一個關鍵觀念讓我的筆記系統變得更有用：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;不要只抄原文，要用自己的話重新解釋一遍。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這個方法叫做費曼技巧（Feynman Technique）。&lt;/p&gt;
+&lt;p&gt;做法很簡單：看完一個知識點，把書或文章闔上，嘗試用自己的話解釋給一個完全不懂的人聽。&lt;/p&gt;
+&lt;p&gt;如果解釋不出來，代表你還沒真正理解，回去重看。&lt;/p&gt;
+&lt;p&gt;所以我的筆記長這樣：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;## 什麼是閉包（Closure）？
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;函式記住了它被建立時的作用域，即使執行時已經離開了那個作用域。
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;### 用一句話說
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;「帶著背包的函式，背包裡裝著它出生時能看到的變數。」
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;### 常見應用
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 工廠函式
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 計數器
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; setTimeout 裡面的變數保留
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;重點是：&lt;strong&gt;有自己的比喻、有自己的例子&lt;/strong&gt;，不是複製貼上文件。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="雙向連結怎麼用"&gt;雙向連結怎麼用？
+&lt;/h2&gt;&lt;p&gt;Obsidian 最強的功能之一是 &lt;code&gt;[[雙向連結]]&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;舉例：我在筆記「React useEffect」裡面提到了閉包（stale closure），我就會加一個 &lt;code&gt;[[閉包（Closure）]]&lt;/code&gt; 的連結。&lt;/p&gt;
+&lt;p&gt;久了之後，Obsidian 的 Graph View 會畫出一張像這樣的網狀圖，讓你看到各個主題之間的關係。&lt;/p&gt;
+&lt;p&gt;這不只是整理筆記，而是&lt;strong&gt;讓你的理解可視化&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="這個系統對我的改變"&gt;這個系統對我的改變
+&lt;/h2&gt;&lt;p&gt;用 Obsidian 認真整理知識庫大概三到四個月了，有幾個明顯的變化：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;學新東西更快&lt;/strong&gt; — 因為舊的基礎筆記都在，不用每次從頭回想&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;面試準備更有系統&lt;/strong&gt; — &lt;code&gt;12-面試準備&lt;/code&gt; 那個資料夾，讓準備面試從「不知道從哪開始」變成有清單可以對照&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;記憶變得更深&lt;/strong&gt; — 動手整理一遍，比看十遍文章更有用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最重要的是：&lt;strong&gt;我終於有一個地方，可以放心把學到的東西存起來，知道以後找得回來。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="如果你也想建立自己的知識庫"&gt;如果你也想建立自己的知識庫
+&lt;/h2&gt;&lt;p&gt;幾個建議：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;不要等架構完整才開始&lt;/strong&gt; — 先隨手記，架構之後再整理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不要只複製貼上&lt;/strong&gt; — 用自己的話寫，哪怕寫得不好&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不要追求完整&lt;/strong&gt; — 知識庫是長出來的，不是一口氣建起來的&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;定期複習&lt;/strong&gt; — 配合 Spaced Repetition（間隔重複），Obsidian 有對應的外掛&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我的 Vault 是公開的，如果你也是前端工程師，歡迎參考或 fork 來用：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://github.com/EricChung24/Obsidian-vault" target="_blank" rel="noopener"
+&gt;github.com/EricChung24/Obsidian-vault&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;知識管理這件事，沒有標準答案。&lt;/p&gt;
+&lt;p&gt;重要的是找到一個&lt;strong&gt;你願意持續用下去的系統&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Obsidian 對我來說就是這個系統。&lt;/p&gt;</description></item></channel></rss>

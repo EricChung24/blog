@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manus on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/manus/</link><description>Recent content in Manus on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 21 Apr 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/manus/index.xml" rel="self" type="application/rss+xml"/><item><title>Manus 是什麼？那個被稱為「第一個真正能做事」的 AI Agent</title><link>https://ericchung24.github.io/blog/p/manus-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E5%80%8B%E8%A2%AB%E7%A8%B1%E7%82%BA%E7%AC%AC%E4%B8%80%E5%80%8B%E7%9C%9F%E6%AD%A3%E8%83%BD%E5%81%9A%E4%BA%8B%E7%9A%84-ai-agent/</link><pubDate>Tue, 21 Apr 2026 00:00:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/manus-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E5%80%8B%E8%A2%AB%E7%A8%B1%E7%82%BA%E7%AC%AC%E4%B8%80%E5%80%8B%E7%9C%9F%E6%AD%A3%E8%83%BD%E5%81%9A%E4%BA%8B%E7%9A%84-ai-agent/</guid><description>&lt;img src="https://files.manuscdn.com/assets/dashboard/materials/2025/12/15/cdfc0adf32479d5715866796f170441a34b6c8d6f0ffa14fcdae56c127a5df45.webp" alt="Featured image of post Manus 是什麼？那個被稱為「第一個真正能做事」的 AI Agent" /&gt;&lt;p&gt;2025 年 3 月，一個叫 &lt;strong&gt;&lt;a class="link" href="https://manus.im" target="_blank" rel="noopener"
+&gt;Manus&lt;/a&gt;&lt;/strong&gt; 的網站突然在全網爆紅。&lt;/p&gt;
+&lt;p&gt;不是因為它是「又一個 ChatGPT」，而是因為它展示了一件以前只存在 demo 影片裡的事：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;你丟一個任務，它真的會自己去完成，然後把結果交給你。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不是給你一段建議、不是給你一個 outline——是&lt;strong&gt;直接把做好的東西丟到你面前&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="manus-是什麼"&gt;Manus 是什麼？
+&lt;/h2&gt;&lt;p&gt;Manus 是一個「通用型 AI Agent」。&lt;/p&gt;
+&lt;p&gt;跟純對話型 AI 最大的差別：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;類型&lt;/th&gt;
+&lt;th&gt;你給它什麼&lt;/th&gt;
+&lt;th&gt;它給你什麼&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ChatGPT（對話模式）&lt;/td&gt;
+&lt;td&gt;問題&lt;/td&gt;
+&lt;td&gt;回答（文字）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Claude（對話模式）&lt;/td&gt;
+&lt;td&gt;問題&lt;/td&gt;
+&lt;td&gt;回答（文字）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Claude（Agent 模式）&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;任務&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;成品&lt;/strong&gt;（有工具呼叫、可執行動作）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Manus&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;任務&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;成品&lt;/strong&gt;（檔案、網站、報告、腳本）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;補充：&lt;/strong&gt; Claude 現在也有 Agent 能力了——&lt;strong&gt;Claude Computer Use&lt;/strong&gt; 可以操控瀏覽器和桌面，&lt;strong&gt;Claude.ai&lt;/strong&gt; 內建的工具模式可以搜尋網路、執行程式碼、讀寫檔案。兩者的主要差異在於 Manus 有獨立的雲端 VM 和完整的任務交付流程，Claude Agent 則更強調與對話的整合。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你可以想像成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「你雇了一個遠端助理，他有電腦、有瀏覽器、會寫 code、會上網查資料，然後他真的會把事情做完。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="它到底怎麼運作"&gt;它到底怎麼運作？
+&lt;/h2&gt;&lt;p&gt;Manus 的核心機制是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;接收任務&lt;/strong&gt; — 你用自然語言描述目標&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;拆解步驟&lt;/strong&gt; — 自動規劃要做哪些事&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;開虛擬電腦&lt;/strong&gt; — 它在雲端會有一台自己的電腦&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;執行&lt;/strong&gt; — 開瀏覽器、寫 code、跑程式、下載資料、查資料&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;回報 &amp;amp; 交付&lt;/strong&gt; — 完成後把檔案或成果丟給你&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;重點是中間的過程&lt;strong&gt;你都看得到&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Manus 有一個「即時操作畫面」，像直播一樣看它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;滑鼠移到哪&lt;/li&gt;
+&lt;li&gt;開了哪些分頁&lt;/li&gt;
+&lt;li&gt;打了什麼 code&lt;/li&gt;
+&lt;li&gt;搜尋了什麼&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個透明度讓人用起來很安心——它不是黑盒子。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="實際可以做什麼"&gt;實際可以做什麼？
+&lt;/h2&gt;&lt;p&gt;網路上流傳的經典案例：&lt;/p&gt;
+&lt;h3 id="案例-1履歷分析"&gt;案例 1：履歷分析
+&lt;/h3&gt;&lt;p&gt;丟一份 PDF 履歷，說：「分析這個人適不適合我們公司的 senior engineer 職缺。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;讀完履歷&lt;/li&gt;
+&lt;li&gt;上網查這個人的 GitHub、LinkedIn&lt;/li&gt;
+&lt;li&gt;分析技能匹配度&lt;/li&gt;
+&lt;li&gt;產出一份完整的評估報告（含建議面試問題）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="案例-2出差行程規劃"&gt;案例 2：出差行程規劃
+&lt;/h3&gt;&lt;p&gt;「我下週要去東京三天，預算 5 萬台幣，想看動漫相關景點。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;查機票、訂機票流程（提供連結給你確認）&lt;/li&gt;
+&lt;li&gt;排三天行程（含交通時間）&lt;/li&gt;
+&lt;li&gt;列出動漫景點、餐廳&lt;/li&gt;
+&lt;li&gt;輸出一份完整的行程表（Excel / PDF）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="案例-3股票研究"&gt;案例 3：股票研究
+&lt;/h3&gt;&lt;p&gt;「分析 NVIDIA 最近三個月的走勢，做一份投資建議報告。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;抓股價資料&lt;/li&gt;
+&lt;li&gt;查最新新聞&lt;/li&gt;
+&lt;li&gt;跑分析腳本、畫圖&lt;/li&gt;
+&lt;li&gt;產出一份帶圖表的研究報告&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="案例-4網站建置"&gt;案例 4：網站建置
+&lt;/h3&gt;&lt;p&gt;「幫我做一個寵物領養平台的 prototype。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;設計資料結構&lt;/li&gt;
+&lt;li&gt;寫 HTML / CSS / JavaScript&lt;/li&gt;
+&lt;li&gt;做出能點擊互動的 demo&lt;/li&gt;
+&lt;li&gt;部署到可以公開訪問的網址&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="跟其他-ai-agent-有什麼不同"&gt;跟其他 AI Agent 有什麼不同？
+&lt;/h2&gt;&lt;p&gt;現在宣稱「AI Agent」的工具一堆，但 Manus 出來的時候引爆討論，有幾個原因：&lt;/p&gt;
+&lt;h3 id="1-真的做完不是建議怎麼做"&gt;1. 真的「做完」，不是「建議怎麼做」
+&lt;/h3&gt;&lt;p&gt;很多 AI Agent 會告訴你：「你可以這樣做、那樣做……」&lt;/p&gt;
+&lt;p&gt;Manus 是&lt;strong&gt;直接做完，給你交付品&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;這個差別在工作流程裡面是天與地。&lt;/p&gt;
+&lt;h3 id="2-多工具協作"&gt;2. 多工具協作
+&lt;/h3&gt;&lt;p&gt;它不是只會寫 code 的 AI，也不是只會查資料的 AI——&lt;strong&gt;該用什麼工具就用什麼工具&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;寫 Excel、做 PDF、寫 Python、開瀏覽器截圖、部署網站，全部都在同一個 agent 裡面。&lt;/p&gt;
+&lt;h3 id="3-執行過程透明"&gt;3. 執行過程透明
+&lt;/h3&gt;&lt;p&gt;看得到它在做什麼，出錯可以中途介入。&lt;/p&gt;
+&lt;p&gt;這比「丟進去等結果」的黑盒 agent 好用太多。&lt;/p&gt;
+&lt;h3 id="4-非同步工作"&gt;4. 非同步工作
+&lt;/h3&gt;&lt;p&gt;Manus 在雲端跑，&lt;strong&gt;你可以關掉瀏覽器去吃飯&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;它自己會繼續做，完成後通知你。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="它適合誰用"&gt;它適合誰用？
+&lt;/h2&gt;&lt;h3 id="非常適合"&gt;非常適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PM / 分析師&lt;/strong&gt; — 要做研究報告、競品分析&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;行銷 / 內容&lt;/strong&gt; — 要做主題研究、素材整理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工程師&lt;/strong&gt; — 做快速原型、腳本自動化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;獨立工作者&lt;/strong&gt; — 一個人要處理很多雜事&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="比較不適合"&gt;比較不適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;只需要簡單問答&lt;/strong&gt; — 用 ChatGPT 或 Claude 對話模式就好&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;需要 Agent 但想整合對話&lt;/strong&gt; — Claude Agent 模式可能更順手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;需要高度精確的專業領域&lt;/strong&gt;（醫療、法律）— 還是要專家審核&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;大量重複性工作&lt;/strong&gt; — 直接寫自動化腳本更穩定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="限制與問題"&gt;限制與問題
+&lt;/h2&gt;&lt;p&gt;用一陣子會發現幾個實際問題：&lt;/p&gt;
+&lt;h3 id="1-慢"&gt;1. 慢
+&lt;/h3&gt;&lt;p&gt;一個任務常常要跑 15–60 分鐘。&lt;/p&gt;
+&lt;p&gt;雖然可以非同步，但急件不適合。&lt;/p&gt;
+&lt;h3 id="2-會迷路"&gt;2. 會迷路
+&lt;/h3&gt;&lt;p&gt;複雜任務有時候它會卡住、重複、做到偏掉。&lt;/p&gt;
+&lt;p&gt;需要你中途給提示把它拉回來。&lt;/p&gt;
+&lt;h3 id="3-貴"&gt;3. 貴
+&lt;/h3&gt;&lt;p&gt;不是免費服務，用得多要付訂閱或買點數。&lt;/p&gt;
+&lt;h3 id="4-資料安全"&gt;4. 資料安全
+&lt;/h3&gt;&lt;p&gt;任務會在它的雲端 VM 跑，&lt;strong&gt;敏感資料、公司機密不要丟進去&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="5-還不夠穩定"&gt;5. 還不夠穩定
+&lt;/h3&gt;&lt;p&gt;畢竟是新一代產品，會有 bug、會有錯誤，不能 100% 依賴。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼開始用"&gt;怎麼開始用？
+&lt;/h2&gt;&lt;h3 id="1-去-manusim-註冊"&gt;1. 去 &lt;a class="link" href="https://manus.im" target="_blank" rel="noopener"
+&gt;manus.im&lt;/a&gt; 註冊
+&lt;/h3&gt;&lt;p&gt;早期要 waitlist，現在已經開放註冊（但可能有排隊或點數限制）。&lt;/p&gt;
+&lt;h3 id="2-從小任務開始"&gt;2. 從小任務開始
+&lt;/h3&gt;&lt;p&gt;不要一開始就丟「幫我做一個完整的 SaaS 產品」。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先從單一、清晰的任務&lt;/strong&gt;試手感：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「分析這份 PDF 的重點」&lt;/li&gt;
+&lt;li&gt;「查一下 XX 工具和 YY 工具的差異」&lt;/li&gt;
+&lt;li&gt;「把這段 CSV 轉成圖表」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-學會給好指令"&gt;3. 學會給好指令
+&lt;/h3&gt;&lt;p&gt;Manus 吃得懂自然語言，但&lt;strong&gt;越清楚越好&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;告訴它最終產出物是什麼格式&lt;/li&gt;
+&lt;li&gt;給它限制條件（預算、時間、風格）&lt;/li&gt;
+&lt;li&gt;給參考範例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4-善用中斷和修正"&gt;4. 善用「中斷」和「修正」
+&lt;/h3&gt;&lt;p&gt;任務跑一半發現不對，直接打斷它、給新指令。&lt;/p&gt;
+&lt;p&gt;不要從頭等它做完才發現白做一場。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="它會取代工程師--分析師嗎"&gt;它會取代工程師 / 分析師嗎？
+&lt;/h2&gt;&lt;p&gt;這是 Manus 剛推出時最熱門的討論。&lt;/p&gt;
+&lt;p&gt;我的觀察：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;短期內不會&lt;/strong&gt;。Manus 能做的事，&lt;strong&gt;有能力判斷好壞的人&lt;/strong&gt;才用得好&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;會改變分工&lt;/strong&gt;。以後一個人能做以前十個人做的雜事&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基礎工作會被吃掉&lt;/strong&gt;。整理資料、寫簡單腳本、做 PPT 模板——這類工作會縮水&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高階判斷更珍貴&lt;/strong&gt;。「要不要做」、「做到什麼程度」、「怎麼跟商業結合」這些還是要人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;簡單講：&lt;strong&gt;它不是取代你，是讓會用它的人比不會用的人多做十倍事情。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Manus 是 AI 工具進化的一個分水嶺——&lt;strong&gt;從「回答問題」變成「交付成果」&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;雖然還有很多不穩定、還有很多做不到的事，但方向很清楚：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;未來的 AI 工具，會越來越像「數位員工」，而不是「搜尋引擎」。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果你想感受一下這個改變：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://manus.im" target="_blank" rel="noopener"
+&gt;manus.im&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;挑一個你平常會自己做的小任務，丟給它試試看。體感可能會超過你的預期。&lt;/p&gt;</description></item></channel></rss>

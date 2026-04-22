@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OpenClaw on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/openclaw/</link><description>Recent content in OpenClaw on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 21 Apr 2026 00:10:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/openclaw/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenClaw 是什麼？那隻紅色龍蝦是你的私人 AI 助理</title><link>https://ericchung24.github.io/blog/p/openclaw-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E9%9A%BB%E7%B4%85%E8%89%B2%E9%BE%8D%E8%9D%A6%E6%98%AF%E4%BD%A0%E7%9A%84%E7%A7%81%E4%BA%BA-ai-%E5%8A%A9%E7%90%86/</link><pubDate>Tue, 21 Apr 2026 00:10:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/openclaw-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E9%9A%BB%E7%B4%85%E8%89%B2%E9%BE%8D%E8%9D%A6%E6%98%AF%E4%BD%A0%E7%9A%84%E7%A7%81%E4%BA%BA-ai-%E5%8A%A9%E7%90%86/</guid><description>&lt;img src="https://image.blocktempo.com/2026/03/f5d227bc122c1ba58f427c78f7b875d0-750x375.png" alt="Featured image of post OpenClaw 是什麼？那隻紅色龍蝦是你的私人 AI 助理" /&gt;&lt;p&gt;如果 Manus 是跑在別人家雲端的 AI 員工，那 &lt;strong&gt;&lt;a class="link" href="https://openclaw.ai" target="_blank" rel="noopener"
+&gt;OpenClaw&lt;/a&gt;&lt;/strong&gt; 就是&lt;strong&gt;住在你自己電腦裡&lt;/strong&gt;的那一個。&lt;/p&gt;
+&lt;p&gt;Logo 是一隻紅色龍蝦，但別被可愛外表騙了——這其實是目前最有潛力的&lt;strong&gt;本地端 AI Agent&lt;/strong&gt; 之一。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="openclaw-是什麼"&gt;OpenClaw 是什麼？
+&lt;/h2&gt;&lt;p&gt;一句話：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「一個跑在你自己電腦上的開源 AI 助理，會自己做事、有記憶、能接通訊軟體，還能自己寫擴充套件。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;作者是 &lt;strong&gt;Peter Steinberger&lt;/strong&gt;（iOS 開發圈的老朋友，以前做 PSPDFKit），在 2025 年推出的個人專案。&lt;/p&gt;
+&lt;p&gt;跟主流 AI 產品最大的差異：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;ChatGPT / Claude / Manus&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;跑在哪&lt;/td&gt;
+&lt;td&gt;別人家雲端&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;你自己電腦&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;資料&lt;/td&gt;
+&lt;td&gt;上傳到對方伺服器&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;全程留在本地&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;擴充&lt;/td&gt;
+&lt;td&gt;官方提供&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;自己寫 / 社群共享&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;費用&lt;/td&gt;
+&lt;td&gt;訂閱費&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;開源免費&lt;/strong&gt;（只付 API 費用）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;整合度&lt;/td&gt;
+&lt;td&gt;有限&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;想接什麼就接什麼&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼這個東西值得注意"&gt;為什麼這個東西值得注意？
+&lt;/h2&gt;&lt;p&gt;因為它解決了一個很多人有的焦慮：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「我想要 AI 幫我做事，但我不想把所有資料都給 OpenAI / Anthropic。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;OpenClaw 的設計哲學很明確：&lt;strong&gt;Privacy-first&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;跑在你自己的 Mac / Windows / Linux 上&lt;/li&gt;
+&lt;li&gt;記憶資料存在本機&lt;/li&gt;
+&lt;li&gt;要不要呼叫雲端 AI（Claude、GPT）由你決定&lt;/li&gt;
+&lt;li&gt;也可以接本地 LLM（Ollama 之類）完全離線&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;等於是把「AI 助理」這件事&lt;strong&gt;從雲端服務變成一個你擁有的程式&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="它能做什麼"&gt;它能做什麼？
+&lt;/h2&gt;&lt;p&gt;官方列出 50+ 整合，但真正厲害的是&lt;strong&gt;它能自己組合這些整合&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;幾個常見情境：&lt;/p&gt;
+&lt;h3 id="情境-1訊息助理"&gt;情境 1：訊息助理
+&lt;/h3&gt;&lt;p&gt;接上 &lt;strong&gt;LINE / Telegram / WhatsApp / Slack / iMessage / Signal / Discord&lt;/strong&gt;，你可以直接傳訊息給它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「幫我整理今天的 GitHub 通知」&lt;/li&gt;
+&lt;li&gt;「搜一下這個餐廳的評價」&lt;/li&gt;
+&lt;li&gt;「提醒我下午 3 點開會」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不用開電腦、不用開瀏覽器，手機傳訊息就完事。&lt;/p&gt;
+&lt;h3 id="情境-2email-處理"&gt;情境 2：Email 處理
+&lt;/h3&gt;&lt;p&gt;接 Gmail 之後，可以說：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「把今天所有未讀信分類，重要的摘要給我」&lt;/li&gt;
+&lt;li&gt;「回覆這封信，語氣要客氣但堅定」&lt;/li&gt;
+&lt;li&gt;「把這封信的附件存到 Obsidian 的 2026-04 資料夾」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="情境-3coding-助手"&gt;情境 3：coding 助手
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;「幫我把這個 repo clone 下來，跑測試看看哪裡壞了」&lt;/li&gt;
+&lt;li&gt;「查一下昨天 push 的 commit 有沒有影響 production」&lt;/li&gt;
+&lt;li&gt;「把這段程式重寫成 TypeScript」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="情境-4生活雜事"&gt;情境 4：生活雜事
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;「訂今晚 7 點的餐廳」&lt;/li&gt;
+&lt;li&gt;「Spotify 放點 jazz」&lt;/li&gt;
+&lt;li&gt;「把今天的支出記進我的財務 Google Sheet」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="情境-5自我擴充"&gt;情境 5：自我擴充
+&lt;/h3&gt;&lt;p&gt;OpenClaw 最狂的一點：&lt;strong&gt;它可以自己寫擴充套件&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你說：「我想要一個能自動抓 Hacker News 前 10 名摘要的功能。」&lt;/p&gt;
+&lt;p&gt;它會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;寫一個新的 skill（擴充模組）&lt;/li&gt;
+&lt;li&gt;測試它&lt;/li&gt;
+&lt;li&gt;加進自己的能力清單&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;AI 幫 AI 自己擴充能力&lt;/strong&gt;，這個遞迴很有意思。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="補充claude-本身也有-agent-功能"&gt;補充：Claude 本身也有 Agent 功能
+&lt;/h2&gt;&lt;p&gt;在講跟 Manus 的差異之前，值得提一下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Anthropic 的 Claude 本身也有 Agent 能力&lt;/strong&gt;，叫做 &lt;strong&gt;Claude Computer Use&lt;/strong&gt;（電腦使用）以及整合在 Claude.ai 的 &lt;strong&gt;Projects + Tools&lt;/strong&gt; 功能。&lt;/p&gt;
+&lt;p&gt;Claude 可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;控制瀏覽器、操作視窗（Computer Use）&lt;/li&gt;
+&lt;li&gt;呼叫工具（搜尋網路、執行程式碼、讀取檔案）&lt;/li&gt;
+&lt;li&gt;在 Projects 裡保存長期記憶與文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;跟 OpenClaw 的差別是：Claude 的 agent 能力是&lt;strong&gt;雲端服務、官方整合&lt;/strong&gt;，而 OpenClaw 是把 Claude 當成「大腦」，在&lt;strong&gt;你的電腦上自主執行&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;也就是說，OpenClaw + Claude API = 把 Claude 的智慧裝進一個跑在你家的機器人。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="跟-manus-有什麼不同"&gt;跟 Manus 有什麼不同？
+&lt;/h2&gt;&lt;p&gt;前一篇才介紹完 Manus，很多人會問：「這兩個差在哪？」&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;Manus&lt;/th&gt;
+&lt;th&gt;OpenClaw&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;執行位置&lt;/td&gt;
+&lt;td&gt;雲端 VM&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;本機&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;是否開源&lt;/td&gt;
+&lt;td&gt;❌ 封閉&lt;/td&gt;
+&lt;td&gt;✅ &lt;strong&gt;開源&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;訊息介面&lt;/td&gt;
+&lt;td&gt;只有網頁&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;7+ 通訊軟體&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;記憶&lt;/td&gt;
+&lt;td&gt;單次任務&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;長期累積&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;擴充&lt;/td&gt;
+&lt;td&gt;官方主導&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;任何人可寫&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;門檻&lt;/td&gt;
+&lt;td&gt;註冊就能用&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;要自己安裝&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;講白一點：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Manus&lt;/strong&gt; 像一個你租的雲端員工——好用、高階、但要付錢、資料給對方&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt; 像一個你自己養的助手——要花時間調教、但完全是自己的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼安裝"&gt;怎麼安裝？
+&lt;/h2&gt;&lt;p&gt;OpenClaw 是開源的，安裝流程大致是：&lt;/p&gt;
+&lt;h3 id="1-安裝主程式"&gt;1. 安裝主程式
+&lt;/h3&gt;&lt;p&gt;Mac / Windows / Linux 都有安裝包，到 &lt;a class="link" href="https://openclaw.ai" target="_blank" rel="noopener"
+&gt;openclaw.ai&lt;/a&gt; 下載。&lt;/p&gt;
+&lt;h3 id="2-提供-api-key"&gt;2. 提供 API Key
+&lt;/h3&gt;&lt;p&gt;你要有一個 LLM 能力來源，可選：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Anthropic API&lt;/strong&gt;（Claude）— 推薦，能力最強&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenAI API&lt;/strong&gt;（GPT）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ollama&lt;/strong&gt;（本地模型，完全離線）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-授權要接的服務"&gt;3. 授權要接的服務
+&lt;/h3&gt;&lt;p&gt;想接 Gmail 就 OAuth 授權 Gmail，想接 LINE 就做 LINE bot 綁定。&lt;/p&gt;
+&lt;h3 id="4-開始對話"&gt;4. 開始對話
+&lt;/h3&gt;&lt;p&gt;裝好後第一次跟它講話，它會記住你的偏好。&lt;/p&gt;
+&lt;p&gt;比如你說：「我叫 Eric，平常用 Notion 做筆記，習慣早上 6 點起床。」&lt;/p&gt;
+&lt;p&gt;之後它都記得。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="使用的幾個注意事項"&gt;使用的幾個注意事項
+&lt;/h2&gt;&lt;h3 id="1-它是個-alpha-階段的工具"&gt;1. 它是個 alpha 階段的工具
+&lt;/h3&gt;&lt;p&gt;OpenClaw 還很新，會有 bug、會有奇怪行為。&lt;/p&gt;
+&lt;p&gt;不建議用在&lt;strong&gt;絕對不能出錯&lt;/strong&gt;的工作流（例如付款、發正式信件給客戶）。&lt;/p&gt;
+&lt;h3 id="2-記憶會累積成包袱"&gt;2. 記憶會累積成包袱
+&lt;/h3&gt;&lt;p&gt;記憶越多，它越懂你，但也可能&lt;strong&gt;把舊的錯誤偏好一直帶著&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;建議定期檢查它的記憶檔、刪掉過時的內容。&lt;/p&gt;
+&lt;h3 id="3-本地執行不代表完全安全"&gt;3. 本地執行不代表完全安全
+&lt;/h3&gt;&lt;p&gt;即使資料在本地，&lt;strong&gt;它呼叫 Claude / GPT 時還是會把 context 送出去&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;如果你真的想完全離線，搭配 Ollama 跑本地模型，但能力會差很多。&lt;/p&gt;
+&lt;h3 id="4-擴充能力--雙面刃"&gt;4. 擴充能力 = 雙面刃
+&lt;/h3&gt;&lt;p&gt;它能自己寫 script、跑 shell 指令——這代表&lt;strong&gt;它也有能力弄壞你的系統&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;建議：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重要操作先看一眼它要做什麼再放行&lt;/li&gt;
+&lt;li&gt;不要給它 root 權限&lt;/li&gt;
+&lt;li&gt;敏感資料夾設 read-only&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="誰適合用"&gt;誰適合用？
+&lt;/h2&gt;&lt;h3 id="很適合"&gt;很適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;重視隱私&lt;/strong&gt;：不想把所有資料給雲端服務的人&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工程師&lt;/strong&gt;：能自己寫擴充、修 bug、調整流程&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重度自動化愛好者&lt;/strong&gt;：喜歡把生活各種雜事自動化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;愛好 open source&lt;/strong&gt;：支持開源生態的人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="暫時不適合"&gt;暫時不適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;完全不會裝軟體的人&lt;/strong&gt;：入門門檻還是比 ChatGPT 高&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;要 100% 穩定的商業應用&lt;/strong&gt;：還在快速迭代，不夠穩&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;只想聊天&lt;/strong&gt;：對話體驗不如 ChatGPT 專精&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼是龍蝦"&gt;為什麼是「龍蝦」？
+&lt;/h2&gt;&lt;p&gt;這個很多人問。&lt;/p&gt;
+&lt;p&gt;OpenClaw 的 Logo 是一隻紅色龍蝦——「Claw」就是龍蝦的螯。&lt;/p&gt;
+&lt;p&gt;這隱喻大概是：&lt;strong&gt;有抓取、有操作、有個性，不是軟綿綿的助手&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;我覺得這個 branding 很成功，至少一眼就記得。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;2025 到 2026 年，AI Agent 的發展進到一個分岔路口：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;雲端路線&lt;/strong&gt;：Manus、Claude Computer Use、各種 SaaS 代理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本地路線&lt;/strong&gt;：OpenClaw、open-interpreter、各種自建 agent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;兩條路各有優缺點，但**「AI Agent 應該長在自己電腦裡」**這個理念，會吸引一群重視主導權的使用者。&lt;/p&gt;
+&lt;p&gt;如果你：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;已經用過 ChatGPT / Claude，想更進一步&lt;/li&gt;
+&lt;li&gt;對資料隱私有要求&lt;/li&gt;
+&lt;li&gt;願意花點時間裝設定&lt;/li&gt;
+&lt;li&gt;想有一個真正「屬於自己」的 AI 助理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那這隻紅色龍蝦值得一試：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://openclaw.ai" target="_blank" rel="noopener"
+&gt;openclaw.ai&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;未來我們可能每個人都會有一個像這樣的東西，陪你處理大大小小的雜事。OpenClaw 讓這個未來提早到了。&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,530 @@
+<!doctype html><html lang=zh-tw dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="靜態網頁的內容是死的，串接 API 才能讓你的網頁活起來！這篇從同步非同步的概念、fetch、Promise，到 async/await 和實戰 API 串接，一步一步帶你搞懂。"><title>新手第十三步：Async / Await 與 API 串接　讓網頁讀取真實世界的資料！</title><link rel=canonical href=https://ericchung24.github.io/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E5%8D%81%E4%B8%89%E6%AD%A5async-/-await-%E8%88%87-api-%E4%B8%B2%E6%8E%A5-%E8%AE%93%E7%B6%B2%E9%A0%81%E8%AE%80%E5%8F%96%E7%9C%9F%E5%AF%A6%E4%B8%96%E7%95%8C%E7%9A%84%E8%B3%87%E6%96%99/><link rel=stylesheet href=/blog/scss/style.min.cd3092ea9888cb3bbe90e17e785276aed69c0ec8f01b70792f5c70ff6ac62ee4.css><meta property='og:title' content="新手第十三步：Async / Await 與 API 串接\u3000讓網頁讀取真實世界的資料！"><meta property='og:description' content="靜態網頁的內容是死的，串接 API 才能讓你的網頁活起來！這篇從同步非同步的概念、fetch、Promise，到 async/await 和實戰 API 串接，一步一步帶你搞懂。"><meta property='og:url' content='https://ericchung24.github.io/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E5%8D%81%E4%B8%89%E6%AD%A5async-/-await-%E8%88%87-api-%E4%B8%B2%E6%8E%A5-%E8%AE%93%E7%B6%B2%E9%A0%81%E8%AE%80%E5%8F%96%E7%9C%9F%E5%AF%A6%E4%B8%96%E7%95%8C%E7%9A%84%E8%B3%87%E6%96%99/'><meta property='og:site_name' content='EricChung的程式勇者村'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='JavaScript'><meta property='article:tag' content='API'><meta property='article:tag' content='Async'><meta property='article:tag' content='Fetch'><meta property='article:tag' content='新手入門'><meta property='article:published_time' content='2026-04-17T00:00:00+00:00'><meta property='article:modified_time' content='2026-04-17T00:00:00+00:00'><meta property='og:image' content='https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png'><meta name=twitter:title content="新手第十三步：Async / Await 與 API 串接\u3000讓網頁讀取真實世界的資料！"><meta name=twitter:description content="靜態網頁的內容是死的，串接 API 才能讓你的網頁活起來！這篇從同步非同步的概念、fetch、Promise，到 async/await 和實戰 API 串接，一步一步帶你搞懂。"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png'><link rel="shortcut icon" href=/blog/favicon.png><link rel=preload as=font type=font/woff2 href=/blog/fonts/Cubic11.woff2 crossorigin><style>@font-face{font-family:cubic11web;src:url(/blog/fonts/Cubic11.woff2)format("woff2");font-display:swap;font-weight:400;font-style:normal}:root{--base-font-family:"Cubic11Web", system-ui, -apple-system, "Segoe UI", "Noto Sans TC", sans-serif;--article-font-family:"Cubic11Web", var(--base-font-family)}body{font-family:var(--base-font-family)}</style></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切換選單>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/blog/><img src=/blog/img/avatar_hu_6a4904efc9fbc170.png width=300 height=302 class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>🤣</span></figure><div class=site-meta><h1 class=site-name><a href=/blog>EricChung的程式勇者村</a></h1><h2 class=site-description>專門把設計稿變成網頁，把網頁變成「看起來像設計稿」。這裡寫切版、元件化、效能優化與踩坑筆記；如果你也被 CSS 搞過，我們算同一個專案組。</h2></div></header><ol class=menu-social><li><a href=https://github.com/EricChung24 target=_blank title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://instagram.com/ericchung1024 target=_blank title=Instagram rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/blog/random/><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+<span>隨機</span></a></li><li><a href=/blog/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>首頁</span></a></li><li><a href=/blog/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>全部文章</span></a></li><li><a href=/blog/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>全站搜尋</span></a></li><li><a href=/blog/links/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>友站連結</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>夜晚模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目錄</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#1-什麼是-api>1. 什麼是 API？</a></li><li><a href=#2-同步-vs-非同步一個讓新手頭痛的概念>2. 同步 vs 非同步：一個讓新手頭痛的概念</a><ol><li><a href=#同步synchronous>同步（Synchronous）</a></li><li><a href=#非同步asynchronous>非同步（Asynchronous）</a></li></ol></li><li><a href=#3-promise非同步操作的承諾>3. Promise：非同步操作的承諾</a></li><li><a href=#4-async--await讓非同步程式碼看起來像同步>4. Async / Await：讓非同步程式碼看起來像同步</a><ol><li><a href=#基本語法>基本語法</a></li><li><a href=#加上錯誤處理>加上錯誤處理</a></li><li><a href=#async--await-vs-then-對比>async / await vs .then() 對比</a></li></ol></li><li><a href=#5-fetch-api瀏覽器內建的-http-請求工具>5. fetch API：瀏覽器內建的 HTTP 請求工具</a><ol><li><a href=#get-請求取得資料>GET 請求（取得資料）</a></li><li><a href=#post-請求送出資料>POST 請求（送出資料）</a></li><li><a href=#http-方法速查>HTTP 方法速查</a></li></ol></li><li><a href=#6-認識-jsonapi-的通用語言>6. 認識 JSON：API 的通用語言</a></li><li><a href=#7-實戰練習一串接公開-api-顯示文章列表>7. 實戰練習一：串接公開 API 顯示文章列表</a></li><li><a href=#8-實戰練習二在-vue-3--vite-中串接-api>8. 實戰練習二：在 Vue 3 + Vite 中串接 API</a></li><li><a href=#9-使用需要-api-key-的服務>9. 使用需要 API Key 的服務</a></li><li><a href=#10-常見錯誤與解法>10. 常見錯誤與解法</a><ol><li><a href=#cors-錯誤>CORS 錯誤</a></li><li><a href=#responsejson-失敗>response.json() 失敗</a></li><li><a href=#404--401--500-錯誤>404 / 401 / 500 錯誤</a></li></ol></li><li><a href=#結語你的網頁現在連接到真實世界了>結語：你的網頁現在連接到真實世界了</a></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E5%8D%81%E4%B8%89%E6%AD%A5async-/-await-%E8%88%87-api-%E4%B8%B2%E6%8E%A5-%E8%AE%93%E7%B6%B2%E9%A0%81%E8%AE%80%E5%8F%96%E7%9C%9F%E5%AF%A6%E4%B8%96%E7%95%8C%E7%9A%84%E8%B3%87%E6%96%99/><img src=https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png loading=lazy alt="Featured image of post 新手第十三步：Async / Await 與 API 串接　讓網頁讀取真實世界的資料！"></a></div><div class=article-details><header class=article-category><a href=/blog/categories/javascript/ style=background-color:#beefed;color:#0f3d3c>JavaScript
+</a><a href=/blog/categories/api/ style=background-color:#debeef;color:#2d0f3d>API</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E5%8D%81%E4%B8%89%E6%AD%A5async-/-await-%E8%88%87-api-%E4%B8%B2%E6%8E%A5-%E8%AE%93%E7%B6%B2%E9%A0%81%E8%AE%80%E5%8F%96%E7%9C%9F%E5%AF%A6%E4%B8%96%E7%95%8C%E7%9A%84%E8%B3%87%E6%96%99/>新手第十三步：Async / Await 與 API 串接　讓網頁讀取真實世界的資料！</a></h2><h3 class=article-subtitle>靜態網頁的內容是死的，串接 API 才能讓你的網頁活起來！這篇從同步非同步的概念、fetch、Promise，到 async/await 和實戰 API 串接，一步一步帶你搞懂。</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2026-04-17T00:00:00Z>Apr 17, 2026</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>閱讀時間: 8 分鐘</time></div></footer></div></header><section class=article-content><p>到目前為止，你網頁上的所有資料都是<strong>自己寫死</strong>的。標題、卡片內容、圖片——全都是你親手打進去的。</p><p>但真實的網站不是這樣運作的。你打開天氣 App，資料是從氣象局的伺服器來的；你滑 Instagram，圖片是從 Meta 的資料庫來的；你用 Google 搜尋，結果是從爬過全世界網頁的資料庫來的。</p><p>這一切都靠一個東西：<strong>API 串接</strong>。</p><hr><h2 id=1-什麼是-api>1. 什麼是 API？</h2><p><strong>API（Application Programming Interface，應用程式介面）</strong> 是一個讓不同系統之間互相溝通的「窗口」。</p><p>用餐廳來比喻：</p><ul><li><strong>你</strong>是前端（客人）</li><li><strong>廚房</strong>是後端（資料庫 / 伺服器）</li><li><strong>服務生</strong>就是 API</li></ul><p>你不需要進廚房，只要告訴服務生你要什麼（送出 Request），服務生就會把廚房做好的食物端給你（回傳 Response）。</p><p><strong>常見的 API 使用場景：</strong></p><ul><li>天氣資訊（OpenWeatherMap API）</li><li>地圖（Google Maps API）</li><li>金流（綠界、藍新 API）</li><li>社群登入（Google / Facebook OAuth API）</li><li>AI 功能（OpenAI API）</li></ul><hr><h2 id=2-同步-vs-非同步一個讓新手頭痛的概念>2. 同步 vs 非同步：一個讓新手頭痛的概念</h2><h3 id=同步synchronous>同步（Synchronous）</h3><p>程式碼<strong>一行一行按順序執行</strong>，下一行必須等上一行執行完才能開始。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;第一步&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;第二步&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;第三步&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 輸出順序：第一步 → 第二步 → 第三步
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=非同步asynchronous>非同步（Asynchronous）</h3><p>某些操作<strong>很耗時</strong>（例如向伺服器請求資料，可能需要 1~3 秒），如果用同步的方式執行，整個頁面會<strong>卡住</strong>等待，什麼事都不能做。</p><p>非同步讓 JavaScript 可以：「你去向伺服器拿資料，我先繼續做其他事，<strong>等你拿回來再處理</strong>。」</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;開始請求資料&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 向 API 請求資料（非同步，需要時間）
+</span></span></span><span class=line><span class=cl><span class=nx>fetch</span><span class=p>(</span><span class=s2>&#34;https://api.example.com/data&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>response</span> <span class=p>=&gt;</span> <span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>    <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>data</span> <span class=p>=&gt;</span> <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;資料回來了：&#34;</span><span class=p>,</span> <span class=nx>data</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;這行不等資料，先執行&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 輸出順序：
+</span></span></span><span class=line><span class=cl><span class=c1>// 開始請求資料
+</span></span></span><span class=line><span class=cl><span class=c1>// 這行不等資料，先執行
+</span></span></span><span class=line><span class=cl><span class=c1>// 資料回來了：{ ... }  ← 等 API 回應後才執行
+</span></span></span></code></pre></td></tr></table></div></div><hr><h2 id=3-promise非同步操作的承諾>3. Promise：非同步操作的承諾</h2><p><strong>Promise</strong> 是 JavaScript 表示「未來會完成的操作」的物件。</p><p>想像你去餐廳點餐，服務生給你一個<strong>號碼牌</strong>（Promise）：</p><ul><li>等一下食物做好，你拿號碼牌去領（<code>.then()</code>）</li><li>如果廚房失火做不了，你也會被通知（<code>.catch()</code>）</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=nx>fetch</span><span class=p>(</span><span class=s2>&#34;https://jsonplaceholder.typicode.com/posts/1&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>response</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>   <span class=c1>// 把回應轉成 JSON 格式
+</span></span></span><span class=line><span class=cl>    <span class=p>})</span>
+</span></span><span class=line><span class=cl>    <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>data</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>        <span class=c1>// 使用資料
+</span></span></span><span class=line><span class=cl>    <span class=p>})</span>
+</span></span><span class=line><span class=cl>    <span class=p>.</span><span class=k>catch</span><span class=p>(</span><span class=nx>error</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>(</span><span class=s2>&#34;出錯了：&#34;</span><span class=p>,</span> <span class=nx>error</span><span class=p>);</span>  <span class=c1>// 處理錯誤
+</span></span></span><span class=line><span class=cl>    <span class=p>});</span>
+</span></span></code></pre></td></tr></table></div></div><p><code>.then()</code> 可以串聯多個，每個 <code>.then()</code> 接收上一個 <code>.then()</code> 的 <code>return</code> 值。</p><hr><h2 id=4-async--await讓非同步程式碼看起來像同步>4. Async / Await：讓非同步程式碼看起來像同步</h2><p>Promise 的 <code>.then()</code> 鏈寫多了會很難閱讀。<strong><code>async / await</code></strong> 是更現代、更好讀的寫法，本質上還是 Promise，只是語法更直覺。</p><h3 id=基本語法>基本語法</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=c1>// 在函式前加 async，代表這個函式裡面有非同步操作
+</span></span></span><span class=line><span class=cl><span class=kr>async</span> <span class=kd>function</span> <span class=nx>getData</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// await 代表「等這行執行完再繼續」
+</span></span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>response</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=s2>&#34;https://jsonplaceholder.typicode.com/posts/1&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>data</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>getData</span><span class=p>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=加上錯誤處理>加上錯誤處理</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>async</span> <span class=kd>function</span> <span class=nx>getData</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>try</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kr>const</span> <span class=nx>response</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=s2>&#34;https://jsonplaceholder.typicode.com/posts/1&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=nx>response</span><span class=p>.</span><span class=nx>ok</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>throw</span> <span class=k>new</span> <span class=nb>Error</span><span class=p>(</span><span class=sb>`HTTP 錯誤：</span><span class=si>${</span><span class=nx>response</span><span class=p>.</span><span class=nx>status</span><span class=si>}</span><span class=sb>`</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=kr>const</span> <span class=nx>data</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>catch</span> <span class=p>(</span><span class=nx>error</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>(</span><span class=s2>&#34;請求失敗：&#34;</span><span class=p>,</span> <span class=nx>error</span><span class=p>.</span><span class=nx>message</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p><code>try...catch</code> 是處理非同步錯誤的標準做法：<code>try</code> 裡面放正常流程，<code>catch</code> 裡面處理例外狀況。</p><h3 id=async--await-vs-then-對比>async / await vs .then() 對比</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=c1>// .then() 寫法（舊式）
+</span></span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>getUser</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>fetch</span><span class=p>(</span><span class=s2>&#34;/api/user&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>res</span> <span class=p>=&gt;</span> <span class=nx>res</span><span class=p>.</span><span class=nx>json</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>        <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>user</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nx>fetch</span><span class=p>(</span><span class=sb>`/api/posts/</span><span class=si>${</span><span class=nx>user</span><span class=p>.</span><span class=nx>id</span><span class=si>}</span><span class=sb>`</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>res</span> <span class=p>=&gt;</span> <span class=nx>res</span><span class=p>.</span><span class=nx>json</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>                <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>posts</span> <span class=p>=&gt;</span> <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>posts</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>        <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// async/await 寫法（現代，推薦）
+</span></span></span><span class=line><span class=cl><span class=kr>async</span> <span class=kd>function</span> <span class=nx>getUser</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>userRes</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=s2>&#34;/api/user&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>user</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>userRes</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>postsRes</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=sb>`/api/posts/</span><span class=si>${</span><span class=nx>user</span><span class=p>.</span><span class=nx>id</span><span class=si>}</span><span class=sb>`</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>posts</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>postsRes</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>posts</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>同樣的功能，<code>async/await</code> 版本閱讀起來就像普通的同步程式碼，清楚多了。</p><hr><h2 id=5-fetch-api瀏覽器內建的-http-請求工具>5. fetch API：瀏覽器內建的 HTTP 請求工具</h2><p><code>fetch</code> 是現代瀏覽器內建的 API，讓你不需要安裝任何套件就能發送 HTTP 請求。</p><h3 id=get-請求取得資料>GET 請求（取得資料）</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>async</span> <span class=kd>function</span> <span class=nx>getPosts</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>response</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=s2>&#34;https://jsonplaceholder.typicode.com/posts&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>posts</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>posts</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=post-請求送出資料>POST 請求（送出資料）</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>async</span> <span class=kd>function</span> <span class=nx>createPost</span><span class=p>(</span><span class=nx>title</span><span class=p>,</span> <span class=nx>body</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>response</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=s2>&#34;https://jsonplaceholder.typicode.com/posts&#34;</span><span class=p>,</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>method</span><span class=o>:</span> <span class=s2>&#34;POST&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=nx>headers</span><span class=o>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;Content-Type&#34;</span><span class=o>:</span> <span class=s2>&#34;application/json&#34;</span><span class=p>,</span>   <span class=c1>// 告訴伺服器你送的是 JSON
+</span></span></span><span class=line><span class=cl>        <span class=p>},</span>
+</span></span><span class=line><span class=cl>        <span class=nx>body</span><span class=o>:</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>stringify</span><span class=p>({</span>                     <span class=c1>// 把物件轉成 JSON 字串
+</span></span></span><span class=line><span class=cl>            <span class=nx>title</span><span class=o>:</span> <span class=nx>title</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nx>body</span><span class=o>:</span> <span class=nx>body</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nx>userId</span><span class=o>:</span> <span class=mi>1</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=p>}),</span>
+</span></span><span class=line><span class=cl>    <span class=p>});</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>newPost</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;建立成功：&#34;</span><span class=p>,</span> <span class=nx>newPost</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=http-方法速查>HTTP 方法速查</h3><div class=table-wrapper><table><thead><tr><th>方法</th><th>用途</th></tr></thead><tbody><tr><td><code>GET</code></td><td>取得資料</td></tr><tr><td><code>POST</code></td><td>建立新資料</td></tr><tr><td><code>PUT</code></td><td>完整更新資料</td></tr><tr><td><code>PATCH</code></td><td>部分更新資料</td></tr><tr><td><code>DELETE</code></td><td>刪除資料</td></tr></tbody></table></div><hr><h2 id=6-認識-jsonapi-的通用語言>6. 認識 JSON：API 的通用語言</h2><p>API 傳回來的資料通常是 <strong>JSON（JavaScript Object Notation）</strong> 格式。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;小明&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;email&#34;</span><span class=p>:</span> <span class=s2>&#34;ming@example.com&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;age&#34;</span><span class=p>:</span> <span class=mi>18</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;hobbies&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;前端開發&#34;</span><span class=p>,</span> <span class=s2>&#34;打籃球&#34;</span><span class=p>,</span> <span class=s2>&#34;看動漫&#34;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;address&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;city&#34;</span><span class=p>:</span> <span class=s2>&#34;台北市&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;district&#34;</span><span class=p>:</span> <span class=s2>&#34;信義區&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>JSON 的規則：</p><ul><li>所有 key 要用<strong>雙引號</strong>包起來</li><li>字串值也要用<strong>雙引號</strong></li><li>支援 String、Number、Boolean、Array、Object、null</li></ul><p><strong>在 JavaScript 中操作 JSON：</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=c1>// JSON 字串 → JavaScript 物件
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>obj</span> <span class=o>=</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>parse</span><span class=p>(</span><span class=s1>&#39;{&#34;name&#34;: &#34;小明&#34;, &#34;age&#34;: 18}&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>obj</span><span class=p>.</span><span class=nx>name</span><span class=p>);</span>  <span class=c1>// &#34;小明&#34;
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// JavaScript 物件 → JSON 字串
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>json</span> <span class=o>=</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>stringify</span><span class=p>({</span> <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;小明&#34;</span><span class=p>,</span> <span class=nx>age</span><span class=o>:</span> <span class=mi>18</span> <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>json</span><span class=p>);</span>  <span class=c1>// &#39;{&#34;name&#34;:&#34;小明&#34;,&#34;age&#34;:18}&#39;
+</span></span></span></code></pre></td></tr></table></div></div><hr><h2 id=7-實戰練習一串接公開-api-顯示文章列表>7. 實戰練習一：串接公開 API 顯示文章列表</h2><p>我們用 <a class=link href=https://jsonplaceholder.typicode.com target=_blank rel=noopener>JSONPlaceholder</a>（一個免費的假 API）來練習。</p><p><strong>HTML：</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE html&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>html</span> <span class=na>lang</span><span class=o>=</span><span class=s>&#34;zh-TW&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>head</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>meta</span> <span class=na>charset</span><span class=o>=</span><span class=s>&#34;UTF-8&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>title</span><span class=p>&gt;</span>文章列表<span class=p>&lt;/</span><span class=nt>title</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>style</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=nt>body</span> <span class=p>{</span> <span class=k>font-family</span><span class=p>:</span> <span class=n>Arial</span><span class=p>,</span> <span class=kc>sans-serif</span><span class=p>;</span> <span class=k>max-width</span><span class=p>:</span> <span class=mi>700</span><span class=kt>px</span><span class=p>;</span> <span class=k>margin</span><span class=p>:</span> <span class=mi>40</span><span class=kt>px</span> <span class=kc>auto</span><span class=p>;</span> <span class=k>padding</span><span class=p>:</span> <span class=mi>0</span> <span class=mi>20</span><span class=kt>px</span><span class=p>;</span> <span class=k>background</span><span class=p>:</span> <span class=mh>#f5f5f5</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=nt>h1</span> <span class=p>{</span> <span class=k>color</span><span class=p>:</span> <span class=mh>#2c3e50</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>.</span><span class=nc>post-card</span> <span class=p>{</span> <span class=k>background</span><span class=p>:</span> <span class=kc>white</span><span class=p>;</span> <span class=k>border-radius</span><span class=p>:</span> <span class=mi>8</span><span class=kt>px</span><span class=p>;</span> <span class=k>padding</span><span class=p>:</span> <span class=mi>20</span><span class=kt>px</span><span class=p>;</span> <span class=k>margin-bottom</span><span class=p>:</span> <span class=mi>16</span><span class=kt>px</span><span class=p>;</span> <span class=k>box-shadow</span><span class=p>:</span> <span class=mi>0</span> <span class=mi>2</span><span class=kt>px</span> <span class=mi>6</span><span class=kt>px</span> <span class=nb>rgba</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mf>0.08</span><span class=p>);</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>.</span><span class=nc>post-card</span> <span class=nt>h3</span> <span class=p>{</span> <span class=k>margin</span><span class=p>:</span> <span class=mi>0</span> <span class=mi>0</span> <span class=mi>8</span><span class=kt>px</span><span class=p>;</span> <span class=k>color</span><span class=p>:</span> <span class=mh>#34495e</span><span class=p>;</span> <span class=k>text-transform</span><span class=p>:</span> <span class=kc>capitalize</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>.</span><span class=nc>post-card</span> <span class=nt>p</span> <span class=p>{</span> <span class=k>margin</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span> <span class=k>color</span><span class=p>:</span> <span class=mh>#666</span><span class=p>;</span> <span class=k>line-height</span><span class=p>:</span> <span class=mf>1.6</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>#</span><span class=nn>loading</span> <span class=p>{</span> <span class=k>text-align</span><span class=p>:</span> <span class=kc>center</span><span class=p>;</span> <span class=k>color</span><span class=p>:</span> <span class=mh>#888</span><span class=p>;</span> <span class=k>padding</span><span class=p>:</span> <span class=mi>40</span><span class=kt>px</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>style</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>head</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>body</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>h1</span><span class=p>&gt;</span>最新文章<span class=p>&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;loading&#34;</span><span class=p>&gt;</span>載入中...<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;post-list&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=kr>async</span> <span class=kd>function</span> <span class=nx>loadPosts</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>try</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=kr>const</span> <span class=nx>response</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=s2>&#34;https://jsonplaceholder.typicode.com/posts?_limit=10&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                <span class=kr>const</span> <span class=nx>posts</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                <span class=kr>const</span> <span class=nx>loading</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s2>&#34;loading&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                <span class=kr>const</span> <span class=nx>postList</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s2>&#34;post-list&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                <span class=nx>loading</span><span class=p>.</span><span class=nx>style</span><span class=p>.</span><span class=nx>display</span> <span class=o>=</span> <span class=s2>&#34;none&#34;</span><span class=p>;</span>  <span class=c1>// 隱藏載入提示
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                <span class=nx>posts</span><span class=p>.</span><span class=nx>forEach</span><span class=p>(</span><span class=nx>post</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                    <span class=kr>const</span> <span class=nx>card</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s2>&#34;div&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                    <span class=nx>card</span><span class=p>.</span><span class=nx>className</span> <span class=o>=</span> <span class=s2>&#34;post-card&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                    <span class=nx>card</span><span class=p>.</span><span class=nx>innerHTML</span> <span class=o>=</span> <span class=sb>`
+</span></span></span><span class=line><span class=cl><span class=sb>                        &lt;h3&gt;</span><span class=si>${</span><span class=nx>post</span><span class=p>.</span><span class=nx>title</span><span class=si>}</span><span class=sb>&lt;/h3&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>                        &lt;p&gt;</span><span class=si>${</span><span class=nx>post</span><span class=p>.</span><span class=nx>body</span><span class=si>}</span><span class=sb>&lt;/p&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>                    `</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                    <span class=nx>postList</span><span class=p>.</span><span class=nx>appendChild</span><span class=p>(</span><span class=nx>card</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                <span class=p>});</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>            <span class=p>}</span> <span class=k>catch</span> <span class=p>(</span><span class=nx>error</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s2>&#34;loading&#34;</span><span class=p>).</span><span class=nx>textContent</span> <span class=o>=</span> <span class=s2>&#34;載入失敗，請稍後再試。&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>(</span><span class=nx>error</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=nx>loadPosts</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>body</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>html</span><span class=p>&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><p>打開瀏覽器，你會看到 10 篇從 API 取得的文章自動渲染到頁面上！</p><hr><h2 id=8-實戰練習二在-vue-3--vite-中串接-api>8. 實戰練習二：在 Vue 3 + Vite 中串接 API</h2><p>在 Vue 專案中，搭配 <code>ref</code> 和 <code>onMounted</code> 來串接 API 是最標準的做法：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-vue data-lang=vue><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>template</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;container&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>h1</span><span class=p>&gt;</span><span class=nx>使用者列表</span><span class=p>&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=c>&lt;!--</span> <span class=nx>載入中狀態</span> <span class=o>--&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>p</span> <span class=nt>v-if</span><span class=o>=</span><span class=s>&#34;loading&#34; class=&#34;loading&#34;</span><span class=p>&gt;</span><span class=na>載入中...</span><span class=p>&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=err>&lt;!--</span> <span class=na>錯誤狀態</span> <span class=err>--</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>p</span> <span class=nt>v-else-if</span><span class=o>=</span><span class=s>&#34;error&#34; class=&#34;error&#34;</span><span class=p>&gt;{{</span> <span class=na>error</span> <span class=p>}}&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=err>&lt;!--</span> <span class=na>成功顯示資料</span> <span class=err>--</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>div</span> <span class=nt>v-else</span><span class=p> </span><span class=na>class</span><span class=o>=</span><span class=s>&#34;user-grid&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>            <span class=p>&lt;</span><span class=nt>div</span> <span class=nt>v-for</span><span class=o>=</span><span class=s>&#34;user in users&#34; :key=&#34;user.id&#34; class=&#34;user-card&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>                <span class=p>&lt;</span><span class=nt>h3</span><span class=p>&gt;{{</span> <span class=nx>user</span><span class=p>.</span><span class=nx>name</span> <span class=p>}}&lt;/</span><span class=nt>h3</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>                <span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span><span class=err>📧</span> <span class=p>{{</span> <span class=nx>user</span><span class=p>.</span><span class=nx>email</span> <span class=p>}}&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>                <span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span><span class=err>🌐</span> <span class=p>{{</span> <span class=nx>user</span><span class=p>.</span><span class=nx>website</span> <span class=p>}}&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>                <span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span><span class=err>🏙️</span> <span class=p>{{</span> <span class=nx>user</span><span class=p>.</span><span class=nx>address</span><span class=p>.</span><span class=nx>city</span> <span class=p>}}&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>            <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>template</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>script</span> <span class=na>setup</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=p>{</span> <span class=nx>ref</span><span class=p>,</span> <span class=nx>onMounted</span> <span class=p>}</span> <span class=nx>from</span> <span class=s1>&#39;vue&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>users</span> <span class=o>=</span> <span class=nx>ref</span><span class=p>([]);</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>loading</span> <span class=o>=</span> <span class=nx>ref</span><span class=p>(</span><span class=kc>true</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>error</span> <span class=o>=</span> <span class=nx>ref</span><span class=p>(</span><span class=kc>null</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>async</span> <span class=kd>function</span> <span class=nx>fetchUsers</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>try</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kr>const</span> <span class=nx>response</span> <span class=o>=</span> <span class=nx>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=s2>&#34;https://jsonplaceholder.typicode.com/users&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=nx>response</span><span class=p>.</span><span class=nx>ok</span><span class=p>)</span> <span class=k>throw</span> <span class=k>new</span> <span class=nb>Error</span><span class=p>(</span><span class=s2>&#34;無法取得資料&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=nx>users</span><span class=p>.</span><span class=nx>value</span> <span class=o>=</span> <span class=nx>await</span> <span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>catch</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>error</span><span class=p>.</span><span class=nx>value</span> <span class=o>=</span> <span class=nx>err</span><span class=p>.</span><span class=nx>message</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>finally</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>loading</span><span class=p>.</span><span class=nx>value</span> <span class=o>=</span> <span class=kc>false</span><span class=p>;</span>  <span class=c1>// 不管成功或失敗，都結束載入狀態
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// onMounted：元件掛載到頁面後自動執行
+</span></span></span><span class=line><span class=cl><span class=nx>onMounted</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>fetchUsers</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>style</span> <span class=na>scoped</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>.</span><span class=nx>container</span> <span class=p>{</span> <span class=nx>max</span><span class=o>-</span><span class=nx>width</span><span class=o>:</span> <span class=mi>900</span><span class=nx>px</span><span class=p>;</span> <span class=nx>margin</span><span class=o>:</span> <span class=mi>40</span><span class=nx>px</span> <span class=nx>auto</span><span class=p>;</span> <span class=nx>padding</span><span class=o>:</span> <span class=mi>0</span> <span class=mi>20</span><span class=nx>px</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>.</span><span class=nx>loading</span> <span class=p>{</span> <span class=nx>text</span><span class=o>-</span><span class=nx>align</span><span class=o>:</span> <span class=nx>center</span><span class=p>;</span> <span class=nx>color</span><span class=o>:</span> <span class=err>#</span><span class=mi>888</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>.</span><span class=nx>error</span> <span class=p>{</span> <span class=nx>color</span><span class=o>:</span> <span class=nx>red</span><span class=p>;</span> <span class=nx>text</span><span class=o>-</span><span class=nx>align</span><span class=o>:</span> <span class=nx>center</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>.</span><span class=nx>user</span><span class=o>-</span><span class=nx>grid</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>display</span><span class=o>:</span> <span class=nx>grid</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>grid</span><span class=o>-</span><span class=nx>template</span><span class=o>-</span><span class=nx>columns</span><span class=o>:</span> <span class=nx>repeat</span><span class=p>(</span><span class=nx>auto</span><span class=o>-</span><span class=nx>fill</span><span class=p>,</span> <span class=nx>minmax</span><span class=p>(</span><span class=mi>250</span><span class=nx>px</span><span class=p>,</span> <span class=mi>1</span><span class=nx>fr</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>    <span class=nx>gap</span><span class=o>:</span> <span class=mi>20</span><span class=nx>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>.</span><span class=nx>user</span><span class=o>-</span><span class=nx>card</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>background</span><span class=o>:</span> <span class=nx>white</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>border</span><span class=o>-</span><span class=nx>radius</span><span class=o>:</span> <span class=mi>12</span><span class=nx>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>padding</span><span class=o>:</span> <span class=mi>20</span><span class=nx>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>box</span><span class=o>-</span><span class=nx>shadow</span><span class=o>:</span> <span class=mi>0</span> <span class=mi>2</span><span class=nx>px</span> <span class=mi>8</span><span class=nx>px</span> <span class=nx>rgba</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mf>0.08</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>.</span><span class=nx>user</span><span class=o>-</span><span class=nx>card</span> <span class=nx>h3</span> <span class=p>{</span> <span class=nx>margin</span><span class=o>:</span> <span class=mi>0</span> <span class=mi>0</span> <span class=mi>12</span><span class=nx>px</span><span class=p>;</span> <span class=nx>color</span><span class=o>:</span> <span class=err>#</span><span class=mi>2</span><span class=nx>c3e50</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>.</span><span class=nx>user</span><span class=o>-</span><span class=nx>card</span> <span class=nx>p</span> <span class=p>{</span> <span class=nx>margin</span><span class=o>:</span> <span class=mi>4</span><span class=nx>px</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>color</span><span class=o>:</span> <span class=err>#</span><span class=mi>555</span><span class=p>;</span> <span class=nx>font</span><span class=o>-</span><span class=nx>size</span><span class=o>:</span> <span class=mi>14</span><span class=nx>px</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>style</span><span class=p>&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><p>這段程式碼示範了 API 串接最重要的三個狀態管理：</p><ul><li><strong>loading</strong>：資料還在載入時顯示等待畫面</li><li><strong>error</strong>：請求失敗時顯示錯誤訊息</li><li><strong>data</strong>：成功後顯示資料</li></ul><hr><h2 id=9-使用需要-api-key-的服務>9. 使用需要 API Key 的服務</h2><p>很多真實 API 需要申請 <strong>API Key</strong> 才能使用（用來識別是誰在呼叫 API）。</p><p>以 <strong>OpenWeatherMap 天氣 API</strong> 為例：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>const</span> <span class=nx>API_KEY</span> <span class=o>=</span> <span class=s2>&#34;你的API金鑰&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>city</span> <span class=o>=</span> <span class=s2>&#34;Taipei&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>async</span> <span class=kd>function</span> <span class=nx>getWeather</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>url</span> <span class=o>=</span> <span class=sb>`https://api.openweathermap.org/data/2.5/weather?q=</span><span class=si>${</span><span class=nx>city</span><span class=si>}</span><span class=sb>&amp;appid=</span><span class=si>${</span><span class=nx>API_KEY</span><span class=si>}</span><span class=sb>&amp;units=metric&amp;lang=zh_tw`</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>response</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=nx>url</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>data</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=sb>`</span><span class=si>${</span><span class=nx>data</span><span class=p>.</span><span class=nx>name</span><span class=si>}</span><span class=sb> 目前氣溫：</span><span class=si>${</span><span class=nx>data</span><span class=p>.</span><span class=nx>main</span><span class=p>.</span><span class=nx>temp</span><span class=si>}</span><span class=sb>°C`</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=sb>`天氣狀況：</span><span class=si>${</span><span class=nx>data</span><span class=p>.</span><span class=nx>weather</span><span class=p>[</span><span class=mi>0</span><span class=p>].</span><span class=nx>description</span><span class=si>}</span><span class=sb>`</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>getWeather</span><span class=p>();</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p><strong>重要安全提醒：</strong> API Key 絕對不能放在前端程式碼裡 commit 到 GitHub（任何人都看得到！）。正確的做法是放在 <code>.env</code> 檔案裡，並在 <code>.gitignore</code> 排除它。</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># .env 檔案</span>
+</span></span><span class=line><span class=cl><span class=nv>VITE_WEATHER_API_KEY</span><span class=o>=</span>你的API金鑰
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=c1>// 在 Vue 裡使用
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>API_KEY</span> <span class=o>=</span> <span class=kr>import</span><span class=p>.</span><span class=nx>meta</span><span class=p>.</span><span class=nx>env</span><span class=p>.</span><span class=nx>VITE_WEATHER_API_KEY</span><span class=p>;</span>
+</span></span></code></pre></td></tr></table></div></div><hr><h2 id=10-常見錯誤與解法>10. 常見錯誤與解法</h2><h3 id=cors-錯誤>CORS 錯誤</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Access to fetch at &#39;https://...&#39; has been blocked by CORS policy
+</span></span></code></pre></td></tr></table></div></div><p>這是最常見的 API 錯誤。CORS 是瀏覽器的安全機制，防止網頁隨意存取其他網域的資源。</p><p>解法：</p><ul><li>確認 API 有開放 CORS（公開 API 通常都有）</li><li>若是自己的後端，在伺服器端設定允許的來源</li><li>開發階段可在 <code>vite.config.js</code> 設定代理（proxy）繞過</li></ul><h3 id=responsejson-失敗>response.json() 失敗</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>SyntaxError: Unexpected token &lt; in JSON at position 0
+</span></span></code></pre></td></tr></table></div></div><p>表示 API 回傳的不是 JSON，可能是 HTML 錯誤頁面。先用 <code>console.log(response.status)</code> 確認狀態碼。</p><h3 id=404--401--500-錯誤>404 / 401 / 500 錯誤</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=nx>response</span><span class=p>.</span><span class=nx>ok</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// response.status 會是 404、401、500 等
+</span></span></span><span class=line><span class=cl>    <span class=k>throw</span> <span class=k>new</span> <span class=nb>Error</span><span class=p>(</span><span class=sb>`錯誤代碼：</span><span class=si>${</span><span class=nx>response</span><span class=p>.</span><span class=nx>status</span><span class=si>}</span><span class=sb>`</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li><code>401</code>：未授權，需要 API Key 或登入</li><li><code>403</code>：禁止存取，權限不足</li><li><code>404</code>：找不到資源，確認 URL 是否正確</li><li><code>500</code>：伺服器錯誤，對方的問題</li></ul><hr><h2 id=結語你的網頁現在連接到真實世界了>結語：你的網頁現在連接到真實世界了</h2><p>學完這篇，你已經能夠：</p><ul><li>理解同步 vs 非同步的差異</li><li>用 <code>fetch</code> + <code>async/await</code> 串接任何 REST API</li><li>正確處理載入、成功、失敗三種狀態</li><li>在 Vue 3 中整合 API 資料</li><li>避免把 API Key 洩漏到 GitHub</li></ul><p><strong>接下來你可以做什麼？</strong>
+有了 API 串接能力，下一篇我們要學 <strong>Vue Router</strong>——讓你的 Vue 應用程式擁有多個頁面，實現真正的「單頁應用程式（SPA）」，做出有導覽列、有路由切換的完整網站架構！</p><p><strong>準備好蓋出多頁面的網站了嗎？下一篇見！</strong></p></section><footer class=article-footer><section class=article-tags><a href=/blog/tags/javascript/>JavaScript</a>
+<a href=/blog/tags/api/>API</a>
+<a href=/blog/tags/async/>Async</a>
+<a href=/blog/tags/fetch/>Fetch</a>
+<a href=/blog/tags/%E6%96%B0%E6%89%8B%E5%85%A5%E9%96%80/>新手入門</a></section><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相關文章</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E4%BA%94%E6%AD%A5javascript-%E5%85%A5%E9%96%80-%E7%B5%A6%E4%BD%A0%E7%9A%84%E7%B6%B2%E9%A0%81%E5%8A%A0%E4%B8%8A%E9%9D%88%E9%AD%82/><div class=article-image><img src=https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png loading=lazy data-key data-hash=https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png></div><div class=article-details><h2 class=article-title>新手第五步：JavaScript 入門　給你的網頁加上靈魂！</h2></div></a></article><article class=has-image><a href=/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E5%85%AD%E6%AD%A5vue.js-%E5%85%A5%E9%96%80-%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E5%88%B0%E5%BA%95%E5%9C%A8%E8%A7%A3%E6%B1%BA%E4%BB%80%E9%BA%BC%E5%95%8F%E9%A1%8C/><div class=article-image><img src=https://vuejs.org/logo.svg loading=lazy data-key data-hash=https://vuejs.org/logo.svg></div><div class=article-details><h2 class=article-title>新手第六步：Vue.js 入門　前端框架到底在解決什麼問題？</h2></div></a></article><article class=has-image><a href=/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E5%8D%81%E4%BA%94%E6%AD%A5react-%E5%85%A5%E9%96%80-%E5%89%8D%E7%AB%AF%E6%9C%80%E7%86%B1%E9%96%80%E7%9A%84%E6%A1%86%E6%9E%B6%E5%88%B0%E5%BA%95%E5%9C%A8%E7%B4%85%E4%BB%80%E9%BA%BC/><div class=article-image><img src=https://legacy.reactjs.org/logo-og.png loading=lazy data-key data-hash=https://legacy.reactjs.org/logo-og.png></div><div class=article-details><h2 class=article-title>新手第十五步：React 入門　前端最熱門的框架，到底在紅什麼？</h2></div></a></article><article class=has-image><a href=/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E5%8D%81%E5%85%AD%E6%AD%A5codepen-%E5%85%A5%E9%96%80-%E4%B8%8D%E7%94%A8%E5%BB%BA%E5%B0%88%E6%A1%88%E4%B9%9F%E8%83%BD%E7%AB%8B%E5%88%BB%E9%96%8B%E5%A7%8B%E5%AF%AB%E5%89%8D%E7%AB%AF/><div class=article-image><img src=https://assets.codepen.io/t-1/codepen-wordmark-black.png loading=lazy data-key data-hash=https://assets.codepen.io/t-1/codepen-wordmark-black.png></div><div class=article-details><h2 class=article-title>新手第十六步：CodePen 入門　不用建專案，也能立刻開始寫前端！</h2></div></a></article></div></div></aside><script src=https://giscus.app/client.js data-repo=EricChung24/blog data-repo-id=R_kgDOQvBrhg data-category=Announcements data-category-id=DIC_kwDOQvBrhs4C7Jcv data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en data-loading crossorigin=anonymous async></script><script>function setGiscusTheme(e){let t=document.querySelector("iframe.giscus-frame");t&&t.contentWindow.postMessage({giscus:{setConfig:{theme:e}}},"https://giscus.app")}(function(){addEventListener("message",t=>{if(event.origin!=="https://giscus.app")return;e()}),window.addEventListener("onColorSchemeChange",e);function e(){setGiscusTheme(document.documentElement.dataset.scheme==="light"?"light":"dark_dimmed")}})()</script><footer class=site-footer><section class=copyright>&copy;
+2025 -
+2026 EricChung的程式勇者村</section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 建立<br>主題 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.34.2>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 設計</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/blog/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

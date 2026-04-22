@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI Agent on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/ai-agent/</link><description>Recent content in AI Agent on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 21 Apr 2026 00:10:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/ai-agent/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenClaw 是什麼？那隻紅色龍蝦是你的私人 AI 助理</title><link>https://ericchung24.github.io/blog/p/openclaw-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E9%9A%BB%E7%B4%85%E8%89%B2%E9%BE%8D%E8%9D%A6%E6%98%AF%E4%BD%A0%E7%9A%84%E7%A7%81%E4%BA%BA-ai-%E5%8A%A9%E7%90%86/</link><pubDate>Tue, 21 Apr 2026 00:10:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/openclaw-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E9%9A%BB%E7%B4%85%E8%89%B2%E9%BE%8D%E8%9D%A6%E6%98%AF%E4%BD%A0%E7%9A%84%E7%A7%81%E4%BA%BA-ai-%E5%8A%A9%E7%90%86/</guid><description>&lt;img src="https://image.blocktempo.com/2026/03/f5d227bc122c1ba58f427c78f7b875d0-750x375.png" alt="Featured image of post OpenClaw 是什麼？那隻紅色龍蝦是你的私人 AI 助理" /&gt;&lt;p&gt;如果 Manus 是跑在別人家雲端的 AI 員工，那 &lt;strong&gt;&lt;a class="link" href="https://openclaw.ai" target="_blank" rel="noopener"
+&gt;OpenClaw&lt;/a&gt;&lt;/strong&gt; 就是&lt;strong&gt;住在你自己電腦裡&lt;/strong&gt;的那一個。&lt;/p&gt;
+&lt;p&gt;Logo 是一隻紅色龍蝦，但別被可愛外表騙了——這其實是目前最有潛力的&lt;strong&gt;本地端 AI Agent&lt;/strong&gt; 之一。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="openclaw-是什麼"&gt;OpenClaw 是什麼？
+&lt;/h2&gt;&lt;p&gt;一句話：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「一個跑在你自己電腦上的開源 AI 助理，會自己做事、有記憶、能接通訊軟體，還能自己寫擴充套件。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;作者是 &lt;strong&gt;Peter Steinberger&lt;/strong&gt;（iOS 開發圈的老朋友，以前做 PSPDFKit），在 2025 年推出的個人專案。&lt;/p&gt;
+&lt;p&gt;跟主流 AI 產品最大的差異：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;ChatGPT / Claude / Manus&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;跑在哪&lt;/td&gt;
+&lt;td&gt;別人家雲端&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;你自己電腦&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;資料&lt;/td&gt;
+&lt;td&gt;上傳到對方伺服器&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;全程留在本地&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;擴充&lt;/td&gt;
+&lt;td&gt;官方提供&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;自己寫 / 社群共享&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;費用&lt;/td&gt;
+&lt;td&gt;訂閱費&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;開源免費&lt;/strong&gt;（只付 API 費用）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;整合度&lt;/td&gt;
+&lt;td&gt;有限&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;想接什麼就接什麼&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼這個東西值得注意"&gt;為什麼這個東西值得注意？
+&lt;/h2&gt;&lt;p&gt;因為它解決了一個很多人有的焦慮：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「我想要 AI 幫我做事，但我不想把所有資料都給 OpenAI / Anthropic。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;OpenClaw 的設計哲學很明確：&lt;strong&gt;Privacy-first&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;跑在你自己的 Mac / Windows / Linux 上&lt;/li&gt;
+&lt;li&gt;記憶資料存在本機&lt;/li&gt;
+&lt;li&gt;要不要呼叫雲端 AI（Claude、GPT）由你決定&lt;/li&gt;
+&lt;li&gt;也可以接本地 LLM（Ollama 之類）完全離線&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;等於是把「AI 助理」這件事&lt;strong&gt;從雲端服務變成一個你擁有的程式&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="它能做什麼"&gt;它能做什麼？
+&lt;/h2&gt;&lt;p&gt;官方列出 50+ 整合，但真正厲害的是&lt;strong&gt;它能自己組合這些整合&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;幾個常見情境：&lt;/p&gt;
+&lt;h3 id="情境-1訊息助理"&gt;情境 1：訊息助理
+&lt;/h3&gt;&lt;p&gt;接上 &lt;strong&gt;LINE / Telegram / WhatsApp / Slack / iMessage / Signal / Discord&lt;/strong&gt;，你可以直接傳訊息給它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「幫我整理今天的 GitHub 通知」&lt;/li&gt;
+&lt;li&gt;「搜一下這個餐廳的評價」&lt;/li&gt;
+&lt;li&gt;「提醒我下午 3 點開會」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不用開電腦、不用開瀏覽器，手機傳訊息就完事。&lt;/p&gt;
+&lt;h3 id="情境-2email-處理"&gt;情境 2：Email 處理
+&lt;/h3&gt;&lt;p&gt;接 Gmail 之後，可以說：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「把今天所有未讀信分類，重要的摘要給我」&lt;/li&gt;
+&lt;li&gt;「回覆這封信，語氣要客氣但堅定」&lt;/li&gt;
+&lt;li&gt;「把這封信的附件存到 Obsidian 的 2026-04 資料夾」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="情境-3coding-助手"&gt;情境 3：coding 助手
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;「幫我把這個 repo clone 下來，跑測試看看哪裡壞了」&lt;/li&gt;
+&lt;li&gt;「查一下昨天 push 的 commit 有沒有影響 production」&lt;/li&gt;
+&lt;li&gt;「把這段程式重寫成 TypeScript」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="情境-4生活雜事"&gt;情境 4：生活雜事
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;「訂今晚 7 點的餐廳」&lt;/li&gt;
+&lt;li&gt;「Spotify 放點 jazz」&lt;/li&gt;
+&lt;li&gt;「把今天的支出記進我的財務 Google Sheet」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="情境-5自我擴充"&gt;情境 5：自我擴充
+&lt;/h3&gt;&lt;p&gt;OpenClaw 最狂的一點：&lt;strong&gt;它可以自己寫擴充套件&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你說：「我想要一個能自動抓 Hacker News 前 10 名摘要的功能。」&lt;/p&gt;
+&lt;p&gt;它會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;寫一個新的 skill（擴充模組）&lt;/li&gt;
+&lt;li&gt;測試它&lt;/li&gt;
+&lt;li&gt;加進自己的能力清單&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;AI 幫 AI 自己擴充能力&lt;/strong&gt;，這個遞迴很有意思。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="補充claude-本身也有-agent-功能"&gt;補充：Claude 本身也有 Agent 功能
+&lt;/h2&gt;&lt;p&gt;在講跟 Manus 的差異之前，值得提一下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Anthropic 的 Claude 本身也有 Agent 能力&lt;/strong&gt;，叫做 &lt;strong&gt;Claude Computer Use&lt;/strong&gt;（電腦使用）以及整合在 Claude.ai 的 &lt;strong&gt;Projects + Tools&lt;/strong&gt; 功能。&lt;/p&gt;
+&lt;p&gt;Claude 可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;控制瀏覽器、操作視窗（Computer Use）&lt;/li&gt;
+&lt;li&gt;呼叫工具（搜尋網路、執行程式碼、讀取檔案）&lt;/li&gt;
+&lt;li&gt;在 Projects 裡保存長期記憶與文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;跟 OpenClaw 的差別是：Claude 的 agent 能力是&lt;strong&gt;雲端服務、官方整合&lt;/strong&gt;，而 OpenClaw 是把 Claude 當成「大腦」，在&lt;strong&gt;你的電腦上自主執行&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;也就是說，OpenClaw + Claude API = 把 Claude 的智慧裝進一個跑在你家的機器人。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="跟-manus-有什麼不同"&gt;跟 Manus 有什麼不同？
+&lt;/h2&gt;&lt;p&gt;前一篇才介紹完 Manus，很多人會問：「這兩個差在哪？」&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;Manus&lt;/th&gt;
+&lt;th&gt;OpenClaw&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;執行位置&lt;/td&gt;
+&lt;td&gt;雲端 VM&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;本機&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;是否開源&lt;/td&gt;
+&lt;td&gt;❌ 封閉&lt;/td&gt;
+&lt;td&gt;✅ &lt;strong&gt;開源&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;訊息介面&lt;/td&gt;
+&lt;td&gt;只有網頁&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;7+ 通訊軟體&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;記憶&lt;/td&gt;
+&lt;td&gt;單次任務&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;長期累積&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;擴充&lt;/td&gt;
+&lt;td&gt;官方主導&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;任何人可寫&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;門檻&lt;/td&gt;
+&lt;td&gt;註冊就能用&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;要自己安裝&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;講白一點：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Manus&lt;/strong&gt; 像一個你租的雲端員工——好用、高階、但要付錢、資料給對方&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt; 像一個你自己養的助手——要花時間調教、但完全是自己的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼安裝"&gt;怎麼安裝？
+&lt;/h2&gt;&lt;p&gt;OpenClaw 是開源的，安裝流程大致是：&lt;/p&gt;
+&lt;h3 id="1-安裝主程式"&gt;1. 安裝主程式
+&lt;/h3&gt;&lt;p&gt;Mac / Windows / Linux 都有安裝包，到 &lt;a class="link" href="https://openclaw.ai" target="_blank" rel="noopener"
+&gt;openclaw.ai&lt;/a&gt; 下載。&lt;/p&gt;
+&lt;h3 id="2-提供-api-key"&gt;2. 提供 API Key
+&lt;/h3&gt;&lt;p&gt;你要有一個 LLM 能力來源，可選：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Anthropic API&lt;/strong&gt;（Claude）— 推薦，能力最強&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenAI API&lt;/strong&gt;（GPT）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ollama&lt;/strong&gt;（本地模型，完全離線）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-授權要接的服務"&gt;3. 授權要接的服務
+&lt;/h3&gt;&lt;p&gt;想接 Gmail 就 OAuth 授權 Gmail，想接 LINE 就做 LINE bot 綁定。&lt;/p&gt;
+&lt;h3 id="4-開始對話"&gt;4. 開始對話
+&lt;/h3&gt;&lt;p&gt;裝好後第一次跟它講話，它會記住你的偏好。&lt;/p&gt;
+&lt;p&gt;比如你說：「我叫 Eric，平常用 Notion 做筆記，習慣早上 6 點起床。」&lt;/p&gt;
+&lt;p&gt;之後它都記得。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="使用的幾個注意事項"&gt;使用的幾個注意事項
+&lt;/h2&gt;&lt;h3 id="1-它是個-alpha-階段的工具"&gt;1. 它是個 alpha 階段的工具
+&lt;/h3&gt;&lt;p&gt;OpenClaw 還很新，會有 bug、會有奇怪行為。&lt;/p&gt;
+&lt;p&gt;不建議用在&lt;strong&gt;絕對不能出錯&lt;/strong&gt;的工作流（例如付款、發正式信件給客戶）。&lt;/p&gt;
+&lt;h3 id="2-記憶會累積成包袱"&gt;2. 記憶會累積成包袱
+&lt;/h3&gt;&lt;p&gt;記憶越多，它越懂你，但也可能&lt;strong&gt;把舊的錯誤偏好一直帶著&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;建議定期檢查它的記憶檔、刪掉過時的內容。&lt;/p&gt;
+&lt;h3 id="3-本地執行不代表完全安全"&gt;3. 本地執行不代表完全安全
+&lt;/h3&gt;&lt;p&gt;即使資料在本地，&lt;strong&gt;它呼叫 Claude / GPT 時還是會把 context 送出去&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;如果你真的想完全離線，搭配 Ollama 跑本地模型，但能力會差很多。&lt;/p&gt;
+&lt;h3 id="4-擴充能力--雙面刃"&gt;4. 擴充能力 = 雙面刃
+&lt;/h3&gt;&lt;p&gt;它能自己寫 script、跑 shell 指令——這代表&lt;strong&gt;它也有能力弄壞你的系統&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;建議：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重要操作先看一眼它要做什麼再放行&lt;/li&gt;
+&lt;li&gt;不要給它 root 權限&lt;/li&gt;
+&lt;li&gt;敏感資料夾設 read-only&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="誰適合用"&gt;誰適合用？
+&lt;/h2&gt;&lt;h3 id="很適合"&gt;很適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;重視隱私&lt;/strong&gt;：不想把所有資料給雲端服務的人&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工程師&lt;/strong&gt;：能自己寫擴充、修 bug、調整流程&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重度自動化愛好者&lt;/strong&gt;：喜歡把生活各種雜事自動化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;愛好 open source&lt;/strong&gt;：支持開源生態的人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="暫時不適合"&gt;暫時不適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;完全不會裝軟體的人&lt;/strong&gt;：入門門檻還是比 ChatGPT 高&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;要 100% 穩定的商業應用&lt;/strong&gt;：還在快速迭代，不夠穩&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;只想聊天&lt;/strong&gt;：對話體驗不如 ChatGPT 專精&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼是龍蝦"&gt;為什麼是「龍蝦」？
+&lt;/h2&gt;&lt;p&gt;這個很多人問。&lt;/p&gt;
+&lt;p&gt;OpenClaw 的 Logo 是一隻紅色龍蝦——「Claw」就是龍蝦的螯。&lt;/p&gt;
+&lt;p&gt;這隱喻大概是：&lt;strong&gt;有抓取、有操作、有個性，不是軟綿綿的助手&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;我覺得這個 branding 很成功，至少一眼就記得。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;2025 到 2026 年，AI Agent 的發展進到一個分岔路口：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;雲端路線&lt;/strong&gt;：Manus、Claude Computer Use、各種 SaaS 代理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本地路線&lt;/strong&gt;：OpenClaw、open-interpreter、各種自建 agent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;兩條路各有優缺點，但**「AI Agent 應該長在自己電腦裡」**這個理念，會吸引一群重視主導權的使用者。&lt;/p&gt;
+&lt;p&gt;如果你：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;已經用過 ChatGPT / Claude，想更進一步&lt;/li&gt;
+&lt;li&gt;對資料隱私有要求&lt;/li&gt;
+&lt;li&gt;願意花點時間裝設定&lt;/li&gt;
+&lt;li&gt;想有一個真正「屬於自己」的 AI 助理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那這隻紅色龍蝦值得一試：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://openclaw.ai" target="_blank" rel="noopener"
+&gt;openclaw.ai&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;未來我們可能每個人都會有一個像這樣的東西，陪你處理大大小小的雜事。OpenClaw 讓這個未來提早到了。&lt;/p&gt;</description></item><item><title>Manus 是什麼？那個被稱為「第一個真正能做事」的 AI Agent</title><link>https://ericchung24.github.io/blog/p/manus-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E5%80%8B%E8%A2%AB%E7%A8%B1%E7%82%BA%E7%AC%AC%E4%B8%80%E5%80%8B%E7%9C%9F%E6%AD%A3%E8%83%BD%E5%81%9A%E4%BA%8B%E7%9A%84-ai-agent/</link><pubDate>Tue, 21 Apr 2026 00:00:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/manus-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E5%80%8B%E8%A2%AB%E7%A8%B1%E7%82%BA%E7%AC%AC%E4%B8%80%E5%80%8B%E7%9C%9F%E6%AD%A3%E8%83%BD%E5%81%9A%E4%BA%8B%E7%9A%84-ai-agent/</guid><description>&lt;img src="https://files.manuscdn.com/assets/dashboard/materials/2025/12/15/cdfc0adf32479d5715866796f170441a34b6c8d6f0ffa14fcdae56c127a5df45.webp" alt="Featured image of post Manus 是什麼？那個被稱為「第一個真正能做事」的 AI Agent" /&gt;&lt;p&gt;2025 年 3 月，一個叫 &lt;strong&gt;&lt;a class="link" href="https://manus.im" target="_blank" rel="noopener"
+&gt;Manus&lt;/a&gt;&lt;/strong&gt; 的網站突然在全網爆紅。&lt;/p&gt;
+&lt;p&gt;不是因為它是「又一個 ChatGPT」，而是因為它展示了一件以前只存在 demo 影片裡的事：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;你丟一個任務，它真的會自己去完成，然後把結果交給你。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不是給你一段建議、不是給你一個 outline——是&lt;strong&gt;直接把做好的東西丟到你面前&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="manus-是什麼"&gt;Manus 是什麼？
+&lt;/h2&gt;&lt;p&gt;Manus 是一個「通用型 AI Agent」。&lt;/p&gt;
+&lt;p&gt;跟純對話型 AI 最大的差別：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;類型&lt;/th&gt;
+&lt;th&gt;你給它什麼&lt;/th&gt;
+&lt;th&gt;它給你什麼&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ChatGPT（對話模式）&lt;/td&gt;
+&lt;td&gt;問題&lt;/td&gt;
+&lt;td&gt;回答（文字）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Claude（對話模式）&lt;/td&gt;
+&lt;td&gt;問題&lt;/td&gt;
+&lt;td&gt;回答（文字）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Claude（Agent 模式）&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;任務&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;成品&lt;/strong&gt;（有工具呼叫、可執行動作）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Manus&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;任務&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;成品&lt;/strong&gt;（檔案、網站、報告、腳本）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;補充：&lt;/strong&gt; Claude 現在也有 Agent 能力了——&lt;strong&gt;Claude Computer Use&lt;/strong&gt; 可以操控瀏覽器和桌面，&lt;strong&gt;Claude.ai&lt;/strong&gt; 內建的工具模式可以搜尋網路、執行程式碼、讀寫檔案。兩者的主要差異在於 Manus 有獨立的雲端 VM 和完整的任務交付流程，Claude Agent 則更強調與對話的整合。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你可以想像成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「你雇了一個遠端助理，他有電腦、有瀏覽器、會寫 code、會上網查資料，然後他真的會把事情做完。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="它到底怎麼運作"&gt;它到底怎麼運作？
+&lt;/h2&gt;&lt;p&gt;Manus 的核心機制是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;接收任務&lt;/strong&gt; — 你用自然語言描述目標&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;拆解步驟&lt;/strong&gt; — 自動規劃要做哪些事&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;開虛擬電腦&lt;/strong&gt; — 它在雲端會有一台自己的電腦&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;執行&lt;/strong&gt; — 開瀏覽器、寫 code、跑程式、下載資料、查資料&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;回報 &amp;amp; 交付&lt;/strong&gt; — 完成後把檔案或成果丟給你&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;重點是中間的過程&lt;strong&gt;你都看得到&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Manus 有一個「即時操作畫面」，像直播一樣看它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;滑鼠移到哪&lt;/li&gt;
+&lt;li&gt;開了哪些分頁&lt;/li&gt;
+&lt;li&gt;打了什麼 code&lt;/li&gt;
+&lt;li&gt;搜尋了什麼&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個透明度讓人用起來很安心——它不是黑盒子。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="實際可以做什麼"&gt;實際可以做什麼？
+&lt;/h2&gt;&lt;p&gt;網路上流傳的經典案例：&lt;/p&gt;
+&lt;h3 id="案例-1履歷分析"&gt;案例 1：履歷分析
+&lt;/h3&gt;&lt;p&gt;丟一份 PDF 履歷，說：「分析這個人適不適合我們公司的 senior engineer 職缺。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;讀完履歷&lt;/li&gt;
+&lt;li&gt;上網查這個人的 GitHub、LinkedIn&lt;/li&gt;
+&lt;li&gt;分析技能匹配度&lt;/li&gt;
+&lt;li&gt;產出一份完整的評估報告（含建議面試問題）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="案例-2出差行程規劃"&gt;案例 2：出差行程規劃
+&lt;/h3&gt;&lt;p&gt;「我下週要去東京三天，預算 5 萬台幣，想看動漫相關景點。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;查機票、訂機票流程（提供連結給你確認）&lt;/li&gt;
+&lt;li&gt;排三天行程（含交通時間）&lt;/li&gt;
+&lt;li&gt;列出動漫景點、餐廳&lt;/li&gt;
+&lt;li&gt;輸出一份完整的行程表（Excel / PDF）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="案例-3股票研究"&gt;案例 3：股票研究
+&lt;/h3&gt;&lt;p&gt;「分析 NVIDIA 最近三個月的走勢，做一份投資建議報告。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;抓股價資料&lt;/li&gt;
+&lt;li&gt;查最新新聞&lt;/li&gt;
+&lt;li&gt;跑分析腳本、畫圖&lt;/li&gt;
+&lt;li&gt;產出一份帶圖表的研究報告&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="案例-4網站建置"&gt;案例 4：網站建置
+&lt;/h3&gt;&lt;p&gt;「幫我做一個寵物領養平台的 prototype。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;設計資料結構&lt;/li&gt;
+&lt;li&gt;寫 HTML / CSS / JavaScript&lt;/li&gt;
+&lt;li&gt;做出能點擊互動的 demo&lt;/li&gt;
+&lt;li&gt;部署到可以公開訪問的網址&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="跟其他-ai-agent-有什麼不同"&gt;跟其他 AI Agent 有什麼不同？
+&lt;/h2&gt;&lt;p&gt;現在宣稱「AI Agent」的工具一堆，但 Manus 出來的時候引爆討論，有幾個原因：&lt;/p&gt;
+&lt;h3 id="1-真的做完不是建議怎麼做"&gt;1. 真的「做完」，不是「建議怎麼做」
+&lt;/h3&gt;&lt;p&gt;很多 AI Agent 會告訴你：「你可以這樣做、那樣做……」&lt;/p&gt;
+&lt;p&gt;Manus 是&lt;strong&gt;直接做完，給你交付品&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;這個差別在工作流程裡面是天與地。&lt;/p&gt;
+&lt;h3 id="2-多工具協作"&gt;2. 多工具協作
+&lt;/h3&gt;&lt;p&gt;它不是只會寫 code 的 AI，也不是只會查資料的 AI——&lt;strong&gt;該用什麼工具就用什麼工具&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;寫 Excel、做 PDF、寫 Python、開瀏覽器截圖、部署網站，全部都在同一個 agent 裡面。&lt;/p&gt;
+&lt;h3 id="3-執行過程透明"&gt;3. 執行過程透明
+&lt;/h3&gt;&lt;p&gt;看得到它在做什麼，出錯可以中途介入。&lt;/p&gt;
+&lt;p&gt;這比「丟進去等結果」的黑盒 agent 好用太多。&lt;/p&gt;
+&lt;h3 id="4-非同步工作"&gt;4. 非同步工作
+&lt;/h3&gt;&lt;p&gt;Manus 在雲端跑，&lt;strong&gt;你可以關掉瀏覽器去吃飯&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;它自己會繼續做，完成後通知你。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="它適合誰用"&gt;它適合誰用？
+&lt;/h2&gt;&lt;h3 id="非常適合"&gt;非常適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PM / 分析師&lt;/strong&gt; — 要做研究報告、競品分析&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;行銷 / 內容&lt;/strong&gt; — 要做主題研究、素材整理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工程師&lt;/strong&gt; — 做快速原型、腳本自動化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;獨立工作者&lt;/strong&gt; — 一個人要處理很多雜事&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="比較不適合"&gt;比較不適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;只需要簡單問答&lt;/strong&gt; — 用 ChatGPT 或 Claude 對話模式就好&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;需要 Agent 但想整合對話&lt;/strong&gt; — Claude Agent 模式可能更順手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;需要高度精確的專業領域&lt;/strong&gt;（醫療、法律）— 還是要專家審核&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;大量重複性工作&lt;/strong&gt; — 直接寫自動化腳本更穩定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="限制與問題"&gt;限制與問題
+&lt;/h2&gt;&lt;p&gt;用一陣子會發現幾個實際問題：&lt;/p&gt;
+&lt;h3 id="1-慢"&gt;1. 慢
+&lt;/h3&gt;&lt;p&gt;一個任務常常要跑 15–60 分鐘。&lt;/p&gt;
+&lt;p&gt;雖然可以非同步，但急件不適合。&lt;/p&gt;
+&lt;h3 id="2-會迷路"&gt;2. 會迷路
+&lt;/h3&gt;&lt;p&gt;複雜任務有時候它會卡住、重複、做到偏掉。&lt;/p&gt;
+&lt;p&gt;需要你中途給提示把它拉回來。&lt;/p&gt;
+&lt;h3 id="3-貴"&gt;3. 貴
+&lt;/h3&gt;&lt;p&gt;不是免費服務，用得多要付訂閱或買點數。&lt;/p&gt;
+&lt;h3 id="4-資料安全"&gt;4. 資料安全
+&lt;/h3&gt;&lt;p&gt;任務會在它的雲端 VM 跑，&lt;strong&gt;敏感資料、公司機密不要丟進去&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="5-還不夠穩定"&gt;5. 還不夠穩定
+&lt;/h3&gt;&lt;p&gt;畢竟是新一代產品，會有 bug、會有錯誤，不能 100% 依賴。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼開始用"&gt;怎麼開始用？
+&lt;/h2&gt;&lt;h3 id="1-去-manusim-註冊"&gt;1. 去 &lt;a class="link" href="https://manus.im" target="_blank" rel="noopener"
+&gt;manus.im&lt;/a&gt; 註冊
+&lt;/h3&gt;&lt;p&gt;早期要 waitlist，現在已經開放註冊（但可能有排隊或點數限制）。&lt;/p&gt;
+&lt;h3 id="2-從小任務開始"&gt;2. 從小任務開始
+&lt;/h3&gt;&lt;p&gt;不要一開始就丟「幫我做一個完整的 SaaS 產品」。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先從單一、清晰的任務&lt;/strong&gt;試手感：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「分析這份 PDF 的重點」&lt;/li&gt;
+&lt;li&gt;「查一下 XX 工具和 YY 工具的差異」&lt;/li&gt;
+&lt;li&gt;「把這段 CSV 轉成圖表」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-學會給好指令"&gt;3. 學會給好指令
+&lt;/h3&gt;&lt;p&gt;Manus 吃得懂自然語言，但&lt;strong&gt;越清楚越好&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;告訴它最終產出物是什麼格式&lt;/li&gt;
+&lt;li&gt;給它限制條件（預算、時間、風格）&lt;/li&gt;
+&lt;li&gt;給參考範例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4-善用中斷和修正"&gt;4. 善用「中斷」和「修正」
+&lt;/h3&gt;&lt;p&gt;任務跑一半發現不對，直接打斷它、給新指令。&lt;/p&gt;
+&lt;p&gt;不要從頭等它做完才發現白做一場。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="它會取代工程師--分析師嗎"&gt;它會取代工程師 / 分析師嗎？
+&lt;/h2&gt;&lt;p&gt;這是 Manus 剛推出時最熱門的討論。&lt;/p&gt;
+&lt;p&gt;我的觀察：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;短期內不會&lt;/strong&gt;。Manus 能做的事，&lt;strong&gt;有能力判斷好壞的人&lt;/strong&gt;才用得好&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;會改變分工&lt;/strong&gt;。以後一個人能做以前十個人做的雜事&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基礎工作會被吃掉&lt;/strong&gt;。整理資料、寫簡單腳本、做 PPT 模板——這類工作會縮水&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高階判斷更珍貴&lt;/strong&gt;。「要不要做」、「做到什麼程度」、「怎麼跟商業結合」這些還是要人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;簡單講：&lt;strong&gt;它不是取代你，是讓會用它的人比不會用的人多做十倍事情。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Manus 是 AI 工具進化的一個分水嶺——&lt;strong&gt;從「回答問題」變成「交付成果」&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;雖然還有很多不穩定、還有很多做不到的事，但方向很清楚：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;未來的 AI 工具，會越來越像「數位員工」，而不是「搜尋引擎」。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果你想感受一下這個改變：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://manus.im" target="_blank" rel="noopener"
+&gt;manus.im&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;挑一個你平常會自己做的小任務，丟給它試試看。體感可能會超過你的預期。&lt;/p&gt;</description></item></channel></rss>

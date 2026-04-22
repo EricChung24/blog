@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工程師文化 on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%96%87%E5%8C%96/</link><description>Recent content in 工程師文化 on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 20 Apr 2026 00:30:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%96%87%E5%8C%96/index.xml" rel="self" type="application/rss+xml"/><item><title>認識 Stack Overflow：工程師搜尋問題的第一站</title><link>https://ericchung24.github.io/blog/p/%E8%AA%8D%E8%AD%98-stack-overflow%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%90%9C%E5%B0%8B%E5%95%8F%E9%A1%8C%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AB%99/</link><pubDate>Mon, 20 Apr 2026 00:30:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/%E8%AA%8D%E8%AD%98-stack-overflow%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%90%9C%E5%B0%8B%E5%95%8F%E9%A1%8C%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AB%99/</guid><description>&lt;img src="https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/size/w2000/2018/07/stackoverflow-1.png" alt="Featured image of post 認識 Stack Overflow：工程師搜尋問題的第一站" /&gt;&lt;p&gt;如果你寫過程式，多半有過這個經驗：&lt;/p&gt;
+&lt;p&gt;遇到一個 bug，在 Google 搜了錯誤訊息，點進一個橘白配色的網站，看到某個 2014 年的回答，照著做，bug 解決了。&lt;/p&gt;
+&lt;p&gt;那個網站就是 &lt;strong&gt;&lt;a class="link" href="https://stackoverflow.com" target="_blank" rel="noopener"
+&gt;Stack Overflow&lt;/a&gt;&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;它幾乎是每個工程師都用過，但很少人認真想過它的起源、為什麼它會長成現在這樣。&lt;/p&gt;
+&lt;p&gt;這篇就來聊聊。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="stack-overflow-怎麼來的"&gt;Stack Overflow 怎麼來的？
+&lt;/h2&gt;&lt;p&gt;時間回到 2008 年。&lt;/p&gt;
+&lt;p&gt;那時候工程師要找答案，主要靠幾個地方：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;論壇&lt;/strong&gt;（phpBB 那種）——資訊分散、搜尋難用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;個人部落格&lt;/strong&gt;——品質參差不齊&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Experts Exchange&lt;/strong&gt;——要付費才能看答案，惡名昭彰&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;郵件列表（Mailing List）&lt;/strong&gt;——老派、門檻高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;兩個知名部落客 &lt;strong&gt;Jeff Atwood&lt;/strong&gt;（Coding Horror 的作者）和 &lt;strong&gt;Joel Spolsky&lt;/strong&gt;（Joel on Software 的作者），決定做一個完全不一樣的問答網站。&lt;/p&gt;
+&lt;p&gt;核心理念是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「答案應該免費，而且要容易找到。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;於是 Stack Overflow 在 2008 年誕生。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼成功"&gt;為什麼成功？
+&lt;/h2&gt;&lt;p&gt;Stack Overflow 之所以能取代既有的論壇文化，關鍵在幾個設計：&lt;/p&gt;
+&lt;h3 id="1-投票機制voting"&gt;1. 投票機制（Voting）
+&lt;/h3&gt;&lt;p&gt;好答案會被推到最上面，不是按時間排序。&lt;/p&gt;
+&lt;p&gt;這一個小小的設計，徹底改變了「找答案」的體驗——&lt;strong&gt;你不用從第一頁翻到第五十頁&lt;/strong&gt;，直接看最多人認可的那一個。&lt;/p&gt;
+&lt;h3 id="2-最佳解答accepted-answer"&gt;2. 最佳解答（Accepted Answer）
+&lt;/h3&gt;&lt;p&gt;發問者可以標記一個「最佳解答」，標綠勾。&lt;/p&gt;
+&lt;p&gt;讓後來看到這個問題的人，可以直接知道「作者覺得哪個方法真的有用」。&lt;/p&gt;
+&lt;h3 id="3-聲望系統reputation"&gt;3. 聲望系統（Reputation）
+&lt;/h3&gt;&lt;p&gt;每次你的問題或回答被 upvote，就會得到聲望點數。&lt;/p&gt;
+&lt;p&gt;這個分數&lt;strong&gt;跟著你一輩子&lt;/strong&gt;，是很多工程師的隱形履歷。有些公司面試甚至會看你的 SO profile。&lt;/p&gt;
+&lt;h3 id="4-編輯權限wiki-style"&gt;4. 編輯權限（Wiki-style）
+&lt;/h3&gt;&lt;p&gt;聲望高的人可以編輯別人的問題和答案，修正錯字、補充更清楚的說明。&lt;/p&gt;
+&lt;p&gt;讓整個平台像維基百科一樣&lt;strong&gt;越用品質越好&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="5-問題品質要求很高"&gt;5. 問題品質要求很高
+&lt;/h3&gt;&lt;p&gt;「已經有人問過」、「問題太模糊」、「沒附 code」——會被關閉。&lt;/p&gt;
+&lt;p&gt;這個做法很有爭議（後面會講），但也確實維持了平台的答案品質。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="stack-overflow-的鄉民文化"&gt;Stack Overflow 的「鄉民文化」
+&lt;/h2&gt;&lt;p&gt;在 SO 混久了會發現，這個社群有自己的個性。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;溫暖的一面：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;答題者通常很熱心，連語法細節都解釋得很詳細&lt;/li&gt;
+&lt;li&gt;有時候會有人直接幫你 debug 整段 code&lt;/li&gt;
+&lt;li&gt;熱門問題下面常常會有補充、更新、不同版本的解法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;嚴格的一面：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;新手問問題，常會被嗆「這個明明就 Google 得到」&lt;/li&gt;
+&lt;li&gt;沒有附 MCVE（Minimal, Complete, Verifiable Example）會被關閉&lt;/li&gt;
+&lt;li&gt;問「XX 語言適合初學者嗎？」這種問題會被投 off-topic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這種嚴格，讓 SO 變成一個「答案品質很高，但對新手不友善」的地方。&lt;/p&gt;
+&lt;p&gt;很多人對這件事又愛又恨。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼用最順"&gt;怎麼用最順？
+&lt;/h2&gt;&lt;p&gt;給剛開始接觸 SO 的人一些建議：&lt;/p&gt;
+&lt;h3 id="搜尋不要發問"&gt;搜尋，不要發問
+&lt;/h3&gt;&lt;p&gt;90% 的問題都已經有人問過了。&lt;/p&gt;
+&lt;p&gt;發問前，用錯誤訊息或關鍵字去 Google 搜尋（SO 的 SEO 超強，幾乎都會是前幾筆結果）。&lt;/p&gt;
+&lt;h3 id="要發問請寫完整"&gt;要發問，請寫完整
+&lt;/h3&gt;&lt;p&gt;一個好的問題包含：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;你在做什麼&lt;/strong&gt;（context）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;你預期會發生什麼&lt;/strong&gt;（expected）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;實際發生了什麼&lt;/strong&gt;（actual，包含完整錯誤訊息）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;你已經試過什麼&lt;/strong&gt;（what I tried）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最小可重現範例&lt;/strong&gt;（minimal reproducible example）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;寫得清楚，答案會很快出現；寫得模糊，問題會被關掉。&lt;/p&gt;
+&lt;h3 id="看答案要看日期"&gt;看答案要看日期
+&lt;/h3&gt;&lt;p&gt;SO 上很多答案是 2010 年的。&lt;/p&gt;
+&lt;p&gt;技術變化很快，一個 10 年前的解法可能早就過時（例如 jQuery、舊版 React class component）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先看日期，再看內容。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="答案區往下滑"&gt;答案區往下滑
+&lt;/h3&gt;&lt;p&gt;最高票答案不一定是最好的。&lt;/p&gt;
+&lt;p&gt;有時候下面會有「2023 年更新：現在已經不用這樣做了，應該用 XXX」。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="ai-時代的-stack-overflow"&gt;AI 時代的 Stack Overflow
+&lt;/h2&gt;&lt;p&gt;ChatGPT 出現後，SO 的流量確實掉了。&lt;/p&gt;
+&lt;p&gt;畢竟要問一個 bug，問 AI 直接得到答案，比在 SO 翻十個回答還快。&lt;/p&gt;
+&lt;p&gt;但這不代表 SO 沒用了，只是角色變了：&lt;/p&gt;
+&lt;h3 id="so-現在更像是答案來源的真相"&gt;SO 現在更像是「答案來源的真相」
+&lt;/h3&gt;&lt;p&gt;ChatGPT 的訓練資料裡面，有大量 SO 的問答。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;當 AI 的答案你不確定對不對，回去 SO 查原始討論串，看人類工程師怎麼吵出那個結論——這件事的價值反而更高了。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="冷門問題還是要靠-so"&gt;冷門問題還是要靠 SO
+&lt;/h3&gt;&lt;p&gt;AI 對主流框架（React、Python）答得很好。&lt;/p&gt;
+&lt;p&gt;但遇到冷門工具、特定版本 bug、某個 library 的邊角情境，AI 常常亂編，&lt;strong&gt;SO 上的真實討論還是比較可靠&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="so-自己也在轉型"&gt;SO 自己也在轉型
+&lt;/h3&gt;&lt;p&gt;Stack Overflow 後來推出了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class="link" href="https://stackoverflow.co/labs/" target="_blank" rel="noopener"
+&gt;OverflowAI&lt;/a&gt;&lt;/strong&gt; — 把社群答案包裝成 AI 助手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Teams 版本&lt;/strong&gt; — 企業內部用的私有 Q&amp;amp;A 平台&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;授權資料給 OpenAI&lt;/strong&gt; — 讓 AI 訓練時能用他們的資料（也有分潤）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有人覺得 SO 走下坡，但它仍然是&lt;strong&gt;人類工程師集體智慧最大的一個資料庫&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Stack Overflow 對工程師的意義，不只是一個找答案的網站。&lt;/p&gt;
+&lt;p&gt;它建立了一套**「問答應該長怎樣」的標準**——有結構、有品質、有社群監督。&lt;/p&gt;
+&lt;p&gt;即使 AI 的時代來了，很多 AI 答案的源頭還是 SO。&lt;/p&gt;
+&lt;p&gt;下次你搜尋 bug 點進 SO，記得：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;幫有用的答案按個讚&lt;/li&gt;
+&lt;li&gt;看到新手問題不要嗆&lt;/li&gt;
+&lt;li&gt;如果你解決了一個冷門問題，回去寫個答案，造福未來的自己&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://stackoverflow.com" target="_blank" rel="noopener"
+&gt;stackoverflow.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;工程師的知識能一層一層累積到今天，SO 這個平台功不可沒。&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI 工具 on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/ai-%E5%B7%A5%E5%85%B7/</link><description>Recent content in AI 工具 on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 22 Apr 2026 00:30:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/ai-%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenAI 最新圖片生成功能整理：現在不只是生圖，還能改圖、修字、做透明背景</title><link>https://ericchung24.github.io/blog/p/openai-%E6%9C%80%E6%96%B0%E5%9C%96%E7%89%87%E7%94%9F%E6%88%90%E5%8A%9F%E8%83%BD%E6%95%B4%E7%90%86%E7%8F%BE%E5%9C%A8%E4%B8%8D%E5%8F%AA%E6%98%AF%E7%94%9F%E5%9C%96%E9%82%84%E8%83%BD%E6%94%B9%E5%9C%96%E4%BF%AE%E5%AD%97%E5%81%9A%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/</link><pubDate>Wed, 22 Apr 2026 00:30:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/openai-%E6%9C%80%E6%96%B0%E5%9C%96%E7%89%87%E7%94%9F%E6%88%90%E5%8A%9F%E8%83%BD%E6%95%B4%E7%90%86%E7%8F%BE%E5%9C%A8%E4%B8%8D%E5%8F%AA%E6%98%AF%E7%94%9F%E5%9C%96%E9%82%84%E8%83%BD%E6%94%B9%E5%9C%96%E4%BF%AE%E5%AD%97%E5%81%9A%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/</guid><description>&lt;img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post OpenAI 最新圖片生成功能整理：現在不只是生圖，還能改圖、修字、做透明背景" /&gt;&lt;p&gt;如果你對 OpenAI 圖片功能的印象還停在「輸入一句 prompt，AI 幫你畫一張圖」，那現在已經不太一樣了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;截至 2026 年 4 月 22 日，OpenAI 官方文件已經把圖片能力往「生成 + 編修 + 多輪修改 + 可整合進產品」這條路推得很完整。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;而且重點不是只有「畫得更漂亮」，而是它開始更像一個真的可以工作的圖片工具。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="先講結論現在-openai-的圖片功能強在哪"&gt;先講結論：現在 OpenAI 的圖片功能強在哪？
+&lt;/h2&gt;&lt;p&gt;如果用最白話的方式講，最新一代方向有 4 個重點：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;不只是生圖，還很強調改圖&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;對文字的理解和輸出更穩&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可以把圖片當輸入，做參考、重製、局部修改&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不只給人手動玩，也很適合接進 App 或工作流程&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;這是它跟早期圖片模型最大的差別。&lt;/p&gt;
+&lt;p&gt;以前很多 AI 生圖工具的體驗是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一次很驚豔，第二次開始就發現它常常「知道你想幹嘛，但做不準」。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;現在 OpenAI 官方主推的 GPT Image 路線，明顯是在解這個問題。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="如果你只記得-dalle-3現在要更新一下印象"&gt;如果你只記得 DALL·E 3，現在要更新一下印象
+&lt;/h2&gt;&lt;p&gt;很多人一提到 OpenAI 生圖，腦中第一個名字還是 &lt;strong&gt;DALL·E 3&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;但如果看官方現在的 API 文件，主力方向已經不是「DALL·E 系列是主角」了，而是 &lt;strong&gt;GPT Image 系列&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;官方文件目前已經列出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gpt-image-2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gpt-image-1.5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gpt-image-1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gpt-image-1-mini&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中 &lt;code&gt;gpt-image-1&lt;/code&gt; 在模型頁已經被標成 &lt;strong&gt;previous image generation model&lt;/strong&gt;，意思很明確：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;現在的新方向不是回到舊的 DALL·E 命名，而是把圖片能力整合進 GPT 系列能力裡。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這個變化很重要，因為它代表 OpenAI 不再把圖片當成一個獨立、孤立的模型功能，而是把它變成整體多模態能力的一部分。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="不是只會畫圖而是會照你的要求修改"&gt;不是只會「畫圖」，而是會「照你的要求修改」
+&lt;/h2&gt;&lt;p&gt;這大概是一般使用者最有感的進步。&lt;/p&gt;
+&lt;p&gt;以前很多 AI 生圖工具的問題是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一次生成還不錯&lt;/li&gt;
+&lt;li&gt;但你一改需求，它就整張重來&lt;/li&gt;
+&lt;li&gt;你想保留某個元素，它常常保不住&lt;/li&gt;
+&lt;li&gt;你要它只改一小塊，它卻順手把別的地方也改掉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;現在 OpenAI 官方文件很明確強調的能力包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;generate images&lt;/strong&gt;：從文字直接生成圖片&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;edit images&lt;/strong&gt;：修改既有圖片&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;image inputs&lt;/strong&gt;：可以把圖片本身當成輸入&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;multi-turn editing&lt;/strong&gt;：可以一輪一輪慢慢修&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這代表你比較像是在跟一個設計工具合作，而不是每次都在抽卡。&lt;/p&gt;
+&lt;p&gt;例如你原本有一張商品圖，你可以要求它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把背景改成純白&lt;/li&gt;
+&lt;li&gt;把杯子顏色改成霧黑&lt;/li&gt;
+&lt;li&gt;保留 logo 不要變&lt;/li&gt;
+&lt;li&gt;幫我加上透明背景版本&lt;/li&gt;
+&lt;li&gt;把海報上的標題字改正&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這些需求的價值，不在於「炫」，而在於&lt;strong&gt;真的有工作用途&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼大家會特別在意文字能不能畫對"&gt;為什麼大家會特別在意「文字能不能畫對」？
+&lt;/h2&gt;&lt;p&gt;因為這是早期 AI 圖片模型最容易翻車的地方之一。&lt;/p&gt;
+&lt;p&gt;以前你叫它做一張海報、價目表、封面圖、社群貼文，常常畫面很漂亮，但字一放上去就變成亂碼。&lt;/p&gt;
+&lt;p&gt;OpenAI 在官方介紹 API 圖片模型時，特別強調了幾件事：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;better instruction following&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;accurately render text&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;use world knowledge&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;翻成白話就是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你叫它做什麼，它比較聽得懂&lt;/li&gt;
+&lt;li&gt;圖裡的文字比較有機會真的寫對&lt;/li&gt;
+&lt;li&gt;它對現實世界物件、情境、風格的理解更強&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這對一般人來說，意義非常直接。&lt;/p&gt;
+&lt;p&gt;因為圖片 AI 真正有商業價值的場景，很多都不是純藝術創作，而是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;社群貼文圖&lt;/li&gt;
+&lt;li&gt;活動宣傳圖&lt;/li&gt;
+&lt;li&gt;商品示意圖&lt;/li&gt;
+&lt;li&gt;App mockup&lt;/li&gt;
+&lt;li&gt;簡報封面&lt;/li&gt;
+&lt;li&gt;教學圖卡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這些東西幾乎都跟「字要對、版面要穩」有關。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="它現在比較像-photoshop--ai不只是-midjourney-式的靈感機器"&gt;它現在比較像 Photoshop + AI，不只是 Midjourney 式的靈感機器
+&lt;/h2&gt;&lt;p&gt;這句話不是在做產品比較，而是在講使用心智。&lt;/p&gt;
+&lt;p&gt;很多人以前對 AI 生圖工具的期待是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;幫我畫一張很酷的圖。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但 OpenAI 現在這條路更像是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;幫我把這張圖做成我真的能用的版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;差別很大。&lt;/p&gt;
+&lt;p&gt;前者偏創意發想，後者偏工作流。&lt;/p&gt;
+&lt;p&gt;所以 OpenAI 這套圖片能力特別適合下面這些人：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要快速做視覺素材的內容創作者&lt;/li&gt;
+&lt;li&gt;要產商品圖、行銷圖的電商團隊&lt;/li&gt;
+&lt;li&gt;要做封面、插圖、概念圖的自媒體或設計師&lt;/li&gt;
+&lt;li&gt;想把生圖功能整合進產品的開發者&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="開發者視角現在可以怎麼接進產品"&gt;開發者視角：現在可以怎麼接進產品？
+&lt;/h2&gt;&lt;p&gt;如果你是工程師，這一段比較重要。&lt;/p&gt;
+&lt;p&gt;OpenAI 目前把圖片能力放在兩種主要用法裡：&lt;/p&gt;
+&lt;h3 id="1-image-api"&gt;1. Image API
+&lt;/h3&gt;&lt;p&gt;適合這種需求：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;單次生成一張圖&lt;/li&gt;
+&lt;li&gt;單次改一張圖&lt;/li&gt;
+&lt;li&gt;後端明確控制輸入與輸出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這種模式比較像：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我知道我要做什麼，直接呼叫 API 執行。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="2-responses-api--image_generation-tool"&gt;2. Responses API + &lt;code&gt;image_generation&lt;/code&gt; tool
+&lt;/h3&gt;&lt;p&gt;適合這種需求：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;對話中順手生成圖片&lt;/li&gt;
+&lt;li&gt;讓模型自己判斷現在該不該出圖&lt;/li&gt;
+&lt;li&gt;在多輪流程中反覆改圖&lt;/li&gt;
+&lt;li&gt;做聊天型產品、助理型產品、創作工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這種模式比較像：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我不是只做一次生圖，而是要把圖片能力放進整個互動流程裡。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這也是現在 OpenAI 很明顯在推的方向：&lt;strong&gt;圖片不是單獨功能，而是 Agent / Assistant / Workflow 的一部分。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="具體可控制哪些東西"&gt;具體可控制哪些東西？
+&lt;/h2&gt;&lt;p&gt;根據官方文件，現在圖片輸出可以控制的面向包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;尺寸&lt;/strong&gt;：例如方圖、直式圖、橫式圖&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;品質&lt;/strong&gt;：低、中、高&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;格式&lt;/strong&gt;：不同輸出格式&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;壓縮&lt;/strong&gt;：JPEG / WebP 可調整壓縮程度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;背景&lt;/strong&gt;：透明或不透明&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;動作&lt;/strong&gt;：自動判斷、直接生成、或編輯圖片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這代表它不是只有「給你一張圖」，而是可以更接近實際產品需求。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;電商商品卡需要透明背景&lt;/li&gt;
+&lt;li&gt;部落格首圖要橫式比例&lt;/li&gt;
+&lt;li&gt;App 內縮圖要控制檔案大小&lt;/li&gt;
+&lt;li&gt;編輯器產品需要保留原圖細節再微調&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這些都比「能不能畫出一隻貓」更接近真實世界。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="一般人現在最適合怎麼用"&gt;一般人現在最適合怎麼用？
+&lt;/h2&gt;&lt;p&gt;如果你不是開發者，最實際的使用方式其實不是追求最複雜 prompt，而是先從「明確任務」開始。&lt;/p&gt;
+&lt;p&gt;比方說：&lt;/p&gt;
+&lt;h3 id="1-做社群圖"&gt;1. 做社群圖
+&lt;/h3&gt;&lt;p&gt;不要只寫：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;幫我畫一張科技感圖片&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;比較好的寫法是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;幫我做一張 16:9 的科技風社群首圖，主題是 AI 自動化，背景乾淨，標題預留空間在左上角。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="2-改現有圖片"&gt;2. 改現有圖片
+&lt;/h3&gt;&lt;p&gt;如果你已經有圖，通常比從零開始生更穩。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;保留人物與構圖，把背景改成簡潔辦公室風格，顏色改冷色調。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="3-做有字的圖"&gt;3. 做有字的圖
+&lt;/h3&gt;&lt;p&gt;請把文字內容直接寫清楚，並拆成層次。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;做一張活動海報。主標題是「React 前端讀書會」，副標題是「週三晚上 7:30」，底部加上「台北市大安區」。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這種寫法通常會比只丟一個模糊句子好很多。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="這一波更新真正代表什麼"&gt;這一波更新真正代表什麼？
+&lt;/h2&gt;&lt;p&gt;我覺得重點不是「OpenAI 也能生圖了」。&lt;/p&gt;
+&lt;p&gt;那早就不是新聞。&lt;/p&gt;
+&lt;p&gt;真正重要的是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;OpenAI 正在把圖片能力從展示型功能，推進到可工作的基礎能力。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也就是說，它不是只拿來玩，而是越來越像：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可接進產品的 API&lt;/li&gt;
+&lt;li&gt;可放進團隊流程的工具&lt;/li&gt;
+&lt;li&gt;可反覆修改的視覺工作台&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你是一般使用者，感受到的會是：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;它比較不再像一次性玩具，而比較像真的能幫你省時間。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你是開發者，感受到的會是：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;圖片生成不再只是附加功能，而是可以變成產品功能本身。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="最後整理"&gt;最後整理
+&lt;/h2&gt;&lt;p&gt;如果用一句話總結：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;OpenAI 最新圖片生成功能的重點，不只是更會畫，而是更會照要求生成、修改，並且更容易接進真實工作流程。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以如果你最近才重新注意到 OpenAI 的圖片能力，可以先更新三個印象：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;主力已經是 GPT Image 系列，不只是 DALL·E&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重點能力是生成 + 編修 + 多輪修改&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;它的價值正在從「好玩」轉向「好用」&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果你後面想看，我也可以再補一篇：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;OpenAI 圖片 API 怎麼串？前端工程師快速上手版&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ChatGPT 生圖 prompt 怎麼寫，成功率比較高？&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OpenAI 生圖 vs Midjourney vs Flux，差別到底在哪？&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="參考資料"&gt;參考資料
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://developers.openai.com/api/docs/guides/image-generation" target="_blank" rel="noopener"
+&gt;OpenAI 官方圖片生成指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://developers.openai.com/api/docs/guides/tools-image-generation" target="_blank" rel="noopener"
+&gt;OpenAI 官方 image generation tool 文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://openai.com/index/image-generation-api/" target="_blank" rel="noopener"
+&gt;OpenAI 圖片模型介紹：Introducing our latest image generation model in the API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://developers.openai.com/api/docs/models/gpt-image-1" target="_blank" rel="noopener"
+&gt;OpenAI 模型頁：GPT Image 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Manus 是什麼？那個被稱為「第一個真正能做事」的 AI Agent</title><link>https://ericchung24.github.io/blog/p/manus-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E5%80%8B%E8%A2%AB%E7%A8%B1%E7%82%BA%E7%AC%AC%E4%B8%80%E5%80%8B%E7%9C%9F%E6%AD%A3%E8%83%BD%E5%81%9A%E4%BA%8B%E7%9A%84-ai-agent/</link><pubDate>Tue, 21 Apr 2026 00:00:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/manus-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E5%80%8B%E8%A2%AB%E7%A8%B1%E7%82%BA%E7%AC%AC%E4%B8%80%E5%80%8B%E7%9C%9F%E6%AD%A3%E8%83%BD%E5%81%9A%E4%BA%8B%E7%9A%84-ai-agent/</guid><description>&lt;img src="https://files.manuscdn.com/assets/dashboard/materials/2025/12/15/cdfc0adf32479d5715866796f170441a34b6c8d6f0ffa14fcdae56c127a5df45.webp" alt="Featured image of post Manus 是什麼？那個被稱為「第一個真正能做事」的 AI Agent" /&gt;&lt;p&gt;2025 年 3 月，一個叫 &lt;strong&gt;&lt;a class="link" href="https://manus.im" target="_blank" rel="noopener"
+&gt;Manus&lt;/a&gt;&lt;/strong&gt; 的網站突然在全網爆紅。&lt;/p&gt;
+&lt;p&gt;不是因為它是「又一個 ChatGPT」，而是因為它展示了一件以前只存在 demo 影片裡的事：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;你丟一個任務，它真的會自己去完成，然後把結果交給你。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不是給你一段建議、不是給你一個 outline——是&lt;strong&gt;直接把做好的東西丟到你面前&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="manus-是什麼"&gt;Manus 是什麼？
+&lt;/h2&gt;&lt;p&gt;Manus 是一個「通用型 AI Agent」。&lt;/p&gt;
+&lt;p&gt;跟純對話型 AI 最大的差別：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;類型&lt;/th&gt;
+&lt;th&gt;你給它什麼&lt;/th&gt;
+&lt;th&gt;它給你什麼&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ChatGPT（對話模式）&lt;/td&gt;
+&lt;td&gt;問題&lt;/td&gt;
+&lt;td&gt;回答（文字）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Claude（對話模式）&lt;/td&gt;
+&lt;td&gt;問題&lt;/td&gt;
+&lt;td&gt;回答（文字）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Claude（Agent 模式）&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;任務&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;成品&lt;/strong&gt;（有工具呼叫、可執行動作）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Manus&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;任務&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;成品&lt;/strong&gt;（檔案、網站、報告、腳本）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;補充：&lt;/strong&gt; Claude 現在也有 Agent 能力了——&lt;strong&gt;Claude Computer Use&lt;/strong&gt; 可以操控瀏覽器和桌面，&lt;strong&gt;Claude.ai&lt;/strong&gt; 內建的工具模式可以搜尋網路、執行程式碼、讀寫檔案。兩者的主要差異在於 Manus 有獨立的雲端 VM 和完整的任務交付流程，Claude Agent 則更強調與對話的整合。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你可以想像成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「你雇了一個遠端助理，他有電腦、有瀏覽器、會寫 code、會上網查資料，然後他真的會把事情做完。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="它到底怎麼運作"&gt;它到底怎麼運作？
+&lt;/h2&gt;&lt;p&gt;Manus 的核心機制是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;接收任務&lt;/strong&gt; — 你用自然語言描述目標&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;拆解步驟&lt;/strong&gt; — 自動規劃要做哪些事&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;開虛擬電腦&lt;/strong&gt; — 它在雲端會有一台自己的電腦&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;執行&lt;/strong&gt; — 開瀏覽器、寫 code、跑程式、下載資料、查資料&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;回報 &amp;amp; 交付&lt;/strong&gt; — 完成後把檔案或成果丟給你&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;重點是中間的過程&lt;strong&gt;你都看得到&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Manus 有一個「即時操作畫面」，像直播一樣看它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;滑鼠移到哪&lt;/li&gt;
+&lt;li&gt;開了哪些分頁&lt;/li&gt;
+&lt;li&gt;打了什麼 code&lt;/li&gt;
+&lt;li&gt;搜尋了什麼&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個透明度讓人用起來很安心——它不是黑盒子。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="實際可以做什麼"&gt;實際可以做什麼？
+&lt;/h2&gt;&lt;p&gt;網路上流傳的經典案例：&lt;/p&gt;
+&lt;h3 id="案例-1履歷分析"&gt;案例 1：履歷分析
+&lt;/h3&gt;&lt;p&gt;丟一份 PDF 履歷，說：「分析這個人適不適合我們公司的 senior engineer 職缺。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;讀完履歷&lt;/li&gt;
+&lt;li&gt;上網查這個人的 GitHub、LinkedIn&lt;/li&gt;
+&lt;li&gt;分析技能匹配度&lt;/li&gt;
+&lt;li&gt;產出一份完整的評估報告（含建議面試問題）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="案例-2出差行程規劃"&gt;案例 2：出差行程規劃
+&lt;/h3&gt;&lt;p&gt;「我下週要去東京三天，預算 5 萬台幣，想看動漫相關景點。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;查機票、訂機票流程（提供連結給你確認）&lt;/li&gt;
+&lt;li&gt;排三天行程（含交通時間）&lt;/li&gt;
+&lt;li&gt;列出動漫景點、餐廳&lt;/li&gt;
+&lt;li&gt;輸出一份完整的行程表（Excel / PDF）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="案例-3股票研究"&gt;案例 3：股票研究
+&lt;/h3&gt;&lt;p&gt;「分析 NVIDIA 最近三個月的走勢，做一份投資建議報告。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;抓股價資料&lt;/li&gt;
+&lt;li&gt;查最新新聞&lt;/li&gt;
+&lt;li&gt;跑分析腳本、畫圖&lt;/li&gt;
+&lt;li&gt;產出一份帶圖表的研究報告&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="案例-4網站建置"&gt;案例 4：網站建置
+&lt;/h3&gt;&lt;p&gt;「幫我做一個寵物領養平台的 prototype。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;設計資料結構&lt;/li&gt;
+&lt;li&gt;寫 HTML / CSS / JavaScript&lt;/li&gt;
+&lt;li&gt;做出能點擊互動的 demo&lt;/li&gt;
+&lt;li&gt;部署到可以公開訪問的網址&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="跟其他-ai-agent-有什麼不同"&gt;跟其他 AI Agent 有什麼不同？
+&lt;/h2&gt;&lt;p&gt;現在宣稱「AI Agent」的工具一堆，但 Manus 出來的時候引爆討論，有幾個原因：&lt;/p&gt;
+&lt;h3 id="1-真的做完不是建議怎麼做"&gt;1. 真的「做完」，不是「建議怎麼做」
+&lt;/h3&gt;&lt;p&gt;很多 AI Agent 會告訴你：「你可以這樣做、那樣做……」&lt;/p&gt;
+&lt;p&gt;Manus 是&lt;strong&gt;直接做完，給你交付品&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;這個差別在工作流程裡面是天與地。&lt;/p&gt;
+&lt;h3 id="2-多工具協作"&gt;2. 多工具協作
+&lt;/h3&gt;&lt;p&gt;它不是只會寫 code 的 AI，也不是只會查資料的 AI——&lt;strong&gt;該用什麼工具就用什麼工具&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;寫 Excel、做 PDF、寫 Python、開瀏覽器截圖、部署網站，全部都在同一個 agent 裡面。&lt;/p&gt;
+&lt;h3 id="3-執行過程透明"&gt;3. 執行過程透明
+&lt;/h3&gt;&lt;p&gt;看得到它在做什麼，出錯可以中途介入。&lt;/p&gt;
+&lt;p&gt;這比「丟進去等結果」的黑盒 agent 好用太多。&lt;/p&gt;
+&lt;h3 id="4-非同步工作"&gt;4. 非同步工作
+&lt;/h3&gt;&lt;p&gt;Manus 在雲端跑，&lt;strong&gt;你可以關掉瀏覽器去吃飯&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;它自己會繼續做，完成後通知你。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="它適合誰用"&gt;它適合誰用？
+&lt;/h2&gt;&lt;h3 id="非常適合"&gt;非常適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PM / 分析師&lt;/strong&gt; — 要做研究報告、競品分析&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;行銷 / 內容&lt;/strong&gt; — 要做主題研究、素材整理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工程師&lt;/strong&gt; — 做快速原型、腳本自動化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;獨立工作者&lt;/strong&gt; — 一個人要處理很多雜事&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="比較不適合"&gt;比較不適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;只需要簡單問答&lt;/strong&gt; — 用 ChatGPT 或 Claude 對話模式就好&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;需要 Agent 但想整合對話&lt;/strong&gt; — Claude Agent 模式可能更順手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;需要高度精確的專業領域&lt;/strong&gt;（醫療、法律）— 還是要專家審核&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;大量重複性工作&lt;/strong&gt; — 直接寫自動化腳本更穩定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="限制與問題"&gt;限制與問題
+&lt;/h2&gt;&lt;p&gt;用一陣子會發現幾個實際問題：&lt;/p&gt;
+&lt;h3 id="1-慢"&gt;1. 慢
+&lt;/h3&gt;&lt;p&gt;一個任務常常要跑 15–60 分鐘。&lt;/p&gt;
+&lt;p&gt;雖然可以非同步，但急件不適合。&lt;/p&gt;
+&lt;h3 id="2-會迷路"&gt;2. 會迷路
+&lt;/h3&gt;&lt;p&gt;複雜任務有時候它會卡住、重複、做到偏掉。&lt;/p&gt;
+&lt;p&gt;需要你中途給提示把它拉回來。&lt;/p&gt;
+&lt;h3 id="3-貴"&gt;3. 貴
+&lt;/h3&gt;&lt;p&gt;不是免費服務，用得多要付訂閱或買點數。&lt;/p&gt;
+&lt;h3 id="4-資料安全"&gt;4. 資料安全
+&lt;/h3&gt;&lt;p&gt;任務會在它的雲端 VM 跑，&lt;strong&gt;敏感資料、公司機密不要丟進去&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="5-還不夠穩定"&gt;5. 還不夠穩定
+&lt;/h3&gt;&lt;p&gt;畢竟是新一代產品，會有 bug、會有錯誤，不能 100% 依賴。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼開始用"&gt;怎麼開始用？
+&lt;/h2&gt;&lt;h3 id="1-去-manusim-註冊"&gt;1. 去 &lt;a class="link" href="https://manus.im" target="_blank" rel="noopener"
+&gt;manus.im&lt;/a&gt; 註冊
+&lt;/h3&gt;&lt;p&gt;早期要 waitlist，現在已經開放註冊（但可能有排隊或點數限制）。&lt;/p&gt;
+&lt;h3 id="2-從小任務開始"&gt;2. 從小任務開始
+&lt;/h3&gt;&lt;p&gt;不要一開始就丟「幫我做一個完整的 SaaS 產品」。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先從單一、清晰的任務&lt;/strong&gt;試手感：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「分析這份 PDF 的重點」&lt;/li&gt;
+&lt;li&gt;「查一下 XX 工具和 YY 工具的差異」&lt;/li&gt;
+&lt;li&gt;「把這段 CSV 轉成圖表」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-學會給好指令"&gt;3. 學會給好指令
+&lt;/h3&gt;&lt;p&gt;Manus 吃得懂自然語言，但&lt;strong&gt;越清楚越好&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;告訴它最終產出物是什麼格式&lt;/li&gt;
+&lt;li&gt;給它限制條件（預算、時間、風格）&lt;/li&gt;
+&lt;li&gt;給參考範例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4-善用中斷和修正"&gt;4. 善用「中斷」和「修正」
+&lt;/h3&gt;&lt;p&gt;任務跑一半發現不對，直接打斷它、給新指令。&lt;/p&gt;
+&lt;p&gt;不要從頭等它做完才發現白做一場。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="它會取代工程師--分析師嗎"&gt;它會取代工程師 / 分析師嗎？
+&lt;/h2&gt;&lt;p&gt;這是 Manus 剛推出時最熱門的討論。&lt;/p&gt;
+&lt;p&gt;我的觀察：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;短期內不會&lt;/strong&gt;。Manus 能做的事，&lt;strong&gt;有能力判斷好壞的人&lt;/strong&gt;才用得好&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;會改變分工&lt;/strong&gt;。以後一個人能做以前十個人做的雜事&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基礎工作會被吃掉&lt;/strong&gt;。整理資料、寫簡單腳本、做 PPT 模板——這類工作會縮水&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高階判斷更珍貴&lt;/strong&gt;。「要不要做」、「做到什麼程度」、「怎麼跟商業結合」這些還是要人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;簡單講：&lt;strong&gt;它不是取代你，是讓會用它的人比不會用的人多做十倍事情。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Manus 是 AI 工具進化的一個分水嶺——&lt;strong&gt;從「回答問題」變成「交付成果」&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;雖然還有很多不穩定、還有很多做不到的事，但方向很清楚：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;未來的 AI 工具，會越來越像「數位員工」，而不是「搜尋引擎」。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果你想感受一下這個改變：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://manus.im" target="_blank" rel="noopener"
+&gt;manus.im&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;挑一個你平常會自己做的小任務，丟給它試試看。體感可能會超過你的預期。&lt;/p&gt;</description></item><item><title>NotebookLM 是什麼？Google 的 AI 筆記助手，幫你把一堆資料變成可問答的知識庫</title><link>https://ericchung24.github.io/blog/p/notebooklm-%E6%98%AF%E4%BB%80%E9%BA%BCgoogle-%E7%9A%84-ai-%E7%AD%86%E8%A8%98%E5%8A%A9%E6%89%8B%E5%B9%AB%E4%BD%A0%E6%8A%8A%E4%B8%80%E5%A0%86%E8%B3%87%E6%96%99%E8%AE%8A%E6%88%90%E5%8F%AF%E5%95%8F%E7%AD%94%E7%9A%84%E7%9F%A5%E8%AD%98%E5%BA%AB/</link><pubDate>Mon, 20 Apr 2026 00:40:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/notebooklm-%E6%98%AF%E4%BB%80%E9%BA%BCgoogle-%E7%9A%84-ai-%E7%AD%86%E8%A8%98%E5%8A%A9%E6%89%8B%E5%B9%AB%E4%BD%A0%E6%8A%8A%E4%B8%80%E5%A0%86%E8%B3%87%E6%96%99%E8%AE%8A%E6%88%90%E5%8F%AF%E5%95%8F%E7%AD%94%E7%9A%84%E7%9F%A5%E8%AD%98%E5%BA%AB/</guid><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/notebookLM_v2_1.width-1000.format-webp.webp" alt="Featured image of post NotebookLM 是什麼？Google 的 AI 筆記助手，幫你把一堆資料變成可問答的知識庫" /&gt;&lt;p&gt;你一定遇過這種情境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手上一堆 PDF、會議記錄、研究報告，要整理成摘要&lt;/li&gt;
+&lt;li&gt;讀了十篇文章，要比較它們對同一個主題的觀點&lt;/li&gt;
+&lt;li&gt;YouTube 有一場 3 小時的演講，只想知道「他在第幾分鐘講了 XX」&lt;/li&gt;
+&lt;li&gt;準備考試或簡報，想把筆記變成可以互相問答的對象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以前這種事很花時間。&lt;/p&gt;
+&lt;p&gt;直到 Google 推出 &lt;strong&gt;&lt;a class="link" href="https://notebooklm.google.com" target="_blank" rel="noopener"
+&gt;NotebookLM&lt;/a&gt;&lt;/strong&gt;，整個遊戲規則變了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="notebooklm-是什麼"&gt;NotebookLM 是什麼？
+&lt;/h2&gt;&lt;p&gt;簡單一句話：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「把你自己的資料丟進去，它就變成一個只會根據這些資料回答的 AI 助手。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;跟 ChatGPT、Claude 最大的差別是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ChatGPT 會用它&lt;strong&gt;全網路的訓練資料&lt;/strong&gt;回答你&lt;/li&gt;
+&lt;li&gt;NotebookLM 只會用&lt;strong&gt;你上傳的那些文件&lt;/strong&gt;回答你&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個差別超級關鍵。&lt;/p&gt;
+&lt;p&gt;因為它表示：&lt;strong&gt;AI 不會亂掰（或至少亂掰的機率大幅降低）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你讀的資料、它讀的資料，是同一份。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="可以放什麼進去"&gt;可以放什麼進去？
+&lt;/h2&gt;&lt;p&gt;支援的來源類型越來越多，目前包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Docs / Slides&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;網頁 URL&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;YouTube 影片&lt;/strong&gt;（會自動抓字幕）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;音訊檔&lt;/strong&gt;（會自動轉文字）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;純文字貼上&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一個 notebook 可以放最多 &lt;strong&gt;50 個來源&lt;/strong&gt;（免費版）、300 個（Plus 版）。&lt;/p&gt;
+&lt;p&gt;每個來源的大小限制也不小（PDF 上限 500,000 字），對大部分情境夠用了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="最強的三個功能"&gt;最強的三個功能
+&lt;/h2&gt;&lt;h3 id="1-基於來源的問答"&gt;1. 基於來源的問答
+&lt;/h3&gt;&lt;p&gt;這是核心。&lt;/p&gt;
+&lt;p&gt;把資料丟進去後，你可以直接問：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「這幾篇文章對於 XX 議題，立場分別是什麼？」&lt;/li&gt;
+&lt;li&gt;「第 3 頁講的那個實驗，結論是什麼？」&lt;/li&gt;
+&lt;li&gt;「這本書的核心論點用三句話總結」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;每個回答都會附上「引用來源」&lt;/strong&gt;，點進去就能看到原文在哪一段。&lt;/p&gt;
+&lt;p&gt;這個 &lt;strong&gt;source citation&lt;/strong&gt; 功能是 NotebookLM 最讓人安心的地方——你可以驗證 AI 有沒有亂掰。&lt;/p&gt;
+&lt;h3 id="2-自動-podcastaudio-overview"&gt;2. 自動 Podcast（Audio Overview）
+&lt;/h3&gt;&lt;p&gt;這個功能剛推出的時候全網都在驚呼。&lt;/p&gt;
+&lt;p&gt;你丟一份資料進去，點一下「Generate Audio Overview」，它會&lt;strong&gt;自動生成一集兩個 AI 主持人對話的 Podcast&lt;/strong&gt;，就像真人在討論你的資料一樣。&lt;/p&gt;
+&lt;p&gt;聽起來像真人節目，而且內容是根據你的資料做的。&lt;/p&gt;
+&lt;p&gt;用途：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通勤聽自己的論文摘要&lt;/li&gt;
+&lt;li&gt;讀書會前快速掌握一本書&lt;/li&gt;
+&lt;li&gt;把枯燥的技術文件轉成好吸收的對話形式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;現在還支援多國語言（包含中文）。&lt;/p&gt;
+&lt;h3 id="3-mind-map心智圖"&gt;3. Mind Map（心智圖）
+&lt;/h3&gt;&lt;p&gt;上傳資料後，NotebookLM 可以自動生成&lt;strong&gt;一張心智圖&lt;/strong&gt;，把主要概念、子概念、彼此的關係視覺化。&lt;/p&gt;
+&lt;p&gt;對要做簡報、寫文章、理清思路的人，超級有用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="實際使用情境"&gt;實際使用情境
+&lt;/h2&gt;&lt;p&gt;我自己常用的幾種情境：&lt;/p&gt;
+&lt;h3 id="情境-1讀論文--研究報告"&gt;情境 1：讀論文 / 研究報告
+&lt;/h3&gt;&lt;p&gt;丟 5 篇相關主題的論文進去，問：「這些研究在方法論上有什麼差異？」&lt;/p&gt;
+&lt;p&gt;比自己一篇一篇讀快十倍。&lt;/p&gt;
+&lt;h3 id="情境-2工作文件彙整"&gt;情境 2：工作文件彙整
+&lt;/h3&gt;&lt;p&gt;把會議記錄、產品規格、使用者回饋全部丟進去。&lt;/p&gt;
+&lt;p&gt;需要某個決策背景時，直接問：「關於 XX 功能，之前做了什麼決定？為什麼？」&lt;/p&gt;
+&lt;h3 id="情境-3技術文件學習"&gt;情境 3：技術文件學習
+&lt;/h3&gt;&lt;p&gt;丟一份新工具的完整官方文件進去，問：「我要做 XX 的話，大概的流程是什麼？」&lt;/p&gt;
+&lt;p&gt;不用從頭讀 200 頁文件。&lt;/p&gt;
+&lt;h3 id="情境-4寫作素材整理"&gt;情境 4：寫作素材整理
+&lt;/h3&gt;&lt;p&gt;把相關文章、筆記、訪談稿丟進去。&lt;/p&gt;
+&lt;p&gt;寫作時問：「這個主題我之前有沒有寫過類似的觀點？」&lt;/p&gt;
+&lt;h3 id="情境-5面試準備"&gt;情境 5：面試準備
+&lt;/h3&gt;&lt;p&gt;把公司官網、產品文件、新聞報導丟進去。&lt;/p&gt;
+&lt;p&gt;問：「這家公司最近的策略方向是什麼？」「他們最大的競爭對手是誰？」&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="跟-chatgpt--claude-比起來呢"&gt;跟 ChatGPT / Claude 比起來呢？
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;NotebookLM&lt;/th&gt;
+&lt;th&gt;ChatGPT / Claude&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;基於自己資料&lt;/td&gt;
+&lt;td&gt;✅ 核心功能&lt;/td&gt;
+&lt;td&gt;有但要貼上&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;引用來源&lt;/td&gt;
+&lt;td&gt;✅ 每句都有&lt;/td&gt;
+&lt;td&gt;大部分沒有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;來源數量&lt;/td&gt;
+&lt;td&gt;50 份（免費）&lt;/td&gt;
+&lt;td&gt;受 context 限制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自動 Podcast&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;通用對話&lt;/td&gt;
+&lt;td&gt;弱&lt;/td&gt;
+&lt;td&gt;強&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;程式碼生成&lt;/td&gt;
+&lt;td&gt;弱&lt;/td&gt;
+&lt;td&gt;強&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;結論：&lt;strong&gt;NotebookLM 不是要取代 ChatGPT，是另一個用途&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;需要「基於特定資料做深度理解」時，用 NotebookLM；要「寫 code、寫文案、泛用對話」時，還是用 ChatGPT / Claude。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="幾個使用小技巧"&gt;幾個使用小技巧
+&lt;/h2&gt;&lt;h3 id="把相關資料放同一個-notebook"&gt;把相關資料放同一個 notebook
+&lt;/h3&gt;&lt;p&gt;NotebookLM 的回答品質，跟你給的來源品質高度相關。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不要把無關的資料塞在一起&lt;/strong&gt;，會互相干擾。建議一個主題開一個 notebook。&lt;/p&gt;
+&lt;h3 id="先問總結再問細節"&gt;先問「總結」再問細節
+&lt;/h3&gt;&lt;p&gt;新開一個 notebook，先丟資料問：「這些資料的主要內容是什麼？」&lt;/p&gt;
+&lt;p&gt;這樣你會對它「看到什麼」有個概念，後續問細節才知道怎麼問。&lt;/p&gt;
+&lt;h3 id="善用notes功能"&gt;善用「Notes」功能
+&lt;/h3&gt;&lt;p&gt;NotebookLM 裡面可以記 notes。&lt;/p&gt;
+&lt;p&gt;把自己的想法、問答結果存成 note，之後可以把這些 note 也變成新的來源。&lt;/p&gt;
+&lt;p&gt;等於&lt;strong&gt;你的思考會跟資料一起累積&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="定期清理來源"&gt;定期清理來源
+&lt;/h3&gt;&lt;p&gt;資料放太多會稀釋重點。&lt;/p&gt;
+&lt;p&gt;做完一個專案後，可以把這個 notebook 封存，開新的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="需要付費嗎"&gt;需要付費嗎？
+&lt;/h2&gt;&lt;p&gt;目前有兩個版本：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;價格&lt;/th&gt;
+&lt;th&gt;特色&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;免費版&lt;/td&gt;
+&lt;td&gt;$0&lt;/td&gt;
+&lt;td&gt;每個 notebook 50 個來源、基本功能都有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Plus&lt;/td&gt;
+&lt;td&gt;併入 Google AI Plus / Pro 方案&lt;/td&gt;
+&lt;td&gt;更多來源、更長使用時間、進階功能&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;免費版已經夠用，&lt;strong&gt;如果你只是想試試看，不用急著付費&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="資料安全"&gt;資料安全？
+&lt;/h2&gt;&lt;p&gt;這是 Google，大家關心的問題：「我的資料會被拿去訓練嗎？」&lt;/p&gt;
+&lt;p&gt;官方說明是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;個人免費版的資料不會被用來訓練模型&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;企業/教育版（Workspace）的資料完全隔離&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但還是有幾個原則：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;機密資料、公司機密不要上傳&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;客戶個資不要上傳&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如果不確定敏感程度，請遵守公司的資料政策&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;對個人學習、公開資料研究，NotebookLM 幾乎沒有安全疑慮。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;如果你是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;學生&lt;/strong&gt;：NotebookLM 可以把整學期的教材變成問答助手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;研究者&lt;/strong&gt;：可以快速整合多篇文獻&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工程師&lt;/strong&gt;：可以把技術文件變成隨時可查的 AI&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;寫作者&lt;/strong&gt;：可以把素材庫變成靈感來源&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一般上班族&lt;/strong&gt;：可以把工作文件變成「問問題就有答案」的系統&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個工具都值得試試看。&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://notebooklm.google.com" target="_blank" rel="noopener"
+&gt;notebooklm.google.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;用 Google 帳號就能登入，免費先玩一輪再說。&lt;/p&gt;</description></item></channel></rss>

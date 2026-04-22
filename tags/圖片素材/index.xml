@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>圖片素材 on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/%E5%9C%96%E7%89%87%E7%B4%A0%E6%9D%90/</link><description>Recent content in 圖片素材 on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 20 Apr 2026 00:10:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/%E5%9C%96%E7%89%87%E7%B4%A0%E6%9D%90/index.xml" rel="self" type="application/rss+xml"/><item><title>找免費圖片不用再怕版權：Unsplash 是前端工程師最好的朋友</title><link>https://ericchung24.github.io/blog/p/%E6%89%BE%E5%85%8D%E8%B2%BB%E5%9C%96%E7%89%87%E4%B8%8D%E7%94%A8%E5%86%8D%E6%80%95%E7%89%88%E6%AC%8Aunsplash-%E6%98%AF%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%9C%80%E5%A5%BD%E7%9A%84%E6%9C%8B%E5%8F%8B/</link><pubDate>Mon, 20 Apr 2026 00:10:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/%E6%89%BE%E5%85%8D%E8%B2%BB%E5%9C%96%E7%89%87%E4%B8%8D%E7%94%A8%E5%86%8D%E6%80%95%E7%89%88%E6%AC%8Aunsplash-%E6%98%AF%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%9C%80%E5%A5%BD%E7%9A%84%E6%9C%8B%E5%8F%8B/</guid><description>&lt;img src="https://images.unsplash.com/photo-1495745966610-2a67f2297e5e?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post 找免費圖片不用再怕版權：Unsplash 是前端工程師最好的朋友" /&gt;&lt;p&gt;做 side project 的時候，有一個地方很容易卡住：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;圖片要從哪裡來？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;自己拍？沒那個美學和器材。&lt;/p&gt;
+&lt;p&gt;隨便去 Google 圖片抓？小心被版權找上門。&lt;/p&gt;
+&lt;p&gt;買付費圖庫？一張動輒好幾百塊，side project 根本不划算。&lt;/p&gt;
+&lt;p&gt;這個問題困擾我很久，直到我認真開始用 &lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;Unsplash&lt;/a&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="unsplash-是什麼"&gt;Unsplash 是什麼？
+&lt;/h2&gt;&lt;p&gt;一個&lt;strong&gt;完全免費&lt;/strong&gt;的高品質圖片網站。&lt;/p&gt;
+&lt;p&gt;特色：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;免費下載&lt;/strong&gt; — 不用付錢、不用訂閱&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可以商用&lt;/strong&gt; — 做產品、做網站、印刷品都可以&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不用標示來源&lt;/strong&gt;（但標了攝影師會很開心）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;畫質超高&lt;/strong&gt; — 隨便一張都是幾千像素寬&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;量大&lt;/strong&gt; — 幾百萬張照片，幾乎什麼主題都找得到&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;簡單說，就是&lt;strong&gt;一群專業攝影師把自己的作品無償釋出來給大家用&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼用"&gt;怎麼用？
+&lt;/h2&gt;&lt;h3 id="1-直接到-unsplashcom-搜尋"&gt;1. 直接到 &lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;unsplash.com&lt;/a&gt; 搜尋
+&lt;/h3&gt;&lt;p&gt;輸入關鍵字，例如 &lt;code&gt;coffee&lt;/code&gt;、&lt;code&gt;mountain&lt;/code&gt;、&lt;code&gt;code&lt;/code&gt;，結果會出來一堆高品質照片。&lt;/p&gt;
+&lt;h3 id="2-下載你喜歡的圖"&gt;2. 下載你喜歡的圖
+&lt;/h3&gt;&lt;p&gt;點進去之後，右上角有「Download free」按鈕，可以選不同尺寸。&lt;/p&gt;
+&lt;h3 id="3-透過網址直接嵌入進階"&gt;3. 透過網址直接嵌入（進階）
+&lt;/h3&gt;&lt;p&gt;Unsplash 有一個很讚的功能：&lt;strong&gt;每張圖都有穩定的 CDN 網址&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你不一定要把圖下載下來再上傳到自己的伺服器，可以直接 hotlink：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&amp;amp;q=80&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;網址後面可以加參數控制：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;w=1200&lt;/code&gt; — 寬度 1200px&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q=80&lt;/code&gt; — 壓縮品質 80%&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fit=crop&lt;/code&gt; — 裁切模式&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;auto=format&lt;/code&gt; — 自動選擇最佳格式（WebP 之類）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個部落格大部分的封面圖，就是直接用 Unsplash 的 CDN 網址。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="前端工程師怎麼用最順"&gt;前端工程師怎麼用最順？
+&lt;/h2&gt;&lt;h3 id="情境-1部落格封面圖"&gt;情境 1：部落格封面圖
+&lt;/h3&gt;&lt;p&gt;每篇文章都要一張封面？去 Unsplash 找，貼 URL，搞定。&lt;/p&gt;
+&lt;h3 id="情境-2landing-page-英雄區"&gt;情境 2：Landing page 英雄區
+&lt;/h3&gt;&lt;p&gt;需要一張有氛圍的 hero image？Unsplash 的攝影作品比很多付費圖庫還有質感。&lt;/p&gt;
+&lt;h3 id="情境-3mockup-假資料"&gt;情境 3：Mockup 假資料
+&lt;/h3&gt;&lt;p&gt;做 demo 時要放使用者頭像、產品圖？Unsplash 有 &lt;strong&gt;&lt;a class="link" href="https://unsplash.com/developers" target="_blank" rel="noopener"
+&gt;Unsplash Source API&lt;/a&gt;&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&amp;lt;!-- 隨機一張分類為 nature 的圖 --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;https://source.unsplash.com/800x600/?nature&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;每次重新整理都會換一張，做 mockup 很方便。&lt;/p&gt;
+&lt;h3 id="情境-4直接整合進設計工具"&gt;情境 4：直接整合進設計工具
+&lt;/h3&gt;&lt;p&gt;Figma、Canva、Notion 都有 Unsplash 外掛，不用離開工具就能插圖。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="使用前要注意的事"&gt;使用前要注意的事
+&lt;/h2&gt;&lt;p&gt;雖然 Unsplash 非常寬鬆，但還是有一些&lt;strong&gt;不能做&lt;/strong&gt;的事情：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;不能把 Unsplash 的圖原封不動重新打包成圖庫販售&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不能用來做明顯詆毀照片中人物的內容&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不能用來暗示照片中的人物代言你的產品&lt;/strong&gt;（除非你有模特兒授權）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;講白一點：&lt;strong&gt;只要你是把圖拿來用在自己的作品裡，基本上都 OK。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;完整條款在這裡：&lt;a class="link" href="https://unsplash.com/license" target="_blank" rel="noopener"
+&gt;Unsplash License&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="其他類似的網站"&gt;其他類似的網站
+&lt;/h2&gt;&lt;p&gt;如果在 Unsplash 找不到你要的風格，可以試試這幾個：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;網站&lt;/th&gt;
+&lt;th&gt;特色&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;Unsplash&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;攝影感強，氛圍照最多&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://www.pexels.com" target="_blank" rel="noopener"
+&gt;Pexels&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;同時有照片和影片&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://pixabay.com" target="_blank" rel="noopener"
+&gt;Pixabay&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;照片、插畫、向量、音樂都有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://burst.shopify.com" target="_blank" rel="noopener"
+&gt;Burst&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Shopify 出的，電商產品圖多&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;我自己是以 Unsplash 為主，Pexels 當備援。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Unsplash 解決了獨立開發者和小團隊最煩的問題之一：&lt;strong&gt;找圖不用再怕版權&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;如果你還在 Google 圖片右鍵存檔，或是怕被告不敢放圖，趕快換個習慣：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;unsplash.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;把時間花在寫 code、做產品，不是花在煩惱圖片授權。&lt;/p&gt;</description></item></channel></rss>

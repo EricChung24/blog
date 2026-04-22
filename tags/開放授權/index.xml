@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>開放授權 on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/%E9%96%8B%E6%94%BE%E6%8E%88%E6%AC%8A/</link><description>Recent content in 開放授權 on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 20 Apr 2026 00:20:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/%E9%96%8B%E6%94%BE%E6%8E%88%E6%AC%8A/index.xml" rel="self" type="application/rss+xml"/><item><title>認識 Unsplash：一個改變網路圖片生態的攝影社群</title><link>https://ericchung24.github.io/blog/p/%E8%AA%8D%E8%AD%98-unsplash%E4%B8%80%E5%80%8B%E6%94%B9%E8%AE%8A%E7%B6%B2%E8%B7%AF%E5%9C%96%E7%89%87%E7%94%9F%E6%85%8B%E7%9A%84%E6%94%9D%E5%BD%B1%E7%A4%BE%E7%BE%A4/</link><pubDate>Mon, 20 Apr 2026 00:20:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/%E8%AA%8D%E8%AD%98-unsplash%E4%B8%80%E5%80%8B%E6%94%B9%E8%AE%8A%E7%B6%B2%E8%B7%AF%E5%9C%96%E7%89%87%E7%94%9F%E6%85%8B%E7%9A%84%E6%94%9D%E5%BD%B1%E7%A4%BE%E7%BE%A4/</guid><description>&lt;img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post 認識 Unsplash：一個改變網路圖片生態的攝影社群" /&gt;&lt;p&gt;上一篇介紹了怎麼用 Unsplash，這一篇想深入講一下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;這個網站到底是怎麼來的？為什麼他們願意把高品質照片全部免費釋出？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;這背後的故事其實比想像中有趣。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="從一個-tumblr-部落格開始"&gt;從一個 Tumblr 部落格開始
+&lt;/h2&gt;&lt;p&gt;Unsplash 不是一開始就是大公司產品，它是 2013 年一個叫 &lt;strong&gt;Mikael Cho&lt;/strong&gt; 的人在 Tumblr 上開的小部落格。&lt;/p&gt;
+&lt;p&gt;當時他經營一家叫 Crew 的網站，需要一張 hero image，找了一位攝影師拍了一組照片。&lt;/p&gt;
+&lt;p&gt;拍完後，他們從中挑了一張，剩下的照片捨不得丟，就想：「不如把這些沒用到的照片也釋出來給別人用吧？」&lt;/p&gt;
+&lt;p&gt;於是開了一個 Tumblr，&lt;strong&gt;每 10 天發 10 張免費照片&lt;/strong&gt;，這就是 Unsplash 的起源。&lt;/p&gt;
+&lt;p&gt;沒有商業計畫，沒有融資簡報，就是一個「反正也是放著，分享出去不是更好嗎」的小實驗。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼會紅"&gt;為什麼會紅？
+&lt;/h2&gt;&lt;p&gt;那個年代，「免費圖庫」通常等於：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;畫質糟糕的像素圖&lt;/li&gt;
+&lt;li&gt;90 年代商務人士假笑握手的尷尬照&lt;/li&gt;
+&lt;li&gt;上面還打著浮水印，要你付費才能用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然後 Unsplash 出現了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;高畫質、有氛圍、免費、可商用、不用標示來源。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;對當時的部落客、獨立開發者、新創團隊來說，這簡直是救命稻草。&lt;/p&gt;
+&lt;p&gt;用的人越來越多，攝影師看到自己的作品被全世界用在各種地方，反而願意貢獻更多作品。&lt;/p&gt;
+&lt;p&gt;形成一個正向循環。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="他們怎麼賺錢"&gt;他們怎麼賺錢？
+&lt;/h2&gt;&lt;p&gt;這是很多人問的問題：&lt;strong&gt;全部免費，那 Unsplash 靠什麼活？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;幾個主要的商業模式：&lt;/p&gt;
+&lt;h3 id="1-unsplash訂閱制進階方案"&gt;1. Unsplash+（訂閱制進階方案）
+&lt;/h3&gt;&lt;p&gt;2022 年推出，提供更多「只給訂閱者使用的」獨家照片，也給商業用戶更強的法律保障（真正有模特兒授權、場地授權的那種）。&lt;/p&gt;
+&lt;h3 id="2-品牌贊助拍攝"&gt;2. 品牌贊助拍攝
+&lt;/h3&gt;&lt;p&gt;企業會付錢請 Unsplash 發起主題攝影專案，例如「請攝影師拍一組關於遠距工作的照片」。&lt;/p&gt;
+&lt;p&gt;攝影作品進到 Unsplash 圖庫後，企業的 logo 或連結會出現在相關搜尋結果旁邊。&lt;/p&gt;
+&lt;p&gt;這叫 &lt;strong&gt;Sponsored Photoshoots&lt;/strong&gt;，對企業來說是一種品牌曝光，對攝影師來說是有錢拿的委託案。&lt;/p&gt;
+&lt;h3 id="3-api-授權"&gt;3. API 授權
+&lt;/h3&gt;&lt;p&gt;第三方工具（Figma、Canva、Notion、WordPress 外掛等）想整合 Unsplash 的圖片，要付費取得 API 授權。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="2021-年被-getty-images-收購"&gt;2021 年被 Getty Images 收購
+&lt;/h2&gt;&lt;p&gt;這件事在攝影圈引起很大討論。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Getty Images&lt;/strong&gt; 是全世界最大的付費圖庫公司之一，收購 Unsplash 後很多人擔心：「會不會從此要收費了？」&lt;/p&gt;
+&lt;p&gt;但到目前為止，Unsplash 的免費服務還是維持著。Getty 的策略看起來是「&lt;strong&gt;用 Unsplash 作為免費入口，高階客戶再導到 Getty&lt;/strong&gt;」。&lt;/p&gt;
+&lt;p&gt;雖然有這個變化，對一般使用者來說幾乎沒有影響。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="unsplash-license最寬鬆的授權之一"&gt;Unsplash License：最寬鬆的授權之一
+&lt;/h2&gt;&lt;p&gt;Unsplash 自己定了一套授權條款，叫做 &lt;strong&gt;Unsplash License&lt;/strong&gt;，不是 Creative Commons 的任何一種。&lt;/p&gt;
+&lt;p&gt;重點可以濃縮成一句話：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「你幾乎可以自由使用，除了不要把 Unsplash 的照片重新打包成付費圖庫販售。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;詳細一點：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可以做：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;免費下載使用&lt;/li&gt;
+&lt;li&gt;商業用途（產品、廣告、印刷品）&lt;/li&gt;
+&lt;li&gt;修改、加工、合成&lt;/li&gt;
+&lt;li&gt;不用標示攝影師或 Unsplash&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;不可以做：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把照片重新包裝成付費圖庫或「類 Unsplash」服務&lt;/li&gt;
+&lt;li&gt;用來做會讓人誤會照片中人物代言你產品的內容&lt;/li&gt;
+&lt;li&gt;用來做詆毀、傷害他人的內容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;完整條款：&lt;a class="link" href="https://unsplash.com/license" target="_blank" rel="noopener"
+&gt;unsplash.com/license&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="攝影師為什麼願意貢獻"&gt;攝影師為什麼願意貢獻？
+&lt;/h2&gt;&lt;p&gt;一個常見的疑問：&lt;strong&gt;免費把好照片給別人用，攝影師有什麼好處？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;訪談過很多 Unsplash 攝影師後，大致有幾個動機：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;曝光機會&lt;/strong&gt; — 自己的作品被幾百萬人看到、用在世界各地的產品上&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;投資自己&lt;/strong&gt; — 有些攝影師把它當作作品集，接案時可以說「這張被 XXX 公司用過」&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;單純分享&lt;/strong&gt; — 就是喜歡攝影，喜歡自己的作品能被使用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unsplash+ 收益&lt;/strong&gt; — 貢獻進階照片的攝影師可以分潤&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;對攝影師來說，這不是「免費工作」，而是一種&lt;strong&gt;曝光 vs 收入&lt;/strong&gt;的策略選擇。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="unsplash-帶來的影響"&gt;Unsplash 帶來的影響
+&lt;/h2&gt;&lt;p&gt;這幾年下來，Unsplash 改變了幾件事：&lt;/p&gt;
+&lt;h3 id="1-讓小團隊也能有好看的產品"&gt;1. 讓小團隊也能有好看的產品
+&lt;/h3&gt;&lt;p&gt;以前只有大公司買得起 Getty 的圖，現在一個獨立開發者做 side project 也能用到專業級照片。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;降低了「做出好看產品」的門檻。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="2-改變了免費圖庫的品質標準"&gt;2. 改變了免費圖庫的品質標準
+&lt;/h3&gt;&lt;p&gt;Unsplash 紅了以後，Pexels、Pixabay 這些平台的品質也被迫提升，整個免費圖庫生態都往上走。&lt;/p&gt;
+&lt;h3 id="3-成為視覺語言的一部分"&gt;3. 成為「視覺語言」的一部分
+&lt;/h3&gt;&lt;p&gt;有沒有一種感覺：走到哪裡都看到同樣幾張 Unsplash 熱門照片？&lt;/p&gt;
+&lt;p&gt;這有好有壞——方便，但也讓很多網站長得很像。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Unsplash 不只是「一個免費圖庫網站」。&lt;/p&gt;
+&lt;p&gt;它是一個關於&lt;strong&gt;分享&lt;/strong&gt;、&lt;strong&gt;開放授權&lt;/strong&gt;、&lt;strong&gt;創作者生態&lt;/strong&gt;的實驗，而且這個實驗成功了。&lt;/p&gt;
+&lt;p&gt;下次你在某個網站看到一張漂亮的 hero image，可以點右鍵搜圖看看——有很大機率來自 Unsplash。&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;unsplash.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;用的時候，也別忘了偶爾點個愛心給攝影師。&lt;/p&gt;</description></item></channel></rss>
