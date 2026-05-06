@@ -23,3 +23,11 @@ url = "https://instagram.com/ericchung1024"
 
 [social.params]
 icon = "brand-instagram"
+
+[[social]]
+identifier = "rss"
+name = "RSS"
+url = "/index.xml"
+
+[social.params]
+icon = "rss"
