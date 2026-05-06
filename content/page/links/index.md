@@ -18,6 +18,11 @@ links:
     website: "https://www.yuzen.dev/zh-Hant"
     image: "https://www.yuzen.dev/avatar.webp"
 
+  - title: "Ikuka Room"
+    description: "日文很厲害的部落客"
+    website: "https://blog.ikukaroom.com/"
+    image: "https://blog.ikukaroom.com/wp-content/uploads/2025/07/39293701-3239-426D-9069-4D59BCFCFCE2-1.png"
+
 menu:
   main:
     weight: 4
