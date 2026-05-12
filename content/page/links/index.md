@@ -1,9 +1,9 @@
 ---
-title: "友站連結"
+title: "部落卷"
 slug: "links"
 links:
   
-  - title: "部落卷"
+  - title: "資工小廢物 - JN"
     description: "資工系畢業，但其實沒有很會寫程式"
     website: "https://blog.giveanornot.com/"
     image: "https://blog.giveanornot.com/img/avatar.png"
