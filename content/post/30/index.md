@@ -40,7 +40,6 @@ categories: ["台灣建築"]
 才發現原來這段路，
 已經沒有以前那麼遠了。
 
-![淡江大橋夜景](https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/2026.05.09_Danjiang_Bridge_at_night.jpg/1920px-2026.05.09_Danjiang_Bridge_at_night.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail)
 
 我喜歡淡江大橋的地方，
 是它不只停在功能。
