@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RSS on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/rss/</link><description>Recent content in RSS on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 06 May 2026 22:55:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/rss/index.xml" rel="self" type="application/rss+xml"/><item><title>RSS 是什麼？3 分鐘學會訂閱這個部落格</title><link>https://ericchung24.github.io/blog/p/rss-%E6%98%AF%E4%BB%80%E9%BA%BC3-%E5%88%86%E9%90%98%E5%AD%B8%E6%9C%83%E8%A8%82%E9%96%B1%E9%80%99%E5%80%8B%E9%83%A8%E8%90%BD%E6%A0%BC/</link><pubDate>Wed, 06 May 2026 22:55:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/rss-%E6%98%AF%E4%BB%80%E9%BA%BC3-%E5%88%86%E9%90%98%E5%AD%B8%E6%9C%83%E8%A8%82%E9%96%B1%E9%80%99%E5%80%8B%E9%83%A8%E8%90%BD%E6%A0%BC/</guid><description>&lt;img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post RSS 是什麼？3 分鐘學會訂閱這個部落格" /&gt;&lt;p&gt;如果你想追這個部落格的新文章，但不想每次都手動打開網站，也不想依賴 Facebook、Instagram 或其他平台的演算法，那最穩定的方法就是用 &lt;strong&gt;RSS 訂閱&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;很多人聽過 RSS，但一直覺得它像是很老的東西。實際上，它到現在仍然是追蹤網站更新最乾淨、最高效率的方式之一。&lt;/p&gt;
+&lt;p&gt;這篇文章會直接講清楚三件事：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;RSS 到底是什麼&lt;/li&gt;
+&lt;li&gt;你要用什麼工具來看 RSS&lt;/li&gt;
+&lt;li&gt;怎麼訂閱這個部落格&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="rss-是什麼"&gt;RSS 是什麼？
+&lt;/h2&gt;&lt;p&gt;RSS 可以把網站最新發布的內容整理成一條可訂閱的資訊流。&lt;/p&gt;
+&lt;p&gt;你不用把文章收藏在不同網站，也不用等平台「推給你」。只要把網站的 RSS 網址加入閱讀器，之後有新文章時，它就會自動出現在你的閱讀列表裡。&lt;/p&gt;
+&lt;p&gt;你可以把 RSS 想成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我主動訂閱我想看的內容，而不是被平台決定我該看什麼。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這對常看部落格、新聞網站、技術文章、創作者更新的人特別有用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼值得用-rss"&gt;為什麼值得用 RSS？
+&lt;/h2&gt;&lt;p&gt;RSS 最大的優點不是「懷舊」，而是它真的有效率。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不被社群平台演算法影響&lt;/li&gt;
+&lt;li&gt;不會錯過網站更新&lt;/li&gt;
+&lt;li&gt;可以把多個網站集中到同一個閱讀器&lt;/li&gt;
+&lt;li&gt;閱讀體驗通常比直接逛網站更乾淨&lt;/li&gt;
+&lt;li&gt;很適合拿來追蹤技術文章、獨立部落格、電子報鏡像與新聞來源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你平常就有固定追蹤幾個網站，RSS 幾乎一定比手動巡站省時間。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="要用什麼工具訂閱"&gt;要用什麼工具訂閱？
+&lt;/h2&gt;&lt;p&gt;你需要一個 &lt;strong&gt;RSS 閱讀器&lt;/strong&gt;。常見選項很多，挑自己順手的就好。&lt;/p&gt;
+&lt;p&gt;幾個常見方向：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Feedly&lt;/code&gt;：上手快，介面簡單&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Inoreader&lt;/code&gt;：功能完整，適合重度使用者&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NewsBlur&lt;/code&gt;：老牌閱讀器，適合整理多來源內容&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NetNewsWire&lt;/code&gt;：Apple 生態系常見選擇&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Readwise Reader&lt;/code&gt;：如果你本來就有做閱讀整理，整合能力不錯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;原則很簡單：先選一個你願意每天打開的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼訂閱這個部落格"&gt;怎麼訂閱這個部落格？
+&lt;/h2&gt;&lt;p&gt;這個網站的 RSS feed 網址是：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;https://ericchung24.github.io/blog/index.xml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;你只要把這個網址貼進 RSS 閱讀器，就可以開始訂閱。&lt;/p&gt;
+&lt;p&gt;一般流程通常是這樣：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打開你的 RSS 閱讀器&lt;/li&gt;
+&lt;li&gt;找到 &lt;code&gt;Add feed&lt;/code&gt;、&lt;code&gt;Subscribe&lt;/code&gt; 或 &lt;code&gt;新增訂閱&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;貼上這個網址：&lt;code&gt;https://ericchung24.github.io/blog/index.xml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;確認加入&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;之後這個部落格有新文章時，就會自動出現在你的閱讀器裡。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="如果你在網站上看到-rss-圖示"&gt;如果你在網站上看到 RSS 圖示
+&lt;/h2&gt;&lt;p&gt;現在這個部落格也已經把 RSS 訂閱入口加到站內了。&lt;/p&gt;
+&lt;p&gt;如果你是從網站側邊欄或社群圖示區看到 &lt;code&gt;RSS&lt;/code&gt; 按鈕，直接點進去也可以拿到 feed 網址。這通常會開啟一個 &lt;code&gt;XML&lt;/code&gt; 頁面，那是正常的，因為 RSS 本來就是給閱讀器讀取的格式。&lt;/p&gt;
+&lt;p&gt;你不需要「看懂 XML」，你只需要複製網址貼進閱讀器即可。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="rss-適合誰"&gt;RSS 適合誰？
+&lt;/h2&gt;&lt;p&gt;如果你符合下面任一種情況，RSS 幾乎都值得試：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你會固定追幾個部落格或網站&lt;/li&gt;
+&lt;li&gt;你不想被社群平台打亂閱讀節奏&lt;/li&gt;
+&lt;li&gt;你想把資訊來源集中管理&lt;/li&gt;
+&lt;li&gt;你想建立自己的資訊輸入系統&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;它不花俏，但非常穩。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="最後"&gt;最後
+&lt;/h2&gt;&lt;p&gt;如果你想穩定收到這個部落格的新文章更新，最直接的方法就是訂閱 RSS：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;https://ericchung24.github.io/blog/index.xml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;比起等演算法想到你，主動訂閱通常更可靠。&lt;/p&gt;</description></item></channel></rss>

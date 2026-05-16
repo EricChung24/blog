@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>檔案分享 on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/%E6%AA%94%E6%A1%88%E5%88%86%E4%BA%AB/</link><description>Recent content in 檔案分享 on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/%E6%AA%94%E6%A1%88%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>分享檔案不用再塞 Google Drive：storage.to 這個免費上傳空間太香了</title><link>https://ericchung24.github.io/blog/p/%E5%88%86%E4%BA%AB%E6%AA%94%E6%A1%88%E4%B8%8D%E7%94%A8%E5%86%8D%E5%A1%9E-google-drivestorage.to-%E9%80%99%E5%80%8B%E5%85%8D%E8%B2%BB%E4%B8%8A%E5%82%B3%E7%A9%BA%E9%96%93%E5%A4%AA%E9%A6%99%E4%BA%86/</link><pubDate>Mon, 20 Apr 2026 00:00:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/%E5%88%86%E4%BA%AB%E6%AA%94%E6%A1%88%E4%B8%8D%E7%94%A8%E5%86%8D%E5%A1%9E-google-drivestorage.to-%E9%80%99%E5%80%8B%E5%85%8D%E8%B2%BB%E4%B8%8A%E5%82%B3%E7%A9%BA%E9%96%93%E5%A4%AA%E9%A6%99%E4%BA%86/</guid><description>&lt;img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post 分享檔案不用再塞 Google Drive：storage.to 這個免費上傳空間太香了" /&gt;&lt;p&gt;有時候你只是想把一個檔案「快速」傳給別人。&lt;/p&gt;
+&lt;p&gt;不是要長期保存，不是要共編，就是&lt;strong&gt;一次性分享&lt;/strong&gt;而已。&lt;/p&gt;
+&lt;p&gt;以前我都丟 Google Drive，但每次都要：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;開瀏覽器、登入 Google&lt;/li&gt;
+&lt;li&gt;上傳檔案&lt;/li&gt;
+&lt;li&gt;右鍵 → 分享 → 改成「知道連結的人」&lt;/li&gt;
+&lt;li&gt;複製連結貼給對方&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;四個步驟，而且檔案還會一直佔用我的 Drive 空間。&lt;/p&gt;
+&lt;p&gt;直到我發現了 &lt;strong&gt;&lt;a class="link" href="https://storage.to" target="_blank" rel="noopener"
+&gt;storage.to&lt;/a&gt;&lt;/strong&gt;，整個流程變成：丟檔案 → 複製連結 → 貼給對方。就這樣。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="storageto-是什麼"&gt;storage.to 是什麼？
+&lt;/h2&gt;&lt;p&gt;一個&lt;strong&gt;免註冊、免登入&lt;/strong&gt;的免費檔案分享服務。&lt;/p&gt;
+&lt;p&gt;主打幾個特色：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;單檔最大 25GB&lt;/strong&gt; — 不是打錯，真的是 25GB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不用註冊帳號&lt;/strong&gt; — 打開網站、拖曳檔案、拿連結&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TLS + AES-256 加密&lt;/strong&gt; — 傳輸和儲存都有加密&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可以設密碼&lt;/strong&gt; — 只讓知道密碼的人下載&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可以設過期時間&lt;/strong&gt; — 1 天到 7 天，時間到自動消失&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不壓縮檔案&lt;/strong&gt; — 原檔上傳、原檔下載&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;對一次性分享的情境來說，這就是我要的東西。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼用"&gt;怎麼用？
+&lt;/h2&gt;&lt;p&gt;三步驟：&lt;/p&gt;
+&lt;h3 id="1-打開-storageto"&gt;1. 打開 &lt;a class="link" href="https://storage.to" target="_blank" rel="noopener"
+&gt;storage.to&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;首頁就是上傳介面，沒有亂七八糟的廣告或引導註冊的彈窗。&lt;/p&gt;
+&lt;h3 id="2-拖曳檔案進去"&gt;2. 拖曳檔案進去
+&lt;/h3&gt;&lt;p&gt;可以直接拖拉，也可以點擊選檔案。&lt;/p&gt;
+&lt;h3 id="3-拿連結"&gt;3. 拿連結
+&lt;/h3&gt;&lt;p&gt;上傳完成後，網站會產生一個分享連結，複製貼給對方就好。&lt;/p&gt;
+&lt;p&gt;要設密碼或過期時間，上傳前可以先勾選選項。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="跟其他服務比起來呢"&gt;跟其他服務比起來呢？
+&lt;/h2&gt;&lt;p&gt;我列一下常用的幾個，大家可以自己挑：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;服務&lt;/th&gt;
+&lt;th&gt;免費單檔上限&lt;/th&gt;
+&lt;th&gt;需要註冊&lt;/th&gt;
+&lt;th&gt;保存期限&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;storage.to&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;25GB&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;1–7 天可設定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Drive&lt;/td&gt;
+&lt;td&gt;15GB（總空間）&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;永久（佔空間）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;WeTransfer&lt;/td&gt;
+&lt;td&gt;2GB&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;7 天&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dropbox Transfer&lt;/td&gt;
+&lt;td&gt;100MB&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;7 天&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;file.io&lt;/td&gt;
+&lt;td&gt;2GB&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;下載一次就刪&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;如果是&lt;strong&gt;一次性、大檔案、不想註冊&lt;/strong&gt;的情境，storage.to 幾乎是目前最好的選擇。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="什麼情境適合用"&gt;什麼情境適合用？
+&lt;/h2&gt;&lt;p&gt;我自己用在這些場景：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;傳給客戶一份設計稿或影片素材&lt;/li&gt;
+&lt;li&gt;丟一包壓縮過的專案原始碼給朋友看&lt;/li&gt;
+&lt;li&gt;把錄的螢幕操作影片（有時候幾 GB）給同事&lt;/li&gt;
+&lt;li&gt;臨時要分享一些素材，但不想丟 LINE 被壓縮&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;反過來，&lt;strong&gt;不適合&lt;/strong&gt;的情境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要長期保存的重要檔案 → 用 Google Drive 或 Dropbox&lt;/li&gt;
+&lt;li&gt;需要多人共編的文件 → 用 Google Docs 或 Notion&lt;/li&gt;
+&lt;li&gt;公司機密資料 → 請用公司規定的管道，不要用免費服務&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="安全性呢"&gt;安全性呢？
+&lt;/h2&gt;&lt;p&gt;官方說明傳輸和儲存都有加密（TLS + AES-256）。&lt;/p&gt;
+&lt;p&gt;但說實話，&lt;strong&gt;沒有任何免費服務能 100% 保證&lt;/strong&gt;你的檔案不會外洩。&lt;/p&gt;
+&lt;p&gt;所以我自己的原則是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;重要或敏感檔案，上傳前先加密壓縮&lt;/strong&gt;（7-Zip 可以設密碼）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;把解壓密碼用另一個通訊管道給對方&lt;/strong&gt;（例如連結用 Email、密碼用 LINE）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;設定過期時間，不要讓連結永久存在&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;這樣就算連結外流，對方也解不開。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;網路上免費的檔案分享服務不少，但 storage.to 的組合——&lt;strong&gt;免註冊、25GB、有密碼、有過期&lt;/strong&gt;——在我用過的裡面算是最舒服的。&lt;/p&gt;
+&lt;p&gt;如果你也常常需要臨時傳大檔案，可以試試看：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://storage.to" target="_blank" rel="noopener"
+&gt;storage.to&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;不是業配，純分享。&lt;/p&gt;</description></item></channel></rss>

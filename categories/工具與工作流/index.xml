@@ -1,0 +1,1676 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具與工作流 on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/categories/%E5%B7%A5%E5%85%B7%E8%88%87%E5%B7%A5%E4%BD%9C%E6%B5%81/</link><description>Recent content in 工具與工作流 on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 22 Apr 2026 00:30:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/categories/%E5%B7%A5%E5%85%B7%E8%88%87%E5%B7%A5%E4%BD%9C%E6%B5%81/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenAI 最新圖片生成功能整理：現在不只是生圖，還能改圖、修字、做透明背景</title><link>https://ericchung24.github.io/blog/p/openai-%E6%9C%80%E6%96%B0%E5%9C%96%E7%89%87%E7%94%9F%E6%88%90%E5%8A%9F%E8%83%BD%E6%95%B4%E7%90%86%E7%8F%BE%E5%9C%A8%E4%B8%8D%E5%8F%AA%E6%98%AF%E7%94%9F%E5%9C%96%E9%82%84%E8%83%BD%E6%94%B9%E5%9C%96%E4%BF%AE%E5%AD%97%E5%81%9A%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/</link><pubDate>Wed, 22 Apr 2026 00:30:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/openai-%E6%9C%80%E6%96%B0%E5%9C%96%E7%89%87%E7%94%9F%E6%88%90%E5%8A%9F%E8%83%BD%E6%95%B4%E7%90%86%E7%8F%BE%E5%9C%A8%E4%B8%8D%E5%8F%AA%E6%98%AF%E7%94%9F%E5%9C%96%E9%82%84%E8%83%BD%E6%94%B9%E5%9C%96%E4%BF%AE%E5%AD%97%E5%81%9A%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/</guid><description>&lt;img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post OpenAI 最新圖片生成功能整理：現在不只是生圖，還能改圖、修字、做透明背景" /&gt;&lt;p&gt;如果你對 OpenAI 圖片功能的印象還停在「輸入一句 prompt，AI 幫你畫一張圖」，那現在已經不太一樣了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;截至 2026 年 4 月 22 日，OpenAI 官方文件已經把圖片能力往「生成 + 編修 + 多輪修改 + 可整合進產品」這條路推得很完整。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;而且重點不是只有「畫得更漂亮」，而是它開始更像一個真的可以工作的圖片工具。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="先講結論現在-openai-的圖片功能強在哪"&gt;先講結論：現在 OpenAI 的圖片功能強在哪？
+&lt;/h2&gt;&lt;p&gt;如果用最白話的方式講，最新一代方向有 4 個重點：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;不只是生圖，還很強調改圖&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;對文字的理解和輸出更穩&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可以把圖片當輸入，做參考、重製、局部修改&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不只給人手動玩，也很適合接進 App 或工作流程&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;這是它跟早期圖片模型最大的差別。&lt;/p&gt;
+&lt;p&gt;以前很多 AI 生圖工具的體驗是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一次很驚豔，第二次開始就發現它常常「知道你想幹嘛，但做不準」。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;現在 OpenAI 官方主推的 GPT Image 路線，明顯是在解這個問題。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="如果你只記得-dalle-3現在要更新一下印象"&gt;如果你只記得 DALL·E 3，現在要更新一下印象
+&lt;/h2&gt;&lt;p&gt;很多人一提到 OpenAI 生圖，腦中第一個名字還是 &lt;strong&gt;DALL·E 3&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;但如果看官方現在的 API 文件，主力方向已經不是「DALL·E 系列是主角」了，而是 &lt;strong&gt;GPT Image 系列&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;官方文件目前已經列出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gpt-image-2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gpt-image-1.5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gpt-image-1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gpt-image-1-mini&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中 &lt;code&gt;gpt-image-1&lt;/code&gt; 在模型頁已經被標成 &lt;strong&gt;previous image generation model&lt;/strong&gt;，意思很明確：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;現在的新方向不是回到舊的 DALL·E 命名，而是把圖片能力整合進 GPT 系列能力裡。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這個變化很重要，因為它代表 OpenAI 不再把圖片當成一個獨立、孤立的模型功能，而是把它變成整體多模態能力的一部分。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="不是只會畫圖而是會照你的要求修改"&gt;不是只會「畫圖」，而是會「照你的要求修改」
+&lt;/h2&gt;&lt;p&gt;這大概是一般使用者最有感的進步。&lt;/p&gt;
+&lt;p&gt;以前很多 AI 生圖工具的問題是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一次生成還不錯&lt;/li&gt;
+&lt;li&gt;但你一改需求，它就整張重來&lt;/li&gt;
+&lt;li&gt;你想保留某個元素，它常常保不住&lt;/li&gt;
+&lt;li&gt;你要它只改一小塊，它卻順手把別的地方也改掉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;現在 OpenAI 官方文件很明確強調的能力包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;generate images&lt;/strong&gt;：從文字直接生成圖片&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;edit images&lt;/strong&gt;：修改既有圖片&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;image inputs&lt;/strong&gt;：可以把圖片本身當成輸入&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;multi-turn editing&lt;/strong&gt;：可以一輪一輪慢慢修&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這代表你比較像是在跟一個設計工具合作，而不是每次都在抽卡。&lt;/p&gt;
+&lt;p&gt;例如你原本有一張商品圖，你可以要求它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把背景改成純白&lt;/li&gt;
+&lt;li&gt;把杯子顏色改成霧黑&lt;/li&gt;
+&lt;li&gt;保留 logo 不要變&lt;/li&gt;
+&lt;li&gt;幫我加上透明背景版本&lt;/li&gt;
+&lt;li&gt;把海報上的標題字改正&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這些需求的價值，不在於「炫」，而在於&lt;strong&gt;真的有工作用途&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼大家會特別在意文字能不能畫對"&gt;為什麼大家會特別在意「文字能不能畫對」？
+&lt;/h2&gt;&lt;p&gt;因為這是早期 AI 圖片模型最容易翻車的地方之一。&lt;/p&gt;
+&lt;p&gt;以前你叫它做一張海報、價目表、封面圖、社群貼文，常常畫面很漂亮，但字一放上去就變成亂碼。&lt;/p&gt;
+&lt;p&gt;OpenAI 在官方介紹 API 圖片模型時，特別強調了幾件事：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;better instruction following&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;accurately render text&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;use world knowledge&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;翻成白話就是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你叫它做什麼，它比較聽得懂&lt;/li&gt;
+&lt;li&gt;圖裡的文字比較有機會真的寫對&lt;/li&gt;
+&lt;li&gt;它對現實世界物件、情境、風格的理解更強&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這對一般人來說，意義非常直接。&lt;/p&gt;
+&lt;p&gt;因為圖片 AI 真正有商業價值的場景，很多都不是純藝術創作，而是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;社群貼文圖&lt;/li&gt;
+&lt;li&gt;活動宣傳圖&lt;/li&gt;
+&lt;li&gt;商品示意圖&lt;/li&gt;
+&lt;li&gt;App mockup&lt;/li&gt;
+&lt;li&gt;簡報封面&lt;/li&gt;
+&lt;li&gt;教學圖卡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這些東西幾乎都跟「字要對、版面要穩」有關。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="它現在比較像-photoshop--ai不只是-midjourney-式的靈感機器"&gt;它現在比較像 Photoshop + AI，不只是 Midjourney 式的靈感機器
+&lt;/h2&gt;&lt;p&gt;這句話不是在做產品比較，而是在講使用心智。&lt;/p&gt;
+&lt;p&gt;很多人以前對 AI 生圖工具的期待是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;幫我畫一張很酷的圖。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但 OpenAI 現在這條路更像是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;幫我把這張圖做成我真的能用的版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;差別很大。&lt;/p&gt;
+&lt;p&gt;前者偏創意發想，後者偏工作流。&lt;/p&gt;
+&lt;p&gt;所以 OpenAI 這套圖片能力特別適合下面這些人：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要快速做視覺素材的內容創作者&lt;/li&gt;
+&lt;li&gt;要產商品圖、行銷圖的電商團隊&lt;/li&gt;
+&lt;li&gt;要做封面、插圖、概念圖的自媒體或設計師&lt;/li&gt;
+&lt;li&gt;想把生圖功能整合進產品的開發者&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="開發者視角現在可以怎麼接進產品"&gt;開發者視角：現在可以怎麼接進產品？
+&lt;/h2&gt;&lt;p&gt;如果你是工程師，這一段比較重要。&lt;/p&gt;
+&lt;p&gt;OpenAI 目前把圖片能力放在兩種主要用法裡：&lt;/p&gt;
+&lt;h3 id="1-image-api"&gt;1. Image API
+&lt;/h3&gt;&lt;p&gt;適合這種需求：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;單次生成一張圖&lt;/li&gt;
+&lt;li&gt;單次改一張圖&lt;/li&gt;
+&lt;li&gt;後端明確控制輸入與輸出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這種模式比較像：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我知道我要做什麼，直接呼叫 API 執行。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="2-responses-api--image_generation-tool"&gt;2. Responses API + &lt;code&gt;image_generation&lt;/code&gt; tool
+&lt;/h3&gt;&lt;p&gt;適合這種需求：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;對話中順手生成圖片&lt;/li&gt;
+&lt;li&gt;讓模型自己判斷現在該不該出圖&lt;/li&gt;
+&lt;li&gt;在多輪流程中反覆改圖&lt;/li&gt;
+&lt;li&gt;做聊天型產品、助理型產品、創作工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這種模式比較像：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我不是只做一次生圖，而是要把圖片能力放進整個互動流程裡。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這也是現在 OpenAI 很明顯在推的方向：&lt;strong&gt;圖片不是單獨功能，而是 Agent / Assistant / Workflow 的一部分。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="具體可控制哪些東西"&gt;具體可控制哪些東西？
+&lt;/h2&gt;&lt;p&gt;根據官方文件，現在圖片輸出可以控制的面向包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;尺寸&lt;/strong&gt;：例如方圖、直式圖、橫式圖&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;品質&lt;/strong&gt;：低、中、高&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;格式&lt;/strong&gt;：不同輸出格式&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;壓縮&lt;/strong&gt;：JPEG / WebP 可調整壓縮程度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;背景&lt;/strong&gt;：透明或不透明&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;動作&lt;/strong&gt;：自動判斷、直接生成、或編輯圖片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這代表它不是只有「給你一張圖」，而是可以更接近實際產品需求。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;電商商品卡需要透明背景&lt;/li&gt;
+&lt;li&gt;部落格首圖要橫式比例&lt;/li&gt;
+&lt;li&gt;App 內縮圖要控制檔案大小&lt;/li&gt;
+&lt;li&gt;編輯器產品需要保留原圖細節再微調&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這些都比「能不能畫出一隻貓」更接近真實世界。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="一般人現在最適合怎麼用"&gt;一般人現在最適合怎麼用？
+&lt;/h2&gt;&lt;p&gt;如果你不是開發者，最實際的使用方式其實不是追求最複雜 prompt，而是先從「明確任務」開始。&lt;/p&gt;
+&lt;p&gt;比方說：&lt;/p&gt;
+&lt;h3 id="1-做社群圖"&gt;1. 做社群圖
+&lt;/h3&gt;&lt;p&gt;不要只寫：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;幫我畫一張科技感圖片&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;比較好的寫法是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;幫我做一張 16:9 的科技風社群首圖，主題是 AI 自動化，背景乾淨，標題預留空間在左上角。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="2-改現有圖片"&gt;2. 改現有圖片
+&lt;/h3&gt;&lt;p&gt;如果你已經有圖，通常比從零開始生更穩。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;保留人物與構圖，把背景改成簡潔辦公室風格，顏色改冷色調。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="3-做有字的圖"&gt;3. 做有字的圖
+&lt;/h3&gt;&lt;p&gt;請把文字內容直接寫清楚，並拆成層次。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;做一張活動海報。主標題是「React 前端讀書會」，副標題是「週三晚上 7:30」，底部加上「台北市大安區」。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這種寫法通常會比只丟一個模糊句子好很多。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="這一波更新真正代表什麼"&gt;這一波更新真正代表什麼？
+&lt;/h2&gt;&lt;p&gt;我覺得重點不是「OpenAI 也能生圖了」。&lt;/p&gt;
+&lt;p&gt;那早就不是新聞。&lt;/p&gt;
+&lt;p&gt;真正重要的是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;OpenAI 正在把圖片能力從展示型功能，推進到可工作的基礎能力。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也就是說，它不是只拿來玩，而是越來越像：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可接進產品的 API&lt;/li&gt;
+&lt;li&gt;可放進團隊流程的工具&lt;/li&gt;
+&lt;li&gt;可反覆修改的視覺工作台&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你是一般使用者，感受到的會是：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;它比較不再像一次性玩具，而比較像真的能幫你省時間。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你是開發者，感受到的會是：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;圖片生成不再只是附加功能，而是可以變成產品功能本身。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="最後整理"&gt;最後整理
+&lt;/h2&gt;&lt;p&gt;如果用一句話總結：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;OpenAI 最新圖片生成功能的重點，不只是更會畫，而是更會照要求生成、修改，並且更容易接進真實工作流程。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以如果你最近才重新注意到 OpenAI 的圖片能力，可以先更新三個印象：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;主力已經是 GPT Image 系列，不只是 DALL·E&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重點能力是生成 + 編修 + 多輪修改&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;它的價值正在從「好玩」轉向「好用」&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果你後面想看，我也可以再補一篇：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;OpenAI 圖片 API 怎麼串？前端工程師快速上手版&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ChatGPT 生圖 prompt 怎麼寫，成功率比較高？&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OpenAI 生圖 vs Midjourney vs Flux，差別到底在哪？&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="參考資料"&gt;參考資料
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://developers.openai.com/api/docs/guides/image-generation" target="_blank" rel="noopener"
+&gt;OpenAI 官方圖片生成指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://developers.openai.com/api/docs/guides/tools-image-generation" target="_blank" rel="noopener"
+&gt;OpenAI 官方 image generation tool 文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://openai.com/index/image-generation-api/" target="_blank" rel="noopener"
+&gt;OpenAI 圖片模型介紹：Introducing our latest image generation model in the API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://developers.openai.com/api/docs/models/gpt-image-1" target="_blank" rel="noopener"
+&gt;OpenAI 模型頁：GPT Image 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>OpenClaw 是什麼？那隻紅色龍蝦是你的私人 AI 助理</title><link>https://ericchung24.github.io/blog/p/openclaw-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E9%9A%BB%E7%B4%85%E8%89%B2%E9%BE%8D%E8%9D%A6%E6%98%AF%E4%BD%A0%E7%9A%84%E7%A7%81%E4%BA%BA-ai-%E5%8A%A9%E7%90%86/</link><pubDate>Tue, 21 Apr 2026 00:10:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/openclaw-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E9%9A%BB%E7%B4%85%E8%89%B2%E9%BE%8D%E8%9D%A6%E6%98%AF%E4%BD%A0%E7%9A%84%E7%A7%81%E4%BA%BA-ai-%E5%8A%A9%E7%90%86/</guid><description>&lt;img src="https://image.blocktempo.com/2026/03/f5d227bc122c1ba58f427c78f7b875d0-750x375.png" alt="Featured image of post OpenClaw 是什麼？那隻紅色龍蝦是你的私人 AI 助理" /&gt;&lt;p&gt;如果 Manus 是跑在別人家雲端的 AI 員工，那 &lt;strong&gt;&lt;a class="link" href="https://openclaw.ai" target="_blank" rel="noopener"
+&gt;OpenClaw&lt;/a&gt;&lt;/strong&gt; 就是&lt;strong&gt;住在你自己電腦裡&lt;/strong&gt;的那一個。&lt;/p&gt;
+&lt;p&gt;Logo 是一隻紅色龍蝦，但別被可愛外表騙了——這其實是目前最有潛力的&lt;strong&gt;本地端 AI Agent&lt;/strong&gt; 之一。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="openclaw-是什麼"&gt;OpenClaw 是什麼？
+&lt;/h2&gt;&lt;p&gt;一句話：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「一個跑在你自己電腦上的開源 AI 助理，會自己做事、有記憶、能接通訊軟體，還能自己寫擴充套件。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;作者是 &lt;strong&gt;Peter Steinberger&lt;/strong&gt;（iOS 開發圈的老朋友，以前做 PSPDFKit），在 2025 年推出的個人專案。&lt;/p&gt;
+&lt;p&gt;跟主流 AI 產品最大的差異：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;ChatGPT / Claude / Manus&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;跑在哪&lt;/td&gt;
+&lt;td&gt;別人家雲端&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;你自己電腦&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;資料&lt;/td&gt;
+&lt;td&gt;上傳到對方伺服器&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;全程留在本地&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;擴充&lt;/td&gt;
+&lt;td&gt;官方提供&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;自己寫 / 社群共享&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;費用&lt;/td&gt;
+&lt;td&gt;訂閱費&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;開源免費&lt;/strong&gt;（只付 API 費用）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;整合度&lt;/td&gt;
+&lt;td&gt;有限&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;想接什麼就接什麼&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼這個東西值得注意"&gt;為什麼這個東西值得注意？
+&lt;/h2&gt;&lt;p&gt;因為它解決了一個很多人有的焦慮：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「我想要 AI 幫我做事，但我不想把所有資料都給 OpenAI / Anthropic。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;OpenClaw 的設計哲學很明確：&lt;strong&gt;Privacy-first&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;跑在你自己的 Mac / Windows / Linux 上&lt;/li&gt;
+&lt;li&gt;記憶資料存在本機&lt;/li&gt;
+&lt;li&gt;要不要呼叫雲端 AI（Claude、GPT）由你決定&lt;/li&gt;
+&lt;li&gt;也可以接本地 LLM（Ollama 之類）完全離線&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;等於是把「AI 助理」這件事&lt;strong&gt;從雲端服務變成一個你擁有的程式&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="它能做什麼"&gt;它能做什麼？
+&lt;/h2&gt;&lt;p&gt;官方列出 50+ 整合，但真正厲害的是&lt;strong&gt;它能自己組合這些整合&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;幾個常見情境：&lt;/p&gt;
+&lt;h3 id="情境-1訊息助理"&gt;情境 1：訊息助理
+&lt;/h3&gt;&lt;p&gt;接上 &lt;strong&gt;LINE / Telegram / WhatsApp / Slack / iMessage / Signal / Discord&lt;/strong&gt;，你可以直接傳訊息給它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「幫我整理今天的 GitHub 通知」&lt;/li&gt;
+&lt;li&gt;「搜一下這個餐廳的評價」&lt;/li&gt;
+&lt;li&gt;「提醒我下午 3 點開會」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不用開電腦、不用開瀏覽器，手機傳訊息就完事。&lt;/p&gt;
+&lt;h3 id="情境-2email-處理"&gt;情境 2：Email 處理
+&lt;/h3&gt;&lt;p&gt;接 Gmail 之後，可以說：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「把今天所有未讀信分類，重要的摘要給我」&lt;/li&gt;
+&lt;li&gt;「回覆這封信，語氣要客氣但堅定」&lt;/li&gt;
+&lt;li&gt;「把這封信的附件存到 Obsidian 的 2026-04 資料夾」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="情境-3coding-助手"&gt;情境 3：coding 助手
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;「幫我把這個 repo clone 下來，跑測試看看哪裡壞了」&lt;/li&gt;
+&lt;li&gt;「查一下昨天 push 的 commit 有沒有影響 production」&lt;/li&gt;
+&lt;li&gt;「把這段程式重寫成 TypeScript」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="情境-4生活雜事"&gt;情境 4：生活雜事
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;「訂今晚 7 點的餐廳」&lt;/li&gt;
+&lt;li&gt;「Spotify 放點 jazz」&lt;/li&gt;
+&lt;li&gt;「把今天的支出記進我的財務 Google Sheet」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="情境-5自我擴充"&gt;情境 5：自我擴充
+&lt;/h3&gt;&lt;p&gt;OpenClaw 最狂的一點：&lt;strong&gt;它可以自己寫擴充套件&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你說：「我想要一個能自動抓 Hacker News 前 10 名摘要的功能。」&lt;/p&gt;
+&lt;p&gt;它會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;寫一個新的 skill（擴充模組）&lt;/li&gt;
+&lt;li&gt;測試它&lt;/li&gt;
+&lt;li&gt;加進自己的能力清單&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;AI 幫 AI 自己擴充能力&lt;/strong&gt;，這個遞迴很有意思。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="補充claude-本身也有-agent-功能"&gt;補充：Claude 本身也有 Agent 功能
+&lt;/h2&gt;&lt;p&gt;在講跟 Manus 的差異之前，值得提一下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Anthropic 的 Claude 本身也有 Agent 能力&lt;/strong&gt;，叫做 &lt;strong&gt;Claude Computer Use&lt;/strong&gt;（電腦使用）以及整合在 Claude.ai 的 &lt;strong&gt;Projects + Tools&lt;/strong&gt; 功能。&lt;/p&gt;
+&lt;p&gt;Claude 可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;控制瀏覽器、操作視窗（Computer Use）&lt;/li&gt;
+&lt;li&gt;呼叫工具（搜尋網路、執行程式碼、讀取檔案）&lt;/li&gt;
+&lt;li&gt;在 Projects 裡保存長期記憶與文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;跟 OpenClaw 的差別是：Claude 的 agent 能力是&lt;strong&gt;雲端服務、官方整合&lt;/strong&gt;，而 OpenClaw 是把 Claude 當成「大腦」，在&lt;strong&gt;你的電腦上自主執行&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;也就是說，OpenClaw + Claude API = 把 Claude 的智慧裝進一個跑在你家的機器人。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="跟-manus-有什麼不同"&gt;跟 Manus 有什麼不同？
+&lt;/h2&gt;&lt;p&gt;前一篇才介紹完 Manus，很多人會問：「這兩個差在哪？」&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;Manus&lt;/th&gt;
+&lt;th&gt;OpenClaw&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;執行位置&lt;/td&gt;
+&lt;td&gt;雲端 VM&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;本機&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;是否開源&lt;/td&gt;
+&lt;td&gt;❌ 封閉&lt;/td&gt;
+&lt;td&gt;✅ &lt;strong&gt;開源&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;訊息介面&lt;/td&gt;
+&lt;td&gt;只有網頁&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;7+ 通訊軟體&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;記憶&lt;/td&gt;
+&lt;td&gt;單次任務&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;長期累積&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;擴充&lt;/td&gt;
+&lt;td&gt;官方主導&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;任何人可寫&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;門檻&lt;/td&gt;
+&lt;td&gt;註冊就能用&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;要自己安裝&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;講白一點：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Manus&lt;/strong&gt; 像一個你租的雲端員工——好用、高階、但要付錢、資料給對方&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt; 像一個你自己養的助手——要花時間調教、但完全是自己的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼安裝"&gt;怎麼安裝？
+&lt;/h2&gt;&lt;p&gt;OpenClaw 是開源的，安裝流程大致是：&lt;/p&gt;
+&lt;h3 id="1-安裝主程式"&gt;1. 安裝主程式
+&lt;/h3&gt;&lt;p&gt;Mac / Windows / Linux 都有安裝包，到 &lt;a class="link" href="https://openclaw.ai" target="_blank" rel="noopener"
+&gt;openclaw.ai&lt;/a&gt; 下載。&lt;/p&gt;
+&lt;h3 id="2-提供-api-key"&gt;2. 提供 API Key
+&lt;/h3&gt;&lt;p&gt;你要有一個 LLM 能力來源，可選：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Anthropic API&lt;/strong&gt;（Claude）— 推薦，能力最強&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenAI API&lt;/strong&gt;（GPT）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ollama&lt;/strong&gt;（本地模型，完全離線）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-授權要接的服務"&gt;3. 授權要接的服務
+&lt;/h3&gt;&lt;p&gt;想接 Gmail 就 OAuth 授權 Gmail，想接 LINE 就做 LINE bot 綁定。&lt;/p&gt;
+&lt;h3 id="4-開始對話"&gt;4. 開始對話
+&lt;/h3&gt;&lt;p&gt;裝好後第一次跟它講話，它會記住你的偏好。&lt;/p&gt;
+&lt;p&gt;比如你說：「我叫 Eric，平常用 Notion 做筆記，習慣早上 6 點起床。」&lt;/p&gt;
+&lt;p&gt;之後它都記得。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="使用的幾個注意事項"&gt;使用的幾個注意事項
+&lt;/h2&gt;&lt;h3 id="1-它是個-alpha-階段的工具"&gt;1. 它是個 alpha 階段的工具
+&lt;/h3&gt;&lt;p&gt;OpenClaw 還很新，會有 bug、會有奇怪行為。&lt;/p&gt;
+&lt;p&gt;不建議用在&lt;strong&gt;絕對不能出錯&lt;/strong&gt;的工作流（例如付款、發正式信件給客戶）。&lt;/p&gt;
+&lt;h3 id="2-記憶會累積成包袱"&gt;2. 記憶會累積成包袱
+&lt;/h3&gt;&lt;p&gt;記憶越多，它越懂你，但也可能&lt;strong&gt;把舊的錯誤偏好一直帶著&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;建議定期檢查它的記憶檔、刪掉過時的內容。&lt;/p&gt;
+&lt;h3 id="3-本地執行不代表完全安全"&gt;3. 本地執行不代表完全安全
+&lt;/h3&gt;&lt;p&gt;即使資料在本地，&lt;strong&gt;它呼叫 Claude / GPT 時還是會把 context 送出去&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;如果你真的想完全離線，搭配 Ollama 跑本地模型，但能力會差很多。&lt;/p&gt;
+&lt;h3 id="4-擴充能力--雙面刃"&gt;4. 擴充能力 = 雙面刃
+&lt;/h3&gt;&lt;p&gt;它能自己寫 script、跑 shell 指令——這代表&lt;strong&gt;它也有能力弄壞你的系統&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;建議：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重要操作先看一眼它要做什麼再放行&lt;/li&gt;
+&lt;li&gt;不要給它 root 權限&lt;/li&gt;
+&lt;li&gt;敏感資料夾設 read-only&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="誰適合用"&gt;誰適合用？
+&lt;/h2&gt;&lt;h3 id="很適合"&gt;很適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;重視隱私&lt;/strong&gt;：不想把所有資料給雲端服務的人&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工程師&lt;/strong&gt;：能自己寫擴充、修 bug、調整流程&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重度自動化愛好者&lt;/strong&gt;：喜歡把生活各種雜事自動化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;愛好 open source&lt;/strong&gt;：支持開源生態的人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="暫時不適合"&gt;暫時不適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;完全不會裝軟體的人&lt;/strong&gt;：入門門檻還是比 ChatGPT 高&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;要 100% 穩定的商業應用&lt;/strong&gt;：還在快速迭代，不夠穩&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;只想聊天&lt;/strong&gt;：對話體驗不如 ChatGPT 專精&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼是龍蝦"&gt;為什麼是「龍蝦」？
+&lt;/h2&gt;&lt;p&gt;這個很多人問。&lt;/p&gt;
+&lt;p&gt;OpenClaw 的 Logo 是一隻紅色龍蝦——「Claw」就是龍蝦的螯。&lt;/p&gt;
+&lt;p&gt;這隱喻大概是：&lt;strong&gt;有抓取、有操作、有個性，不是軟綿綿的助手&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;我覺得這個 branding 很成功，至少一眼就記得。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;2025 到 2026 年，AI Agent 的發展進到一個分岔路口：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;雲端路線&lt;/strong&gt;：Manus、Claude Computer Use、各種 SaaS 代理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本地路線&lt;/strong&gt;：OpenClaw、open-interpreter、各種自建 agent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;兩條路各有優缺點，但**「AI Agent 應該長在自己電腦裡」**這個理念，會吸引一群重視主導權的使用者。&lt;/p&gt;
+&lt;p&gt;如果你：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;已經用過 ChatGPT / Claude，想更進一步&lt;/li&gt;
+&lt;li&gt;對資料隱私有要求&lt;/li&gt;
+&lt;li&gt;願意花點時間裝設定&lt;/li&gt;
+&lt;li&gt;想有一個真正「屬於自己」的 AI 助理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那這隻紅色龍蝦值得一試：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://openclaw.ai" target="_blank" rel="noopener"
+&gt;openclaw.ai&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;未來我們可能每個人都會有一個像這樣的東西，陪你處理大大小小的雜事。OpenClaw 讓這個未來提早到了。&lt;/p&gt;</description></item><item><title>Manus 是什麼？那個被稱為「第一個真正能做事」的 AI Agent</title><link>https://ericchung24.github.io/blog/p/manus-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E5%80%8B%E8%A2%AB%E7%A8%B1%E7%82%BA%E7%AC%AC%E4%B8%80%E5%80%8B%E7%9C%9F%E6%AD%A3%E8%83%BD%E5%81%9A%E4%BA%8B%E7%9A%84-ai-agent/</link><pubDate>Tue, 21 Apr 2026 00:00:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/manus-%E6%98%AF%E4%BB%80%E9%BA%BC%E9%82%A3%E5%80%8B%E8%A2%AB%E7%A8%B1%E7%82%BA%E7%AC%AC%E4%B8%80%E5%80%8B%E7%9C%9F%E6%AD%A3%E8%83%BD%E5%81%9A%E4%BA%8B%E7%9A%84-ai-agent/</guid><description>&lt;img src="https://files.manuscdn.com/assets/dashboard/materials/2025/12/15/cdfc0adf32479d5715866796f170441a34b6c8d6f0ffa14fcdae56c127a5df45.webp" alt="Featured image of post Manus 是什麼？那個被稱為「第一個真正能做事」的 AI Agent" /&gt;&lt;p&gt;2025 年 3 月，一個叫 &lt;strong&gt;&lt;a class="link" href="https://manus.im" target="_blank" rel="noopener"
+&gt;Manus&lt;/a&gt;&lt;/strong&gt; 的網站突然在全網爆紅。&lt;/p&gt;
+&lt;p&gt;不是因為它是「又一個 ChatGPT」，而是因為它展示了一件以前只存在 demo 影片裡的事：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;你丟一個任務，它真的會自己去完成，然後把結果交給你。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不是給你一段建議、不是給你一個 outline——是&lt;strong&gt;直接把做好的東西丟到你面前&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="manus-是什麼"&gt;Manus 是什麼？
+&lt;/h2&gt;&lt;p&gt;Manus 是一個「通用型 AI Agent」。&lt;/p&gt;
+&lt;p&gt;跟純對話型 AI 最大的差別：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;類型&lt;/th&gt;
+&lt;th&gt;你給它什麼&lt;/th&gt;
+&lt;th&gt;它給你什麼&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ChatGPT（對話模式）&lt;/td&gt;
+&lt;td&gt;問題&lt;/td&gt;
+&lt;td&gt;回答（文字）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Claude（對話模式）&lt;/td&gt;
+&lt;td&gt;問題&lt;/td&gt;
+&lt;td&gt;回答（文字）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Claude（Agent 模式）&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;任務&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;成品&lt;/strong&gt;（有工具呼叫、可執行動作）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Manus&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;任務&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;成品&lt;/strong&gt;（檔案、網站、報告、腳本）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;補充：&lt;/strong&gt; Claude 現在也有 Agent 能力了——&lt;strong&gt;Claude Computer Use&lt;/strong&gt; 可以操控瀏覽器和桌面，&lt;strong&gt;Claude.ai&lt;/strong&gt; 內建的工具模式可以搜尋網路、執行程式碼、讀寫檔案。兩者的主要差異在於 Manus 有獨立的雲端 VM 和完整的任務交付流程，Claude Agent 則更強調與對話的整合。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你可以想像成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「你雇了一個遠端助理，他有電腦、有瀏覽器、會寫 code、會上網查資料，然後他真的會把事情做完。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="它到底怎麼運作"&gt;它到底怎麼運作？
+&lt;/h2&gt;&lt;p&gt;Manus 的核心機制是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;接收任務&lt;/strong&gt; — 你用自然語言描述目標&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;拆解步驟&lt;/strong&gt; — 自動規劃要做哪些事&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;開虛擬電腦&lt;/strong&gt; — 它在雲端會有一台自己的電腦&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;執行&lt;/strong&gt; — 開瀏覽器、寫 code、跑程式、下載資料、查資料&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;回報 &amp;amp; 交付&lt;/strong&gt; — 完成後把檔案或成果丟給你&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;重點是中間的過程&lt;strong&gt;你都看得到&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Manus 有一個「即時操作畫面」，像直播一樣看它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;滑鼠移到哪&lt;/li&gt;
+&lt;li&gt;開了哪些分頁&lt;/li&gt;
+&lt;li&gt;打了什麼 code&lt;/li&gt;
+&lt;li&gt;搜尋了什麼&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個透明度讓人用起來很安心——它不是黑盒子。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="實際可以做什麼"&gt;實際可以做什麼？
+&lt;/h2&gt;&lt;p&gt;網路上流傳的經典案例：&lt;/p&gt;
+&lt;h3 id="案例-1履歷分析"&gt;案例 1：履歷分析
+&lt;/h3&gt;&lt;p&gt;丟一份 PDF 履歷，說：「分析這個人適不適合我們公司的 senior engineer 職缺。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;讀完履歷&lt;/li&gt;
+&lt;li&gt;上網查這個人的 GitHub、LinkedIn&lt;/li&gt;
+&lt;li&gt;分析技能匹配度&lt;/li&gt;
+&lt;li&gt;產出一份完整的評估報告（含建議面試問題）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="案例-2出差行程規劃"&gt;案例 2：出差行程規劃
+&lt;/h3&gt;&lt;p&gt;「我下週要去東京三天，預算 5 萬台幣，想看動漫相關景點。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;查機票、訂機票流程（提供連結給你確認）&lt;/li&gt;
+&lt;li&gt;排三天行程（含交通時間）&lt;/li&gt;
+&lt;li&gt;列出動漫景點、餐廳&lt;/li&gt;
+&lt;li&gt;輸出一份完整的行程表（Excel / PDF）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="案例-3股票研究"&gt;案例 3：股票研究
+&lt;/h3&gt;&lt;p&gt;「分析 NVIDIA 最近三個月的走勢，做一份投資建議報告。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;抓股價資料&lt;/li&gt;
+&lt;li&gt;查最新新聞&lt;/li&gt;
+&lt;li&gt;跑分析腳本、畫圖&lt;/li&gt;
+&lt;li&gt;產出一份帶圖表的研究報告&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="案例-4網站建置"&gt;案例 4：網站建置
+&lt;/h3&gt;&lt;p&gt;「幫我做一個寵物領養平台的 prototype。」&lt;/p&gt;
+&lt;p&gt;Manus 會：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;設計資料結構&lt;/li&gt;
+&lt;li&gt;寫 HTML / CSS / JavaScript&lt;/li&gt;
+&lt;li&gt;做出能點擊互動的 demo&lt;/li&gt;
+&lt;li&gt;部署到可以公開訪問的網址&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="跟其他-ai-agent-有什麼不同"&gt;跟其他 AI Agent 有什麼不同？
+&lt;/h2&gt;&lt;p&gt;現在宣稱「AI Agent」的工具一堆，但 Manus 出來的時候引爆討論，有幾個原因：&lt;/p&gt;
+&lt;h3 id="1-真的做完不是建議怎麼做"&gt;1. 真的「做完」，不是「建議怎麼做」
+&lt;/h3&gt;&lt;p&gt;很多 AI Agent 會告訴你：「你可以這樣做、那樣做……」&lt;/p&gt;
+&lt;p&gt;Manus 是&lt;strong&gt;直接做完，給你交付品&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;這個差別在工作流程裡面是天與地。&lt;/p&gt;
+&lt;h3 id="2-多工具協作"&gt;2. 多工具協作
+&lt;/h3&gt;&lt;p&gt;它不是只會寫 code 的 AI，也不是只會查資料的 AI——&lt;strong&gt;該用什麼工具就用什麼工具&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;寫 Excel、做 PDF、寫 Python、開瀏覽器截圖、部署網站，全部都在同一個 agent 裡面。&lt;/p&gt;
+&lt;h3 id="3-執行過程透明"&gt;3. 執行過程透明
+&lt;/h3&gt;&lt;p&gt;看得到它在做什麼，出錯可以中途介入。&lt;/p&gt;
+&lt;p&gt;這比「丟進去等結果」的黑盒 agent 好用太多。&lt;/p&gt;
+&lt;h3 id="4-非同步工作"&gt;4. 非同步工作
+&lt;/h3&gt;&lt;p&gt;Manus 在雲端跑，&lt;strong&gt;你可以關掉瀏覽器去吃飯&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;它自己會繼續做，完成後通知你。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="它適合誰用"&gt;它適合誰用？
+&lt;/h2&gt;&lt;h3 id="非常適合"&gt;非常適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PM / 分析師&lt;/strong&gt; — 要做研究報告、競品分析&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;行銷 / 內容&lt;/strong&gt; — 要做主題研究、素材整理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工程師&lt;/strong&gt; — 做快速原型、腳本自動化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;獨立工作者&lt;/strong&gt; — 一個人要處理很多雜事&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="比較不適合"&gt;比較不適合：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;只需要簡單問答&lt;/strong&gt; — 用 ChatGPT 或 Claude 對話模式就好&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;需要 Agent 但想整合對話&lt;/strong&gt; — Claude Agent 模式可能更順手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;需要高度精確的專業領域&lt;/strong&gt;（醫療、法律）— 還是要專家審核&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;大量重複性工作&lt;/strong&gt; — 直接寫自動化腳本更穩定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="限制與問題"&gt;限制與問題
+&lt;/h2&gt;&lt;p&gt;用一陣子會發現幾個實際問題：&lt;/p&gt;
+&lt;h3 id="1-慢"&gt;1. 慢
+&lt;/h3&gt;&lt;p&gt;一個任務常常要跑 15–60 分鐘。&lt;/p&gt;
+&lt;p&gt;雖然可以非同步，但急件不適合。&lt;/p&gt;
+&lt;h3 id="2-會迷路"&gt;2. 會迷路
+&lt;/h3&gt;&lt;p&gt;複雜任務有時候它會卡住、重複、做到偏掉。&lt;/p&gt;
+&lt;p&gt;需要你中途給提示把它拉回來。&lt;/p&gt;
+&lt;h3 id="3-貴"&gt;3. 貴
+&lt;/h3&gt;&lt;p&gt;不是免費服務，用得多要付訂閱或買點數。&lt;/p&gt;
+&lt;h3 id="4-資料安全"&gt;4. 資料安全
+&lt;/h3&gt;&lt;p&gt;任務會在它的雲端 VM 跑，&lt;strong&gt;敏感資料、公司機密不要丟進去&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="5-還不夠穩定"&gt;5. 還不夠穩定
+&lt;/h3&gt;&lt;p&gt;畢竟是新一代產品，會有 bug、會有錯誤，不能 100% 依賴。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼開始用"&gt;怎麼開始用？
+&lt;/h2&gt;&lt;h3 id="1-去-manusim-註冊"&gt;1. 去 &lt;a class="link" href="https://manus.im" target="_blank" rel="noopener"
+&gt;manus.im&lt;/a&gt; 註冊
+&lt;/h3&gt;&lt;p&gt;早期要 waitlist，現在已經開放註冊（但可能有排隊或點數限制）。&lt;/p&gt;
+&lt;h3 id="2-從小任務開始"&gt;2. 從小任務開始
+&lt;/h3&gt;&lt;p&gt;不要一開始就丟「幫我做一個完整的 SaaS 產品」。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先從單一、清晰的任務&lt;/strong&gt;試手感：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「分析這份 PDF 的重點」&lt;/li&gt;
+&lt;li&gt;「查一下 XX 工具和 YY 工具的差異」&lt;/li&gt;
+&lt;li&gt;「把這段 CSV 轉成圖表」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-學會給好指令"&gt;3. 學會給好指令
+&lt;/h3&gt;&lt;p&gt;Manus 吃得懂自然語言，但&lt;strong&gt;越清楚越好&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;告訴它最終產出物是什麼格式&lt;/li&gt;
+&lt;li&gt;給它限制條件（預算、時間、風格）&lt;/li&gt;
+&lt;li&gt;給參考範例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4-善用中斷和修正"&gt;4. 善用「中斷」和「修正」
+&lt;/h3&gt;&lt;p&gt;任務跑一半發現不對，直接打斷它、給新指令。&lt;/p&gt;
+&lt;p&gt;不要從頭等它做完才發現白做一場。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="它會取代工程師--分析師嗎"&gt;它會取代工程師 / 分析師嗎？
+&lt;/h2&gt;&lt;p&gt;這是 Manus 剛推出時最熱門的討論。&lt;/p&gt;
+&lt;p&gt;我的觀察：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;短期內不會&lt;/strong&gt;。Manus 能做的事，&lt;strong&gt;有能力判斷好壞的人&lt;/strong&gt;才用得好&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;會改變分工&lt;/strong&gt;。以後一個人能做以前十個人做的雜事&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基礎工作會被吃掉&lt;/strong&gt;。整理資料、寫簡單腳本、做 PPT 模板——這類工作會縮水&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高階判斷更珍貴&lt;/strong&gt;。「要不要做」、「做到什麼程度」、「怎麼跟商業結合」這些還是要人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;簡單講：&lt;strong&gt;它不是取代你，是讓會用它的人比不會用的人多做十倍事情。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Manus 是 AI 工具進化的一個分水嶺——&lt;strong&gt;從「回答問題」變成「交付成果」&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;雖然還有很多不穩定、還有很多做不到的事，但方向很清楚：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;未來的 AI 工具，會越來越像「數位員工」，而不是「搜尋引擎」。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果你想感受一下這個改變：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://manus.im" target="_blank" rel="noopener"
+&gt;manus.im&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;挑一個你平常會自己做的小任務，丟給它試試看。體感可能會超過你的預期。&lt;/p&gt;</description></item><item><title>Notion 是什麼？把筆記、資料庫、協作、專案管理全部塞進一個地方的神器</title><link>https://ericchung24.github.io/blog/p/notion-%E6%98%AF%E4%BB%80%E9%BA%BC%E6%8A%8A%E7%AD%86%E8%A8%98%E8%B3%87%E6%96%99%E5%BA%AB%E5%8D%94%E4%BD%9C%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86%E5%85%A8%E9%83%A8%E5%A1%9E%E9%80%B2%E4%B8%80%E5%80%8B%E5%9C%B0%E6%96%B9%E7%9A%84%E7%A5%9E%E5%99%A8/</link><pubDate>Mon, 20 Apr 2026 00:50:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/notion-%E6%98%AF%E4%BB%80%E9%BA%BC%E6%8A%8A%E7%AD%86%E8%A8%98%E8%B3%87%E6%96%99%E5%BA%AB%E5%8D%94%E4%BD%9C%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86%E5%85%A8%E9%83%A8%E5%A1%9E%E9%80%B2%E4%B8%80%E5%80%8B%E5%9C%B0%E6%96%B9%E7%9A%84%E7%A5%9E%E5%99%A8/</guid><description>&lt;img src="https://www.notion.so/front-static/meta/default.png" alt="Featured image of post Notion 是什麼？把筆記、資料庫、協作、專案管理全部塞進一個地方的神器" /&gt;&lt;p&gt;有一類工具，第一次用會搞不清楚它到底是什麼。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Notion 就是這種工具。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;是筆記？是資料庫？是協作平台？是專案管理？是 Wiki？&lt;/p&gt;
+&lt;p&gt;答案是：&lt;strong&gt;以上皆是，而且可以自己組合。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;這個不明確的定位反而是它的強項，也是它有點難入門的原因。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="notion-是什麼"&gt;Notion 是什麼？
+&lt;/h2&gt;&lt;p&gt;官方說法是「&lt;strong&gt;All-in-one workspace&lt;/strong&gt;」——一個把筆記、文件、專案、資料庫、協作全部整合在一起的工作空間。&lt;/p&gt;
+&lt;p&gt;但這樣講很抽象。&lt;/p&gt;
+&lt;p&gt;更好理解的方式是把 Notion 想成&lt;strong&gt;一個積木盒&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每個「頁面」是一塊積木&lt;/li&gt;
+&lt;li&gt;每個頁面裡可以放文字、圖片、表格、看板、行事曆、連結、子頁面&lt;/li&gt;
+&lt;li&gt;這些積木可以自由組合、互相連結、拆裝重組&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以用同一套積木蓋出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;個人日記&lt;/li&gt;
+&lt;li&gt;團隊 Wiki&lt;/li&gt;
+&lt;li&gt;產品 roadmap&lt;/li&gt;
+&lt;li&gt;客戶管理系統（CRM）&lt;/li&gt;
+&lt;li&gt;讀書筆記&lt;/li&gt;
+&lt;li&gt;食譜收藏&lt;/li&gt;
+&lt;li&gt;旅遊規劃&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;工具是同一個，結果可以完全不同&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="核心概念block區塊"&gt;核心概念：Block（區塊）
+&lt;/h2&gt;&lt;p&gt;理解 Notion 之前，要先認識它最基本的單位：&lt;strong&gt;Block&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;在 Notion 裡面，&lt;strong&gt;所有東西都是 block&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一段文字是 block&lt;/li&gt;
+&lt;li&gt;一張圖片是 block&lt;/li&gt;
+&lt;li&gt;一個待辦項目是 block&lt;/li&gt;
+&lt;li&gt;一個資料庫是 block&lt;/li&gt;
+&lt;li&gt;一個子頁面也是 block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;每個 block 都可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;拖曳移動&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;轉換類型&lt;/strong&gt;（例如把一段文字轉成代辦項目）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;巢狀包起來&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個設計讓 Notion 的編輯體驗變得非常自由——&lt;strong&gt;你不是在填表格，而是在組裝&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="另一個殺手鐧database資料庫"&gt;另一個殺手鐧：Database（資料庫）
+&lt;/h2&gt;&lt;p&gt;如果 block 是 Notion 的骨架，&lt;strong&gt;database 就是它的靈魂&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Notion 的資料庫不是 Excel，更像是&lt;strong&gt;可以用不同角度檢視的同一份資料&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Table View&lt;/strong&gt; — 像試算表&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Board View&lt;/strong&gt; — 像 Trello 看板&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calendar View&lt;/strong&gt; — 像 Google Calendar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gallery View&lt;/strong&gt; — 像 Pinterest 卡片&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Timeline View&lt;/strong&gt; — 像甘特圖&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;List View&lt;/strong&gt; — 簡潔的清單&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;重點是&lt;/strong&gt;：同一筆資料，可以在不同 view 裡面以不同形式呈現。&lt;/p&gt;
+&lt;p&gt;例如一個「任務清單」：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;工程師用 Board View 管 Kanban&lt;/li&gt;
+&lt;li&gt;主管用 Timeline View 看時程&lt;/li&gt;
+&lt;li&gt;PM 用 Calendar View 追 deadline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;資料只有一份，視角各自不同&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="notion-最常見的用法"&gt;Notion 最常見的用法
+&lt;/h2&gt;&lt;p&gt;給一些實際的使用情境：&lt;/p&gt;
+&lt;h3 id="個人用途"&gt;個人用途
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;第二大腦&lt;/strong&gt;：把所有筆記、想法、靈感存在這裡&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;閱讀清單&lt;/strong&gt;：書、文章、Podcast 統一管理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;專案追蹤&lt;/strong&gt;：side project 的 task list&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;習慣追蹤&lt;/strong&gt;：每天運動、讀書打勾&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;旅遊規劃&lt;/strong&gt;：行程、預算、住宿整合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="工作用途"&gt;工作用途
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;公司 Wiki&lt;/strong&gt;：把 SOP、文件、會議記錄集中&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;產品 Roadmap&lt;/strong&gt;：功能、進度、負責人&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;客戶管理&lt;/strong&gt;：代替 CRM 的輕量版&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OKR 追蹤&lt;/strong&gt;：目標拆解、季度檢視&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;招募流程&lt;/strong&gt;：應徵者清單、面試紀錄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="團隊協作"&gt;團隊協作
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;共同編輯&lt;/strong&gt;：多人同時編輯，類似 Google Docs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;留言 &amp;amp; 標註&lt;/strong&gt;：&lt;code&gt;@某人&lt;/code&gt; 指派任務或討論&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;權限管理&lt;/strong&gt;：哪些頁面誰能看、誰能編輯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="notion-ai2022-年以後最大的改變"&gt;Notion AI：2022 年以後最大的改變
+&lt;/h2&gt;&lt;p&gt;2022 年 Notion 推出了內建的 AI 功能。&lt;/p&gt;
+&lt;p&gt;直接在頁面裡：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;自動寫作&lt;/strong&gt;：輸入標題，AI 幫你寫初稿&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;摘要長文&lt;/strong&gt;：一鍵把整頁內容壓縮成重點&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;翻譯&lt;/strong&gt;：直接轉換語言&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;改寫&lt;/strong&gt;：讓文字更正式 / 更口語 / 更簡短&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;問答&lt;/strong&gt;：根據整個 workspace 的資料回答問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最後這個「Q&amp;amp;A」功能有點像 NotebookLM，但範圍是你整個 Notion——等於整個工作空間變成可問答的知識庫。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="優點-vs-缺點"&gt;優點 vs 缺點
+&lt;/h2&gt;&lt;h3 id="優點"&gt;優點
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;超級彈性&lt;/strong&gt; — 幾乎什麼情境都能用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;跨平台&lt;/strong&gt; — Web、Mac、Windows、iOS、Android 全部有&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分享容易&lt;/strong&gt; — 一鍵產生公開連結，像迷你網站&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模板豐富&lt;/strong&gt; — 社群有幾千個免費模板可以抄&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;免費版就很好用&lt;/strong&gt; — 個人使用基本不用付費&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="缺點"&gt;缺點
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;速度不算快&lt;/strong&gt; — 頁面多、資料庫大的時候會 lag&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;離線支援差&lt;/strong&gt; — 幾乎是雲端依賴&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;學習曲線&lt;/strong&gt; — 第一次用會搞不清楚能幹嘛&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;太彈性反而難開始&lt;/strong&gt; — 空白頁面容易讓人不知道怎麼下手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;搜尋普通&lt;/strong&gt; — 跟 Obsidian、Roam 比起來，連結功能較弱&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="跟其他工具怎麼選"&gt;跟其他工具怎麼選？
+&lt;/h2&gt;&lt;p&gt;很多人會糾結 Notion vs Obsidian vs Evernote vs Apple Notes。&lt;/p&gt;
+&lt;p&gt;我自己的分法：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;需求&lt;/th&gt;
+&lt;th&gt;推薦&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;個人純筆記 + 雙向連結&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Obsidian&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;跟別人協作、做 Wiki、做資料庫&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Notion&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;快速記一些瑣事&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Apple Notes / Google Keep&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;深度寫作、長文&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Ulysses / iA Writer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;專案管理為主&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Linear / Asana&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Notion 最強的情境是「&lt;strong&gt;個人 + 協作都要、筆記 + 資料庫都要&lt;/strong&gt;」。&lt;/p&gt;
+&lt;p&gt;如果你只需要其中一部分，可能有更專精的工具。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="新手怎麼開始"&gt;新手怎麼開始？
+&lt;/h2&gt;&lt;p&gt;剛接觸 Notion 很容易「空白頁面恐懼症」——看著空白畫面不知道要做什麼。&lt;/p&gt;
+&lt;p&gt;建議這樣開始：&lt;/p&gt;
+&lt;h3 id="1-先用模板"&gt;1. 先用模板
+&lt;/h3&gt;&lt;p&gt;不要從零開始。&lt;/p&gt;
+&lt;p&gt;Notion 官方有 &lt;a class="link" href="https://www.notion.com/templates" target="_blank" rel="noopener"
+&gt;Template Gallery&lt;/a&gt;，找一個最接近你需求的模板，&lt;strong&gt;直接 duplicate 到你的 workspace&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="2-用一陣子再改"&gt;2. 用一陣子再改
+&lt;/h3&gt;&lt;p&gt;先照著模板用一兩週。&lt;/p&gt;
+&lt;p&gt;用的過程會自然發現「這裡不順、那裡多餘」，再開始客製化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不要還沒用就開始調結構&lt;/strong&gt;，通常會浪費很多時間。&lt;/p&gt;
+&lt;h3 id="3-一次只建一個系統"&gt;3. 一次只建一個系統
+&lt;/h3&gt;&lt;p&gt;新手最常犯的錯：&lt;strong&gt;一次想把筆記、任務、閱讀清單、專案管理全部移進 Notion&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;結果每個系統都半成品，最後放棄。&lt;/p&gt;
+&lt;p&gt;建議&lt;strong&gt;一次只搬一個&lt;/strong&gt;，用穩了再搬下一個。&lt;/p&gt;
+&lt;h3 id="4-學會-slash-command"&gt;4. 學會 Slash Command
+&lt;/h3&gt;&lt;p&gt;在 Notion 裡輸入 &lt;code&gt;/&lt;/code&gt;，會跳出所有 block 類型選單。&lt;/p&gt;
+&lt;p&gt;熟悉這個命令能大幅加速編輯。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="價格"&gt;價格
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方案&lt;/th&gt;
+&lt;th&gt;價格&lt;/th&gt;
+&lt;th&gt;適合&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Free&lt;/td&gt;
+&lt;td&gt;$0&lt;/td&gt;
+&lt;td&gt;個人使用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Plus&lt;/td&gt;
+&lt;td&gt;約 $10/月&lt;/td&gt;
+&lt;td&gt;小團隊&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Business&lt;/td&gt;
+&lt;td&gt;約 $18/月&lt;/td&gt;
+&lt;td&gt;公司&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Enterprise&lt;/td&gt;
+&lt;td&gt;聯繫&lt;/td&gt;
+&lt;td&gt;大型組織&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;個人使用免費版完全夠用&lt;/strong&gt;，除非你需要更多團隊成員、更多上傳空間、或高級權限管理。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Notion 不是一個工具，而是&lt;strong&gt;一個可以組合出任何工具的平台&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;一開始會覺得複雜、混亂、不知道怎麼用。&lt;/p&gt;
+&lt;p&gt;但一旦你建立起自己的系統，會發現它成為&lt;strong&gt;日常工作與思考的中心&lt;/strong&gt;——打開電腦第一件事就是開 Notion。&lt;/p&gt;
+&lt;p&gt;如果你還沒用過，推薦從一個模板開始：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://www.notion.com" target="_blank" rel="noopener"
+&gt;notion.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有時候一個好的工具，不是讓你做更多事，而是讓你&lt;strong&gt;把所有事情放在同一個地方&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>NotebookLM 是什麼？Google 的 AI 筆記助手，幫你把一堆資料變成可問答的知識庫</title><link>https://ericchung24.github.io/blog/p/notebooklm-%E6%98%AF%E4%BB%80%E9%BA%BCgoogle-%E7%9A%84-ai-%E7%AD%86%E8%A8%98%E5%8A%A9%E6%89%8B%E5%B9%AB%E4%BD%A0%E6%8A%8A%E4%B8%80%E5%A0%86%E8%B3%87%E6%96%99%E8%AE%8A%E6%88%90%E5%8F%AF%E5%95%8F%E7%AD%94%E7%9A%84%E7%9F%A5%E8%AD%98%E5%BA%AB/</link><pubDate>Mon, 20 Apr 2026 00:40:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/notebooklm-%E6%98%AF%E4%BB%80%E9%BA%BCgoogle-%E7%9A%84-ai-%E7%AD%86%E8%A8%98%E5%8A%A9%E6%89%8B%E5%B9%AB%E4%BD%A0%E6%8A%8A%E4%B8%80%E5%A0%86%E8%B3%87%E6%96%99%E8%AE%8A%E6%88%90%E5%8F%AF%E5%95%8F%E7%AD%94%E7%9A%84%E7%9F%A5%E8%AD%98%E5%BA%AB/</guid><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/notebookLM_v2_1.width-1000.format-webp.webp" alt="Featured image of post NotebookLM 是什麼？Google 的 AI 筆記助手，幫你把一堆資料變成可問答的知識庫" /&gt;&lt;p&gt;你一定遇過這種情境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手上一堆 PDF、會議記錄、研究報告，要整理成摘要&lt;/li&gt;
+&lt;li&gt;讀了十篇文章，要比較它們對同一個主題的觀點&lt;/li&gt;
+&lt;li&gt;YouTube 有一場 3 小時的演講，只想知道「他在第幾分鐘講了 XX」&lt;/li&gt;
+&lt;li&gt;準備考試或簡報，想把筆記變成可以互相問答的對象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以前這種事很花時間。&lt;/p&gt;
+&lt;p&gt;直到 Google 推出 &lt;strong&gt;&lt;a class="link" href="https://notebooklm.google.com" target="_blank" rel="noopener"
+&gt;NotebookLM&lt;/a&gt;&lt;/strong&gt;，整個遊戲規則變了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="notebooklm-是什麼"&gt;NotebookLM 是什麼？
+&lt;/h2&gt;&lt;p&gt;簡單一句話：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「把你自己的資料丟進去，它就變成一個只會根據這些資料回答的 AI 助手。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;跟 ChatGPT、Claude 最大的差別是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ChatGPT 會用它&lt;strong&gt;全網路的訓練資料&lt;/strong&gt;回答你&lt;/li&gt;
+&lt;li&gt;NotebookLM 只會用&lt;strong&gt;你上傳的那些文件&lt;/strong&gt;回答你&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個差別超級關鍵。&lt;/p&gt;
+&lt;p&gt;因為它表示：&lt;strong&gt;AI 不會亂掰（或至少亂掰的機率大幅降低）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你讀的資料、它讀的資料，是同一份。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="可以放什麼進去"&gt;可以放什麼進去？
+&lt;/h2&gt;&lt;p&gt;支援的來源類型越來越多，目前包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Docs / Slides&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;網頁 URL&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;YouTube 影片&lt;/strong&gt;（會自動抓字幕）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;音訊檔&lt;/strong&gt;（會自動轉文字）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;純文字貼上&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一個 notebook 可以放最多 &lt;strong&gt;50 個來源&lt;/strong&gt;（免費版）、300 個（Plus 版）。&lt;/p&gt;
+&lt;p&gt;每個來源的大小限制也不小（PDF 上限 500,000 字），對大部分情境夠用了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="最強的三個功能"&gt;最強的三個功能
+&lt;/h2&gt;&lt;h3 id="1-基於來源的問答"&gt;1. 基於來源的問答
+&lt;/h3&gt;&lt;p&gt;這是核心。&lt;/p&gt;
+&lt;p&gt;把資料丟進去後，你可以直接問：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「這幾篇文章對於 XX 議題，立場分別是什麼？」&lt;/li&gt;
+&lt;li&gt;「第 3 頁講的那個實驗，結論是什麼？」&lt;/li&gt;
+&lt;li&gt;「這本書的核心論點用三句話總結」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;每個回答都會附上「引用來源」&lt;/strong&gt;，點進去就能看到原文在哪一段。&lt;/p&gt;
+&lt;p&gt;這個 &lt;strong&gt;source citation&lt;/strong&gt; 功能是 NotebookLM 最讓人安心的地方——你可以驗證 AI 有沒有亂掰。&lt;/p&gt;
+&lt;h3 id="2-自動-podcastaudio-overview"&gt;2. 自動 Podcast（Audio Overview）
+&lt;/h3&gt;&lt;p&gt;這個功能剛推出的時候全網都在驚呼。&lt;/p&gt;
+&lt;p&gt;你丟一份資料進去，點一下「Generate Audio Overview」，它會&lt;strong&gt;自動生成一集兩個 AI 主持人對話的 Podcast&lt;/strong&gt;，就像真人在討論你的資料一樣。&lt;/p&gt;
+&lt;p&gt;聽起來像真人節目，而且內容是根據你的資料做的。&lt;/p&gt;
+&lt;p&gt;用途：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通勤聽自己的論文摘要&lt;/li&gt;
+&lt;li&gt;讀書會前快速掌握一本書&lt;/li&gt;
+&lt;li&gt;把枯燥的技術文件轉成好吸收的對話形式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;現在還支援多國語言（包含中文）。&lt;/p&gt;
+&lt;h3 id="3-mind-map心智圖"&gt;3. Mind Map（心智圖）
+&lt;/h3&gt;&lt;p&gt;上傳資料後，NotebookLM 可以自動生成&lt;strong&gt;一張心智圖&lt;/strong&gt;，把主要概念、子概念、彼此的關係視覺化。&lt;/p&gt;
+&lt;p&gt;對要做簡報、寫文章、理清思路的人，超級有用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="實際使用情境"&gt;實際使用情境
+&lt;/h2&gt;&lt;p&gt;我自己常用的幾種情境：&lt;/p&gt;
+&lt;h3 id="情境-1讀論文--研究報告"&gt;情境 1：讀論文 / 研究報告
+&lt;/h3&gt;&lt;p&gt;丟 5 篇相關主題的論文進去，問：「這些研究在方法論上有什麼差異？」&lt;/p&gt;
+&lt;p&gt;比自己一篇一篇讀快十倍。&lt;/p&gt;
+&lt;h3 id="情境-2工作文件彙整"&gt;情境 2：工作文件彙整
+&lt;/h3&gt;&lt;p&gt;把會議記錄、產品規格、使用者回饋全部丟進去。&lt;/p&gt;
+&lt;p&gt;需要某個決策背景時，直接問：「關於 XX 功能，之前做了什麼決定？為什麼？」&lt;/p&gt;
+&lt;h3 id="情境-3技術文件學習"&gt;情境 3：技術文件學習
+&lt;/h3&gt;&lt;p&gt;丟一份新工具的完整官方文件進去，問：「我要做 XX 的話，大概的流程是什麼？」&lt;/p&gt;
+&lt;p&gt;不用從頭讀 200 頁文件。&lt;/p&gt;
+&lt;h3 id="情境-4寫作素材整理"&gt;情境 4：寫作素材整理
+&lt;/h3&gt;&lt;p&gt;把相關文章、筆記、訪談稿丟進去。&lt;/p&gt;
+&lt;p&gt;寫作時問：「這個主題我之前有沒有寫過類似的觀點？」&lt;/p&gt;
+&lt;h3 id="情境-5面試準備"&gt;情境 5：面試準備
+&lt;/h3&gt;&lt;p&gt;把公司官網、產品文件、新聞報導丟進去。&lt;/p&gt;
+&lt;p&gt;問：「這家公司最近的策略方向是什麼？」「他們最大的競爭對手是誰？」&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="跟-chatgpt--claude-比起來呢"&gt;跟 ChatGPT / Claude 比起來呢？
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;NotebookLM&lt;/th&gt;
+&lt;th&gt;ChatGPT / Claude&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;基於自己資料&lt;/td&gt;
+&lt;td&gt;✅ 核心功能&lt;/td&gt;
+&lt;td&gt;有但要貼上&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;引用來源&lt;/td&gt;
+&lt;td&gt;✅ 每句都有&lt;/td&gt;
+&lt;td&gt;大部分沒有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;來源數量&lt;/td&gt;
+&lt;td&gt;50 份（免費）&lt;/td&gt;
+&lt;td&gt;受 context 限制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自動 Podcast&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;通用對話&lt;/td&gt;
+&lt;td&gt;弱&lt;/td&gt;
+&lt;td&gt;強&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;程式碼生成&lt;/td&gt;
+&lt;td&gt;弱&lt;/td&gt;
+&lt;td&gt;強&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;結論：&lt;strong&gt;NotebookLM 不是要取代 ChatGPT，是另一個用途&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;需要「基於特定資料做深度理解」時，用 NotebookLM；要「寫 code、寫文案、泛用對話」時，還是用 ChatGPT / Claude。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="幾個使用小技巧"&gt;幾個使用小技巧
+&lt;/h2&gt;&lt;h3 id="把相關資料放同一個-notebook"&gt;把相關資料放同一個 notebook
+&lt;/h3&gt;&lt;p&gt;NotebookLM 的回答品質，跟你給的來源品質高度相關。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不要把無關的資料塞在一起&lt;/strong&gt;，會互相干擾。建議一個主題開一個 notebook。&lt;/p&gt;
+&lt;h3 id="先問總結再問細節"&gt;先問「總結」再問細節
+&lt;/h3&gt;&lt;p&gt;新開一個 notebook，先丟資料問：「這些資料的主要內容是什麼？」&lt;/p&gt;
+&lt;p&gt;這樣你會對它「看到什麼」有個概念，後續問細節才知道怎麼問。&lt;/p&gt;
+&lt;h3 id="善用notes功能"&gt;善用「Notes」功能
+&lt;/h3&gt;&lt;p&gt;NotebookLM 裡面可以記 notes。&lt;/p&gt;
+&lt;p&gt;把自己的想法、問答結果存成 note，之後可以把這些 note 也變成新的來源。&lt;/p&gt;
+&lt;p&gt;等於&lt;strong&gt;你的思考會跟資料一起累積&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="定期清理來源"&gt;定期清理來源
+&lt;/h3&gt;&lt;p&gt;資料放太多會稀釋重點。&lt;/p&gt;
+&lt;p&gt;做完一個專案後，可以把這個 notebook 封存，開新的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="需要付費嗎"&gt;需要付費嗎？
+&lt;/h2&gt;&lt;p&gt;目前有兩個版本：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;價格&lt;/th&gt;
+&lt;th&gt;特色&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;免費版&lt;/td&gt;
+&lt;td&gt;$0&lt;/td&gt;
+&lt;td&gt;每個 notebook 50 個來源、基本功能都有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Plus&lt;/td&gt;
+&lt;td&gt;併入 Google AI Plus / Pro 方案&lt;/td&gt;
+&lt;td&gt;更多來源、更長使用時間、進階功能&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;免費版已經夠用，&lt;strong&gt;如果你只是想試試看，不用急著付費&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="資料安全"&gt;資料安全？
+&lt;/h2&gt;&lt;p&gt;這是 Google，大家關心的問題：「我的資料會被拿去訓練嗎？」&lt;/p&gt;
+&lt;p&gt;官方說明是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;個人免費版的資料不會被用來訓練模型&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;企業/教育版（Workspace）的資料完全隔離&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但還是有幾個原則：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;機密資料、公司機密不要上傳&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;客戶個資不要上傳&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如果不確定敏感程度，請遵守公司的資料政策&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;對個人學習、公開資料研究，NotebookLM 幾乎沒有安全疑慮。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;如果你是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;學生&lt;/strong&gt;：NotebookLM 可以把整學期的教材變成問答助手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;研究者&lt;/strong&gt;：可以快速整合多篇文獻&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工程師&lt;/strong&gt;：可以把技術文件變成隨時可查的 AI&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;寫作者&lt;/strong&gt;：可以把素材庫變成靈感來源&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一般上班族&lt;/strong&gt;：可以把工作文件變成「問問題就有答案」的系統&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個工具都值得試試看。&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://notebooklm.google.com" target="_blank" rel="noopener"
+&gt;notebooklm.google.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;用 Google 帳號就能登入，免費先玩一輪再說。&lt;/p&gt;</description></item><item><title>認識 Stack Overflow：工程師搜尋問題的第一站</title><link>https://ericchung24.github.io/blog/p/%E8%AA%8D%E8%AD%98-stack-overflow%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%90%9C%E5%B0%8B%E5%95%8F%E9%A1%8C%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AB%99/</link><pubDate>Mon, 20 Apr 2026 00:30:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/%E8%AA%8D%E8%AD%98-stack-overflow%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%90%9C%E5%B0%8B%E5%95%8F%E9%A1%8C%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AB%99/</guid><description>&lt;img src="https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/size/w2000/2018/07/stackoverflow-1.png" alt="Featured image of post 認識 Stack Overflow：工程師搜尋問題的第一站" /&gt;&lt;p&gt;如果你寫過程式，多半有過這個經驗：&lt;/p&gt;
+&lt;p&gt;遇到一個 bug，在 Google 搜了錯誤訊息，點進一個橘白配色的網站，看到某個 2014 年的回答，照著做，bug 解決了。&lt;/p&gt;
+&lt;p&gt;那個網站就是 &lt;strong&gt;&lt;a class="link" href="https://stackoverflow.com" target="_blank" rel="noopener"
+&gt;Stack Overflow&lt;/a&gt;&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;它幾乎是每個工程師都用過，但很少人認真想過它的起源、為什麼它會長成現在這樣。&lt;/p&gt;
+&lt;p&gt;這篇就來聊聊。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="stack-overflow-怎麼來的"&gt;Stack Overflow 怎麼來的？
+&lt;/h2&gt;&lt;p&gt;時間回到 2008 年。&lt;/p&gt;
+&lt;p&gt;那時候工程師要找答案，主要靠幾個地方：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;論壇&lt;/strong&gt;（phpBB 那種）——資訊分散、搜尋難用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;個人部落格&lt;/strong&gt;——品質參差不齊&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Experts Exchange&lt;/strong&gt;——要付費才能看答案，惡名昭彰&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;郵件列表（Mailing List）&lt;/strong&gt;——老派、門檻高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;兩個知名部落客 &lt;strong&gt;Jeff Atwood&lt;/strong&gt;（Coding Horror 的作者）和 &lt;strong&gt;Joel Spolsky&lt;/strong&gt;（Joel on Software 的作者），決定做一個完全不一樣的問答網站。&lt;/p&gt;
+&lt;p&gt;核心理念是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「答案應該免費，而且要容易找到。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;於是 Stack Overflow 在 2008 年誕生。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼成功"&gt;為什麼成功？
+&lt;/h2&gt;&lt;p&gt;Stack Overflow 之所以能取代既有的論壇文化，關鍵在幾個設計：&lt;/p&gt;
+&lt;h3 id="1-投票機制voting"&gt;1. 投票機制（Voting）
+&lt;/h3&gt;&lt;p&gt;好答案會被推到最上面，不是按時間排序。&lt;/p&gt;
+&lt;p&gt;這一個小小的設計，徹底改變了「找答案」的體驗——&lt;strong&gt;你不用從第一頁翻到第五十頁&lt;/strong&gt;，直接看最多人認可的那一個。&lt;/p&gt;
+&lt;h3 id="2-最佳解答accepted-answer"&gt;2. 最佳解答（Accepted Answer）
+&lt;/h3&gt;&lt;p&gt;發問者可以標記一個「最佳解答」，標綠勾。&lt;/p&gt;
+&lt;p&gt;讓後來看到這個問題的人，可以直接知道「作者覺得哪個方法真的有用」。&lt;/p&gt;
+&lt;h3 id="3-聲望系統reputation"&gt;3. 聲望系統（Reputation）
+&lt;/h3&gt;&lt;p&gt;每次你的問題或回答被 upvote，就會得到聲望點數。&lt;/p&gt;
+&lt;p&gt;這個分數&lt;strong&gt;跟著你一輩子&lt;/strong&gt;，是很多工程師的隱形履歷。有些公司面試甚至會看你的 SO profile。&lt;/p&gt;
+&lt;h3 id="4-編輯權限wiki-style"&gt;4. 編輯權限（Wiki-style）
+&lt;/h3&gt;&lt;p&gt;聲望高的人可以編輯別人的問題和答案，修正錯字、補充更清楚的說明。&lt;/p&gt;
+&lt;p&gt;讓整個平台像維基百科一樣&lt;strong&gt;越用品質越好&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="5-問題品質要求很高"&gt;5. 問題品質要求很高
+&lt;/h3&gt;&lt;p&gt;「已經有人問過」、「問題太模糊」、「沒附 code」——會被關閉。&lt;/p&gt;
+&lt;p&gt;這個做法很有爭議（後面會講），但也確實維持了平台的答案品質。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="stack-overflow-的鄉民文化"&gt;Stack Overflow 的「鄉民文化」
+&lt;/h2&gt;&lt;p&gt;在 SO 混久了會發現，這個社群有自己的個性。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;溫暖的一面：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;答題者通常很熱心，連語法細節都解釋得很詳細&lt;/li&gt;
+&lt;li&gt;有時候會有人直接幫你 debug 整段 code&lt;/li&gt;
+&lt;li&gt;熱門問題下面常常會有補充、更新、不同版本的解法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;嚴格的一面：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;新手問問題，常會被嗆「這個明明就 Google 得到」&lt;/li&gt;
+&lt;li&gt;沒有附 MCVE（Minimal, Complete, Verifiable Example）會被關閉&lt;/li&gt;
+&lt;li&gt;問「XX 語言適合初學者嗎？」這種問題會被投 off-topic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這種嚴格，讓 SO 變成一個「答案品質很高，但對新手不友善」的地方。&lt;/p&gt;
+&lt;p&gt;很多人對這件事又愛又恨。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼用最順"&gt;怎麼用最順？
+&lt;/h2&gt;&lt;p&gt;給剛開始接觸 SO 的人一些建議：&lt;/p&gt;
+&lt;h3 id="搜尋不要發問"&gt;搜尋，不要發問
+&lt;/h3&gt;&lt;p&gt;90% 的問題都已經有人問過了。&lt;/p&gt;
+&lt;p&gt;發問前，用錯誤訊息或關鍵字去 Google 搜尋（SO 的 SEO 超強，幾乎都會是前幾筆結果）。&lt;/p&gt;
+&lt;h3 id="要發問請寫完整"&gt;要發問，請寫完整
+&lt;/h3&gt;&lt;p&gt;一個好的問題包含：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;你在做什麼&lt;/strong&gt;（context）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;你預期會發生什麼&lt;/strong&gt;（expected）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;實際發生了什麼&lt;/strong&gt;（actual，包含完整錯誤訊息）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;你已經試過什麼&lt;/strong&gt;（what I tried）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最小可重現範例&lt;/strong&gt;（minimal reproducible example）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;寫得清楚，答案會很快出現；寫得模糊，問題會被關掉。&lt;/p&gt;
+&lt;h3 id="看答案要看日期"&gt;看答案要看日期
+&lt;/h3&gt;&lt;p&gt;SO 上很多答案是 2010 年的。&lt;/p&gt;
+&lt;p&gt;技術變化很快，一個 10 年前的解法可能早就過時（例如 jQuery、舊版 React class component）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先看日期，再看內容。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="答案區往下滑"&gt;答案區往下滑
+&lt;/h3&gt;&lt;p&gt;最高票答案不一定是最好的。&lt;/p&gt;
+&lt;p&gt;有時候下面會有「2023 年更新：現在已經不用這樣做了，應該用 XXX」。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="ai-時代的-stack-overflow"&gt;AI 時代的 Stack Overflow
+&lt;/h2&gt;&lt;p&gt;ChatGPT 出現後，SO 的流量確實掉了。&lt;/p&gt;
+&lt;p&gt;畢竟要問一個 bug，問 AI 直接得到答案，比在 SO 翻十個回答還快。&lt;/p&gt;
+&lt;p&gt;但這不代表 SO 沒用了，只是角色變了：&lt;/p&gt;
+&lt;h3 id="so-現在更像是答案來源的真相"&gt;SO 現在更像是「答案來源的真相」
+&lt;/h3&gt;&lt;p&gt;ChatGPT 的訓練資料裡面，有大量 SO 的問答。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;當 AI 的答案你不確定對不對，回去 SO 查原始討論串，看人類工程師怎麼吵出那個結論——這件事的價值反而更高了。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="冷門問題還是要靠-so"&gt;冷門問題還是要靠 SO
+&lt;/h3&gt;&lt;p&gt;AI 對主流框架（React、Python）答得很好。&lt;/p&gt;
+&lt;p&gt;但遇到冷門工具、特定版本 bug、某個 library 的邊角情境，AI 常常亂編，&lt;strong&gt;SO 上的真實討論還是比較可靠&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="so-自己也在轉型"&gt;SO 自己也在轉型
+&lt;/h3&gt;&lt;p&gt;Stack Overflow 後來推出了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class="link" href="https://stackoverflow.co/labs/" target="_blank" rel="noopener"
+&gt;OverflowAI&lt;/a&gt;&lt;/strong&gt; — 把社群答案包裝成 AI 助手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Teams 版本&lt;/strong&gt; — 企業內部用的私有 Q&amp;amp;A 平台&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;授權資料給 OpenAI&lt;/strong&gt; — 讓 AI 訓練時能用他們的資料（也有分潤）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有人覺得 SO 走下坡，但它仍然是&lt;strong&gt;人類工程師集體智慧最大的一個資料庫&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Stack Overflow 對工程師的意義，不只是一個找答案的網站。&lt;/p&gt;
+&lt;p&gt;它建立了一套**「問答應該長怎樣」的標準**——有結構、有品質、有社群監督。&lt;/p&gt;
+&lt;p&gt;即使 AI 的時代來了，很多 AI 答案的源頭還是 SO。&lt;/p&gt;
+&lt;p&gt;下次你搜尋 bug 點進 SO，記得：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;幫有用的答案按個讚&lt;/li&gt;
+&lt;li&gt;看到新手問題不要嗆&lt;/li&gt;
+&lt;li&gt;如果你解決了一個冷門問題，回去寫個答案，造福未來的自己&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://stackoverflow.com" target="_blank" rel="noopener"
+&gt;stackoverflow.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;工程師的知識能一層一層累積到今天，SO 這個平台功不可沒。&lt;/p&gt;</description></item><item><title>認識 Unsplash：一個改變網路圖片生態的攝影社群</title><link>https://ericchung24.github.io/blog/p/%E8%AA%8D%E8%AD%98-unsplash%E4%B8%80%E5%80%8B%E6%94%B9%E8%AE%8A%E7%B6%B2%E8%B7%AF%E5%9C%96%E7%89%87%E7%94%9F%E6%85%8B%E7%9A%84%E6%94%9D%E5%BD%B1%E7%A4%BE%E7%BE%A4/</link><pubDate>Mon, 20 Apr 2026 00:20:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/%E8%AA%8D%E8%AD%98-unsplash%E4%B8%80%E5%80%8B%E6%94%B9%E8%AE%8A%E7%B6%B2%E8%B7%AF%E5%9C%96%E7%89%87%E7%94%9F%E6%85%8B%E7%9A%84%E6%94%9D%E5%BD%B1%E7%A4%BE%E7%BE%A4/</guid><description>&lt;img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post 認識 Unsplash：一個改變網路圖片生態的攝影社群" /&gt;&lt;p&gt;上一篇介紹了怎麼用 Unsplash，這一篇想深入講一下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;這個網站到底是怎麼來的？為什麼他們願意把高品質照片全部免費釋出？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;這背後的故事其實比想像中有趣。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="從一個-tumblr-部落格開始"&gt;從一個 Tumblr 部落格開始
+&lt;/h2&gt;&lt;p&gt;Unsplash 不是一開始就是大公司產品，它是 2013 年一個叫 &lt;strong&gt;Mikael Cho&lt;/strong&gt; 的人在 Tumblr 上開的小部落格。&lt;/p&gt;
+&lt;p&gt;當時他經營一家叫 Crew 的網站，需要一張 hero image，找了一位攝影師拍了一組照片。&lt;/p&gt;
+&lt;p&gt;拍完後，他們從中挑了一張，剩下的照片捨不得丟，就想：「不如把這些沒用到的照片也釋出來給別人用吧？」&lt;/p&gt;
+&lt;p&gt;於是開了一個 Tumblr，&lt;strong&gt;每 10 天發 10 張免費照片&lt;/strong&gt;，這就是 Unsplash 的起源。&lt;/p&gt;
+&lt;p&gt;沒有商業計畫，沒有融資簡報，就是一個「反正也是放著，分享出去不是更好嗎」的小實驗。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼會紅"&gt;為什麼會紅？
+&lt;/h2&gt;&lt;p&gt;那個年代，「免費圖庫」通常等於：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;畫質糟糕的像素圖&lt;/li&gt;
+&lt;li&gt;90 年代商務人士假笑握手的尷尬照&lt;/li&gt;
+&lt;li&gt;上面還打著浮水印，要你付費才能用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然後 Unsplash 出現了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;高畫質、有氛圍、免費、可商用、不用標示來源。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;對當時的部落客、獨立開發者、新創團隊來說，這簡直是救命稻草。&lt;/p&gt;
+&lt;p&gt;用的人越來越多，攝影師看到自己的作品被全世界用在各種地方，反而願意貢獻更多作品。&lt;/p&gt;
+&lt;p&gt;形成一個正向循環。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="他們怎麼賺錢"&gt;他們怎麼賺錢？
+&lt;/h2&gt;&lt;p&gt;這是很多人問的問題：&lt;strong&gt;全部免費，那 Unsplash 靠什麼活？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;幾個主要的商業模式：&lt;/p&gt;
+&lt;h3 id="1-unsplash訂閱制進階方案"&gt;1. Unsplash+（訂閱制進階方案）
+&lt;/h3&gt;&lt;p&gt;2022 年推出，提供更多「只給訂閱者使用的」獨家照片，也給商業用戶更強的法律保障（真正有模特兒授權、場地授權的那種）。&lt;/p&gt;
+&lt;h3 id="2-品牌贊助拍攝"&gt;2. 品牌贊助拍攝
+&lt;/h3&gt;&lt;p&gt;企業會付錢請 Unsplash 發起主題攝影專案，例如「請攝影師拍一組關於遠距工作的照片」。&lt;/p&gt;
+&lt;p&gt;攝影作品進到 Unsplash 圖庫後，企業的 logo 或連結會出現在相關搜尋結果旁邊。&lt;/p&gt;
+&lt;p&gt;這叫 &lt;strong&gt;Sponsored Photoshoots&lt;/strong&gt;，對企業來說是一種品牌曝光，對攝影師來說是有錢拿的委託案。&lt;/p&gt;
+&lt;h3 id="3-api-授權"&gt;3. API 授權
+&lt;/h3&gt;&lt;p&gt;第三方工具（Figma、Canva、Notion、WordPress 外掛等）想整合 Unsplash 的圖片，要付費取得 API 授權。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="2021-年被-getty-images-收購"&gt;2021 年被 Getty Images 收購
+&lt;/h2&gt;&lt;p&gt;這件事在攝影圈引起很大討論。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Getty Images&lt;/strong&gt; 是全世界最大的付費圖庫公司之一，收購 Unsplash 後很多人擔心：「會不會從此要收費了？」&lt;/p&gt;
+&lt;p&gt;但到目前為止，Unsplash 的免費服務還是維持著。Getty 的策略看起來是「&lt;strong&gt;用 Unsplash 作為免費入口，高階客戶再導到 Getty&lt;/strong&gt;」。&lt;/p&gt;
+&lt;p&gt;雖然有這個變化，對一般使用者來說幾乎沒有影響。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="unsplash-license最寬鬆的授權之一"&gt;Unsplash License：最寬鬆的授權之一
+&lt;/h2&gt;&lt;p&gt;Unsplash 自己定了一套授權條款，叫做 &lt;strong&gt;Unsplash License&lt;/strong&gt;，不是 Creative Commons 的任何一種。&lt;/p&gt;
+&lt;p&gt;重點可以濃縮成一句話：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「你幾乎可以自由使用，除了不要把 Unsplash 的照片重新打包成付費圖庫販售。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;詳細一點：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可以做：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;免費下載使用&lt;/li&gt;
+&lt;li&gt;商業用途（產品、廣告、印刷品）&lt;/li&gt;
+&lt;li&gt;修改、加工、合成&lt;/li&gt;
+&lt;li&gt;不用標示攝影師或 Unsplash&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;不可以做：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把照片重新包裝成付費圖庫或「類 Unsplash」服務&lt;/li&gt;
+&lt;li&gt;用來做會讓人誤會照片中人物代言你產品的內容&lt;/li&gt;
+&lt;li&gt;用來做詆毀、傷害他人的內容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;完整條款：&lt;a class="link" href="https://unsplash.com/license" target="_blank" rel="noopener"
+&gt;unsplash.com/license&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="攝影師為什麼願意貢獻"&gt;攝影師為什麼願意貢獻？
+&lt;/h2&gt;&lt;p&gt;一個常見的疑問：&lt;strong&gt;免費把好照片給別人用，攝影師有什麼好處？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;訪談過很多 Unsplash 攝影師後，大致有幾個動機：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;曝光機會&lt;/strong&gt; — 自己的作品被幾百萬人看到、用在世界各地的產品上&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;投資自己&lt;/strong&gt; — 有些攝影師把它當作作品集，接案時可以說「這張被 XXX 公司用過」&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;單純分享&lt;/strong&gt; — 就是喜歡攝影，喜歡自己的作品能被使用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unsplash+ 收益&lt;/strong&gt; — 貢獻進階照片的攝影師可以分潤&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;對攝影師來說，這不是「免費工作」，而是一種&lt;strong&gt;曝光 vs 收入&lt;/strong&gt;的策略選擇。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="unsplash-帶來的影響"&gt;Unsplash 帶來的影響
+&lt;/h2&gt;&lt;p&gt;這幾年下來，Unsplash 改變了幾件事：&lt;/p&gt;
+&lt;h3 id="1-讓小團隊也能有好看的產品"&gt;1. 讓小團隊也能有好看的產品
+&lt;/h3&gt;&lt;p&gt;以前只有大公司買得起 Getty 的圖，現在一個獨立開發者做 side project 也能用到專業級照片。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;降低了「做出好看產品」的門檻。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="2-改變了免費圖庫的品質標準"&gt;2. 改變了免費圖庫的品質標準
+&lt;/h3&gt;&lt;p&gt;Unsplash 紅了以後，Pexels、Pixabay 這些平台的品質也被迫提升，整個免費圖庫生態都往上走。&lt;/p&gt;
+&lt;h3 id="3-成為視覺語言的一部分"&gt;3. 成為「視覺語言」的一部分
+&lt;/h3&gt;&lt;p&gt;有沒有一種感覺：走到哪裡都看到同樣幾張 Unsplash 熱門照片？&lt;/p&gt;
+&lt;p&gt;這有好有壞——方便，但也讓很多網站長得很像。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Unsplash 不只是「一個免費圖庫網站」。&lt;/p&gt;
+&lt;p&gt;它是一個關於&lt;strong&gt;分享&lt;/strong&gt;、&lt;strong&gt;開放授權&lt;/strong&gt;、&lt;strong&gt;創作者生態&lt;/strong&gt;的實驗，而且這個實驗成功了。&lt;/p&gt;
+&lt;p&gt;下次你在某個網站看到一張漂亮的 hero image，可以點右鍵搜圖看看——有很大機率來自 Unsplash。&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;unsplash.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;用的時候，也別忘了偶爾點個愛心給攝影師。&lt;/p&gt;</description></item><item><title>找免費圖片不用再怕版權：Unsplash 是前端工程師最好的朋友</title><link>https://ericchung24.github.io/blog/p/%E6%89%BE%E5%85%8D%E8%B2%BB%E5%9C%96%E7%89%87%E4%B8%8D%E7%94%A8%E5%86%8D%E6%80%95%E7%89%88%E6%AC%8Aunsplash-%E6%98%AF%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%9C%80%E5%A5%BD%E7%9A%84%E6%9C%8B%E5%8F%8B/</link><pubDate>Mon, 20 Apr 2026 00:10:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/%E6%89%BE%E5%85%8D%E8%B2%BB%E5%9C%96%E7%89%87%E4%B8%8D%E7%94%A8%E5%86%8D%E6%80%95%E7%89%88%E6%AC%8Aunsplash-%E6%98%AF%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%9C%80%E5%A5%BD%E7%9A%84%E6%9C%8B%E5%8F%8B/</guid><description>&lt;img src="https://images.unsplash.com/photo-1495745966610-2a67f2297e5e?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post 找免費圖片不用再怕版權：Unsplash 是前端工程師最好的朋友" /&gt;&lt;p&gt;做 side project 的時候，有一個地方很容易卡住：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;圖片要從哪裡來？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;自己拍？沒那個美學和器材。&lt;/p&gt;
+&lt;p&gt;隨便去 Google 圖片抓？小心被版權找上門。&lt;/p&gt;
+&lt;p&gt;買付費圖庫？一張動輒好幾百塊，side project 根本不划算。&lt;/p&gt;
+&lt;p&gt;這個問題困擾我很久，直到我認真開始用 &lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;Unsplash&lt;/a&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="unsplash-是什麼"&gt;Unsplash 是什麼？
+&lt;/h2&gt;&lt;p&gt;一個&lt;strong&gt;完全免費&lt;/strong&gt;的高品質圖片網站。&lt;/p&gt;
+&lt;p&gt;特色：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;免費下載&lt;/strong&gt; — 不用付錢、不用訂閱&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可以商用&lt;/strong&gt; — 做產品、做網站、印刷品都可以&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不用標示來源&lt;/strong&gt;（但標了攝影師會很開心）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;畫質超高&lt;/strong&gt; — 隨便一張都是幾千像素寬&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;量大&lt;/strong&gt; — 幾百萬張照片，幾乎什麼主題都找得到&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;簡單說，就是&lt;strong&gt;一群專業攝影師把自己的作品無償釋出來給大家用&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼用"&gt;怎麼用？
+&lt;/h2&gt;&lt;h3 id="1-直接到-unsplashcom-搜尋"&gt;1. 直接到 &lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;unsplash.com&lt;/a&gt; 搜尋
+&lt;/h3&gt;&lt;p&gt;輸入關鍵字，例如 &lt;code&gt;coffee&lt;/code&gt;、&lt;code&gt;mountain&lt;/code&gt;、&lt;code&gt;code&lt;/code&gt;，結果會出來一堆高品質照片。&lt;/p&gt;
+&lt;h3 id="2-下載你喜歡的圖"&gt;2. 下載你喜歡的圖
+&lt;/h3&gt;&lt;p&gt;點進去之後，右上角有「Download free」按鈕，可以選不同尺寸。&lt;/p&gt;
+&lt;h3 id="3-透過網址直接嵌入進階"&gt;3. 透過網址直接嵌入（進階）
+&lt;/h3&gt;&lt;p&gt;Unsplash 有一個很讚的功能：&lt;strong&gt;每張圖都有穩定的 CDN 網址&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你不一定要把圖下載下來再上傳到自己的伺服器，可以直接 hotlink：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&amp;amp;q=80&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;網址後面可以加參數控制：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;w=1200&lt;/code&gt; — 寬度 1200px&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q=80&lt;/code&gt; — 壓縮品質 80%&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fit=crop&lt;/code&gt; — 裁切模式&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;auto=format&lt;/code&gt; — 自動選擇最佳格式（WebP 之類）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個部落格大部分的封面圖，就是直接用 Unsplash 的 CDN 網址。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="前端工程師怎麼用最順"&gt;前端工程師怎麼用最順？
+&lt;/h2&gt;&lt;h3 id="情境-1部落格封面圖"&gt;情境 1：部落格封面圖
+&lt;/h3&gt;&lt;p&gt;每篇文章都要一張封面？去 Unsplash 找，貼 URL，搞定。&lt;/p&gt;
+&lt;h3 id="情境-2landing-page-英雄區"&gt;情境 2：Landing page 英雄區
+&lt;/h3&gt;&lt;p&gt;需要一張有氛圍的 hero image？Unsplash 的攝影作品比很多付費圖庫還有質感。&lt;/p&gt;
+&lt;h3 id="情境-3mockup-假資料"&gt;情境 3：Mockup 假資料
+&lt;/h3&gt;&lt;p&gt;做 demo 時要放使用者頭像、產品圖？Unsplash 有 &lt;strong&gt;&lt;a class="link" href="https://unsplash.com/developers" target="_blank" rel="noopener"
+&gt;Unsplash Source API&lt;/a&gt;&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&amp;lt;!-- 隨機一張分類為 nature 的圖 --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;https://source.unsplash.com/800x600/?nature&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;每次重新整理都會換一張，做 mockup 很方便。&lt;/p&gt;
+&lt;h3 id="情境-4直接整合進設計工具"&gt;情境 4：直接整合進設計工具
+&lt;/h3&gt;&lt;p&gt;Figma、Canva、Notion 都有 Unsplash 外掛，不用離開工具就能插圖。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="使用前要注意的事"&gt;使用前要注意的事
+&lt;/h2&gt;&lt;p&gt;雖然 Unsplash 非常寬鬆，但還是有一些&lt;strong&gt;不能做&lt;/strong&gt;的事情：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;不能把 Unsplash 的圖原封不動重新打包成圖庫販售&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不能用來做明顯詆毀照片中人物的內容&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不能用來暗示照片中的人物代言你的產品&lt;/strong&gt;（除非你有模特兒授權）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;講白一點：&lt;strong&gt;只要你是把圖拿來用在自己的作品裡，基本上都 OK。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;完整條款在這裡：&lt;a class="link" href="https://unsplash.com/license" target="_blank" rel="noopener"
+&gt;Unsplash License&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="其他類似的網站"&gt;其他類似的網站
+&lt;/h2&gt;&lt;p&gt;如果在 Unsplash 找不到你要的風格，可以試試這幾個：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;網站&lt;/th&gt;
+&lt;th&gt;特色&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;Unsplash&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;攝影感強，氛圍照最多&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://www.pexels.com" target="_blank" rel="noopener"
+&gt;Pexels&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;同時有照片和影片&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://pixabay.com" target="_blank" rel="noopener"
+&gt;Pixabay&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;照片、插畫、向量、音樂都有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://burst.shopify.com" target="_blank" rel="noopener"
+&gt;Burst&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Shopify 出的，電商產品圖多&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;我自己是以 Unsplash 為主，Pexels 當備援。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Unsplash 解決了獨立開發者和小團隊最煩的問題之一：&lt;strong&gt;找圖不用再怕版權&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;如果你還在 Google 圖片右鍵存檔，或是怕被告不敢放圖，趕快換個習慣：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;unsplash.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;把時間花在寫 code、做產品，不是花在煩惱圖片授權。&lt;/p&gt;</description></item><item><title>分享檔案不用再塞 Google Drive：storage.to 這個免費上傳空間太香了</title><link>https://ericchung24.github.io/blog/p/%E5%88%86%E4%BA%AB%E6%AA%94%E6%A1%88%E4%B8%8D%E7%94%A8%E5%86%8D%E5%A1%9E-google-drivestorage.to-%E9%80%99%E5%80%8B%E5%85%8D%E8%B2%BB%E4%B8%8A%E5%82%B3%E7%A9%BA%E9%96%93%E5%A4%AA%E9%A6%99%E4%BA%86/</link><pubDate>Mon, 20 Apr 2026 00:00:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/%E5%88%86%E4%BA%AB%E6%AA%94%E6%A1%88%E4%B8%8D%E7%94%A8%E5%86%8D%E5%A1%9E-google-drivestorage.to-%E9%80%99%E5%80%8B%E5%85%8D%E8%B2%BB%E4%B8%8A%E5%82%B3%E7%A9%BA%E9%96%93%E5%A4%AA%E9%A6%99%E4%BA%86/</guid><description>&lt;img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post 分享檔案不用再塞 Google Drive：storage.to 這個免費上傳空間太香了" /&gt;&lt;p&gt;有時候你只是想把一個檔案「快速」傳給別人。&lt;/p&gt;
+&lt;p&gt;不是要長期保存，不是要共編，就是&lt;strong&gt;一次性分享&lt;/strong&gt;而已。&lt;/p&gt;
+&lt;p&gt;以前我都丟 Google Drive，但每次都要：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;開瀏覽器、登入 Google&lt;/li&gt;
+&lt;li&gt;上傳檔案&lt;/li&gt;
+&lt;li&gt;右鍵 → 分享 → 改成「知道連結的人」&lt;/li&gt;
+&lt;li&gt;複製連結貼給對方&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;四個步驟，而且檔案還會一直佔用我的 Drive 空間。&lt;/p&gt;
+&lt;p&gt;直到我發現了 &lt;strong&gt;&lt;a class="link" href="https://storage.to" target="_blank" rel="noopener"
+&gt;storage.to&lt;/a&gt;&lt;/strong&gt;，整個流程變成：丟檔案 → 複製連結 → 貼給對方。就這樣。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="storageto-是什麼"&gt;storage.to 是什麼？
+&lt;/h2&gt;&lt;p&gt;一個&lt;strong&gt;免註冊、免登入&lt;/strong&gt;的免費檔案分享服務。&lt;/p&gt;
+&lt;p&gt;主打幾個特色：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;單檔最大 25GB&lt;/strong&gt; — 不是打錯，真的是 25GB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不用註冊帳號&lt;/strong&gt; — 打開網站、拖曳檔案、拿連結&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TLS + AES-256 加密&lt;/strong&gt; — 傳輸和儲存都有加密&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可以設密碼&lt;/strong&gt; — 只讓知道密碼的人下載&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可以設過期時間&lt;/strong&gt; — 1 天到 7 天，時間到自動消失&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不壓縮檔案&lt;/strong&gt; — 原檔上傳、原檔下載&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;對一次性分享的情境來說，這就是我要的東西。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼用"&gt;怎麼用？
+&lt;/h2&gt;&lt;p&gt;三步驟：&lt;/p&gt;
+&lt;h3 id="1-打開-storageto"&gt;1. 打開 &lt;a class="link" href="https://storage.to" target="_blank" rel="noopener"
+&gt;storage.to&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;首頁就是上傳介面，沒有亂七八糟的廣告或引導註冊的彈窗。&lt;/p&gt;
+&lt;h3 id="2-拖曳檔案進去"&gt;2. 拖曳檔案進去
+&lt;/h3&gt;&lt;p&gt;可以直接拖拉，也可以點擊選檔案。&lt;/p&gt;
+&lt;h3 id="3-拿連結"&gt;3. 拿連結
+&lt;/h3&gt;&lt;p&gt;上傳完成後，網站會產生一個分享連結，複製貼給對方就好。&lt;/p&gt;
+&lt;p&gt;要設密碼或過期時間，上傳前可以先勾選選項。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="跟其他服務比起來呢"&gt;跟其他服務比起來呢？
+&lt;/h2&gt;&lt;p&gt;我列一下常用的幾個，大家可以自己挑：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;服務&lt;/th&gt;
+&lt;th&gt;免費單檔上限&lt;/th&gt;
+&lt;th&gt;需要註冊&lt;/th&gt;
+&lt;th&gt;保存期限&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;storage.to&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;25GB&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;1–7 天可設定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Drive&lt;/td&gt;
+&lt;td&gt;15GB（總空間）&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;永久（佔空間）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;WeTransfer&lt;/td&gt;
+&lt;td&gt;2GB&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;7 天&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dropbox Transfer&lt;/td&gt;
+&lt;td&gt;100MB&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;7 天&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;file.io&lt;/td&gt;
+&lt;td&gt;2GB&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;下載一次就刪&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;如果是&lt;strong&gt;一次性、大檔案、不想註冊&lt;/strong&gt;的情境，storage.to 幾乎是目前最好的選擇。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="什麼情境適合用"&gt;什麼情境適合用？
+&lt;/h2&gt;&lt;p&gt;我自己用在這些場景：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;傳給客戶一份設計稿或影片素材&lt;/li&gt;
+&lt;li&gt;丟一包壓縮過的專案原始碼給朋友看&lt;/li&gt;
+&lt;li&gt;把錄的螢幕操作影片（有時候幾 GB）給同事&lt;/li&gt;
+&lt;li&gt;臨時要分享一些素材，但不想丟 LINE 被壓縮&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;反過來，&lt;strong&gt;不適合&lt;/strong&gt;的情境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要長期保存的重要檔案 → 用 Google Drive 或 Dropbox&lt;/li&gt;
+&lt;li&gt;需要多人共編的文件 → 用 Google Docs 或 Notion&lt;/li&gt;
+&lt;li&gt;公司機密資料 → 請用公司規定的管道，不要用免費服務&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="安全性呢"&gt;安全性呢？
+&lt;/h2&gt;&lt;p&gt;官方說明傳輸和儲存都有加密（TLS + AES-256）。&lt;/p&gt;
+&lt;p&gt;但說實話，&lt;strong&gt;沒有任何免費服務能 100% 保證&lt;/strong&gt;你的檔案不會外洩。&lt;/p&gt;
+&lt;p&gt;所以我自己的原則是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;重要或敏感檔案，上傳前先加密壓縮&lt;/strong&gt;（7-Zip 可以設密碼）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;把解壓密碼用另一個通訊管道給對方&lt;/strong&gt;（例如連結用 Email、密碼用 LINE）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;設定過期時間，不要讓連結永久存在&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;這樣就算連結外流，對方也解不開。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;網路上免費的檔案分享服務不少，但 storage.to 的組合——&lt;strong&gt;免註冊、25GB、有密碼、有過期&lt;/strong&gt;——在我用過的裡面算是最舒服的。&lt;/p&gt;
+&lt;p&gt;如果你也常常需要臨時傳大檔案，可以試試看：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://storage.to" target="_blank" rel="noopener"
+&gt;storage.to&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;不是業配，純分享。&lt;/p&gt;</description></item><item><title>我的 Obsidian 知識庫長什麼樣？前端工程師的筆記系統建立方法</title><link>https://ericchung24.github.io/blog/p/%E6%88%91%E7%9A%84-obsidian-%E7%9F%A5%E8%AD%98%E5%BA%AB%E9%95%B7%E4%BB%80%E9%BA%BC%E6%A8%A3%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E7%AD%86%E8%A8%98%E7%B3%BB%E7%B5%B1%E5%BB%BA%E7%AB%8B%E6%96%B9%E6%B3%95/</link><pubDate>Sun, 19 Apr 2026 00:00:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/%E6%88%91%E7%9A%84-obsidian-%E7%9F%A5%E8%AD%98%E5%BA%AB%E9%95%B7%E4%BB%80%E9%BA%BC%E6%A8%A3%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E7%AD%86%E8%A8%98%E7%B3%BB%E7%B5%B1%E5%BB%BA%E7%AB%8B%E6%96%B9%E6%B3%95/</guid><description>&lt;img src="https://github.com/EricChung24/Obsidian-vault/blob/main/status.png?raw=true" alt="Featured image of post 我的 Obsidian 知識庫長什麼樣？前端工程師的筆記系統建立方法" /&gt;&lt;p&gt;工程師最怕的一件事，不是學不會，是&lt;strong&gt;學了又忘&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;看了一篇很棒的文章，當下覺得懂了，過三天回來看自己的 code 又像在看別人寫的。&lt;/p&gt;
+&lt;p&gt;這個問題困擾我很久。&lt;/p&gt;
+&lt;p&gt;直到我開始認真用 Obsidian，才覺得知識開始真正累積起來。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼選-obsidian"&gt;為什麼選 Obsidian？
+&lt;/h2&gt;&lt;p&gt;市面上的筆記工具不少：Notion、Evernote、Logseq……&lt;/p&gt;
+&lt;p&gt;我試過不少，最後回到 Obsidian，原因很簡單：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;本地純文字（Markdown）&lt;/strong&gt; — 資料永遠在自己電腦上，不依賴任何雲端服務&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;雙向連結&lt;/strong&gt; — 可以把不同主題的筆記串聯起來，像大腦一樣形成網狀結構&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;完全客製化&lt;/strong&gt; — 外掛生態系非常豐富，可以打造符合自己習慣的系統&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;速度快&lt;/strong&gt; — 不像 Notion 有時候載入要等，Obsidian 本地執行幾乎零延遲&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="知識庫的架構"&gt;知識庫的架構
+&lt;/h2&gt;&lt;p&gt;我的 Obsidian Vault 公開放在 GitHub 上：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://github.com/EricChung24/Obsidian-vault" target="_blank" rel="noopener"
+&gt;EricChung24/Obsidian-vault&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;整個 Vault 以&lt;strong&gt;前端工程師&lt;/strong&gt;的知識地圖為核心，目前分成 12 個資料夾：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;資料夾&lt;/th&gt;
+&lt;th&gt;主題&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;01-基礎技術&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;HTML、CSS、JavaScript 核心觀念&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;02-框架與函式庫&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;React、Vue、Angular 等框架&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;03-狀態管理&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Redux、Zustand、Pinia 等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;04-樣式解決方案&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Tailwind、CSS Modules、styled-components&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;05-建置工具&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Vite、Webpack、Rollup&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;06-測試&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Jest、Vitest、Cypress、Testing Library&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;07-效能優化&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Lazy loading、Bundle size、Core Web Vitals&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;08-瀏覽器與 Web APIs&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;DOM、事件迴圈、Fetch、Web Storage&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;09-設計模式&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;常見 Design Patterns 在前端的應用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;10-無障礙與資安&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;a11y、CSRF、XSS 防護&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;11-DevOps 與部署&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;CI/CD、Docker、Vercel、GitHub Actions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;12-面試準備&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;常見面試題整理與解題思路&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="目前的進度快照"&gt;目前的進度快照
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://github.com/EricChung24/Obsidian-vault/blob/main/status.png?raw=true"
+loading="lazy"
+alt="知識庫進度截圖"
+&gt;&lt;/p&gt;
+&lt;p&gt;這是現在 Vault 的大致狀態。&lt;/p&gt;
+&lt;p&gt;每個資料夾下面都在持續補充中，不是一次性整理好的，而是&lt;strong&gt;隨著學習推進慢慢長出來的&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="我怎麼記筆記"&gt;我怎麼記筆記？
+&lt;/h2&gt;&lt;p&gt;有一個關鍵觀念讓我的筆記系統變得更有用：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;不要只抄原文，要用自己的話重新解釋一遍。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這個方法叫做費曼技巧（Feynman Technique）。&lt;/p&gt;
+&lt;p&gt;做法很簡單：看完一個知識點，把書或文章闔上，嘗試用自己的話解釋給一個完全不懂的人聽。&lt;/p&gt;
+&lt;p&gt;如果解釋不出來，代表你還沒真正理解，回去重看。&lt;/p&gt;
+&lt;p&gt;所以我的筆記長這樣：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;## 什麼是閉包（Closure）？
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;函式記住了它被建立時的作用域，即使執行時已經離開了那個作用域。
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;### 用一句話說
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;「帶著背包的函式，背包裡裝著它出生時能看到的變數。」
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;### 常見應用
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 工廠函式
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 計數器
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; setTimeout 裡面的變數保留
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;重點是：&lt;strong&gt;有自己的比喻、有自己的例子&lt;/strong&gt;，不是複製貼上文件。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="雙向連結怎麼用"&gt;雙向連結怎麼用？
+&lt;/h2&gt;&lt;p&gt;Obsidian 最強的功能之一是 &lt;code&gt;[[雙向連結]]&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;舉例：我在筆記「React useEffect」裡面提到了閉包（stale closure），我就會加一個 &lt;code&gt;[[閉包（Closure）]]&lt;/code&gt; 的連結。&lt;/p&gt;
+&lt;p&gt;久了之後，Obsidian 的 Graph View 會畫出一張像這樣的網狀圖，讓你看到各個主題之間的關係。&lt;/p&gt;
+&lt;p&gt;這不只是整理筆記，而是&lt;strong&gt;讓你的理解可視化&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="這個系統對我的改變"&gt;這個系統對我的改變
+&lt;/h2&gt;&lt;p&gt;用 Obsidian 認真整理知識庫大概三到四個月了，有幾個明顯的變化：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;學新東西更快&lt;/strong&gt; — 因為舊的基礎筆記都在，不用每次從頭回想&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;面試準備更有系統&lt;/strong&gt; — &lt;code&gt;12-面試準備&lt;/code&gt; 那個資料夾，讓準備面試從「不知道從哪開始」變成有清單可以對照&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;記憶變得更深&lt;/strong&gt; — 動手整理一遍，比看十遍文章更有用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最重要的是：&lt;strong&gt;我終於有一個地方，可以放心把學到的東西存起來，知道以後找得回來。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="如果你也想建立自己的知識庫"&gt;如果你也想建立自己的知識庫
+&lt;/h2&gt;&lt;p&gt;幾個建議：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;不要等架構完整才開始&lt;/strong&gt; — 先隨手記，架構之後再整理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不要只複製貼上&lt;/strong&gt; — 用自己的話寫，哪怕寫得不好&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不要追求完整&lt;/strong&gt; — 知識庫是長出來的，不是一口氣建起來的&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;定期複習&lt;/strong&gt; — 配合 Spaced Repetition（間隔重複），Obsidian 有對應的外掛&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我的 Vault 是公開的，如果你也是前端工程師，歡迎參考或 fork 來用：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://github.com/EricChung24/Obsidian-vault" target="_blank" rel="noopener"
+&gt;github.com/EricChung24/Obsidian-vault&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;知識管理這件事，沒有標準答案。&lt;/p&gt;
+&lt;p&gt;重要的是找到一個&lt;strong&gt;你願意持續用下去的系統&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Obsidian 對我來說就是這個系統。&lt;/p&gt;</description></item></channel></rss>

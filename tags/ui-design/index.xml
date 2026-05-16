@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UI Design on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/ui-design/</link><description>Recent content in UI Design on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 17 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/ui-design/index.xml" rel="self" type="application/rss+xml"/><item><title>新手第十七步：Figma 入門　前端工程師一定會碰到的設計工具</title><link>https://ericchung24.github.io/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E5%8D%81%E4%B8%83%E6%AD%A5figma-%E5%85%A5%E9%96%80-%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E4%B8%80%E5%AE%9A%E6%9C%83%E7%A2%B0%E5%88%B0%E7%9A%84%E8%A8%AD%E8%A8%88%E5%B7%A5%E5%85%B7/</link><pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate><guid>https://ericchung24.github.io/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E5%8D%81%E4%B8%83%E6%AD%A5figma-%E5%85%A5%E9%96%80-%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E4%B8%80%E5%AE%9A%E6%9C%83%E7%A2%B0%E5%88%B0%E7%9A%84%E8%A8%AD%E8%A8%88%E5%B7%A5%E5%85%B7/</guid><description>&lt;img src="https://cdn.sanity.io/images/599r6htc/regionalized/5094051dac77593d0f0978bdcbabaf79e5bb855c-1080x1080.png?w=540&amp;h=540&amp;q=75&amp;fit=max&amp;auto=format" alt="Featured image of post 新手第十七步：Figma 入門　前端工程師一定會碰到的設計工具" /&gt;&lt;p&gt;很多新手以為 Figma 是設計師才需要學的工具，但其實不是。&lt;/p&gt;
+&lt;p&gt;只要你是前端工程師，你很快就會碰到這些情況：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;設計師丟一個 Figma 連結給你&lt;/li&gt;
+&lt;li&gt;你要量按鈕尺寸、看字體大小、抓顏色碼&lt;/li&gt;
+&lt;li&gt;你要確認某個區塊在手機版怎麼排&lt;/li&gt;
+&lt;li&gt;你要看 hover 狀態、元件變體、間距規則&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也就是說，&lt;strong&gt;你不一定要用 Figma 畫設計稿，但你幾乎一定要會看 Figma。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-figma-是什麼"&gt;1. Figma 是什麼？
+&lt;/h2&gt;&lt;p&gt;Figma 是一個雲端 UI / UX 設計工具。&lt;/p&gt;
+&lt;p&gt;設計師可以用它來做：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;網站設計稿&lt;/li&gt;
+&lt;li&gt;App 畫面&lt;/li&gt;
+&lt;li&gt;元件庫&lt;/li&gt;
+&lt;li&gt;Prototype（互動原型）&lt;/li&gt;
+&lt;li&gt;團隊設計協作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;而前端工程師最常用它來：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;看設計稿&lt;/li&gt;
+&lt;li&gt;量尺寸&lt;/li&gt;
+&lt;li&gt;查顏色&lt;/li&gt;
+&lt;li&gt;看字體&lt;/li&gt;
+&lt;li&gt;確認元件狀態&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以把 Figma 想成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;設計稿版的 Google Docs。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;它強的地方不是只有畫圖，而是多人協作、雲端同步、分享方便。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="2-為什麼前端工程師要會-figma"&gt;2. 為什麼前端工程師要會 Figma？
+&lt;/h2&gt;&lt;p&gt;因為現在大部分公司，設計交付幾乎都在 Figma 上完成。&lt;/p&gt;
+&lt;p&gt;以前可能是 PSD、Sketch、Zeplin，現在很多團隊直接用 Figma 一條龍處理。&lt;/p&gt;
+&lt;p&gt;如果你不會看 Figma，常常會出現這些問題：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;切版尺寸抓錯&lt;/li&gt;
+&lt;li&gt;間距亂掉&lt;/li&gt;
+&lt;li&gt;字重看錯&lt;/li&gt;
+&lt;li&gt;顏色用錯&lt;/li&gt;
+&lt;li&gt;手機版和桌機版搞混&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以學 Figma 對前端來說，不是為了變設計師，而是為了：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;把設計稿正確地做成畫面。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="3-figma-裡最常見的幾個概念"&gt;3. Figma 裡最常見的幾個概念
+&lt;/h2&gt;&lt;p&gt;剛打開 Figma 時，新手很容易被一堆面板嚇到。其實你先懂下面幾個概念就夠了。&lt;/p&gt;
+&lt;h3 id="frame"&gt;Frame
+&lt;/h3&gt;&lt;p&gt;Frame 可以理解成一個畫板，通常代表：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一個頁面&lt;/li&gt;
+&lt;li&gt;一個區塊&lt;/li&gt;
+&lt;li&gt;一個手機畫面&lt;/li&gt;
+&lt;li&gt;一個桌機版面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以把它想成設計稿裡的主要容器。&lt;/p&gt;
+&lt;h3 id="layer"&gt;Layer
+&lt;/h3&gt;&lt;p&gt;每一個文字、按鈕、圖片、背景區塊，都是一個 layer。&lt;br&gt;
+這和你在前端裡看到的 DOM 結構有點像。&lt;/p&gt;
+&lt;h3 id="component"&gt;Component
+&lt;/h3&gt;&lt;p&gt;設計師會把常用的按鈕、卡片、輸入框做成 Component。&lt;br&gt;
+這跟你在 React 或 Vue 裡寫元件的概念很像。&lt;/p&gt;
+&lt;h3 id="auto-layout"&gt;Auto Layout
+&lt;/h3&gt;&lt;p&gt;這是 Figma 很重要的功能。&lt;br&gt;
+它讓元件在排列時會自動維持：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;間距&lt;/li&gt;
+&lt;li&gt;對齊&lt;/li&gt;
+&lt;li&gt;內距&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以把它想成設計稿版本的 &lt;code&gt;flex&lt;/code&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="4-前端工程師最常怎麼用-figma"&gt;4. 前端工程師最常怎麼用 Figma？
+&lt;/h2&gt;&lt;p&gt;這一段最實際。&lt;/p&gt;
+&lt;p&gt;前端在 Figma 裡最常做的事通常不是「設計」，而是「讀設計稿」。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;看容器寬度是 &lt;code&gt;1200px&lt;/code&gt; 還是 &lt;code&gt;1280px&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;看按鈕高度是多少&lt;/li&gt;
+&lt;li&gt;看字體大小是 &lt;code&gt;16px&lt;/code&gt; 還是 &lt;code&gt;18px&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;看顏色是 &lt;code&gt;#2563EB&lt;/code&gt; 還是 &lt;code&gt;#1D4ED8&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;看元素和元素之間的間距&lt;/li&gt;
+&lt;li&gt;看元件有沒有 hover / active / disabled 狀態&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以你不需要一開始就學會做很完整的 UI 設計，&lt;br&gt;
+但你一定要先學會怎麼「看懂」設計稿。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="5-用-figma-看設計稿時前端最該注意什麼"&gt;5. 用 Figma 看設計稿時，前端最該注意什麼？
+&lt;/h2&gt;&lt;p&gt;很多新手只看畫面長相，卻沒注意真正會影響切版的細節。&lt;/p&gt;
+&lt;p&gt;你至少要看這幾個地方：&lt;/p&gt;
+&lt;h3 id="1-字體"&gt;1. 字體
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;字型名稱&lt;/li&gt;
+&lt;li&gt;字體大小&lt;/li&gt;
+&lt;li&gt;字重&lt;/li&gt;
+&lt;li&gt;行高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2-顏色"&gt;2. 顏色
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;文字色&lt;/li&gt;
+&lt;li&gt;背景色&lt;/li&gt;
+&lt;li&gt;邊框色&lt;/li&gt;
+&lt;li&gt;hover 狀態色&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-間距"&gt;3. 間距
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;padding&lt;/li&gt;
+&lt;li&gt;margin&lt;/li&gt;
+&lt;li&gt;元素和元素之間的 gap&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4-響應式版本"&gt;4. 響應式版本
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;桌機版&lt;/li&gt;
+&lt;li&gt;平板版&lt;/li&gt;
+&lt;li&gt;手機版&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="5-元件狀態"&gt;5. 元件狀態
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;default&lt;/li&gt;
+&lt;li&gt;hover&lt;/li&gt;
+&lt;li&gt;active&lt;/li&gt;
+&lt;li&gt;disabled&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這些東西如果一開始沒看清楚，後面切版常常會一直返工。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="6-figma-和前端開發的關係"&gt;6. Figma 和前端開發的關係
+&lt;/h2&gt;&lt;p&gt;這裡有一個觀念很重要：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Figma 不是程式碼，但它會直接影響你的程式碼。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;因為你最後寫的 HTML、CSS、React component，很多細節都來自設計稿。&lt;/p&gt;
+&lt;p&gt;例如設計師在 Figma 裡做一個按鈕元件，前端可能就會對應做出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Button component&lt;/li&gt;
+&lt;li&gt;size variant&lt;/li&gt;
+&lt;li&gt;color variant&lt;/li&gt;
+&lt;li&gt;disabled state&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以當你越懂 Figma，你在實作 UI 時就越容易抓到真正的結構，而不是只照著畫面硬刻。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="7-figma-和-codepen-有什麼不同"&gt;7. Figma 和 CodePen 有什麼不同？
+&lt;/h2&gt;&lt;p&gt;這兩個工具常常一起出現，但它們做的事完全不同。&lt;/p&gt;
+&lt;h3 id="figma"&gt;Figma
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;偏設計&lt;/li&gt;
+&lt;li&gt;用來畫介面、看設計稿、做 prototype&lt;/li&gt;
+&lt;li&gt;重點是視覺和版面規劃&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="codepen"&gt;CodePen
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;偏實作&lt;/li&gt;
+&lt;li&gt;用來寫 HTML / CSS / JavaScript&lt;/li&gt;
+&lt;li&gt;重點是把想法快速做成真的畫面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以這樣記：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Figma 是先看設計&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CodePen 是再動手做&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;兩者不是競爭關係，而是前後流程。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="8-給新手的學習建議"&gt;8. 給新手的學習建議
+&lt;/h2&gt;&lt;p&gt;如果你是前端新手，我建議你先學會這些基本操作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;開啟 Figma 檔案&lt;/li&gt;
+&lt;li&gt;找到頁面和 Frame&lt;/li&gt;
+&lt;li&gt;看文字大小、顏色、間距&lt;/li&gt;
+&lt;li&gt;知道怎麼看 component 和 variant&lt;/li&gt;
+&lt;li&gt;知道桌機版和手機版切換在哪裡&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;你不一定要一開始就去研究很深的設計系統，&lt;br&gt;
+但至少要先讓自己能夠順利地「從設計稿走到切版」。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="結語前端不只是在寫程式也是在讀設計"&gt;結語：前端不只是在寫程式，也是在讀設計
+&lt;/h2&gt;&lt;p&gt;很多人以為前端工程師的工作只是把功能做出來，但其實不是。&lt;br&gt;
+前端很大一部分工作，是把設計師的想法正確地轉成可以互動的介面。&lt;/p&gt;
+&lt;p&gt;而 Figma，就是現在這個流程裡非常核心的工具。&lt;/p&gt;
+&lt;p&gt;你不需要先成為設計師，才開始學 Figma。&lt;br&gt;
+你只需要先學會一件事：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;怎麼用它看懂設計稿。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;這件事一旦打通，你的切版效率會高很多，和設計師溝通也會順很多。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;接下來你可以做什麼？&lt;/strong&gt;&lt;br&gt;
+如果你願意，下一篇我們可以接著寫 &lt;strong&gt;前端工程師怎麼看設計稿切版&lt;/strong&gt;，把 Figma 裡的尺寸、字體、顏色、間距，真正對應到 HTML 和 CSS 的實作思路。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;準備好把設計稿變成真正的網頁了嗎？下一篇見！&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>
