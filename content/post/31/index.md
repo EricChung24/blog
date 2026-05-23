@@ -12,8 +12,6 @@ categories: ["前端工具"]
 
 [`json-server` 的 npm 頁面](https://www.npmjs.com/package/json-server) 介紹的是一個非常實用的工具：你只要準備一份 JSON 資料，它就能快速幫你產生一組可用的 REST API。對前端工程師來說，這代表你不用等後端，也能先把列表、表單、編輯、刪除這些功能做起來。
 
-![json-server 示意圖](https://miro.medium.com/1*Sj1aoYWs4utJj5TfdeMlrw.png)
-
 ## 這個網站在做什麼？
 
 這個網站其實是 npm 上的套件介紹頁。它的用途不是單純下載，而是讓開發者快速了解：
