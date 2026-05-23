@@ -3,7 +3,7 @@ title: "json-server 是什麼？前端開發很常用的假 API 工具介紹"
 date: 2026-05-23T20:05:00+08:00
 draft: false
 description: "介紹 npm 上的 json-server 套件頁面，整理它的用途、安裝方式、適合情境，以及為什麼前端工程師會常拿它來快速建立假 API。"
-image: "/json-server-npm.png"
+image: "https://miro.medium.com/1*Sj1aoYWs4utJj5TfdeMlrw.png"
 tags: ["json-server", "npm", "mock api", "frontend", "react"]
 categories: ["前端工具"]
 ---
@@ -12,7 +12,7 @@ categories: ["前端工具"]
 
 [`json-server` 的 npm 頁面](https://www.npmjs.com/package/json-server) 介紹的是一個非常實用的工具：你只要準備一份 JSON 資料，它就能快速幫你產生一組可用的 REST API。對前端工程師來說，這代表你不用等後端，也能先把列表、表單、編輯、刪除這些功能做起來。
 
-![json-server npm 頁面截圖](/json-server-npm.png)
+![json-server 示意圖](https://miro.medium.com/1*Sj1aoYWs4utJj5TfdeMlrw.png)
 
 ## 這個網站在做什麼？
 
