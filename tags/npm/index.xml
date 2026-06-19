@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Npm on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/npm/</link><description>Recent content in Npm on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 23 May 2026 20:05:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/npm/index.xml" rel="self" type="application/rss+xml"/><item><title>json-server 是什麼？前端開發很常用的假 API 工具介紹</title><link>https://ericchung24.github.io/blog/p/json-server-%E6%98%AF%E4%BB%80%E9%BA%BC%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC%E5%BE%88%E5%B8%B8%E7%94%A8%E7%9A%84%E5%81%87-api-%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%B4%B9/</link><pubDate>Sat, 23 May 2026 20:05:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/json-server-%E6%98%AF%E4%BB%80%E9%BA%BC%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC%E5%BE%88%E5%B8%B8%E7%94%A8%E7%9A%84%E5%81%87-api-%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%B4%B9/</guid><description>&lt;img src="https://miro.medium.com/1*Sj1aoYWs4utJj5TfdeMlrw.png" alt="Featured image of post json-server 是什麼？前端開發很常用的假 API 工具介紹" /&gt;&lt;p&gt;前端開發最常遇到的問題之一，就是畫面想先做，但 API 還沒完成。這時候，如果還要自己手刻一個後端，只是為了讓前端有資料可以串，通常很浪費時間。&lt;code&gt;json-server&lt;/code&gt; 就是在解決這個問題。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.npmjs.com/package/json-server" target="_blank" rel="noopener"
+&gt;&lt;code&gt;json-server&lt;/code&gt; 的 npm 頁面&lt;/a&gt; 介紹的是一個非常實用的工具：你只要準備一份 JSON 資料，它就能快速幫你產生一組可用的 REST API。對前端工程師來說，這代表你不用等後端，也能先把列表、表單、編輯、刪除這些功能做起來。&lt;/p&gt;
+&lt;h2 id="這個網站在做什麼"&gt;這個網站在做什麼？
+&lt;/h2&gt;&lt;p&gt;這個網站其實是 npm 上的套件介紹頁。它的用途不是單純下載，而是讓開發者快速了解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;這個套件是做什麼的&lt;/li&gt;
+&lt;li&gt;要怎麼安裝&lt;/li&gt;
+&lt;li&gt;怎麼啟動&lt;/li&gt;
+&lt;li&gt;支援哪些功能&lt;/li&gt;
+&lt;li&gt;套件目前版本和使用狀況&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以 &lt;code&gt;json-server&lt;/code&gt; 這頁來看，頁面上可以直接看到安裝指令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npm i json-server
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;也可以看到最基本的啟動方式：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npx json-server db.json
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;這兩個資訊就已經很夠你快速上手。&lt;/p&gt;
+&lt;h2 id="json-server-的核心功能是什麼"&gt;json-server 的核心功能是什麼？
+&lt;/h2&gt;&lt;p&gt;它最核心的功能，就是把一個 JSON 檔案變成一組 REST API。&lt;/p&gt;
+&lt;p&gt;例如你有一個 &lt;code&gt;db.json&lt;/code&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;posts&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;World&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;啟動 &lt;code&gt;json-server&lt;/code&gt; 後，就可以得到類似下面的 API：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;GET /posts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;GET /posts/1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;POST /posts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUT /posts/1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PATCH /posts/1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;DELETE /posts/1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;這代表什麼？代表你前端原本需要後端才能做的 CRUD 流程，現在可以先自己模擬出來。&lt;/p&gt;
+&lt;h2 id="為什麼前端工程師會常用它"&gt;為什麼前端工程師會常用它？
+&lt;/h2&gt;&lt;p&gt;原因很實際，因為它真的省時間。&lt;/p&gt;
+&lt;p&gt;第一，它可以讓前端先開發，不用卡在「API 還沒好」。
+第二，它很適合做 demo、作品集、教學範例。
+第三，它能讓你提早驗證資料格式和畫面流程。
+第四，它的使用門檻低，不需要先寫很多後端程式。&lt;/p&gt;
+&lt;p&gt;如果你是 React 開發者，這種工具特別方便，因為你可以直接拿 &lt;code&gt;fetch&lt;/code&gt; 或 &lt;code&gt;axios&lt;/code&gt; 去串它，流程和串正式 API 很接近。&lt;/p&gt;
+&lt;h2 id="這個-npm-頁面還透露哪些資訊"&gt;這個 npm 頁面還透露哪些資訊？
+&lt;/h2&gt;&lt;p&gt;根據我查看頁面時的內容，截至 &lt;strong&gt;2026-05-23&lt;/strong&gt;，可以看到幾個重點：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;版本是 &lt;code&gt;1.0.0-beta.15&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;每週下載量約 &lt;code&gt;332,131&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;License 是 &lt;code&gt;MIT&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;GitHub repository 是 &lt;code&gt;typicode/json-server&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;有 &lt;code&gt;412&lt;/code&gt; 個 dependents&lt;/li&gt;
+&lt;li&gt;累積 &lt;code&gt;165&lt;/code&gt; 個版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這些資訊代表它不是冷門工具，而是真的有不少開發者在使用。不過也要注意，頁面顯示的版本仍然是 &lt;code&gt;beta&lt;/code&gt;，如果你要放進正式團隊開發流程，最好先確認版本相容性和使用情境。&lt;/p&gt;
+&lt;h2 id="它適合用在哪些情境"&gt;它適合用在哪些情境？
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;json-server&lt;/code&gt; 很適合這幾種情況：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;前端畫面先做，但後端還沒完成&lt;/li&gt;
+&lt;li&gt;想快速做一個假資料 API&lt;/li&gt;
+&lt;li&gt;想練習 CRUD 串接&lt;/li&gt;
+&lt;li&gt;要做作品集或 demo&lt;/li&gt;
+&lt;li&gt;教學時想快速展示 API 行為&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但它比較不適合拿來當真正的正式後端。因為它的主要目的是開發輔助，不是完整商業系統的後端解法。&lt;/p&gt;
+&lt;h2 id="總結"&gt;總結
+&lt;/h2&gt;&lt;p&gt;如果你把 &lt;code&gt;json-server&lt;/code&gt; 想成「前端開發時的假後端工具」，這個理解基本上就是對的。它最大的價值不是功能多複雜，而是可以讓你非常快地把資料流跑起來。對前端來說，這件事很重要，因為很多畫面問題、互動問題、狀態管理問題，都要真的有 API 可以串時才會看得清楚。&lt;/p&gt;
+&lt;p&gt;所以，如果你常常碰到「前端要先做，但 API 還沒來」這種情況，那 &lt;code&gt;json-server&lt;/code&gt; 是非常值得認識的一個工具。&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CodePen on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/codepen/</link><description>Recent content in CodePen on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 17 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/codepen/index.xml" rel="self" type="application/rss+xml"/><item><title>新手第十六步：CodePen 入門　不用建專案，也能立刻開始寫前端！</title><link>https://ericchung24.github.io/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E5%8D%81%E5%85%AD%E6%AD%A5codepen-%E5%85%A5%E9%96%80-%E4%B8%8D%E7%94%A8%E5%BB%BA%E5%B0%88%E6%A1%88%E4%B9%9F%E8%83%BD%E7%AB%8B%E5%88%BB%E9%96%8B%E5%A7%8B%E5%AF%AB%E5%89%8D%E7%AB%AF/</link><pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate><guid>https://ericchung24.github.io/blog/p/%E6%96%B0%E6%89%8B%E7%AC%AC%E5%8D%81%E5%85%AD%E6%AD%A5codepen-%E5%85%A5%E9%96%80-%E4%B8%8D%E7%94%A8%E5%BB%BA%E5%B0%88%E6%A1%88%E4%B9%9F%E8%83%BD%E7%AB%8B%E5%88%BB%E9%96%8B%E5%A7%8B%E5%AF%AB%E5%89%8D%E7%AB%AF/</guid><description>&lt;img src="https://assets.codepen.io/t-1/codepen-wordmark-black.png" alt="Featured image of post 新手第十六步：CodePen 入門　不用建專案，也能立刻開始寫前端！" /&gt;&lt;p&gt;你有沒有遇過這種情況：&lt;/p&gt;
+&lt;p&gt;只是想測一個按鈕 hover 效果，結果卻要先：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;建資料夾&lt;/li&gt;
+&lt;li&gt;開 VS Code&lt;/li&gt;
+&lt;li&gt;建 &lt;code&gt;index.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;建 &lt;code&gt;style.css&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;建 &lt;code&gt;script.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;再開 Live Server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;明明只是想試 10 行程式，卻先花了 5 分鐘準備環境。&lt;/p&gt;
+&lt;p&gt;這時候，&lt;strong&gt;CodePen&lt;/strong&gt; 就非常好用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-codepen-是什麼"&gt;1. CodePen 是什麼？
+&lt;/h2&gt;&lt;p&gt;CodePen 是一個線上前端編輯器，你可以直接在瀏覽器裡寫：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML&lt;/li&gt;
+&lt;li&gt;CSS&lt;/li&gt;
+&lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;而且它會立刻幫你把結果顯示出來。&lt;/p&gt;
+&lt;p&gt;你可以把它想成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;前端版的線上遊樂場。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不用安裝、不用建專案、不用設定環境，只要打開網站就能開始寫。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="2-codepen-能做什麼"&gt;2. CodePen 能做什麼？
+&lt;/h2&gt;&lt;p&gt;很多新手以為 CodePen 只是「拿來玩玩看」的網站，其實它很好用。&lt;/p&gt;
+&lt;p&gt;你可以拿它來：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;練習 HTML / CSS / JavaScript&lt;/li&gt;
+&lt;li&gt;測試一小段 UI 效果&lt;/li&gt;
+&lt;li&gt;做按鈕、卡片、導覽列等小元件&lt;/li&gt;
+&lt;li&gt;分享作品給別人看&lt;/li&gt;
+&lt;li&gt;收藏別人的範例，學習寫法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;尤其是學前端初期，你常常不是要做整個網站，而是想先試一個小功能。&lt;br&gt;
+這時候 CodePen 比開一個完整專案快非常多。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="3-codepen-的畫面怎麼看"&gt;3. CodePen 的畫面怎麼看？
+&lt;/h2&gt;&lt;p&gt;CodePen 最常見的畫面分成四塊：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HTML 區&lt;/strong&gt;：放結構&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CSS 區&lt;/strong&gt;：放樣式&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript 區&lt;/strong&gt;：放互動邏輯&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Preview 區&lt;/strong&gt;：即時預覽結果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個設計很適合新手，因為你可以很清楚地看到：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML 負責骨架&lt;/li&gt;
+&lt;li&gt;CSS 負責外觀&lt;/li&gt;
+&lt;li&gt;JavaScript 負責互動&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;三者的角色分工會非常直觀。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="4-為什麼新手很適合先用-codepen"&gt;4. 為什麼新手很適合先用 CodePen？
+&lt;/h2&gt;&lt;p&gt;因為它把「環境成本」降到幾乎沒有。&lt;/p&gt;
+&lt;p&gt;剛開始學前端的人，最容易被兩件事打亂節奏：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;程式本身還沒學懂&lt;/li&gt;
+&lt;li&gt;開發環境又一堆設定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CodePen 的好處就是：&lt;strong&gt;你可以先把注意力放在程式本身。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;例如你今天只是想練：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;flex&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hover&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;addEventListener&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fetch&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;一個小型卡片 UI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那你直接開 CodePen 寫，速度通常最快。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="5-一個最簡單的-codepen-範例"&gt;5. 一個最簡單的 CodePen 範例
+&lt;/h2&gt;&lt;p&gt;假設你想做一個按一下就改文字的按鈕，CodePen 會很好上手。&lt;/p&gt;
+&lt;h3 id="html"&gt;HTML
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;card&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;你好，CodePen！&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;button&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;change-btn&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;點我換文字&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;button&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="css"&gt;CSS
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;body&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;margin&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;min-height&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="kt"&gt;vh&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;display&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;flex&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;justify-content&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;center&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;align-items&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;center&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;background&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mh"&gt;#f4f7fb&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;font-family&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Arial&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;sans-serif&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;card&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;background&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;white&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;padding&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;border-radius&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;box-shadow&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt; &lt;span class="nb"&gt;rgba&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;0.08&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;text-align&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;center&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;button&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;border&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;none&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;background&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mh"&gt;#2563eb&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;white&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;padding&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;border-radius&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;cursor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;pointer&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="javascript"&gt;JavaScript
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;button&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;change-btn&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;button&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addEventListener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;click&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;textContent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;文字被改掉了！&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;你把這三段分別貼到 CodePen 的區塊裡，就能立刻看到結果。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="6-codepen-和本地開發有什麼差別"&gt;6. CodePen 和本地開發有什麼差別？
+&lt;/h2&gt;&lt;p&gt;這點很重要。&lt;/p&gt;
+&lt;h3 id="codepen-的優點"&gt;CodePen 的優點
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;打開就能寫&lt;/li&gt;
+&lt;li&gt;適合做小範例&lt;/li&gt;
+&lt;li&gt;分享超方便&lt;/li&gt;
+&lt;li&gt;適合學習和展示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="codepen-的限制"&gt;CodePen 的限制
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;不適合大型專案&lt;/li&gt;
+&lt;li&gt;檔案結構比較簡化&lt;/li&gt;
+&lt;li&gt;不像真正專案那樣有完整資料夾管理&lt;/li&gt;
+&lt;li&gt;有些套件和工具鏈整合沒那麼自由&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以你可以這樣理解：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;CodePen 很適合「練習」和「展示」，但不適合拿來做完整產品。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="7-什麼時候該用-codepen"&gt;7. 什麼時候該用 CodePen？
+&lt;/h2&gt;&lt;p&gt;以下這幾種情況，CodePen 都很適合：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你想快速試一段 CSS 動畫&lt;/li&gt;
+&lt;li&gt;你想做一個小互動元件&lt;/li&gt;
+&lt;li&gt;你想把作品丟給朋友或面試官看&lt;/li&gt;
+&lt;li&gt;你看到別人的範例，想拆開研究&lt;/li&gt;
+&lt;li&gt;你想整理自己的前端練習作品集&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;尤其對新手來說，CodePen 最大的價值不是「很酷」，而是：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;它讓你更容易開始動手寫。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="8-給新手的使用建議"&gt;8. 給新手的使用建議
+&lt;/h2&gt;&lt;p&gt;如果你剛開始學前端，我會建議你這樣用：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;小效果、小練習，用 CodePen&lt;/li&gt;
+&lt;li&gt;完整網站、小專案，用本地開發&lt;/li&gt;
+&lt;li&gt;做完一個好作品，再把它整理成可分享的 Pen&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;這樣你既能享受 CodePen 的快速，也不會忽略真正專案的開發流程。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="結語先把開始寫這件事變簡單"&gt;結語：先把「開始寫」這件事變簡單
+&lt;/h2&gt;&lt;p&gt;很多新手不是不會寫，而是每次開始前就先被環境搞得很累。&lt;/p&gt;
+&lt;p&gt;CodePen 的價值，就在於它把「開始動手」這件事變得非常輕。&lt;/p&gt;
+&lt;p&gt;你不用先想專案架構、不用先管 build tool，也不用先開很多檔案。&lt;br&gt;
+你只要專心回答一個問題：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;「我現在想試什麼效果？」&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;這對前端學習初期非常有幫助。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;接下來你可以做什麼？&lt;/strong&gt;&lt;br&gt;
+下一篇我們可以接著介紹 &lt;strong&gt;Figma&lt;/strong&gt;，因為當你開始會切版、做元件之後，你就會發現前端工程師幾乎一定會碰到設計稿，而 Figma 幾乎就是現在的業界標配。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;準備好從寫畫面，進一步看懂設計稿了嗎？下一篇見！&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>

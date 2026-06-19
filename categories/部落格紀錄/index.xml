@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>部落格紀錄 on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/categories/%E9%83%A8%E8%90%BD%E6%A0%BC%E7%B4%80%E9%8C%84/</link><description>Recent content in 部落格紀錄 on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 18 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/categories/%E9%83%A8%E8%90%BD%E6%A0%BC%E7%B4%80%E9%8C%84/index.xml" rel="self" type="application/rss+xml"/><item><title>部落格終於有留言板了！聊聊我為什麼選 Giscus</title><link>https://ericchung24.github.io/blog/p/%E9%83%A8%E8%90%BD%E6%A0%BC%E7%B5%82%E6%96%BC%E6%9C%89%E7%95%99%E8%A8%80%E6%9D%BF%E4%BA%86%E8%81%8A%E8%81%8A%E6%88%91%E7%82%BA%E4%BB%80%E9%BA%BC%E9%81%B8-giscus/</link><pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate><guid>https://ericchung24.github.io/blog/p/%E9%83%A8%E8%90%BD%E6%A0%BC%E7%B5%82%E6%96%BC%E6%9C%89%E7%95%99%E8%A8%80%E6%9D%BF%E4%BA%86%E8%81%8A%E8%81%8A%E6%88%91%E7%82%BA%E4%BB%80%E9%BA%BC%E9%81%B8-giscus/</guid><description>&lt;img src="https://avatars.githubusercontent.com/u/81452695?s=200&amp;v=4" alt="Featured image of post 部落格終於有留言板了！聊聊我為什麼選 Giscus" /&gt;&lt;p&gt;如果你以前來過這裡，你可能注意到一件事：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;每篇文章的最下面，什麼都沒有。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;沒有留言區、沒有回覆按鈕、沒有「你怎麼看？」的欄位。&lt;/p&gt;
+&lt;p&gt;只有文章結尾，然後就是頁尾。&lt;/p&gt;
+&lt;p&gt;這不是故意的，只是一直沒時間把留言板搞定。&lt;/p&gt;
+&lt;p&gt;今天，這件事終於完成了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼留言板拖了這麼久"&gt;為什麼留言板拖了這麼久？
+&lt;/h2&gt;&lt;p&gt;其實留言板本身不難，難的是「選哪一個」。&lt;/p&gt;
+&lt;p&gt;市面上常見的選項大概是這些：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Disqus&lt;/strong&gt; — 最老牌，但免費版有廣告，資料不在自己手上&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Waline / Artalk&lt;/strong&gt; — 功能強，但需要自己架後端伺服器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Utterances&lt;/strong&gt; — 輕量，存在 GitHub Issues，但設計比較陽春&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Giscus&lt;/strong&gt; — 存在 GitHub Discussions，開源、免費、支援 dark mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我本來想用 &lt;strong&gt;Artalk&lt;/strong&gt;，因為介面很漂亮。&lt;/p&gt;
+&lt;p&gt;但 Artalk 需要一台後端伺服器。自己架要花時間維護，用雲端托管平台又多了一層依賴。&lt;/p&gt;
+&lt;p&gt;對一個靜態部落格來說，這有點殺雞用牛刀。&lt;/p&gt;
+&lt;p&gt;最後我選了 &lt;strong&gt;Giscus&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="giscus-是什麼"&gt;Giscus 是什麼？
+&lt;/h2&gt;&lt;p&gt;簡單說：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Giscus 把你的 GitHub repo 的 Discussions，當作留言板的資料庫。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;每一篇文章，對應一個 GitHub Discussion。&lt;br&gt;
+有人留言，就等於在那個 Discussion 底下回覆。&lt;br&gt;
+你的回覆，也會直接出現在文章頁面上。&lt;/p&gt;
+&lt;p&gt;這個設計有幾個我很喜歡的地方：&lt;/p&gt;
+&lt;h3 id="1-完全不需要後端伺服器"&gt;1. 完全不需要後端伺服器
+&lt;/h3&gt;&lt;p&gt;留言存在 GitHub，不用自己租 VPS，不用架 Docker，不用管資料庫備份。&lt;/p&gt;
+&lt;p&gt;對靜態網站來說，這是最舒服的架法。&lt;/p&gt;
+&lt;h3 id="2-資料永遠在自己手上"&gt;2. 資料永遠在自己手上
+&lt;/h3&gt;&lt;p&gt;留言存在你的 GitHub repo，你隨時可以看、可以匯出、可以刪除。&lt;br&gt;
+不像 Disqus，資料放在別人的伺服器上，哪天服務關掉就沒了。&lt;/p&gt;
+&lt;h3 id="3-完全免費"&gt;3. 完全免費
+&lt;/h3&gt;&lt;p&gt;GitHub Discussions 完全免費。&lt;br&gt;
+Giscus 本身也是開源的，沒有廣告、沒有付費方案差異。&lt;/p&gt;
+&lt;h3 id="4-自動支援-dark-mode"&gt;4. 自動支援 dark mode
+&lt;/h3&gt;&lt;p&gt;這個部落格有深色模式，Giscus 設定成 &lt;code&gt;preferred_color_scheme&lt;/code&gt; 之後，&lt;br&gt;
+深色模式下留言板也會跟著變暗，不會突然出現一個刺眼的白色區塊。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼裝的"&gt;怎麼裝的？
+&lt;/h2&gt;&lt;p&gt;這個部落格用 Hugo 搭配 Stack 主題。&lt;/p&gt;
+&lt;p&gt;Stack 主題原生就支援 Giscus，只需要三個步驟：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1&lt;/strong&gt; — 在 GitHub repo 開啟 Discussions 功能&lt;br&gt;
+&lt;strong&gt;Step 2&lt;/strong&gt; — 安裝 &lt;a class="link" href="https://github.com/apps/giscus" target="_blank" rel="noopener"
+&gt;Giscus App&lt;/a&gt;，授權給你的 repo&lt;br&gt;
+&lt;strong&gt;Step 3&lt;/strong&gt; — 在 &lt;code&gt;params.toml&lt;/code&gt; 填入 repo ID 和 category ID&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-toml" data-lang="toml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;comments&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;enabled&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;provider&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;giscus&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;comments&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;giscus&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;repo&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;你的帳號/你的repo&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;repoID&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;R_xxxxxx&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;category&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Announcements&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;categoryID&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;DIC_xxxxxx&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;mapping&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;pathname&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;lightTheme&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;light&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;darkTheme&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;dark_dimmed&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;reactionsEnabled&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;設定完 &lt;code&gt;git push&lt;/code&gt;，留言板就出現了。&lt;/p&gt;
+&lt;p&gt;沒有伺服器，沒有資料庫，沒有額外費用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="給你的邀請"&gt;給你的邀請
+&lt;/h2&gt;&lt;p&gt;這個部落格寫了快二十篇文章，&lt;/p&gt;
+&lt;p&gt;一直是我單方面在輸出，不知道你有沒有看、有什麼問題、或是文章哪裡沒講清楚。&lt;/p&gt;
+&lt;p&gt;現在留言板裝好了。&lt;/p&gt;
+&lt;p&gt;如果哪篇文章你有問題、有補充、或是覺得我哪裡寫錯了，&lt;br&gt;
+都歡迎在下面留言。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你是第一個能在這裡留言的人。&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>
