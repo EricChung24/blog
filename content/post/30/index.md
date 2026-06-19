@@ -3,7 +3,7 @@ title: "經過淡水河岸時，會想多看一眼的淡江大橋"
 date: 2026-05-16T10:30:00+08:00
 draft: false
 description: "淡江大橋讓淡水與八里的距離更近，也讓淡水河岸多了一道安靜而俐落的風景。它不只帶來便利，也讓一段往返有了更溫柔的樣子。"
-image: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNZQ_NzYiGxok6UA-tcE2dzBbLSRZpWX8NTfQul_gALYLJGNueYsLCraAOhEz_nfeDeUeL4StCrK5AddDq5Ihbw25g8RZQlkrlvKBImkRaXc7NfpBjIHZQGHKDM9AR9rY9Pe1s2Z9LGKX1=s1360-w1360-h1020-rw"
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/2026.05.09_Danjiang_Bridge_at_night.jpg/1920px-2026.05.09_Danjiang_Bridge_at_night.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
 tags: ["淡江大橋", "新北市", "橋梁設計", "城市風景", "淡水"]
 categories: ["台灣建築"]
 ---
