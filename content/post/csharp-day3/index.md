@@ -11,7 +11,7 @@ categories: ["C# 學習筆記"]
 
 今天的目標是把重複邏輯抽成方法（method），並透過巢狀迴圈輸出九九乘法表。方法能讓程式更容易閱讀、測試與重複使用。
 
-![方法接收輸入並回傳結果的概念圖](https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80)
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="C# 方法與程式碼示意圖" loading="lazy">
 
 ## 沒有回傳值的方法：`void`
 

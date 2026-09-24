@@ -11,7 +11,7 @@ categories: ["C# 學習筆記"]
 
 今天的重點是把多筆資料放進陣列，再用迴圈依序讀取它們。這是之後處理商品、成績或 API 資料的基礎。
 
-![陣列中的資料由迴圈依序處理](https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80)
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="C# 陣列與迴圈示意圖" loading="lazy">
 
 ## 陣列：同一類資料的集合
 
