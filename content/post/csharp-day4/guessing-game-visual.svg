@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" rx="28" fill="#17202a"/>
+<text x="70" y="95" fill="#f8fafc" font-size="42" font-family="Arial, sans-serif" font-weight="700">C# 猜數字遊戲</text>
+<text x="70" y="140" fill="#a7f3d0" font-size="24" font-family="Arial, sans-serif">Try → Validate → Compare → Retry</text>
+<rect x="100" y="225" width="220" height="135" rx="18" fill="#243447" stroke="#34d399" stroke-width="4"/><text x="210" y="285" text-anchor="middle" fill="#6ee7b7" font-size="25" font-family="Arial">輸入猜測</text><text x="210" y="330" text-anchor="middle" fill="#fff" font-size="28" font-family="Arial">1 ～ 9</text>
+<path d="M340 292h100" stroke="#fbbf24" stroke-width="8" fill="none" marker-end="url(#a)"/>
+<rect x="455" y="195" width="290" height="195" rx="18" fill="#3b2f2f" stroke="#fb7185" stroke-width="4"/><text x="600" y="250" text-anchor="middle" fill="#fecdd3" font-size="25" font-family="Arial">TryParse</text><text x="600" y="305" text-anchor="middle" fill="#f8fafc" font-size="22" font-family="Arial">格式正確？</text><text x="600" y="350" text-anchor="middle" fill="#fbbf24" font-size="25" font-family="Arial">while (true)</text>
+<path d="M765 292h100" stroke="#fbbf24" stroke-width="8" fill="none" marker-end="url(#a)"/>
+<rect x="880" y="225" width="220" height="135" rx="18" fill="#243447" stroke="#38bdf8" stroke-width="4"/><text x="990" y="282" text-anchor="middle" fill="#7dd3fc" font-size="25" font-family="Arial">比較答案</text><text x="990" y="328" text-anchor="middle" fill="#fff" font-size="24" font-family="Arial">break / retry</text>
+<rect x="150" y="480" width="900" height="68" rx="18" fill="#0f3d3e"/><text x="600" y="523" text-anchor="middle" fill="#a7f3d0" font-size="25" font-family="Arial">輸入錯誤不當機，猜中才離開迴圈</text>
+<defs><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#fbbf24"/></marker></defs>
+</svg>
