@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>筆記工具 on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/%E7%AD%86%E8%A8%98%E5%B7%A5%E5%85%B7/</link><description>Recent content in 筆記工具 on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 20 Apr 2026 00:50:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/%E7%AD%86%E8%A8%98%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>Notion 是什麼？把筆記、資料庫、協作、專案管理全部塞進一個地方的神器</title><link>https://ericchung24.github.io/blog/p/notion-%E6%98%AF%E4%BB%80%E9%BA%BC%E6%8A%8A%E7%AD%86%E8%A8%98%E8%B3%87%E6%96%99%E5%BA%AB%E5%8D%94%E4%BD%9C%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86%E5%85%A8%E9%83%A8%E5%A1%9E%E9%80%B2%E4%B8%80%E5%80%8B%E5%9C%B0%E6%96%B9%E7%9A%84%E7%A5%9E%E5%99%A8/</link><pubDate>Mon, 20 Apr 2026 00:50:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/notion-%E6%98%AF%E4%BB%80%E9%BA%BC%E6%8A%8A%E7%AD%86%E8%A8%98%E8%B3%87%E6%96%99%E5%BA%AB%E5%8D%94%E4%BD%9C%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86%E5%85%A8%E9%83%A8%E5%A1%9E%E9%80%B2%E4%B8%80%E5%80%8B%E5%9C%B0%E6%96%B9%E7%9A%84%E7%A5%9E%E5%99%A8/</guid><description>&lt;img src="https://www.notion.so/front-static/meta/default.png" alt="Featured image of post Notion 是什麼？把筆記、資料庫、協作、專案管理全部塞進一個地方的神器" /&gt;&lt;p&gt;有一類工具，第一次用會搞不清楚它到底是什麼。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Notion 就是這種工具。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;是筆記？是資料庫？是協作平台？是專案管理？是 Wiki？&lt;/p&gt;
+&lt;p&gt;答案是：&lt;strong&gt;以上皆是，而且可以自己組合。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;這個不明確的定位反而是它的強項，也是它有點難入門的原因。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="notion-是什麼"&gt;Notion 是什麼？
+&lt;/h2&gt;&lt;p&gt;官方說法是「&lt;strong&gt;All-in-one workspace&lt;/strong&gt;」——一個把筆記、文件、專案、資料庫、協作全部整合在一起的工作空間。&lt;/p&gt;
+&lt;p&gt;但這樣講很抽象。&lt;/p&gt;
+&lt;p&gt;更好理解的方式是把 Notion 想成&lt;strong&gt;一個積木盒&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每個「頁面」是一塊積木&lt;/li&gt;
+&lt;li&gt;每個頁面裡可以放文字、圖片、表格、看板、行事曆、連結、子頁面&lt;/li&gt;
+&lt;li&gt;這些積木可以自由組合、互相連結、拆裝重組&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以用同一套積木蓋出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;個人日記&lt;/li&gt;
+&lt;li&gt;團隊 Wiki&lt;/li&gt;
+&lt;li&gt;產品 roadmap&lt;/li&gt;
+&lt;li&gt;客戶管理系統（CRM）&lt;/li&gt;
+&lt;li&gt;讀書筆記&lt;/li&gt;
+&lt;li&gt;食譜收藏&lt;/li&gt;
+&lt;li&gt;旅遊規劃&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;工具是同一個，結果可以完全不同&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="核心概念block區塊"&gt;核心概念：Block（區塊）
+&lt;/h2&gt;&lt;p&gt;理解 Notion 之前，要先認識它最基本的單位：&lt;strong&gt;Block&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;在 Notion 裡面，&lt;strong&gt;所有東西都是 block&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一段文字是 block&lt;/li&gt;
+&lt;li&gt;一張圖片是 block&lt;/li&gt;
+&lt;li&gt;一個待辦項目是 block&lt;/li&gt;
+&lt;li&gt;一個資料庫是 block&lt;/li&gt;
+&lt;li&gt;一個子頁面也是 block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;每個 block 都可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;拖曳移動&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;轉換類型&lt;/strong&gt;（例如把一段文字轉成代辦項目）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;巢狀包起來&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個設計讓 Notion 的編輯體驗變得非常自由——&lt;strong&gt;你不是在填表格，而是在組裝&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="另一個殺手鐧database資料庫"&gt;另一個殺手鐧：Database（資料庫）
+&lt;/h2&gt;&lt;p&gt;如果 block 是 Notion 的骨架，&lt;strong&gt;database 就是它的靈魂&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Notion 的資料庫不是 Excel，更像是&lt;strong&gt;可以用不同角度檢視的同一份資料&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Table View&lt;/strong&gt; — 像試算表&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Board View&lt;/strong&gt; — 像 Trello 看板&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calendar View&lt;/strong&gt; — 像 Google Calendar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gallery View&lt;/strong&gt; — 像 Pinterest 卡片&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Timeline View&lt;/strong&gt; — 像甘特圖&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;List View&lt;/strong&gt; — 簡潔的清單&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;重點是&lt;/strong&gt;：同一筆資料，可以在不同 view 裡面以不同形式呈現。&lt;/p&gt;
+&lt;p&gt;例如一個「任務清單」：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;工程師用 Board View 管 Kanban&lt;/li&gt;
+&lt;li&gt;主管用 Timeline View 看時程&lt;/li&gt;
+&lt;li&gt;PM 用 Calendar View 追 deadline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;資料只有一份，視角各自不同&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="notion-最常見的用法"&gt;Notion 最常見的用法
+&lt;/h2&gt;&lt;p&gt;給一些實際的使用情境：&lt;/p&gt;
+&lt;h3 id="個人用途"&gt;個人用途
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;第二大腦&lt;/strong&gt;：把所有筆記、想法、靈感存在這裡&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;閱讀清單&lt;/strong&gt;：書、文章、Podcast 統一管理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;專案追蹤&lt;/strong&gt;：side project 的 task list&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;習慣追蹤&lt;/strong&gt;：每天運動、讀書打勾&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;旅遊規劃&lt;/strong&gt;：行程、預算、住宿整合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="工作用途"&gt;工作用途
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;公司 Wiki&lt;/strong&gt;：把 SOP、文件、會議記錄集中&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;產品 Roadmap&lt;/strong&gt;：功能、進度、負責人&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;客戶管理&lt;/strong&gt;：代替 CRM 的輕量版&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OKR 追蹤&lt;/strong&gt;：目標拆解、季度檢視&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;招募流程&lt;/strong&gt;：應徵者清單、面試紀錄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="團隊協作"&gt;團隊協作
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;共同編輯&lt;/strong&gt;：多人同時編輯，類似 Google Docs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;留言 &amp;amp; 標註&lt;/strong&gt;：&lt;code&gt;@某人&lt;/code&gt; 指派任務或討論&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;權限管理&lt;/strong&gt;：哪些頁面誰能看、誰能編輯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="notion-ai2022-年以後最大的改變"&gt;Notion AI：2022 年以後最大的改變
+&lt;/h2&gt;&lt;p&gt;2022 年 Notion 推出了內建的 AI 功能。&lt;/p&gt;
+&lt;p&gt;直接在頁面裡：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;自動寫作&lt;/strong&gt;：輸入標題，AI 幫你寫初稿&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;摘要長文&lt;/strong&gt;：一鍵把整頁內容壓縮成重點&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;翻譯&lt;/strong&gt;：直接轉換語言&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;改寫&lt;/strong&gt;：讓文字更正式 / 更口語 / 更簡短&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;問答&lt;/strong&gt;：根據整個 workspace 的資料回答問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最後這個「Q&amp;amp;A」功能有點像 NotebookLM，但範圍是你整個 Notion——等於整個工作空間變成可問答的知識庫。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="優點-vs-缺點"&gt;優點 vs 缺點
+&lt;/h2&gt;&lt;h3 id="優點"&gt;優點
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;超級彈性&lt;/strong&gt; — 幾乎什麼情境都能用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;跨平台&lt;/strong&gt; — Web、Mac、Windows、iOS、Android 全部有&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分享容易&lt;/strong&gt; — 一鍵產生公開連結，像迷你網站&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模板豐富&lt;/strong&gt; — 社群有幾千個免費模板可以抄&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;免費版就很好用&lt;/strong&gt; — 個人使用基本不用付費&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="缺點"&gt;缺點
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;速度不算快&lt;/strong&gt; — 頁面多、資料庫大的時候會 lag&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;離線支援差&lt;/strong&gt; — 幾乎是雲端依賴&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;學習曲線&lt;/strong&gt; — 第一次用會搞不清楚能幹嘛&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;太彈性反而難開始&lt;/strong&gt; — 空白頁面容易讓人不知道怎麼下手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;搜尋普通&lt;/strong&gt; — 跟 Obsidian、Roam 比起來，連結功能較弱&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="跟其他工具怎麼選"&gt;跟其他工具怎麼選？
+&lt;/h2&gt;&lt;p&gt;很多人會糾結 Notion vs Obsidian vs Evernote vs Apple Notes。&lt;/p&gt;
+&lt;p&gt;我自己的分法：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;需求&lt;/th&gt;
+&lt;th&gt;推薦&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;個人純筆記 + 雙向連結&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Obsidian&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;跟別人協作、做 Wiki、做資料庫&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Notion&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;快速記一些瑣事&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Apple Notes / Google Keep&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;深度寫作、長文&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Ulysses / iA Writer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;專案管理為主&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Linear / Asana&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Notion 最強的情境是「&lt;strong&gt;個人 + 協作都要、筆記 + 資料庫都要&lt;/strong&gt;」。&lt;/p&gt;
+&lt;p&gt;如果你只需要其中一部分，可能有更專精的工具。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="新手怎麼開始"&gt;新手怎麼開始？
+&lt;/h2&gt;&lt;p&gt;剛接觸 Notion 很容易「空白頁面恐懼症」——看著空白畫面不知道要做什麼。&lt;/p&gt;
+&lt;p&gt;建議這樣開始：&lt;/p&gt;
+&lt;h3 id="1-先用模板"&gt;1. 先用模板
+&lt;/h3&gt;&lt;p&gt;不要從零開始。&lt;/p&gt;
+&lt;p&gt;Notion 官方有 &lt;a class="link" href="https://www.notion.com/templates" target="_blank" rel="noopener"
+&gt;Template Gallery&lt;/a&gt;，找一個最接近你需求的模板，&lt;strong&gt;直接 duplicate 到你的 workspace&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="2-用一陣子再改"&gt;2. 用一陣子再改
+&lt;/h3&gt;&lt;p&gt;先照著模板用一兩週。&lt;/p&gt;
+&lt;p&gt;用的過程會自然發現「這裡不順、那裡多餘」，再開始客製化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不要還沒用就開始調結構&lt;/strong&gt;，通常會浪費很多時間。&lt;/p&gt;
+&lt;h3 id="3-一次只建一個系統"&gt;3. 一次只建一個系統
+&lt;/h3&gt;&lt;p&gt;新手最常犯的錯：&lt;strong&gt;一次想把筆記、任務、閱讀清單、專案管理全部移進 Notion&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;結果每個系統都半成品，最後放棄。&lt;/p&gt;
+&lt;p&gt;建議&lt;strong&gt;一次只搬一個&lt;/strong&gt;，用穩了再搬下一個。&lt;/p&gt;
+&lt;h3 id="4-學會-slash-command"&gt;4. 學會 Slash Command
+&lt;/h3&gt;&lt;p&gt;在 Notion 裡輸入 &lt;code&gt;/&lt;/code&gt;，會跳出所有 block 類型選單。&lt;/p&gt;
+&lt;p&gt;熟悉這個命令能大幅加速編輯。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="價格"&gt;價格
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方案&lt;/th&gt;
+&lt;th&gt;價格&lt;/th&gt;
+&lt;th&gt;適合&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Free&lt;/td&gt;
+&lt;td&gt;$0&lt;/td&gt;
+&lt;td&gt;個人使用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Plus&lt;/td&gt;
+&lt;td&gt;約 $10/月&lt;/td&gt;
+&lt;td&gt;小團隊&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Business&lt;/td&gt;
+&lt;td&gt;約 $18/月&lt;/td&gt;
+&lt;td&gt;公司&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Enterprise&lt;/td&gt;
+&lt;td&gt;聯繫&lt;/td&gt;
+&lt;td&gt;大型組織&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;個人使用免費版完全夠用&lt;/strong&gt;，除非你需要更多團隊成員、更多上傳空間、或高級權限管理。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Notion 不是一個工具，而是&lt;strong&gt;一個可以組合出任何工具的平台&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;一開始會覺得複雜、混亂、不知道怎麼用。&lt;/p&gt;
+&lt;p&gt;但一旦你建立起自己的系統，會發現它成為&lt;strong&gt;日常工作與思考的中心&lt;/strong&gt;——打開電腦第一件事就是開 Notion。&lt;/p&gt;
+&lt;p&gt;如果你還沒用過，推薦從一個模板開始：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://www.notion.com" target="_blank" rel="noopener"
+&gt;notion.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有時候一個好的工具，不是讓你做更多事，而是讓你&lt;strong&gt;把所有事情放在同一個地方&lt;/strong&gt;。&lt;/p&gt;</description></item></channel></rss>

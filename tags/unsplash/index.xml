@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Unsplash on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/unsplash/</link><description>Recent content in Unsplash on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 20 Apr 2026 00:20:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/unsplash/index.xml" rel="self" type="application/rss+xml"/><item><title>認識 Unsplash：一個改變網路圖片生態的攝影社群</title><link>https://ericchung24.github.io/blog/p/%E8%AA%8D%E8%AD%98-unsplash%E4%B8%80%E5%80%8B%E6%94%B9%E8%AE%8A%E7%B6%B2%E8%B7%AF%E5%9C%96%E7%89%87%E7%94%9F%E6%85%8B%E7%9A%84%E6%94%9D%E5%BD%B1%E7%A4%BE%E7%BE%A4/</link><pubDate>Mon, 20 Apr 2026 00:20:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/%E8%AA%8D%E8%AD%98-unsplash%E4%B8%80%E5%80%8B%E6%94%B9%E8%AE%8A%E7%B6%B2%E8%B7%AF%E5%9C%96%E7%89%87%E7%94%9F%E6%85%8B%E7%9A%84%E6%94%9D%E5%BD%B1%E7%A4%BE%E7%BE%A4/</guid><description>&lt;img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post 認識 Unsplash：一個改變網路圖片生態的攝影社群" /&gt;&lt;p&gt;上一篇介紹了怎麼用 Unsplash，這一篇想深入講一下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;這個網站到底是怎麼來的？為什麼他們願意把高品質照片全部免費釋出？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;這背後的故事其實比想像中有趣。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="從一個-tumblr-部落格開始"&gt;從一個 Tumblr 部落格開始
+&lt;/h2&gt;&lt;p&gt;Unsplash 不是一開始就是大公司產品，它是 2013 年一個叫 &lt;strong&gt;Mikael Cho&lt;/strong&gt; 的人在 Tumblr 上開的小部落格。&lt;/p&gt;
+&lt;p&gt;當時他經營一家叫 Crew 的網站，需要一張 hero image，找了一位攝影師拍了一組照片。&lt;/p&gt;
+&lt;p&gt;拍完後，他們從中挑了一張，剩下的照片捨不得丟，就想：「不如把這些沒用到的照片也釋出來給別人用吧？」&lt;/p&gt;
+&lt;p&gt;於是開了一個 Tumblr，&lt;strong&gt;每 10 天發 10 張免費照片&lt;/strong&gt;，這就是 Unsplash 的起源。&lt;/p&gt;
+&lt;p&gt;沒有商業計畫，沒有融資簡報，就是一個「反正也是放著，分享出去不是更好嗎」的小實驗。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼會紅"&gt;為什麼會紅？
+&lt;/h2&gt;&lt;p&gt;那個年代，「免費圖庫」通常等於：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;畫質糟糕的像素圖&lt;/li&gt;
+&lt;li&gt;90 年代商務人士假笑握手的尷尬照&lt;/li&gt;
+&lt;li&gt;上面還打著浮水印，要你付費才能用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然後 Unsplash 出現了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;高畫質、有氛圍、免費、可商用、不用標示來源。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;對當時的部落客、獨立開發者、新創團隊來說，這簡直是救命稻草。&lt;/p&gt;
+&lt;p&gt;用的人越來越多，攝影師看到自己的作品被全世界用在各種地方，反而願意貢獻更多作品。&lt;/p&gt;
+&lt;p&gt;形成一個正向循環。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="他們怎麼賺錢"&gt;他們怎麼賺錢？
+&lt;/h2&gt;&lt;p&gt;這是很多人問的問題：&lt;strong&gt;全部免費，那 Unsplash 靠什麼活？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;幾個主要的商業模式：&lt;/p&gt;
+&lt;h3 id="1-unsplash訂閱制進階方案"&gt;1. Unsplash+（訂閱制進階方案）
+&lt;/h3&gt;&lt;p&gt;2022 年推出，提供更多「只給訂閱者使用的」獨家照片，也給商業用戶更強的法律保障（真正有模特兒授權、場地授權的那種）。&lt;/p&gt;
+&lt;h3 id="2-品牌贊助拍攝"&gt;2. 品牌贊助拍攝
+&lt;/h3&gt;&lt;p&gt;企業會付錢請 Unsplash 發起主題攝影專案，例如「請攝影師拍一組關於遠距工作的照片」。&lt;/p&gt;
+&lt;p&gt;攝影作品進到 Unsplash 圖庫後，企業的 logo 或連結會出現在相關搜尋結果旁邊。&lt;/p&gt;
+&lt;p&gt;這叫 &lt;strong&gt;Sponsored Photoshoots&lt;/strong&gt;，對企業來說是一種品牌曝光，對攝影師來說是有錢拿的委託案。&lt;/p&gt;
+&lt;h3 id="3-api-授權"&gt;3. API 授權
+&lt;/h3&gt;&lt;p&gt;第三方工具（Figma、Canva、Notion、WordPress 外掛等）想整合 Unsplash 的圖片，要付費取得 API 授權。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="2021-年被-getty-images-收購"&gt;2021 年被 Getty Images 收購
+&lt;/h2&gt;&lt;p&gt;這件事在攝影圈引起很大討論。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Getty Images&lt;/strong&gt; 是全世界最大的付費圖庫公司之一，收購 Unsplash 後很多人擔心：「會不會從此要收費了？」&lt;/p&gt;
+&lt;p&gt;但到目前為止，Unsplash 的免費服務還是維持著。Getty 的策略看起來是「&lt;strong&gt;用 Unsplash 作為免費入口，高階客戶再導到 Getty&lt;/strong&gt;」。&lt;/p&gt;
+&lt;p&gt;雖然有這個變化，對一般使用者來說幾乎沒有影響。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="unsplash-license最寬鬆的授權之一"&gt;Unsplash License：最寬鬆的授權之一
+&lt;/h2&gt;&lt;p&gt;Unsplash 自己定了一套授權條款，叫做 &lt;strong&gt;Unsplash License&lt;/strong&gt;，不是 Creative Commons 的任何一種。&lt;/p&gt;
+&lt;p&gt;重點可以濃縮成一句話：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「你幾乎可以自由使用，除了不要把 Unsplash 的照片重新打包成付費圖庫販售。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;詳細一點：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可以做：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;免費下載使用&lt;/li&gt;
+&lt;li&gt;商業用途（產品、廣告、印刷品）&lt;/li&gt;
+&lt;li&gt;修改、加工、合成&lt;/li&gt;
+&lt;li&gt;不用標示攝影師或 Unsplash&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;不可以做：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把照片重新包裝成付費圖庫或「類 Unsplash」服務&lt;/li&gt;
+&lt;li&gt;用來做會讓人誤會照片中人物代言你產品的內容&lt;/li&gt;
+&lt;li&gt;用來做詆毀、傷害他人的內容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;完整條款：&lt;a class="link" href="https://unsplash.com/license" target="_blank" rel="noopener"
+&gt;unsplash.com/license&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="攝影師為什麼願意貢獻"&gt;攝影師為什麼願意貢獻？
+&lt;/h2&gt;&lt;p&gt;一個常見的疑問：&lt;strong&gt;免費把好照片給別人用，攝影師有什麼好處？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;訪談過很多 Unsplash 攝影師後，大致有幾個動機：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;曝光機會&lt;/strong&gt; — 自己的作品被幾百萬人看到、用在世界各地的產品上&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;投資自己&lt;/strong&gt; — 有些攝影師把它當作作品集，接案時可以說「這張被 XXX 公司用過」&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;單純分享&lt;/strong&gt; — 就是喜歡攝影，喜歡自己的作品能被使用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unsplash+ 收益&lt;/strong&gt; — 貢獻進階照片的攝影師可以分潤&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;對攝影師來說，這不是「免費工作」，而是一種&lt;strong&gt;曝光 vs 收入&lt;/strong&gt;的策略選擇。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="unsplash-帶來的影響"&gt;Unsplash 帶來的影響
+&lt;/h2&gt;&lt;p&gt;這幾年下來，Unsplash 改變了幾件事：&lt;/p&gt;
+&lt;h3 id="1-讓小團隊也能有好看的產品"&gt;1. 讓小團隊也能有好看的產品
+&lt;/h3&gt;&lt;p&gt;以前只有大公司買得起 Getty 的圖，現在一個獨立開發者做 side project 也能用到專業級照片。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;降低了「做出好看產品」的門檻。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="2-改變了免費圖庫的品質標準"&gt;2. 改變了免費圖庫的品質標準
+&lt;/h3&gt;&lt;p&gt;Unsplash 紅了以後，Pexels、Pixabay 這些平台的品質也被迫提升，整個免費圖庫生態都往上走。&lt;/p&gt;
+&lt;h3 id="3-成為視覺語言的一部分"&gt;3. 成為「視覺語言」的一部分
+&lt;/h3&gt;&lt;p&gt;有沒有一種感覺：走到哪裡都看到同樣幾張 Unsplash 熱門照片？&lt;/p&gt;
+&lt;p&gt;這有好有壞——方便，但也讓很多網站長得很像。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Unsplash 不只是「一個免費圖庫網站」。&lt;/p&gt;
+&lt;p&gt;它是一個關於&lt;strong&gt;分享&lt;/strong&gt;、&lt;strong&gt;開放授權&lt;/strong&gt;、&lt;strong&gt;創作者生態&lt;/strong&gt;的實驗，而且這個實驗成功了。&lt;/p&gt;
+&lt;p&gt;下次你在某個網站看到一張漂亮的 hero image，可以點右鍵搜圖看看——有很大機率來自 Unsplash。&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;unsplash.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;用的時候，也別忘了偶爾點個愛心給攝影師。&lt;/p&gt;</description></item><item><title>找免費圖片不用再怕版權：Unsplash 是前端工程師最好的朋友</title><link>https://ericchung24.github.io/blog/p/%E6%89%BE%E5%85%8D%E8%B2%BB%E5%9C%96%E7%89%87%E4%B8%8D%E7%94%A8%E5%86%8D%E6%80%95%E7%89%88%E6%AC%8Aunsplash-%E6%98%AF%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%9C%80%E5%A5%BD%E7%9A%84%E6%9C%8B%E5%8F%8B/</link><pubDate>Mon, 20 Apr 2026 00:10:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/%E6%89%BE%E5%85%8D%E8%B2%BB%E5%9C%96%E7%89%87%E4%B8%8D%E7%94%A8%E5%86%8D%E6%80%95%E7%89%88%E6%AC%8Aunsplash-%E6%98%AF%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%9C%80%E5%A5%BD%E7%9A%84%E6%9C%8B%E5%8F%8B/</guid><description>&lt;img src="https://images.unsplash.com/photo-1495745966610-2a67f2297e5e?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post 找免費圖片不用再怕版權：Unsplash 是前端工程師最好的朋友" /&gt;&lt;p&gt;做 side project 的時候，有一個地方很容易卡住：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;圖片要從哪裡來？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;自己拍？沒那個美學和器材。&lt;/p&gt;
+&lt;p&gt;隨便去 Google 圖片抓？小心被版權找上門。&lt;/p&gt;
+&lt;p&gt;買付費圖庫？一張動輒好幾百塊，side project 根本不划算。&lt;/p&gt;
+&lt;p&gt;這個問題困擾我很久，直到我認真開始用 &lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;Unsplash&lt;/a&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="unsplash-是什麼"&gt;Unsplash 是什麼？
+&lt;/h2&gt;&lt;p&gt;一個&lt;strong&gt;完全免費&lt;/strong&gt;的高品質圖片網站。&lt;/p&gt;
+&lt;p&gt;特色：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;免費下載&lt;/strong&gt; — 不用付錢、不用訂閱&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可以商用&lt;/strong&gt; — 做產品、做網站、印刷品都可以&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不用標示來源&lt;/strong&gt;（但標了攝影師會很開心）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;畫質超高&lt;/strong&gt; — 隨便一張都是幾千像素寬&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;量大&lt;/strong&gt; — 幾百萬張照片，幾乎什麼主題都找得到&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;簡單說，就是&lt;strong&gt;一群專業攝影師把自己的作品無償釋出來給大家用&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="怎麼用"&gt;怎麼用？
+&lt;/h2&gt;&lt;h3 id="1-直接到-unsplashcom-搜尋"&gt;1. 直接到 &lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;unsplash.com&lt;/a&gt; 搜尋
+&lt;/h3&gt;&lt;p&gt;輸入關鍵字，例如 &lt;code&gt;coffee&lt;/code&gt;、&lt;code&gt;mountain&lt;/code&gt;、&lt;code&gt;code&lt;/code&gt;，結果會出來一堆高品質照片。&lt;/p&gt;
+&lt;h3 id="2-下載你喜歡的圖"&gt;2. 下載你喜歡的圖
+&lt;/h3&gt;&lt;p&gt;點進去之後，右上角有「Download free」按鈕，可以選不同尺寸。&lt;/p&gt;
+&lt;h3 id="3-透過網址直接嵌入進階"&gt;3. 透過網址直接嵌入（進階）
+&lt;/h3&gt;&lt;p&gt;Unsplash 有一個很讚的功能：&lt;strong&gt;每張圖都有穩定的 CDN 網址&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你不一定要把圖下載下來再上傳到自己的伺服器，可以直接 hotlink：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&amp;amp;q=80&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;網址後面可以加參數控制：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;w=1200&lt;/code&gt; — 寬度 1200px&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q=80&lt;/code&gt; — 壓縮品質 80%&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fit=crop&lt;/code&gt; — 裁切模式&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;auto=format&lt;/code&gt; — 自動選擇最佳格式（WebP 之類）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個部落格大部分的封面圖，就是直接用 Unsplash 的 CDN 網址。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="前端工程師怎麼用最順"&gt;前端工程師怎麼用最順？
+&lt;/h2&gt;&lt;h3 id="情境-1部落格封面圖"&gt;情境 1：部落格封面圖
+&lt;/h3&gt;&lt;p&gt;每篇文章都要一張封面？去 Unsplash 找，貼 URL，搞定。&lt;/p&gt;
+&lt;h3 id="情境-2landing-page-英雄區"&gt;情境 2：Landing page 英雄區
+&lt;/h3&gt;&lt;p&gt;需要一張有氛圍的 hero image？Unsplash 的攝影作品比很多付費圖庫還有質感。&lt;/p&gt;
+&lt;h3 id="情境-3mockup-假資料"&gt;情境 3：Mockup 假資料
+&lt;/h3&gt;&lt;p&gt;做 demo 時要放使用者頭像、產品圖？Unsplash 有 &lt;strong&gt;&lt;a class="link" href="https://unsplash.com/developers" target="_blank" rel="noopener"
+&gt;Unsplash Source API&lt;/a&gt;&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&amp;lt;!-- 隨機一張分類為 nature 的圖 --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;https://source.unsplash.com/800x600/?nature&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;每次重新整理都會換一張，做 mockup 很方便。&lt;/p&gt;
+&lt;h3 id="情境-4直接整合進設計工具"&gt;情境 4：直接整合進設計工具
+&lt;/h3&gt;&lt;p&gt;Figma、Canva、Notion 都有 Unsplash 外掛，不用離開工具就能插圖。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="使用前要注意的事"&gt;使用前要注意的事
+&lt;/h2&gt;&lt;p&gt;雖然 Unsplash 非常寬鬆，但還是有一些&lt;strong&gt;不能做&lt;/strong&gt;的事情：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;不能把 Unsplash 的圖原封不動重新打包成圖庫販售&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不能用來做明顯詆毀照片中人物的內容&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不能用來暗示照片中的人物代言你的產品&lt;/strong&gt;（除非你有模特兒授權）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;講白一點：&lt;strong&gt;只要你是把圖拿來用在自己的作品裡，基本上都 OK。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;完整條款在這裡：&lt;a class="link" href="https://unsplash.com/license" target="_blank" rel="noopener"
+&gt;Unsplash License&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="其他類似的網站"&gt;其他類似的網站
+&lt;/h2&gt;&lt;p&gt;如果在 Unsplash 找不到你要的風格，可以試試這幾個：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;網站&lt;/th&gt;
+&lt;th&gt;特色&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;Unsplash&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;攝影感強，氛圍照最多&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://www.pexels.com" target="_blank" rel="noopener"
+&gt;Pexels&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;同時有照片和影片&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://pixabay.com" target="_blank" rel="noopener"
+&gt;Pixabay&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;照片、插畫、向量、音樂都有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://burst.shopify.com" target="_blank" rel="noopener"
+&gt;Burst&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Shopify 出的，電商產品圖多&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;我自己是以 Unsplash 為主，Pexels 當備援。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;Unsplash 解決了獨立開發者和小團隊最煩的問題之一：&lt;strong&gt;找圖不用再怕版權&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;如果你還在 Google 圖片右鍵存檔，或是怕被告不敢放圖，趕快換個習慣：&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://unsplash.com" target="_blank" rel="noopener"
+&gt;unsplash.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;把時間花在寫 code、做產品，不是花在煩惱圖片授權。&lt;/p&gt;</description></item></channel></rss>

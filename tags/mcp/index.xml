@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MCP on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/mcp/</link><description>Recent content in MCP on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 24 Sep 2026 22:30:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/mcp/index.xml" rel="self" type="application/rss+xml"/><item><title>Google Stitch + Claude Code：從文字到 UI 的 AI 設計工作流</title><link>https://ericchung24.github.io/blog/p/google-stitch--claude-code%E5%BE%9E%E6%96%87%E5%AD%97%E5%88%B0-ui-%E7%9A%84-ai-%E8%A8%AD%E8%A8%88%E5%B7%A5%E4%BD%9C%E6%B5%81/</link><pubDate>Thu, 24 Sep 2026 22:30:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/google-stitch--claude-code%E5%BE%9E%E6%96%87%E5%AD%97%E5%88%B0-ui-%E7%9A%84-ai-%E8%A8%AD%E8%A8%88%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid><description>&lt;img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Featured image of post Google Stitch + Claude Code：從文字到 UI 的 AI 設計工作流" /&gt;&lt;p&gt;昨天直播示範了 &lt;strong&gt;Google Stitch 串接 Claude Code 的完整流程&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;原本要花一整天從零開始刻的 UI，現在可以先用文字描述需求，快速產出一套畫面，再把設計脈絡交給 AI coding agent，繼續往真正能執行的前端程式走。&lt;/p&gt;
+&lt;p&gt;但這件事你的老闆不需要知道。&lt;/p&gt;
+&lt;p&gt;不然他只會覺得：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;「喔，所以你現在可以再多做三倍的量？」&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;開個玩笑。&lt;/p&gt;
+&lt;p&gt;真正重要的不是「AI 幫你生畫面」，而是 &lt;strong&gt;設計、規格與程式終於可以放在同一條工作流裡討論&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;這篇整理我在實作中看到的幾個重點。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="先講結論stitch-不只是生一張-ui-圖"&gt;先講結論：Stitch 不只是生一張 UI 圖
+&lt;/h2&gt;&lt;p&gt;Google 目前把 Stitch 定位成 AI-native 的設計畫布。你可以從自然語言開始，建立高擬真 UI，接著繼續迭代、串接畫面、預覽互動流程，甚至把設計規則帶到其他設計或 coding 工具裡。&lt;/p&gt;
+&lt;p&gt;它的價值不只是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;「幫我畫一個漂亮的首頁。」&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;「我有一個產品目標，請先理解使用者、資訊架構、視覺語言，再幫我把它變成可以繼續工作的設計資產。」&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Google 也把 &lt;code&gt;DESIGN.md&lt;/code&gt; 當成設計系統交換格式之一。這個方向很值得注意，因為它讓顏色、字體、間距、元件規則不再只藏在 Figma 或截圖裡，而是可以被 agent 讀懂、引用與延續。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-stitch-幫你把最無聊的第一版先做完"&gt;1. Stitch 幫你把最無聊的第一版先做完
+&lt;/h2&gt;&lt;p&gt;每次拿到需求，最花時間的常常不是最後的細節，而是從零開始把第一版畫面堆出來：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首頁要放哪些區塊？&lt;/li&gt;
+&lt;li&gt;導覽列要怎麼安排？&lt;/li&gt;
+&lt;li&gt;卡片、按鈕、表格要用什麼比例？&lt;/li&gt;
+&lt;li&gt;空狀態、錯誤狀態、手機版要不要一起想？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這些事情都很重要，但不一定需要每次都靠人工從白紙開始。&lt;/p&gt;
+&lt;p&gt;在 Stitch 裡，你可以先描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;產品是給誰用的&lt;/li&gt;
+&lt;li&gt;使用者要完成什麼任務&lt;/li&gt;
+&lt;li&gt;希望使用者感受到什麼&lt;/li&gt;
+&lt;li&gt;有哪些頁面和主要流程&lt;/li&gt;
+&lt;li&gt;參考哪些產品或視覺風格&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;它會先幫你建立一個可以討論的版本。這個版本不一定一次就對，但它至少把「完全空白」變成「有東西可以批評」。&lt;/p&gt;
+&lt;p&gt;這差很多。&lt;/p&gt;
+&lt;p&gt;因為設計真正需要人的地方，通常不是把第一個矩形拉出來，而是判斷：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;這個畫面有沒有真的幫助使用者完成事情？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="2-規格越清楚後面要改的越少"&gt;2. 規格越清楚，後面要改的越少
+&lt;/h2&gt;&lt;p&gt;直播實測時最明顯的差異，就是詳細 prompt 和簡略 prompt 產出的完整度真的不一樣。&lt;/p&gt;
+&lt;p&gt;簡略寫法可能是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;幫我做一個遊戲 App 的首頁。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這句話不是不能用，但它沒有告訴工具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;遊戲的類型&lt;/li&gt;
+&lt;li&gt;目標玩家&lt;/li&gt;
+&lt;li&gt;主要轉換目標&lt;/li&gt;
+&lt;li&gt;首頁最重要的資訊&lt;/li&gt;
+&lt;li&gt;色彩與情緒&lt;/li&gt;
+&lt;li&gt;需要哪些互動狀態&lt;/li&gt;
+&lt;li&gt;手機比例與響應式需求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;比較好的寫法會像這樣：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;請設計一個給 18–30 歲玩家使用的手機遊戲首頁。核心目標是讓回訪玩家在 10 秒內看到每日任務、目前體力與繼續遊玩的入口。視覺風格採深色背景、低飽和藍紫色、少量螢光綠作為 CTA。請同時規劃新手空狀態、載入狀態、錯誤狀態與底部導覽列。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你花十幾分鐘把需求寫清楚，通常比後面反覆說「不是這個感覺」有效率很多。&lt;/p&gt;
+&lt;p&gt;這不是 prompt 魔法，而是需求分析。&lt;/p&gt;
+&lt;p&gt;AI 只是把你寫下來的需求放大執行。需求本身模糊，產出的東西也會跟著模糊。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="3-mcp-的價值不是複製貼上而是讓工具互相取得上下文"&gt;3. MCP 的價值：不是複製貼上，而是讓工具互相取得上下文
+&lt;/h2&gt;&lt;p&gt;MCP 可以把它想成 AI 工具之間的標準接頭。Anthropic 對 MCP 的描述是：它提供一套標準方式，讓應用程式把上下文、資料與工具提供給大型語言模型。&lt;/p&gt;
+&lt;p&gt;放到 Stitch 和 Claude Code 的情境裡，差別是這樣：&lt;/p&gt;
+&lt;h3 id="沒有-mcp-的流程"&gt;沒有 MCP 的流程
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;在 Stitch 做完畫面&lt;/li&gt;
+&lt;li&gt;截圖&lt;/li&gt;
+&lt;li&gt;下載資產&lt;/li&gt;
+&lt;li&gt;複製顏色、字體、間距&lt;/li&gt;
+&lt;li&gt;手動告訴 Claude Code 這個畫面長什麼樣&lt;/li&gt;
+&lt;li&gt;寫程式&lt;/li&gt;
+&lt;li&gt;發現實作和設計不一致&lt;/li&gt;
+&lt;li&gt;回去找資料，再重來一次&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="有-mcp-的流程"&gt;有 MCP 的流程
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;在 Stitch 建立並整理設計&lt;/li&gt;
+&lt;li&gt;由 Claude Code 取得 Stitch 專案脈絡&lt;/li&gt;
+&lt;li&gt;讀取設計系統、畫面與相關資訊&lt;/li&gt;
+&lt;li&gt;先產生 &lt;code&gt;DESIGN.md&lt;/code&gt; 或等價的設計規格&lt;/li&gt;
+&lt;li&gt;再依照規格實作 React / Next.js 頁面&lt;/li&gt;
+&lt;li&gt;由 agent 協助比對與修正&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;差別不是少打幾個字，而是&lt;strong&gt;少掉一整段人工搬運上下文的工作&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="4-claude-code-接到-mcp-之後才比較像真的-coding-agent"&gt;4. Claude Code 接到 MCP 之後，才比較像真的 coding agent
+&lt;/h2&gt;&lt;p&gt;Claude Code 本身可以透過 MCP 連接外部工具與資料來源。常見的設定方式包括在專案根目錄放置 &lt;code&gt;.mcp.json&lt;/code&gt;，或使用 &lt;code&gt;claude mcp add&lt;/code&gt; 設定伺服器。&lt;/p&gt;
+&lt;p&gt;連接之後，建議不要一開始就下「把整個網站做完」這種大指令。&lt;/p&gt;
+&lt;p&gt;比較穩定的流程是分階段：&lt;/p&gt;
+&lt;h3 id="第一步先確認連線"&gt;第一步：先確認連線
+&lt;/h3&gt;&lt;p&gt;先讓 Claude Code 列出目前可用的 Stitch 專案，確認 MCP 真的連上，而不是直接開始改檔案。&lt;/p&gt;
+&lt;h3 id="第二步先抓設計脈絡"&gt;第二步：先抓設計脈絡
+&lt;/h3&gt;&lt;p&gt;請它讀取指定專案，整理：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;色彩系統&lt;/li&gt;
+&lt;li&gt;字體與字級層級&lt;/li&gt;
+&lt;li&gt;版面寬度與間距&lt;/li&gt;
+&lt;li&gt;元件狀態&lt;/li&gt;
+&lt;li&gt;頁面之間的導航關係&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然後要求它產生一份 &lt;code&gt;DESIGN.md&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id="第三步先做一頁"&gt;第三步：先做一頁
+&lt;/h3&gt;&lt;p&gt;不要一次生成整個產品。先挑一個最重要的頁面，確認：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;寬度與斷點是否正確&lt;/li&gt;
+&lt;li&gt;元件命名是否合理&lt;/li&gt;
+&lt;li&gt;CSS 是否能維護&lt;/li&gt;
+&lt;li&gt;設計規則是否真的被遵守&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="第四步再擴充頁面"&gt;第四步：再擴充頁面
+&lt;/h3&gt;&lt;p&gt;第一頁的結構確認後，再把同一套設計系統延伸到其他畫面。這樣比每頁各自 prompt 一次穩定很多。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="5-designmd-可能會變成新的前端協作介面"&gt;5. &lt;code&gt;DESIGN.md&lt;/code&gt; 可能會變成新的前端協作介面
+&lt;/h2&gt;&lt;p&gt;以前設計交付常見的形式是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一份 Figma 檔案&lt;/li&gt;
+&lt;li&gt;幾張設計稿&lt;/li&gt;
+&lt;li&gt;一份標註圖&lt;/li&gt;
+&lt;li&gt;一串聊天紀錄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這些東西不是沒用，但對 coding agent 來說不一定是最容易處理的格式。&lt;/p&gt;
+&lt;p&gt;一份好的 &lt;code&gt;DESIGN.md&lt;/code&gt; 可以直接寫：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-md" data-lang="md"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;# Design System
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;## Colors
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Primary: &lt;span class="ni"&gt;#6C5CE7&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Surface: &lt;span class="ni"&gt;#151621&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Text: &lt;span class="ni"&gt;#F8F8FA&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Muted: &lt;span class="ni"&gt;#9A9CAE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;## Typography
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Heading: 32px / 1.2 / 700
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Body: 16px / 1.6 / 400
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;## Spacing
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Base unit: 4px
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Card padding: 24px
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Section gap: 48px
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;## Components
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Buttons have default, hover, disabled states
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Cards use 16px radius
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Mobile navigation becomes bottom navigation
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;這種格式的好處是：人看得懂，agent 也比較容易引用。&lt;/p&gt;
+&lt;p&gt;但要注意，&lt;code&gt;DESIGN.md&lt;/code&gt; 不是把 Figma 完全取代掉。它比較像是設計規則的可讀版本，讓設計和程式之間多一個共同語言。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="6-這不是設計師被取代的故事"&gt;6. 這不是「設計師被取代」的故事
+&lt;/h2&gt;&lt;p&gt;我覺得這件事最容易被誤解的地方，就是大家把它講成「AI 會不會取代設計師」。&lt;/p&gt;
+&lt;p&gt;實際上，Stitch 最先取代的比較像是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;從零開始畫線框的重複工作&lt;/li&gt;
+&lt;li&gt;反覆複製貼上的規格整理&lt;/li&gt;
+&lt;li&gt;每頁重新交代一次相同的設計規則&lt;/li&gt;
+&lt;li&gt;把截圖和標註搬到另一個工具裡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;它沒有自動替你決定：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;這個產品到底該不該做&lt;/li&gt;
+&lt;li&gt;使用者真正的問題是什麼&lt;/li&gt;
+&lt;li&gt;這個互動是否符合品牌性格&lt;/li&gt;
+&lt;li&gt;這個畫面是不是只是看起來很漂亮&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以比較精準的說法應該是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AI 讓設計師更快通過低價值的第一版，然後把時間留給判斷、取捨和創意。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但前提是，你真的知道自己要判斷什麼。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="7-前端工程師真正要學的不只是下-prompt"&gt;7. 前端工程師真正要學的，不只是下 prompt
+&lt;/h2&gt;&lt;p&gt;如果你是前端工程師，這套工作流帶來的要求其實更高。&lt;/p&gt;
+&lt;p&gt;你不能只會說：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;幫我把這張圖刻出來。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你還要懂：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;設計系統如何轉成元件系統&lt;/li&gt;
+&lt;li&gt;哪些樣式應該抽成 token&lt;/li&gt;
+&lt;li&gt;哪些互動狀態不能漏&lt;/li&gt;
+&lt;li&gt;如何處理 responsive layout&lt;/li&gt;
+&lt;li&gt;如何讓生成的程式碼可測試、可維護&lt;/li&gt;
+&lt;li&gt;如何檢查 AI 是否偷偷引入不一致的實作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;換句話說，AI 讓第一版變快，但也讓 code review 變得更重要。&lt;/p&gt;
+&lt;p&gt;如果你沒有基本的 HTML、CSS、JavaScript、TypeScript、React 和 Git 能力，AI 只會很快地幫你生出一堆你不敢改的程式碼。&lt;/p&gt;
+&lt;p&gt;速度不是能力的替代品。&lt;/p&gt;
+&lt;p&gt;速度只是把你的能力放大。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="我現在會怎麼安排這套工作流"&gt;我現在會怎麼安排這套工作流？
+&lt;/h2&gt;&lt;p&gt;如果是我自己要做一個新功能，我會照下面順序：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;先寫產品目標&lt;/strong&gt;：這個功能要幫誰解決什麼問題？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;用 Stitch 做方向探索&lt;/strong&gt;：先出兩到三個版本，不急著選第一個。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;整理設計規則&lt;/strong&gt;：把顏色、字體、間距與元件狀態寫進 &lt;code&gt;DESIGN.md&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;用 MCP 讓 coding agent 取得脈絡&lt;/strong&gt;：避免只丟截圖和一句「照這個做」。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;先做最小可行頁面&lt;/strong&gt;：先確認骨架、資料流與互動。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;跑 lint、typecheck、測試與實機畫面&lt;/strong&gt;：AI 產生的程式碼一樣要驗證。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最後才做細節拋光&lt;/strong&gt;：動畫、文案、空狀態和錯誤處理不要一開始就全部混在一起。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;這樣做的好處是，每一步都有可以檢查的產物，不會變成 AI 一次生成一大坨，最後沒人知道問題從哪裡開始。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="最後"&gt;最後
+&lt;/h2&gt;&lt;p&gt;Google Stitch 加上 MCP 和 Claude Code，真正改變的不是「設計師今天少畫幾個畫面」。&lt;/p&gt;
+&lt;p&gt;真正改變的是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;設計規則、產品脈絡與程式實作，開始可以在同一個工作流裡被傳遞。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這會讓設計和前端之間的交接更快，但也會要求每個人把自己的專業講得更清楚。&lt;/p&gt;
+&lt;p&gt;設計師要更會描述意圖。&lt;/p&gt;
+&lt;p&gt;工程師要更懂設計系統。&lt;/p&gt;
+&lt;p&gt;PM 要更會寫需求。&lt;/p&gt;
+&lt;p&gt;而 AI agent 會把這些模糊的地方全部放大給你看。&lt;/p&gt;
+&lt;p&gt;所以，不要把它想成「按一下就完成網站」。&lt;/p&gt;
+&lt;p&gt;比較接近真相的說法是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;你把需求、設計與規則講清楚，AI 才有機會幫你把第一版做得夠快；接下來真正有價值的工作，仍然是你的判斷。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="參考資料"&gt;參考資料
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/" target="_blank" rel="noopener"
+&gt;Google：Design UI using AI with Stitch from Google Labs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://codelabs.developers.google.com/design-to-code-with-antigravity-stitch" target="_blank" rel="noopener"
+&gt;Google Codelabs：Design-to-Code with Antigravity and Stitch MCP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://docs.anthropic.com/en/docs/mcp" target="_blank" rel="noopener"
+&gt;Anthropic：Model Context Protocol&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://docs.anthropic.com/en/docs/claude-code/cli-usage" target="_blank" rel="noopener"
+&gt;Anthropic：Claude Code CLI reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

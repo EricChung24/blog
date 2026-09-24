@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NotebookLM on EricChung的程式勇者村</title><link>https://ericchung24.github.io/blog/tags/notebooklm/</link><description>Recent content in NotebookLM on EricChung的程式勇者村</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 20 Apr 2026 00:40:00 +0800</lastBuildDate><atom:link href="https://ericchung24.github.io/blog/tags/notebooklm/index.xml" rel="self" type="application/rss+xml"/><item><title>NotebookLM 是什麼？Google 的 AI 筆記助手，幫你把一堆資料變成可問答的知識庫</title><link>https://ericchung24.github.io/blog/p/notebooklm-%E6%98%AF%E4%BB%80%E9%BA%BCgoogle-%E7%9A%84-ai-%E7%AD%86%E8%A8%98%E5%8A%A9%E6%89%8B%E5%B9%AB%E4%BD%A0%E6%8A%8A%E4%B8%80%E5%A0%86%E8%B3%87%E6%96%99%E8%AE%8A%E6%88%90%E5%8F%AF%E5%95%8F%E7%AD%94%E7%9A%84%E7%9F%A5%E8%AD%98%E5%BA%AB/</link><pubDate>Mon, 20 Apr 2026 00:40:00 +0800</pubDate><guid>https://ericchung24.github.io/blog/p/notebooklm-%E6%98%AF%E4%BB%80%E9%BA%BCgoogle-%E7%9A%84-ai-%E7%AD%86%E8%A8%98%E5%8A%A9%E6%89%8B%E5%B9%AB%E4%BD%A0%E6%8A%8A%E4%B8%80%E5%A0%86%E8%B3%87%E6%96%99%E8%AE%8A%E6%88%90%E5%8F%AF%E5%95%8F%E7%AD%94%E7%9A%84%E7%9F%A5%E8%AD%98%E5%BA%AB/</guid><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/notebookLM_v2_1.width-1000.format-webp.webp" alt="Featured image of post NotebookLM 是什麼？Google 的 AI 筆記助手，幫你把一堆資料變成可問答的知識庫" /&gt;&lt;p&gt;你一定遇過這種情境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手上一堆 PDF、會議記錄、研究報告，要整理成摘要&lt;/li&gt;
+&lt;li&gt;讀了十篇文章，要比較它們對同一個主題的觀點&lt;/li&gt;
+&lt;li&gt;YouTube 有一場 3 小時的演講，只想知道「他在第幾分鐘講了 XX」&lt;/li&gt;
+&lt;li&gt;準備考試或簡報，想把筆記變成可以互相問答的對象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以前這種事很花時間。&lt;/p&gt;
+&lt;p&gt;直到 Google 推出 &lt;strong&gt;&lt;a class="link" href="https://notebooklm.google.com" target="_blank" rel="noopener"
+&gt;NotebookLM&lt;/a&gt;&lt;/strong&gt;，整個遊戲規則變了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="notebooklm-是什麼"&gt;NotebookLM 是什麼？
+&lt;/h2&gt;&lt;p&gt;簡單一句話：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「把你自己的資料丟進去，它就變成一個只會根據這些資料回答的 AI 助手。」&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;跟 ChatGPT、Claude 最大的差別是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ChatGPT 會用它&lt;strong&gt;全網路的訓練資料&lt;/strong&gt;回答你&lt;/li&gt;
+&lt;li&gt;NotebookLM 只會用&lt;strong&gt;你上傳的那些文件&lt;/strong&gt;回答你&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個差別超級關鍵。&lt;/p&gt;
+&lt;p&gt;因為它表示：&lt;strong&gt;AI 不會亂掰（或至少亂掰的機率大幅降低）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你讀的資料、它讀的資料，是同一份。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="可以放什麼進去"&gt;可以放什麼進去？
+&lt;/h2&gt;&lt;p&gt;支援的來源類型越來越多，目前包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Docs / Slides&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;網頁 URL&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;YouTube 影片&lt;/strong&gt;（會自動抓字幕）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;音訊檔&lt;/strong&gt;（會自動轉文字）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;純文字貼上&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一個 notebook 可以放最多 &lt;strong&gt;50 個來源&lt;/strong&gt;（免費版）、300 個（Plus 版）。&lt;/p&gt;
+&lt;p&gt;每個來源的大小限制也不小（PDF 上限 500,000 字），對大部分情境夠用了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="最強的三個功能"&gt;最強的三個功能
+&lt;/h2&gt;&lt;h3 id="1-基於來源的問答"&gt;1. 基於來源的問答
+&lt;/h3&gt;&lt;p&gt;這是核心。&lt;/p&gt;
+&lt;p&gt;把資料丟進去後，你可以直接問：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「這幾篇文章對於 XX 議題，立場分別是什麼？」&lt;/li&gt;
+&lt;li&gt;「第 3 頁講的那個實驗，結論是什麼？」&lt;/li&gt;
+&lt;li&gt;「這本書的核心論點用三句話總結」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;每個回答都會附上「引用來源」&lt;/strong&gt;，點進去就能看到原文在哪一段。&lt;/p&gt;
+&lt;p&gt;這個 &lt;strong&gt;source citation&lt;/strong&gt; 功能是 NotebookLM 最讓人安心的地方——你可以驗證 AI 有沒有亂掰。&lt;/p&gt;
+&lt;h3 id="2-自動-podcastaudio-overview"&gt;2. 自動 Podcast（Audio Overview）
+&lt;/h3&gt;&lt;p&gt;這個功能剛推出的時候全網都在驚呼。&lt;/p&gt;
+&lt;p&gt;你丟一份資料進去，點一下「Generate Audio Overview」，它會&lt;strong&gt;自動生成一集兩個 AI 主持人對話的 Podcast&lt;/strong&gt;，就像真人在討論你的資料一樣。&lt;/p&gt;
+&lt;p&gt;聽起來像真人節目，而且內容是根據你的資料做的。&lt;/p&gt;
+&lt;p&gt;用途：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通勤聽自己的論文摘要&lt;/li&gt;
+&lt;li&gt;讀書會前快速掌握一本書&lt;/li&gt;
+&lt;li&gt;把枯燥的技術文件轉成好吸收的對話形式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;現在還支援多國語言（包含中文）。&lt;/p&gt;
+&lt;h3 id="3-mind-map心智圖"&gt;3. Mind Map（心智圖）
+&lt;/h3&gt;&lt;p&gt;上傳資料後，NotebookLM 可以自動生成&lt;strong&gt;一張心智圖&lt;/strong&gt;，把主要概念、子概念、彼此的關係視覺化。&lt;/p&gt;
+&lt;p&gt;對要做簡報、寫文章、理清思路的人，超級有用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="實際使用情境"&gt;實際使用情境
+&lt;/h2&gt;&lt;p&gt;我自己常用的幾種情境：&lt;/p&gt;
+&lt;h3 id="情境-1讀論文--研究報告"&gt;情境 1：讀論文 / 研究報告
+&lt;/h3&gt;&lt;p&gt;丟 5 篇相關主題的論文進去，問：「這些研究在方法論上有什麼差異？」&lt;/p&gt;
+&lt;p&gt;比自己一篇一篇讀快十倍。&lt;/p&gt;
+&lt;h3 id="情境-2工作文件彙整"&gt;情境 2：工作文件彙整
+&lt;/h3&gt;&lt;p&gt;把會議記錄、產品規格、使用者回饋全部丟進去。&lt;/p&gt;
+&lt;p&gt;需要某個決策背景時，直接問：「關於 XX 功能，之前做了什麼決定？為什麼？」&lt;/p&gt;
+&lt;h3 id="情境-3技術文件學習"&gt;情境 3：技術文件學習
+&lt;/h3&gt;&lt;p&gt;丟一份新工具的完整官方文件進去，問：「我要做 XX 的話，大概的流程是什麼？」&lt;/p&gt;
+&lt;p&gt;不用從頭讀 200 頁文件。&lt;/p&gt;
+&lt;h3 id="情境-4寫作素材整理"&gt;情境 4：寫作素材整理
+&lt;/h3&gt;&lt;p&gt;把相關文章、筆記、訪談稿丟進去。&lt;/p&gt;
+&lt;p&gt;寫作時問：「這個主題我之前有沒有寫過類似的觀點？」&lt;/p&gt;
+&lt;h3 id="情境-5面試準備"&gt;情境 5：面試準備
+&lt;/h3&gt;&lt;p&gt;把公司官網、產品文件、新聞報導丟進去。&lt;/p&gt;
+&lt;p&gt;問：「這家公司最近的策略方向是什麼？」「他們最大的競爭對手是誰？」&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="跟-chatgpt--claude-比起來呢"&gt;跟 ChatGPT / Claude 比起來呢？
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;NotebookLM&lt;/th&gt;
+&lt;th&gt;ChatGPT / Claude&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;基於自己資料&lt;/td&gt;
+&lt;td&gt;✅ 核心功能&lt;/td&gt;
+&lt;td&gt;有但要貼上&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;引用來源&lt;/td&gt;
+&lt;td&gt;✅ 每句都有&lt;/td&gt;
+&lt;td&gt;大部分沒有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;來源數量&lt;/td&gt;
+&lt;td&gt;50 份（免費）&lt;/td&gt;
+&lt;td&gt;受 context 限制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自動 Podcast&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;通用對話&lt;/td&gt;
+&lt;td&gt;弱&lt;/td&gt;
+&lt;td&gt;強&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;程式碼生成&lt;/td&gt;
+&lt;td&gt;弱&lt;/td&gt;
+&lt;td&gt;強&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;結論：&lt;strong&gt;NotebookLM 不是要取代 ChatGPT，是另一個用途&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;需要「基於特定資料做深度理解」時，用 NotebookLM；要「寫 code、寫文案、泛用對話」時，還是用 ChatGPT / Claude。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="幾個使用小技巧"&gt;幾個使用小技巧
+&lt;/h2&gt;&lt;h3 id="把相關資料放同一個-notebook"&gt;把相關資料放同一個 notebook
+&lt;/h3&gt;&lt;p&gt;NotebookLM 的回答品質，跟你給的來源品質高度相關。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不要把無關的資料塞在一起&lt;/strong&gt;，會互相干擾。建議一個主題開一個 notebook。&lt;/p&gt;
+&lt;h3 id="先問總結再問細節"&gt;先問「總結」再問細節
+&lt;/h3&gt;&lt;p&gt;新開一個 notebook，先丟資料問：「這些資料的主要內容是什麼？」&lt;/p&gt;
+&lt;p&gt;這樣你會對它「看到什麼」有個概念，後續問細節才知道怎麼問。&lt;/p&gt;
+&lt;h3 id="善用notes功能"&gt;善用「Notes」功能
+&lt;/h3&gt;&lt;p&gt;NotebookLM 裡面可以記 notes。&lt;/p&gt;
+&lt;p&gt;把自己的想法、問答結果存成 note，之後可以把這些 note 也變成新的來源。&lt;/p&gt;
+&lt;p&gt;等於&lt;strong&gt;你的思考會跟資料一起累積&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id="定期清理來源"&gt;定期清理來源
+&lt;/h3&gt;&lt;p&gt;資料放太多會稀釋重點。&lt;/p&gt;
+&lt;p&gt;做完一個專案後，可以把這個 notebook 封存，開新的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="需要付費嗎"&gt;需要付費嗎？
+&lt;/h2&gt;&lt;p&gt;目前有兩個版本：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;價格&lt;/th&gt;
+&lt;th&gt;特色&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;免費版&lt;/td&gt;
+&lt;td&gt;$0&lt;/td&gt;
+&lt;td&gt;每個 notebook 50 個來源、基本功能都有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Plus&lt;/td&gt;
+&lt;td&gt;併入 Google AI Plus / Pro 方案&lt;/td&gt;
+&lt;td&gt;更多來源、更長使用時間、進階功能&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;免費版已經夠用，&lt;strong&gt;如果你只是想試試看，不用急著付費&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="資料安全"&gt;資料安全？
+&lt;/h2&gt;&lt;p&gt;這是 Google，大家關心的問題：「我的資料會被拿去訓練嗎？」&lt;/p&gt;
+&lt;p&gt;官方說明是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;個人免費版的資料不會被用來訓練模型&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;企業/教育版（Workspace）的資料完全隔離&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但還是有幾個原則：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;機密資料、公司機密不要上傳&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;客戶個資不要上傳&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如果不確定敏感程度，請遵守公司的資料政策&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;對個人學習、公開資料研究，NotebookLM 幾乎沒有安全疑慮。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="小結"&gt;小結
+&lt;/h2&gt;&lt;p&gt;如果你是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;學生&lt;/strong&gt;：NotebookLM 可以把整學期的教材變成問答助手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;研究者&lt;/strong&gt;：可以快速整合多篇文獻&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工程師&lt;/strong&gt;：可以把技術文件變成隨時可查的 AI&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;寫作者&lt;/strong&gt;：可以把素材庫變成靈感來源&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一般上班族&lt;/strong&gt;：可以把工作文件變成「問問題就有答案」的系統&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這個工具都值得試試看。&lt;/p&gt;
+&lt;p&gt;👉 &lt;a class="link" href="https://notebooklm.google.com" target="_blank" rel="noopener"
+&gt;notebooklm.google.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;用 Google 帳號就能登入，免費先玩一輪再說。&lt;/p&gt;</description></item></channel></rss>
