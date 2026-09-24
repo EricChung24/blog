@@ -23,7 +23,9 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 0.123.8
+          # The latest Stack v3 theme uses Hugo template functions unavailable in 0.123.8.
+          # Keep this on the current extended release so scheduled updates can build.
+          hugo-version: latest
           extended: true
 
       - name: Update theme
