@@ -11,7 +11,7 @@ categories: ["C# 學習筆記"]
 
 今天把前幾天的內容組合起來：用亂數出題、讀取使用者輸入、驗證輸入格式，並在答對前持續執行迴圈。
 
-![猜數字遊戲的輸入驗證與重試流程](guessing-game-visual.svg)
+![猜數字遊戲的輸入驗證與重試流程](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80)
 
 ## 產生 1 到 9 的亂數
 
